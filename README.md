@@ -9,7 +9,7 @@
 
 ************************************************************
 
-<img src="media/readme/t2x_rohloff_drop_lr.jpg.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/t2x_rohloff_drop_lr.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
 
 ************************************************************
 
