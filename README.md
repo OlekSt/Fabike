@@ -208,22 +208,22 @@ The User model used is provided by Django as a part of defaults `django.contrib.
  Frame Type | frame | max_length=80  | CharField
  Title | title | max_length=120  | TextField
  Fork | fork | max_length=80 | CharField
- Wheels | wheels | max_length=80  | CharField
- Tyres | tyres | max_length=80 | CharField
- Max Tyre Size | max_tyre_size | max_length=20  | CharField
- Crankset | crankset | max_length=80 | CharField
- Shift Levers | shift_levers | max_length=80  | CharField
- Derailleurs | derailleurs | max_length=80 | CharField
- Casette/Sprocket | casette_or_sprocket | max_length=80  | CharField
- Chain/Belt | chain_or_belt | max_length=80 | CharField 
- Brakes | brakes | max_length=80  | CharField
- Handlebar | handlerbar | max_length=80  | CharField
- Stem | stem | max_length=100 | CharField
- Saddle | description | max_length=80  | CharField
- Seatpost | description | max_length=80  | CharField
- Seat Clamp | name | max_length=80 | CharField
- Headset | description | max_length=80  | CharField
- Seatpost Diameter | description | max_length=254  | CharField
+ Wheels | wheels | max_length=80, null=True, blank=True  | CharField
+ Tyres | tyres | max_length=80, null=True, blank=True | CharField
+ Max Tyre Size | max_tyre_size, null=True, blank=True | max_length=20  | CharField
+ Crankset | crankset | max_length=80, null=True, blank=True | CharField
+ Shift Levers | shift_levers | max_length=80, null=True, blank=True  | CharField
+ Derailleurs | derailleurs | max_length=80, null=True, blank=True | CharField
+ Casette/Sprocket | casette_or_sprocket | max_length=80, null=True, blank=True  | CharField
+ Chain/Belt | chain_or_belt | max_length=80, null=True, blank=True | CharField 
+ Brakes | brakes | max_length=80, null=True, blank=True  | CharField
+ Handlebar | handlerbar | max_length=80, null=True, blank=True  | CharField
+ Stem | stem | max_length=100, null=True, blank=True | CharField
+ Saddle | saddle | max_length=80, null=True, blank=True  | CharField
+ Seatpost | seatpost | max_length=80, null=True, blank=True  | CharField
+ Seat Clamp | seat_clamp | max_length=80, null=True, blank=True | CharField
+ Headset | headset | max_length=80, null=True, blank=True  | CharField
+ Seatpost Diameter | seatpost_diameter | max_length=20  | CharField
  Bottom Bracket Type | bottom_bracket | max_length=80 | CharField
  Dropouts | dropouts | max_length=120  | CharField
  Weigth | weight | max_digits=4, decimal_places=2  | DecimalField
@@ -232,6 +232,55 @@ The User model used is provided by Django as a part of defaults `django.contrib.
  Price | price | max_digits=6, decimal_places=2  | DecimalField
  Price Alloy | price_alloy | max_digits=6, decimal_places=2 | DecimalField
  Price Carbon | price_carbon | max_digits=6, decimal_places=2  | DecimalField
- Price comment | description | max_length=254  | TextField 
+ Price comment | price_comment | max_length=120  | CharField 
  Image 1 | product_image01 |  | ImageField
  Image 2 | product_image02 | null=True, blank=True | ImageField
+
+* Product Types/choices are defined within the Product model.
+
+
+#### Checkout App
+##### Order
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
+ Order Number | order_number | CharField | max_length=32, null=False, editable=False
+ User | account | ForeignKey 'User' | on_delete=models.SET_NULL, null=True, blank=True, related_name='orders'
+ Full Name | account_full_name | max_length=70 | CharField
+ Phone number | account_phone_number | max_length=25 | CharField
+ Address Line1 | account_address_line1 | max_length=120 | CharField
+ Address Line2 | account_address_line2 | max_length=120, null=True, blank=True | CharField
+ Town/City | account_town_or_city | max_length=70 | CharField
+ County | account_county | max_length=50, null=True, blank=True | CharField
+ Postcode | accountaccount_postcode | max_length=20 | CharField
+ Country | account_country | blank_label='Country' | CountryField
+ Purchase Date | purchase_date | auto_now_add=True | DateTimeField
+ Order Total | order_total | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
+ Stripe Pid | stripe_pid | max_length=254, null=False, blank=False, default='' | CharField
+ Comment | comment | TextField | max_length=254, null=True, blank=True
+
+
+ ##### Order Item Details 
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
+ Order | order | null=False, blank=False, on_delete=models.CASCADE, related_name='orderitems' | ForeignKey 'Order'
+ Product | product | null=False, blank=False, on_delete=models.PROTECT | ForeignKey 'Product'
+ Quantity | quantity | null=False, blank=False, default=0 | IntegerField
+ Color | color | choices=COLORS | CharField
+ Size | size | choices=SIZES | CharField
+ Components | alloy_or_carbon | choices=COMPONENTS | CharField
+ Item Total | item_total | max_digits=6, decimal_places=2, null=False, blank=False, editable=False | DecimalField
+ Shipped | shipped | default=False | BooleanField
+
+* Colors, Components & Sizes choices are defined within the Product model.
+
+
+#### Events app
+##### Event
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
+ Name | name | max_length=80 | CharField
+ Description | description | max_length=254 | TextFeild
+ Date | date | max_length=20 | DateTimeField
+ Time | time | max_length=20 | DateTimeField 
+ Price | price | max_digits=3, decimal_places=2  | DecimalField
+ Price Comment | price_comment 
