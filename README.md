@@ -22,3 +22,27 @@
     - [**Structure**](#structure)
     - [**Skeleton**](#skeleton)
     - [**Surface**](#surface)
+
+2. [**Features**](#features)
+    - [**Existing Features**](#existing-features)
+    - [**Features to be Implemented**](#features-to-be-implemented)
+
+3. [**Technologies used**](#technologies-used)
+    - [**Languages**](#languages)
+    - [**Libraries and Frameworks**](#libraries-and-frameworks)
+    - [**Tools**](#tools)
+    - [**Databases**](#databases)
+
+4. [**Testing**](#testing)
+
+5. [**Deployment**](#deployment)
+    - [**Local Deployment**](#local-deployment)
+    - [**Heroku Deployment**](#heroku-deployment)
+
+6. [**Credits**](#credits)
+    - [**Content**](#content)
+    - [**Images**](#images)
+    - [**Code**](#code)
+    - [**Acknowledgments**](#acknowledgments)
+
+7. [**Disclaimer**](#disclaimer)
