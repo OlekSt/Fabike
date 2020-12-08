@@ -84,7 +84,9 @@ User Goals:
 
 ### SCOPE 
 
-User Stories:
+User Stories
+
+Wesbite visitors:
 - First time website visitor:
     * I want to get a clear idea what the website is about
     * I want to be able to easily see where I can find various info (menu, sections, links, individual pages/windows) and easily navigate there
@@ -110,6 +112,7 @@ User Stories:
     * To be able to easily add, modify or delete products listings, with all the necessary info – images, descriptions, technical parameters, etc. 
 
 
+Visitor vs Administrator:
 - Website's visitor can:
     * Look through products (bikes, frames, repair workshops)
     * Check details of an individual product
@@ -131,6 +134,7 @@ User Stories:
     * Add/update/delete events (repair workshops)
 
 
+Logged-in vs unlogged:
 - Unlogged user can see/access:
     * Products (all or individual)
     * Events (repair workshops)
@@ -172,4 +176,62 @@ Images:
 
 ### DATABASE CHOICE
 
+* During development on a local machine standard sqlite3 databasewill be used, as it is installed with Django.
+
+* After deployment, PostgreSQL database will be used as, it is provided by Heroku where the website will be deployed.  
+
 ### DATA MODELLING
+
+#### User
+The User model used is provided by Django as a part of defaults `django.contrib.auth.models`.
+
+#### Accounts app
+##### Account
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
+ User | user |  on_delete=models.CASCADE | OneToOneField 'User' 
+ Full Name | account_full_name | max_length=70 | CharField
+ Phone number | account_phone_number | max_length=25 | CharField
+ Address Line1 | account_address_line1 | max_length=120 | CharField
+ Address Line2 | account_address_line2 | max_length=120, null=True, blank=True | CharField
+ Town/City | account_town_or_city | max_length=70 | CharField
+ County | account_county | max_length=50, null=True, blank=True | CharField
+ Postcode | accountaccount_postcode | max_length=20 | CharField
+ Country | account_country | blank_label='Country' | CountryField
+
+#### Products app
+##### Product
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
+ Product Type | type | choices=PRODUCT_TYPE | CharField
+ Name | name | max_length=80 | CharField
+ Frame Type | frame | max_length=80  | CharField
+ Title | title | max_length=120  | TextField
+ Fork | fork | max_length=80 | CharField
+ Wheels | wheels | max_length=80  | CharField
+ Tyres | tyres | max_length=80 | CharField
+ Max Tyre Size | max_tyre_size | max_length=20  | CharField
+ Crankset | crankset | max_length=80 | CharField
+ Shift Levers | shift_levers | max_length=80  | CharField
+ Derailleurs | derailleurs | max_length=80 | CharField
+ Casette/Sprocket | casette_or_sprocket | max_length=80  | CharField
+ Chain/Belt | chain_or_belt | max_length=80 | CharField 
+ Brakes | brakes | max_length=80  | CharField
+ Handlebar | handlerbar | max_length=80  | CharField
+ Stem | stem | max_length=100 | CharField
+ Saddle | description | max_length=80  | CharField
+ Seatpost | description | max_length=80  | CharField
+ Seat Clamp | name | max_length=80 | CharField
+ Headset | description | max_length=80  | CharField
+ Seatpost Diameter | description | max_length=254  | CharField
+ Bottom Bracket Type | bottom_bracket | max_length=80 | CharField
+ Dropouts | dropouts | max_length=120  | CharField
+ Weigth | weight | max_digits=4, decimal_places=2  | DecimalField
+ Weight Alloy | weight_alloy | max_digits=4, decimal_places=2 | DecimalField
+ Weight Carbon | weight_carbon | max_digits=4, decimal_places=2  | DecimalField
+ Price | price | max_digits=6, decimal_places=2  | DecimalField
+ Price Alloy | price_alloy | max_digits=6, decimal_places=2 | DecimalField
+ Price Carbon | price_carbon | max_digits=6, decimal_places=2  | DecimalField
+ Price comment | description | max_length=254  | TextField 
+ Image 1 | product_image01 |  | ImageField
+ Image 2 | product_image02 | null=True, blank=True | ImageField
