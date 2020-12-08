@@ -157,7 +157,29 @@ Logged-in vs unlogged:
 
 ### SKELETON
 
-[Balsamiq](https://balsamiq.com/) wireframes software was used to create wireframes for this project:
+[Balsamiq](https://balsamiq.com/) wireframes software was used to create wireframes for this project.
+
+Each wireframe below contains mobile, pad & laptop/desktop view:
+* [HOME](media/wireframes/home.png)
+* [SIGN UP/IN](media/wireframes/sign_up_in.png)
+* [ABOUT](media/wireframes/about.png)
+* [BIKES](media/wireframes/bikes.png)
+* [Section URBAN BIKES](media/wireframes/urban_bikes.png)
+* [FRAMES](media/wireframes/frames.png)
+* [PRODUCT page](media/wireframes/product_details.png)
+* [SHOPPING CART](media/wireframes/shopping_cart.png)
+* [CHECKOUT](media/wireframes/checkout.png)
+* [ACCOUNT](media/wireframes/account.png)
+* [ORDER HISTORY](media/wireframes/order_history.png)
+* [PRODUCT MANAGEMENT](media/wireframes/product_management.png)
+* [EVENTS](media/wireframes/events.png)
+* [EVENT page](media/wireframes/event_details.png)
+
+All wireframes in one [pdf document](media/wireframes/fabike_wireframes.pdf)
+
+
+
+
 
 
 ### SURFACE 
@@ -217,7 +239,7 @@ The User model used is provided by Django as a part of defaults `django.contrib.
  Casette/Sprocket | casette_or_sprocket | max_length=80, null=True, blank=True  | CharField
  Chain/Belt | chain_or_belt | max_length=80, null=True, blank=True | CharField 
  Brakes | brakes | max_length=80, null=True, blank=True  | CharField
- Handlebar | handlerbar | max_length=80, null=True, blank=True  | CharField
+ Handlebar | handlebar | max_length=80, null=True, blank=True  | CharField
  Stem | stem | max_length=100, null=True, blank=True | CharField
  Saddle | saddle | max_length=80, null=True, blank=True  | CharField
  Seatpost | seatpost | max_length=80, null=True, blank=True  | CharField
@@ -283,4 +305,4 @@ The User model used is provided by Django as a part of defaults `django.contrib.
  Date | date | max_length=20 | DateTimeField
  Time | time | max_length=20 | DateTimeField 
  Price | price | max_digits=3, decimal_places=2  | DecimalField
- Price Comment | price_comment 
+ Price Comment | price_comment | max_length=120 | CharField
