@@ -57,7 +57,7 @@
 ### GOALS
 
 Target audience:
-- Cyckling enthusiast, semi- & professionals, who value high quality products for sports, who are very knowledgeable about the industry, and want to purchase a high end customizable frame or fully assembled bicyckle for their sports or recreational cyckling.
+- Cycling enthusiast, semi- & professionals, who value high quality products for sports, who are very knowledgeable about the industry, and want to purchase a high end customizable frame or fully assembled bicycle for their sports or recreational cyckling.
 
 Main goal of this site: 
 - Build a full cycle e-shop to present the brand's products to potential buyers, and enable the latter with an easy way to choose a product, get all necessary info about the products on the web or additional info by contacting the website's onwer, quickly and easily purchase one, or save it for buying later.
@@ -79,7 +79,7 @@ User Goals:
 
 
 ### STRATEGY
-
+Create an e-shop which is easy to navigate, with a simple & convenient order-payment process. The website will be built on Python-Django, with PostgreSQL database, and Stripe payment system. 
 
 
 ### SCOPE 
@@ -175,23 +175,21 @@ Each wireframe below contains mobile, pad & laptop/desktop view:
 * [EVENTS](media/wireframes/events.png)
 * [EVENT page](media/wireframes/event_details.png)
 
-All wireframes in one [pdf document](media/wireframes/fabike_wireframes.pdf)
-
-
-
-
-
 
 ### SURFACE 
 
 Design choices:
-
+* General guidelines are taken from the existing website www.fabike.it, and approved by the main designed of the company, Fabio Putzolu. 
+* The overall strucutre of existing pages will be re-created in this project, but will be coded from scratch, and all the non-existing pages/features will be added during the development of the project.
 
 Colors:
+* All the colors & color combination will be derived from the 4 main colors used for the frames/bikes: black, blue, yellow, & red.
 
 Fonts: 
 
+
 Images:
+* All product(bikes, frames) & lifestyle photos were taken by the designer of the frames, Fabio Putzolu.
 
 
 ## INFORMATION ARCHITECTURE
@@ -306,3 +304,22 @@ The User model used is provided by Django as a part of defaults `django.contrib.
  Time | time | max_length=20 | DateTimeField 
  Price | price | max_digits=3, decimal_places=2  | DecimalField
  Price Comment | price_comment | max_length=120 | CharField
+
+
+
+## CREDITS
+#### CONTENT
+The website is created by Alexey Statsenko, using the media described below. 
+
+#### IMAGES
+- All product(bikes, frames) & lifestyle photos were taken by the designer of the frames, Fabio Putzolu. All rights belong to FABIKE Design s.r.o. 
+
+
+#### CODE
+
+
+
+#### ACKNOWLEDGMENTS 
+
+
+##### back to [top](#table-of-contents)
