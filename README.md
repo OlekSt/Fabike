@@ -284,7 +284,7 @@ The User model used is provided by Django as a part of defaults `django.contrib.
  Fork | fork | max_length=80 | CharField
  Wheels | wheels | max_length=80, null=True, blank=True  | CharField
  Tyres | tyres | max_length=80, null=True, blank=True | CharField
- Max Tyre Size | max_tyre_size, null=True, blank=True | max_length=20  | CharField
+ Max Tyre Size | max_tyre_size | max_length=80, null=True, blank=True   | CharField
  Crankset | crankset | max_length=80, null=True, blank=True | CharField
  Shift Levers | shift_levers | max_length=80, null=True, blank=True  | CharField
  Derailleurs | derailleurs | max_length=80, null=True, blank=True | CharField
@@ -331,6 +331,7 @@ The User model used is provided by Django as a part of defaults `django.contrib.
  Order Total | order_total | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
  Stripe Pid | stripe_pid | max_length=254, null=False, blank=False, default='' | CharField
  Comment | comment | TextField | max_length=254, null=True, blank=True
+ Shipped | shipped | default=False | BooleanField
 
 
  ##### Order Item Details 
@@ -343,7 +344,7 @@ The User model used is provided by Django as a part of defaults `django.contrib.
  Size | size | choices=SIZES | CharField
  Components | alloy_or_carbon | choices=COMPONENTS | CharField
  Item Total | item_total | max_digits=6, decimal_places=2, null=False, blank=False, editable=False | DecimalField
- Shipped | shipped | default=False | BooleanField
+
 
 * Colors, Components & Sizes choices are defined within the Product model.
 
