@@ -57,7 +57,7 @@
 ### GOALS
 
 Target audience:
-- Cycling enthusiast, semi- & professionals, who value high quality products for sports, who are very knowledgeable about the industry, and want to purchase a high end customizable frame or fully assembled bicycle for their sports or recreational cyckling.
+- Cycling enthusiast, semi- & professionals, who value high quality products for sports, who are very knowledgeable about the industry, and want to purchase a high end customizable frame or fully assembled bicycle for their sports or recreational cycling.
 
 Main goal of this site: 
 - Build a full cycle e-shop to present the brand's products to potential buyers, and enable the latter with an easy way to choose a product, get all necessary info about the products on the web or additional info by contacting the website's onwer, quickly and easily purchase one, or save it for buying later.
@@ -66,7 +66,7 @@ Organizational Goals:
 - Present products in way to make a purchase easy
 - Enable convenient & quick way of buying products via its e-shop
 - Sell frames & bicyckles
-- Promote & provide educational support on how to service and take care of bicicles
+- Promote & provide educational support on how to service and take care of bicycles
 - Strengthen the brand's image
 
 User Goals:
@@ -78,8 +78,10 @@ User Goals:
 ##### back to [top](#table-of-contents)
 
 
+
 ### STRATEGY
 Create an e-shop which is easy to navigate, with a simple & convenient order-payment process. The website will be built on Python-Django, with PostgreSQL database, and Stripe payment system. 
+
 
 
 ### SCOPE 
@@ -148,8 +150,9 @@ Logged-in vs unlogged:
 - Logged user can see/access:
     * Everything as above
     * Personal account (user’s details, order history, wish list)
-    * Administtrator can acess product management area (inaccessible to other logged in users)
+    * Administtrator can access product management area (inaccessible to other logged in users)
     
+
 
 ### STRUCTURE 
 
@@ -178,6 +181,7 @@ The website will consist of the following pages/sections:
 *For more details on what pages will contain check out the wireframes below.*
 
 
+
 ### SKELETON
 
 [Balsamiq](https://balsamiq.com/) wireframes software was used to create wireframes for this project.
@@ -199,20 +203,43 @@ Each wireframe below contains mobile, pad & laptop/desktop view:
 * [EVENT page](media/wireframes/event_details.png)
 
 
+
 ### SURFACE 
 
 Design choices:
 * General guidelines are taken from the existing website www.fabike.it, and approved by the main designed of the company, Fabio Putzolu. 
-* The overall strucutre of existing pages will be re-created in this project, but will be coded from scratch, and all the non-existing pages/features will be added during the development of the project.
+* The overall strucutre of existing pages(www.fabik.it) will be re-created in this project, but will be coded from scratch, and all the non-existing pages/features will be added during the development of the project.
 
 Colors:
 * All the colors & color combination will be derived from the 4 main colors used for the frames/bikes: black, blue, yellow, & red.
 
+For the purpose of the project the following colors (matching or related) will be used:
+
+**Greys-Blacks**
+<img src="media/readme/palette/pallete_black_grey.jpg" alt="Color Picking" style="margin: 0 10px; align-self: left;"/>
+
+
+**Blues**
+<img src="media/readme/palette/pallete_blue.jpg" alt="Color Picking" style="margin: 0 10px; align-self: left;"/>
+
+
+**Yellows**
+<img src="media/readme/palette/pallete_yellow.jpg" alt="Color Picking" style="margin: 0 10px; align-self: left;"/>
+
+
+**Reds**
+<img src="media/readme/palette/pallete_red.jpg" alt="Color Picking" style="margin: 0 10px; align-self: left;"/>
+
+
+
 Fonts: 
+* The original web-site is using DINPro font, Bold and Light. For the purpose of the project, i will use a very similar Google font - **Noto Sans KR**. 
 
 
 Images:
 * All product(bikes, frames) & lifestyle photos were taken by the designer of the frames, Fabio Putzolu.
+---
+
 
 
 ## INFORMATION ARCHITECTURE
@@ -327,6 +354,7 @@ The User model used is provided by Django as a part of defaults `django.contrib.
  Time | time | max_length=20 | DateTimeField 
  Price | price | max_digits=3, decimal_places=2  | DecimalField
  Price Comment | price_comment | max_length=120 | CharField
+---
 
 
 
