@@ -84,7 +84,7 @@ Create an e-shop which is easy to navigate, with a simple & convenient order-pay
 
 ### SCOPE 
 
-User Stories
+##### User Stories
 
 Wesbite visitors:
 - First time website visitor:
@@ -151,8 +151,31 @@ Logged-in vs unlogged:
     * Administtrator can acess product management area (inaccessible to other logged in users)
     
 
-
 ### STRUCTURE 
+
+The website will consist of the following pages/sections:
+
+**Unlogged users' view**:
+- HOME 
+- ABOUT 
+- BIKES 
+- URBAN BIKES 
+- ALL-ROAD BIKES
+- ROAD BIKES
+- FRAMES
+- Individual PRODUCT pages
+- EVNETS
+- Individual EVENT pages
+- SHOPPING CART
+- CHECKOUT
+
+**Logged users' view**:
+*In addition to the pages mentioned above*
+- ACCOUNT
+- ORDER HISTORY
+- PRODUCT MANAGEMENT (for super-user)
+
+*For more details on what pages will contain check out the wireframes below.*
 
 
 ### SKELETON
