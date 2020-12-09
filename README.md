@@ -216,18 +216,22 @@ Colors:
 For the purpose of the project the following colors (matching or related) will be used:
 
 **Greys-Blacks**
+
 <img src="media/readme/palette/pallete_black_grey.jpg" alt="Color Picking" style="margin: 0 10px; align-self: left;"/>
 
 
 **Blues**
+
 <img src="media/readme/palette/pallete_blue.jpg" alt="Color Picking" style="margin: 0 10px; align-self: left;"/>
 
 
 **Yellows**
+
 <img src="media/readme/palette/pallete_yellow.jpg" alt="Color Picking" style="margin: 0 10px; align-self: left;"/>
 
 
 **Reds**
+
 <img src="media/readme/palette/pallete_red.jpg" alt="Color Picking" style="margin: 0 10px; align-self: left;"/>
 
 
