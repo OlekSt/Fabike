@@ -256,16 +256,24 @@ Images:
 
 ### DATA MODELLING
 
+<img src="static/readme/db_schema_diagram.png" alt="DB Schema Diagram" style="margin: 0 10px;" width="100%"/>
+
+
 #### User
 The User model used is provided by Django as a part of defaults `django.contrib.auth.models`.
 
 #### Accounts app
 ##### Account
-| **Name** | **Database Key** | **Field Type** | **Validation** |
+| **Name** | **Database Key** | **Validation** | **Field Type** | 
 --- | --- | --- | --- 
  User | user |  on_delete=models.CASCADE | OneToOneField 'User' 
  Full Name | account_full_name | max_length=70 | CharField
  Phone number | account_phone_number | max_length=25 | CharField
+ Address | account_address | max_length=120 | TextField, ForeignKey 'Address'
+
+##### Address
+| **Name** | **Database Key** | **Validation** | **Field Type** | 
+--- | --- | --- | --- 
  Address Line1 | account_address_line1 | max_length=120 | CharField
  Address Line2 | account_address_line2 | max_length=120, null=True, blank=True | CharField
  Town/City | account_town_or_city | max_length=70 | CharField
@@ -275,7 +283,7 @@ The User model used is provided by Django as a part of defaults `django.contrib.
 
 #### Products app
 ##### Product
-| **Name** | **Database Key** | **Field Type** | **Validation** |
+| **Name** | **Database Key** | **Validation** | **Field Type** | 
 --- | --- | --- | --- 
  Product Type | type | choices=PRODUCT_TYPE | CharField
  Name | name | max_length=80 | CharField
@@ -315,18 +323,13 @@ The User model used is provided by Django as a part of defaults `django.contrib.
 
 #### Checkout App
 ##### Order
-| **Name** | **Database Key** | **Field Type** | **Validation** |
+| **Name** | **Database Key** | **Validation** | **Field Type** | 
 --- | --- | --- | --- 
  Order Number | order_number | CharField | max_length=32, null=False, editable=False
- User | account | ForeignKey 'User' | on_delete=models.SET_NULL, null=True, blank=True, related_name='orders'
+ User | account | ForeignKey 'Account' | on_delete=models.SET_NULL, null=True, blank=True, related_name='orders'
  Full Name | account_full_name | max_length=70 | CharField
  Phone number | account_phone_number | max_length=25 | CharField
- Address Line1 | account_address_line1 | max_length=120 | CharField
- Address Line2 | account_address_line2 | max_length=120, null=True, blank=True | CharField
- Town/City | account_town_or_city | max_length=70 | CharField
- County | account_county | max_length=50, null=True, blank=True | CharField
- Postcode | accountaccount_postcode | max_length=20 | CharField
- Country | account_country | blank_label='Country' | CountryField
+ Address | delivery_address | max_length=254 | TextField, ForeignKey 'Address'
  Purchase Date | purchase_date | auto_now_add=True | DateTimeField
  Order Total | order_total | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
  Stripe Pid | stripe_pid | max_length=254, null=False, blank=False, default='' | CharField
@@ -335,23 +338,22 @@ The User model used is provided by Django as a part of defaults `django.contrib.
 
 
  ##### Order Item Details 
-| **Name** | **Database Key** | **Field Type** | **Validation** |
+| **Name** | **Database Key** | **Validation** | **Field Type** | 
 --- | --- | --- | --- 
  Order | order | null=False, blank=False, on_delete=models.CASCADE, related_name='orderitems' | ForeignKey 'Order'
- Product | product | null=False, blank=False, on_delete=models.PROTECT | ForeignKey 'Product'
+ Product | product | null=False, blank=False, on_delete=models.PROTECT | ForeignKey 'Product' or 'Event'
  Quantity | quantity | null=False, blank=False, default=0 | IntegerField
  Color | color | choices=COLORS | CharField
  Size | size | choices=SIZES | CharField
  Components | alloy_or_carbon | choices=COMPONENTS | CharField
  Item Total | item_total | max_digits=6, decimal_places=2, null=False, blank=False, editable=False | DecimalField
 
-
 * Colors, Components & Sizes choices are defined within the Product model.
 
 
 #### Events app
 ##### Event
-| **Name** | **Database Key** | **Field Type** | **Validation** |
+| **Name** | **Database Key** | **Validation** | **Field Type** | 
 --- | --- | --- | --- 
  Name | name | max_length=80 | CharField
  Description | description | max_length=254 | TextFeild
