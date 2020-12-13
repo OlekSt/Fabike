@@ -19,6 +19,45 @@ body{
     width: 5em;
 }
 
+/* to push down the hero image below fixed navbar */
 #hero{
-    padding-top: 90px;
+    padding-top: 95px;
+}
+
+#slogan{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    color: white;
+}
+
+/* Hero image slideshow container */
+.slideshow-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+    max-height: 818px;
+    overflow: hidden;
+}
+
+.active-slide {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 4s;
+    animation-name: fade;
+    animation-duration: 4s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
 }

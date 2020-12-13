@@ -5,29 +5,30 @@
     {% include 'includes/navbar.html' %}
 {% endblock %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
-
-
 {% block content %}
-
-    <div id="hero" class="container-fluid px-0">
-        <div class="row">
-            <div class="col w-100 ">
-                <img class="img-fluid" src="{% static 'img/hero_image.jpg' %}" alt="Hero image"/>
-                <div>
-                    <h3 class="display-6 text-success text-center">DESIGNED FOR EXPERIENCING</h3>
-                </div>
-            </div>
-        </div>
-    </div>    
-
+<div id="hero" class="slideshow-container container-fluid px-0">
+    <div>
+        <h3 id="slogan" class="display-6 text-success text-center">DESIGNED FOR EXPERIENCING</h3>
+    </div>
+    <div class="mySlides fade">
+        <img src="{% static 'img/hero/hero_image_1.jpg' %}" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+        <img src="{% static 'img/hero/hero_image_2.jpg' %}" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+        <img src="{% static 'img/hero/hero_image_3.jpg' %}" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+        <img src="{% static 'img/hero/hero_image_4.jpg' %}" style="width:100%">
+    </div>
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+    </div>
+</div>
     <div class="container v-100">
         <div class="row my-10">
             <div class="col">
@@ -142,3 +143,4 @@
     </div> 
 
 {% endblock %}
+
