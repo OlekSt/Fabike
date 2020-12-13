@@ -19,12 +19,24 @@ body{
     width: 5em;
 }
 
+.navbar-center{
+    margin: auto;  
+}
+
+.navbar-right{
+    margin-left: auto;  
+}
+
 /* to push down the hero image below fixed navbar */
 #hero{
     padding-top: 95px;
     position: relative;
     text-align: center;
     color: white;
+    width: 100%;
+    margin: auto;
+    max-height: 800px;
+    overflow: hidden;
 }
 
 #slogan{
@@ -39,14 +51,6 @@ body{
 }
 
 /* Hero image slideshow container */
-.slideshow-container {
-    width: 100%;
-    position: relative;
-    margin: auto;
-    max-height: 818px;
-    overflow: hidden;
-}
-
 /* Fading animation */
 .fade {
     -webkit-animation-name: fade;
@@ -68,7 +72,8 @@ body{
 /* For various screen sizes */
 @media only screen and (max-width: 600px) {
     #slogan {
-        font-size: 1.4em;
+        font-size: 1.2em;
+        font-weight: 400;
     }
     .centered {
         position: absolute;

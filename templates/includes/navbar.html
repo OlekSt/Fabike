@@ -2,31 +2,55 @@
 
 {% block header %}
 <!-- Top navbar -->
-<div class="bg-dark fixed-top">
-    <div class="col-12 py-2 text-center">
-        <a href="{% url 'home' %}" class="text-center">
-            <img src="{% static 'img/logo/logo_white.jpg' %}" alt="FABIKE logo" height="45px">
-            <h2 class="text-uppercase text-primary">fabike</h2>
-        </a>
-    </div>
-</div>
-<div class="bg-dark fixed-top">
-    <div class="col-12 my-auto py-0 d-flex justify-content-lg-center">
-        <nav class="navbar navbar-expand-lg navbar-light py-1">
-            <button class="navbar-toggler btn btn-outline-light" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+<div class="bg-dark fixed-top row">
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="justify-content-sm-center">
+        <a class="navbar-brand px-1" href="#">
+            <img src="{% static 'img/logo/logo.png' %}" alt="FABIKE logo" height="60">
+        </a> 
+        </div>
+        <button class="navbar-toggler btn btn-outline-light" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse bg-dark py-0" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="text-white py-0 nav-item nav-link active" href="#">BIKES<span class="sr-only"></span></a>
-                    <a class="text-white py-0 nav-item nav-link" href="#">FRAMES</a>
-                    <a class="text-white py-0 nav-item nav-link" href="#">EVENTS</a>
-                    <a class="text-white py-0 nav-item nav-link" href="#">ABOUT</a>
-                    <a class="text-white py-0 nav-item nav-link" href="#">CONTACT</a>
-                    <a class="text-white py-0 nav-item nav-link" href="#">SIGN IN</a>
-                </div>
+        <div class="collapse navbar-collapse my-auto pt-6 d-flex" id="navbarNav">
+            <div class="navbar-center">
+            <ul class="nav navbar-nav display-11">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">BIKES</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item text-white" href="#">URBAN</a>
+                        <a class="dropdown-item text-white" href="#">ALL-ROAD</a>
+                        <a class="dropdown-item text-white" href="#">ROAD</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">FRAMES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">CONTACT</a>
+                </li>
+
+            </ul>
             </div>
-        </nav>
-    </div>
+            <div class="navbar-right">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">WL</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">ACCOUNT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">SC</a>
+                </li>
+            </ul></div>
+        </div>
+    </nav>
 </div>
 {% endblock %}
