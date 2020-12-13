@@ -9,15 +9,15 @@
 			<img src="{% static 'img/logo/logo_white.png' %}" alt="FABIKE logo" height="50px">
 			</a>
 		</div>
-		<div id="main-menu" class="container col-10 my-auto py-0 d-flex">
+		<div id="main-menu" class="container col-10 my-auto py-0 d-flex" role="navigation">
 			<nav class="nav navbar navbar-expand-lg navbar-dark pl-1 pb-1 pt-0 text-white">
                 <div class="navbar-header">
-                    <button class="navbar-toggler first-button collapsed btn pl-2" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon white pl-2"></span>
+                    <button class="navbar-toggler first-button pl-2" data-toggle="collapse" data-activates="navbarContent" type="button" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="animated-icon1 pl-2"><span></span><span></span><span></span></div>
                     </button>  
                 </div>
-				<div id="navbarContent" class="collapse navbar-collapse bg-dark">
-					<ul class="nav navbar-nav pr-0" >
+				<div id="navbarContent" class="collapse navbar-collapse" role="navigation">
+					<ul class="navbar-nav pr-0" >
 						<li>
 							<a class="text-white py-0 nav-item nav-link" href="#">BIKES</a>
 						</li>
@@ -51,6 +51,6 @@
 				</li>
 			</ul>
 		</div>
-	</div>
+    </div>
 
 {% endblock %}
