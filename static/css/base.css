@@ -22,13 +22,16 @@ body{
 /* to push down the hero image below fixed navbar */
 #hero{
     padding-top: 95px;
+    position: relative;
+    text-align: center;
+    color: white;
 }
 
-#slogan{
+.centered {
     position: absolute;
     top: 50%;
-    left:50%;
-    color: white;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Hero image slideshow container */
@@ -38,10 +41,6 @@ body{
     margin: auto;
     max-height: 818px;
     overflow: hidden;
-}
-
-.active-slide {
-    background-color: #717171;
 }
 
 /* Fading animation */
