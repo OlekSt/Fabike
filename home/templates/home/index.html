@@ -1,15 +1,35 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block content %}
-    <div class="container v-100">
+{% block header %}
+    {% include 'includes/navbar.html' %}
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
         <div class="row">
-            <div class="col">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+{% block content %}
+
+    <div id="hero" class="container-fluid px-0">
+        <div class="row">
+            <div class="col w-100 ">
                 <img class="img-fluid" src="{% static 'img/hero_image.jpg' %}" alt="Hero image"/>
-                <h3 class="display-6 text-success text-center">DESIGNED FOR EXPERIENCING</h3>
+                <div>
+                    <h3 class="display-6 text-success text-center">DESIGNED FOR EXPERIENCING</h3>
+                </div>
             </div>
         </div>
-        <div class="row">
+    </div>    
+
+    <div class="container v-100">
+        <div class="row my-10">
             <div class="col">
                 <p class="display-7 text-primary text-uppercase mx-30">fabike is sardinia - italy and prague -     Czech republic based bicycle brand with technical innovation and clean design as a mission.
                 </p>
@@ -119,5 +139,6 @@
                 </h4>     
             </div>
         </div>
-    </div>    
+    </div> 
+
 {% endblock %}

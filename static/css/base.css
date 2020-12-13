@@ -13,3 +13,12 @@ html, body{
 body{
     font-family: 'Noto Sans KR', sans-serif;
 }
+
+/* Navbar */
+#logo{
+    width: 5em;
+}
+
+#hero{
+    padding-top: 90px;
+}
