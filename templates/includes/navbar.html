@@ -1,43 +1,56 @@
 {% load static %}
 
 {% block header %}
+
 <!-- Top navbar -->
 <div class="bg-dark fixed-top row">
-    <div class="col-12 py-2 text-center">
-        <a href="{% url 'home' %}" class="text-center">
-            <img src="{% static 'img/logo/logo.png' %}" alt="FABIKE logo" height="50px">
-        </a>
-    </div>
-    <div id="main-menu" class="col-10 my-auto py-0 d-flex justify-content-lg-center">
-        <nav class="nav navbar navbar-expand-lg navbar-light py-1 text-white">
-            <button class="navbar-toggler btn " type="button" data-toggle="collapse" data-target="#sidenav" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <ul class="nav navbar-nav collapse navbar-collapse bg-dark pr-0" id="navbarNavAltMarkup">
-                <li class="nav-item dropdown"><a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" class="dropdown-toggle text-white py-0 nav-item nav-link" href="#">BIKES<span class="sr-only"></span></a></li>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item text-white py-0 nav-item nav-link" href="#">URBAN</a></li>
-                        <a class="dropdown-item text-white py-0 nav-item nav-link" href="#">ALL-ROAD</a></li>
-                        <a class="dropdown-item text-white py-0 nav-item nav-link" href="#">ROAD</a></li>
-                    </div>
-                <li><a class="text-white py-0 nav-item nav-link" href="#">FRAMES</a></li>
-                <li><a class="text-white py-0 nav-item nav-link" href="#">EVENTS</a></li>
-                <li><a class="text-white py-0 nav-item nav-link" href="#">ABOUT</a></li>
-                <li><a class="text-white py-0 nav-item nav-link" href="#">CONTACT</a></li>
-            </ul>    
-        </nav>
-        
-    </div>
-    <div class="col-2">
-        <ul class="d-flex justify-content-end mb-0">
-            <li class="nav-item">
-                <a class="nav-link text-white px-3" href="#"><i class="far fa-user"></i></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white px-3" href="#"><i class="fas fa-cart-arrow-down"></i></a>
-            </li>
-        </ul>
-    </div>
-</div> 
+	<div class="col-12 py-2 text-center">
+		<a href="{% url 'home' %}" class="text-center">
+			<img src="{% static 'img/logo/logo_white.png' %}" alt="FABIKE logo" height="50px">
+			</a>
+		</div>
+		<div id="main-menu" class="container col-10 my-auto py-0 d-flex">
+			<nav class="nav navbar navbar-expand-lg navbar-dark pl-1 pb-1 pt-0 text-white">
+                <div class="navbar-header">
+                    <button class="navbar-toggler first-button collapsed btn pl-2" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon white pl-2"></span>
+                    </button>  
+                </div>
+				<div id="navbarContent" class="collapse navbar-collapse bg-dark">
+					<ul class="nav navbar-nav pr-0" >
+						<li>
+							<a class="text-white py-0 nav-item nav-link" href="#">BIKES</a>
+						</li>
+						<li>
+							<a class="text-white py-0 nav-item nav-link" href="#">FRAMES</a>
+						</li>
+						<li>
+							<a class="text-white py-0 nav-item nav-link" href="#">EVENTS</a>
+						</li>
+						<li>
+							<a class="text-white py-0 nav-item nav-link" href="#">ABOUT</a>
+						</li>
+						<li>
+							<a class="text-white py-0 nav-item nav-link" href="#">CONTACT</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="col-2">
+			<ul class="d-flex justify-content-end mb-0">
+				<li class="nav-item">
+					<a class="nav-link text-white px-3" href="#">
+						<i class="far fa-user"></i>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white px-3" href="#">
+						<i class="fas fa-cart-arrow-down"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 
 {% endblock %}
