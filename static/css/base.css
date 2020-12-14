@@ -19,6 +19,8 @@ body{
     width: 5em;
 }
 
+/* Index page */
+
 /* to push down the hero image below fixed navbar */
 #hero{
     padding-top: 95px;
@@ -61,12 +63,46 @@ body{
     to {opacity: 1}
 }
 
+.intro-text{
+    padding: 15px 20px;
+    font-size: 1.2em;
+    margin-bottom: 0;
+}
+
+.intro-section{
+    background-color: #0b173d;
+    padding: 20px 0;
+}
+
 /* For various screen sizes */
+@media only screen and (min-width: 995px) {
+    .intro-text{
+        padding-left: 20%;
+        padding-right: 20%;
+        font-size: 3em;
+    }
+}
+
 @media only screen and (min-width: 995px) {
     #main-menu{
         padding-left: 35%;
     }
+    .intro-text{
+        padding-left: 20%;
+        padding-right: 20%;
+        font-size: 2em;
+    }
 }
+
+@media only screen and (min-width: 750px) {
+    .intro-text{
+        padding-left: 15%;
+        padding-right: 15%;
+        font-size: 1.5em;
+    }
+}
+
+
 
 @media only screen and (max-width: 600px) {
     #slogan {
