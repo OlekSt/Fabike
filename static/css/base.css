@@ -122,38 +122,23 @@ body{
 
 #footer{
     background-color: #262626;
+    padding-top: 15px;
+    flex-wrap: wrap;
 }
 
-.social {
-    text-align: center;
-    padding: 20px;
+.footer-links{
+    padding-left: 15px;
 }
 
 .social li a i {
-    height: 46px;
-    width: 46px;
+    height: 30px;
+    width: 30px;
     border-radius: 30%;
-    font-size: 40px;
+    font-size: 30px;
     padding: 13px;
     text-align: center;
     color: #201766;
     color: white;
-}
-
-.social {
-    text-align: center;
-    padding-top: 25px;
-    padding-bottom: 15px;
-}
-
-.social li a i {
-    height: 46px;
-    width: 46px;
-    border-radius: 30%;
-    font-size: 40px;
-    padding-top: 3px;
-    text-align: center;
-    color: #201766;
 }
 
 
