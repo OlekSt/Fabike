@@ -70,15 +70,46 @@ body{
 }
 
 .intro-section{
-    background-color: #0b173d;
+    background-color: #262626;
     padding: 20px 0;
 }
 
+/* to scale width vs height of the image within div */
+.box-image{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.feat-image{
+    width: 100%;
+}
+
+.box-urban{
+    background-color: rgba(83, 55, 15, 0.858);
+}
+
+.box-all-road{
+    background-color: #751d1a;
+}
+
+.box-road{
+    background-color: #0b173d;
+}
+
+.box-urban, 
+.box-all-road,
+.box-road{
+    padding: 50px 50px;
+}
+
+
 /* For various screen sizes */
-@media only screen and (min-width: 995px) {
+@media only screen and (min-width: 1200px) {
     .intro-text{
-        padding-left: 20%;
-        padding-right: 20%;
+        padding-left: 30%;
+        padding-right: 30%;
         font-size: 3em;
     }
 }
@@ -88,9 +119,9 @@ body{
         padding-left: 35%;
     }
     .intro-text{
-        padding-left: 20%;
-        padding-right: 20%;
-        font-size: 2em;
+        padding-left: 30%;
+        padding-right: 30%;
+        font-size: 2.5em;
     }
 }
 
