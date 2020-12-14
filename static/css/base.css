@@ -20,7 +20,6 @@ body{
 }
 
 /* Index page */
-
 /* to push down the hero image below fixed navbar */
 #hero{
     padding-top: 95px;
@@ -106,7 +105,7 @@ body{
 
 /* Brands section */
 .brands-section{
-    background: #262626;
+    background: #575757;
     padding-top: 15px;
 }
 
@@ -120,6 +119,43 @@ body{
     padding-left: 16%;
     padding-right: 16%;
 }
+
+#footer{
+    background-color: #262626;
+}
+
+.social {
+    text-align: center;
+    padding: 20px;
+}
+
+.social li a i {
+    height: 46px;
+    width: 46px;
+    border-radius: 30%;
+    font-size: 40px;
+    padding: 13px;
+    text-align: center;
+    color: #201766;
+    color: white;
+}
+
+.social {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+.social li a i {
+    height: 46px;
+    width: 46px;
+    border-radius: 30%;
+    font-size: 40px;
+    padding-top: 3px;
+    text-align: center;
+    color: #201766;
+}
+
 
 /* For various screen sizes */
 @media only screen and (min-width: 1200px) {
