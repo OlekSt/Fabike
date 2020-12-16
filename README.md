@@ -374,6 +374,7 @@ The website is created by Alexey Statsenko, using the media described below.
 
 
 #### CODE
+- Code for search dropdown menu was copied from CI's Boutique Ado project, and modified according to the current project's needs. Thanks Chris! ;-)
 
 
 
