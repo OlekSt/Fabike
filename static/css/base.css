@@ -6,7 +6,7 @@ html, body{
     margin: 0;
     padding: 0;  
     max-width: 100%;
-    overflow-x: initial !important;
+    overflow-x: initial hidden;
     height: 100%;
 }
 
@@ -18,6 +18,7 @@ body{
 #logo{
     width: 5em;
 }
+
 
 /* Index page */
 /* to push down the hero image below fixed navbar */
@@ -43,6 +44,8 @@ body{
     transform: translate(-50%, -50%);
 }
 
+
+
 /* Hero image slideshow container */
 /* Fading animation */
 .fade {
@@ -62,6 +65,7 @@ body{
     to {opacity: 1}
 }
 
+/* Intro section under hero slideshow */
 .intro-text{
     padding: 15px 20px;
     font-size: 1.2em;
@@ -81,6 +85,7 @@ body{
     height: auto;
 }
 
+/* Urban, all-road, road section on home page */
 .feat-image{
     width: 100%;
 }
@@ -120,6 +125,7 @@ body{
     padding-right: 16%;
 }
 
+/* Footer */
 #footer{
     background-color: #262626;
     padding-top: 15px;
@@ -143,6 +149,7 @@ body{
 
 
 /* For various screen sizes */
+/* Bigger screens */
 @media only screen and (min-width: 1200px) {
     .intro-text{
         padding-left: 30%;
@@ -170,8 +177,7 @@ body{
     }
 }
 
-
-
+/* Smaller screens */
 @media only screen and (max-width: 600px) {
     #slogan {
         font-size: 1.2em;
