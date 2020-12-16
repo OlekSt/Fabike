@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 # Create your views here.
-def index(request):
+def bikes(request):
     """
-    A view to return landing page
+    A view to return all bikes, showing 3 groups: urban, all-road, road 
     """
-    return render(request, 'home/index.html')
+    return render(request, 'products/bikes.html', context)
