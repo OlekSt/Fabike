@@ -5,6 +5,7 @@ from .models import Product
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'frame', 
+        'product_group',
         'name',
         'fork',
         'weight',
@@ -13,10 +14,9 @@ class ProductAdmin(admin.ModelAdmin):
         'price',
         'price_alloy',
         'price_carbon',
-        'product_image01',
     )
 
-    ordering = ('frame',)
+    ordering = ('product_group',)
 
 # Register your models here.
 admin.site.register(Product, ProductAdmin)

@@ -14,7 +14,9 @@ class Product(models.Model):
     URBAN = 'URBAN'
     ALL_ROAD = 'ALL ROAD'
     ROAD = 'ROAD'
+    FRAME = 'FRAME'
     PRODUCT_GROUP = [
+        (FRAME, 'FRAME'),
         (URBAN, 'URBAN'),
         (ALL_ROAD, 'ALL ROAD'),
         (ROAD, 'ROAD'),
@@ -23,12 +25,12 @@ class Product(models.Model):
     product_type = models.CharField(
         max_length=20,
         choices=PRODUCT_TYPE,
-        default=BIKES,
+        default=FRAME,
     )
     product_group = models.CharField(
         max_length=20,
         choices=PRODUCT_GROUP,
-        default=URBAN,
+        default=FRAME,
     )
     frame =	models.CharField(max_length=80)
     name = models.CharField(max_length=80)
@@ -52,11 +54,11 @@ class Product(models.Model):
     seatpost_diameter = models.CharField(max_length=20, null=True, blank=True)
     bottom_bracket = models.CharField(max_length=80, null=True, blank=True)
     dropouts = models.CharField(max_length=120, null=True, blank=True)
-    weight = models.DecimalField(max_digits=4, decimal_places=2, null=True, blank=True,
+    weight = models.DecimalField(max_digits=4, decimal_places=1, null=True, blank=True,
                                  validators=[MinValueValidator(0.01)])
-    weight_alloy = models.DecimalField(max_digits=4, decimal_places=2,  null=True, blank=True,
+    weight_alloy = models.DecimalField(max_digits=4, decimal_places=1,  null=True, blank=True,
                                  validators=[MinValueValidator(0.01)])
-    weight_carbon = models.DecimalField(max_digits=4, decimal_places=2,  null=True, blank=True,
+    weight_carbon = models.DecimalField(max_digits=4, decimal_places=1,  null=True, blank=True,
                                  validators=[MinValueValidator(0.01)])
     price = models.DecimalField(max_digits=6, decimal_places=2,  null=True, blank=True,
                                 validators=[MinValueValidator(0.01)])
@@ -64,7 +66,7 @@ class Product(models.Model):
                                 validators=[MinValueValidator(0.01)])
     price_carbon = models.DecimalField(max_digits=6, decimal_places=2,  null=True, blank=True,
                                 validators=[MinValueValidator(0.01)])
-    price_comment = models.CharField(max_length=120)
+    price_comment = models.CharField(max_length=120, null=True, blank=True)
     product_image01 = models.ImageField(null=True, blank=True)
     image_url01 = models.URLField(max_length=1024, null=True, blank=True)
     product_image02 = models.ImageField(null=True, blank=True)
