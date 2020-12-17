@@ -12,7 +12,7 @@ class ProductAdmin(admin.ModelAdmin):
         'weight_carbon',
         'price',
         'price_alloy',
-        'price_carbon'
+        'price_carbon',
         'product_image01',
     )
 
