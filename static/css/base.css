@@ -14,16 +14,17 @@ body{
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+/* to push down other elements to give space for navbar */
+.pillow{
+    padding-top: 97px;
+}
 /* Navbar */
 #logo{
     width: 5em;
 }
 
-
 /* Index page */
-/* to push down the hero image below fixed navbar */
 #hero{
-    padding-top: 95px;
     position: relative;
     text-align: center;
     color: white;

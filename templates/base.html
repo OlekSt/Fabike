@@ -8,12 +8,14 @@
 <body>
 <header>
 {% block header %}
+    {% include 'includes/navbar.html' %}
 {% endblock %}
 </header>
 
 {% block page_header %}
 {% endblock %}
-
+<div class="pillow">    
+</div>
 {% block content %}
 {% endblock %}
 
