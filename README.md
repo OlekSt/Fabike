@@ -285,7 +285,8 @@ The User model used is provided by Django as a part of defaults `django.contrib.
 ##### Product
 | **Name** | **Database Key** | **Validation** | **Field Type** | 
 --- | --- | --- | --- 
- Product Type | type | choices=PRODUCT_TYPE | CharField
+ Product Type | product_type | choices=PRODUCT_TYPE | CharField
+ Product Group | product_group | choices=PRODUCT_GROUP | CharField
  Name | name | max_length=80 | CharField
  Frame Type | frame | max_length=80  | CharField
  Title | title | max_length=120  | TextField
