@@ -14,9 +14,11 @@ class Product(models.Model):
     URBAN = 'URBAN'
     ALL_ROAD = 'ALL ROAD'
     ROAD = 'ROAD'
-    FRAME = 'FRAME'
+    CARBON = 'CARBON'
+    TITANIUM = 'TITANIUM'
     PRODUCT_GROUP = [
-        (FRAME, 'FRAME'),
+        (CARBON, 'CARBON'),
+        (TITANIUM, 'TITANIUM'),
         (URBAN, 'URBAN'),
         (ALL_ROAD, 'ALL ROAD'),
         (ROAD, 'ROAD'),
@@ -25,12 +27,12 @@ class Product(models.Model):
     product_type = models.CharField(
         max_length=20,
         choices=PRODUCT_TYPE,
-        default=FRAME,
+        default=FRAMES,
     )
     product_group = models.CharField(
         max_length=20,
         choices=PRODUCT_GROUP,
-        default=FRAME,
+        default=CARBON,
     )
     frame =	models.CharField(max_length=80)
     name = models.CharField(max_length=80)

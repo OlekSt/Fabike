@@ -4,5 +4,9 @@
 {% block extra_title %}- Bikes{% endblock %}
 
 {% block content %}
-<h3> here </h3>
+<h2 class="text-center"> BIKES </h2>
+
+<a href="{% url 'urban' %}"><h3> URBAN </h3></a>
+<a href="{% url 'all_road' %}"><h3> ALL ROAD </h3></a>
+<a href="{% url 'road' %}"><h3> ROAD </h3></a>
 {% endblock %}
