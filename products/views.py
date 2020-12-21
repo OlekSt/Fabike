@@ -1,14 +1,17 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Product
 
-
 def bikes(request):
     """
     A view to return all bikes, showing 3 groups: urban, all-road, road 
     """
-    bikes = Product.objects.filter(product_type='BIKES')
+    urban = Product.objects.filter(product_group='URBAN')
+    all_road = Product.objects.filter(product_group='ALL ROAD')
+    road = Product.objects.filter(product_group='ROAD')
     context = {
-        'bikes': bikes,
+        'urban': urban,
+        'all_road': all_road,
+        'road': road,    
     }    
     return render(request, 'products/bikes.html', context)
 
@@ -17,6 +20,7 @@ def urban(request):
     """
     A view to return urban bikes 
     """
+    
     urban = Product.objects.filter(product_group='URBAN')
     context = {
         'urban': urban,

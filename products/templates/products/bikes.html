@@ -12,25 +12,30 @@
         <div class="col-12 col-lg-4 col-md-4 text-center px-0 mx-0">
             <img class="bikes-img image-fluid" src="{% static 'img/index/homepage_featured_box_1.jpg' %}" alt="Urban Bikes">
             <h3><a  href="{% url 'urban' %}">URBAN</a></h3>
-            <h3 class="text-center"> URBAN</h3>
-            <h3 class="text-center"> URBAN</h3>
-            <h3 class="text-center"> URBAN</h3>
-            <h3 class="text-center"> URBAN</h3>
-            <h3 class="text-center"> URBAN</h3>
-            <h3 class="text-center"> URBAN</h3>
-            <h3 class="text-center"> URBAN</h3>
+        
+            <div class="row">
+                
+                {% for item in urban %}
+                
+                <div class="col">
+                    <div class="card h-100 border-0"> 
+                        {{ item.name }}
+                        {{ item.title }}
+                        {{ item.fork }}
+                    </div>
+                    
+                </div>
+                {% endfor %}
+            
+            </div>
+            
+            
 
         </div>
         <div class="col-12 col-lg-4 col-md-4 text-center px-0 mx-0">
             <img class="bikes-img image-fluid" src="{% static 'img/index/homepage_featured_box_2.jpg' %}" alt="All Road Bikes">
             <h3><a href="{% url 'all_road' %}">ALL ROAD</a></h3>
-            <h3 class="text-center"> ALL ROAD</h3>
-            <h3 class="text-center"> ALL ROAD</h3>
-            <h3 class="text-center"> ALL ROAD</h3>
-            <h3 class="text-center"> ALL ROAD</h3>
-            <h3 class="text-center"> ALL ROAD</h3>
-            <h3 class="text-center"> ALL ROAD</h3>
-            <h3 class="text-center"> ALL ROAD</h3>
+           {{ all_road }}
 
         </div>
         <div class="col-12 col-lg-4 col-md-4 text-center px-0 mx-0">
