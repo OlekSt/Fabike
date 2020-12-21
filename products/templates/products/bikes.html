@@ -4,19 +4,14 @@
 {% block extra_title %}- Bikes{% endblock %}
 
 {% block content %}
-
-<h2 class="text-center"> BIKES </h2>
-
-<a href="{% url 'urban' %}"><h3> URBAN </h3></a>
-<a href="{% url 'all_road' %}"><h3> ALL ROAD </h3></a>
-<a href="{% url 'road' %}"><h3> ROAD </h3></a>
-
-<div class="container-fluid">
+<div id="products" class="container-fluid ">
     <div class="row">
-        <h3 class="text-center"> BIKES IMAGE</h3>
+        <img class="image-fluid" src="{% static 'img/products/bikes.jpg' %}" alt="Bikes">
     </div>
-    <div class="row">
-        <div class="col-12 col-lg-4">
+    <div class="row px-1">
+        <div class="col-12 col-lg-4 col-md-4 text-center px-0 mx-0">
+            <img class="bikes-img image-fluid" src="{% static 'img/index/homepage_featured_box_1.jpg' %}" alt="Urban Bikes">
+            <h3><a  href="{% url 'urban' %}">URBAN</a></h3>
             <h3 class="text-center"> URBAN</h3>
             <h3 class="text-center"> URBAN</h3>
             <h3 class="text-center"> URBAN</h3>
@@ -26,7 +21,9 @@
             <h3 class="text-center"> URBAN</h3>
 
         </div>
-        <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-4 col-md-4 text-center px-0 mx-0">
+            <img class="bikes-img image-fluid" src="{% static 'img/index/homepage_featured_box_2.jpg' %}" alt="All Road Bikes">
+            <h3><a href="{% url 'all_road' %}">ALL ROAD</a></h3>
             <h3 class="text-center"> ALL ROAD</h3>
             <h3 class="text-center"> ALL ROAD</h3>
             <h3 class="text-center"> ALL ROAD</h3>
@@ -36,7 +33,9 @@
             <h3 class="text-center"> ALL ROAD</h3>
 
         </div>
-        <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-4 col-md-4 text-center px-0 mx-0">
+            <img class="bikes-img image-fluid" src="{% static 'img/index/homepage_featured_box_3.jpg' %}" alt="Road Bikes">
+            <h3><a href="{% url 'road' %}">ROAD</a></h3>
             <h3 class="text-center"> ROAD</h3>
             <h3 class="text-center"> ROAD</h3>
             <h3 class="text-center"> ROAD</h3>

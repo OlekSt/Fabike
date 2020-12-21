@@ -130,6 +130,15 @@ body{
     padding-right: 16%;
 }
 
+/* Products page */
+#products{
+    padding: 0;
+}
+
+.bikes-img{
+    width: 100%;
+}
+
 /* Footer */
 #footer{
     background-color: #262626;
