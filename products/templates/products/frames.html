@@ -4,10 +4,19 @@
 {% block extra_title %}- Frames{% endblock %}
 
 {% block content %}
-<h2 class="text-center"> FRAMES </h2>
-
-<a href="{% url 'titanium' %}"><h3> Titanium </h3></a>
-<a href="{% url 'carbon' %}"><h3> Carbon </h3></a>
-
-{{ frames }}
+<div id="all-road" class="container-fluid ">
+    <div class="row">
+        <img class="image-fluid" src="{% static 'img/products/frame/c3+t1_white.jpg' %}" alt="Frames">
+    </div>
+    <div class="row justify-content-center py-5">
+        <div class="col-lg-4 col-sm-10 text-center pt-3">
+            <a href="{% url 'carbon' %}"><a href="{% url 'carbon' %}"><img class="bikes-img image-fluid" src="{% static 'img/products/frame/c3frame_white.jpg' %}" alt="Carbon Fiber frame"></a>
+            <h5>FABIKE C3 <strong>FRAME SET</strong></h5></a>
+        </div>
+        <div class="col-lg-4 col-sm-10  text-center pt-3">
+            <a href="{% url 'titanium' %}"><a href="{% url 'carbon' %}"><img class="bikes-img image-fluid" src="{% static 'img/products/frame/t1frame_white.jpg' %}" alt="Titanium frame"></a>
+            <h5>FABIKE T2 <strong>FRAME SET</strong></h5></a>
+        </div>    
+    </div>
+</div>
 {% endblock %}
