@@ -10,8 +10,8 @@
     </div>
     <div id="bikes-section" class="row">
         <div class="col-12 col-lg-4 col-md-4 text-center px-0 mx-0 pb-5">
-            <img class="bikes-img image-fluid" src="{% static 'img/index/homepage_featured_box_1.jpg' %}" alt="Urban Bikes">
-            <h2 class="font-weight-bolder pt-3 "><a class="bike-sec-title" href="{% url 'urban' %}">URBAN</a></h2>
+            <a href="{% url 'urban' %}"><img class="bikes-img image-fluid" src="{% static 'img/index/homepage_featured_box_1.jpg' %}" alt="Urban Bikes"></a>
+            <h2 class="pt-3"><a class="bike-sec-title" href="{% url 'urban' %}">URBAN</a></h2>
             <div class="row">
                 {% for item in urban %}
                 <div class="col-12 px-5">
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-4 col-md-4 text-center px-0 mx-0 pb-5">
-            <img class="bikes-img image-fluid" src="{% static 'img/index/homepage_featured_box_2.jpg' %}" alt="All Road Bikes">
+            <a href="{% url 'all_road' %}"><img class="bikes-img image-fluid" src="{% static 'img/index/homepage_featured_box_2.jpg' %}" alt="All Road Bikes"></a>
             <h2 class="pt-3"><a class="bike-sec-title" href="{% url 'all_road' %}">ALL ROAD</a></h2>
             <div class="row">
                 {% for item in all_road %}
@@ -38,7 +38,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-4 col-md-4 text-center px-0 mx-0  pb-5">
-            <img class="bikes-img image-fluid" src="{% static 'img/index/homepage_featured_box_3.jpg' %}" alt="Road Bikes">
+            <a href="{% url 'road' %}"><img class="bikes-img image-fluid" src="{% static 'img/index/homepage_featured_box_3.jpg' %}" alt="Road Bikes"></a>
             <h2 class="pt-3"><a class="bike-sec-title" href="{% url 'road' %}">ROAD</a></h2>
             <div class="row">
                 {% for item in road %}
