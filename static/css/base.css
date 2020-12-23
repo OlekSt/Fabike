@@ -45,8 +45,6 @@ body{
     transform: translate(-50%, -50%);
 }
 
-
-
 /* Hero image slideshow container */
 .hero-image{
     width: 100%;
@@ -139,6 +137,15 @@ body{
 
 .bikes-img{
     width: 100%;
+}
+
+.product-image{
+    width: 100%;
+}
+
+.bike-sec-title{
+    color: black;
+    text-decoration: none;
 }
 
 /* Footer */

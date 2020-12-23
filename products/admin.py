@@ -14,6 +14,7 @@ class ProductAdmin(admin.ModelAdmin):
         'price',
         'price_alloy',
         'price_carbon',
+        'image01',
     )
 
     ordering = ('product_group',)

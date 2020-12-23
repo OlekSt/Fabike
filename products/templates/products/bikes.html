@@ -9,48 +9,43 @@
         <img class="image-fluid" src="{% static 'img/products/bikes.jpg' %}" alt="Bikes">
     </div>
     <div id="bikes-section" class="row">
-        <div class="col-12 col-lg-4 col-md-4 text-center px-0 mx-0">
+        <div class="col-12 col-lg-4 col-md-4 text-center px-0 mx-0 pb-5">
             <img class="bikes-img image-fluid" src="{% static 'img/index/homepage_featured_box_1.jpg' %}" alt="Urban Bikes">
-            <h3><a  href="{% url 'urban' %}">URBAN</a></h3>
+            <h2 class="font-weight-bolder pt-3 "><a class="bike-sec-title" href="{% url 'urban' %}">URBAN</a></h2>
             <div class="row">
                 {% for item in urban %}
-                <div class="col">
+                <div class="col-12 px-5">
                     <div class="card h-100 border-0"> 
-                        {{ item.name }}
-                        {{ item.title }}
-                        {{ item.fork }}
+                        <img class="product-image" src="{% static 'img/products/urban/c3_ss_lr.jpg' %}"  alt="Bike Image">
+                        <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
                     </div>
                 </div>
                 {% endfor %}
             </div>
         </div>
-        <div class="col-12 col-lg-4 col-md-4 text-center px-0 mx-0">
+        <div class="col-12 col-lg-4 col-md-4 text-center px-0 mx-0 pb-5">
             <img class="bikes-img image-fluid" src="{% static 'img/index/homepage_featured_box_2.jpg' %}" alt="All Road Bikes">
-            <h3><a href="{% url 'all_road' %}">ALL ROAD</a></h3>
+            <h2 class="pt-3"><a class="bike-sec-title" href="{% url 'all_road' %}">ALL ROAD</a></h2>
             <div class="row">
-            {% for item in all_road %}
-                
-                <div class="col">
+                {% for item in all_road %}
+                <div class="col-12 px-5">
                     <div class="card h-100 border-0"> 
-                        {{ item.name }}
-                        {{ item.title }}
-                        {{ item.fork }}
+                        <img class="product-image" src="{% static 'img/products/allroad/t2x_rohloff_drop_lr.jpg' %}"  alt="Bike Image">
+                        <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
                     </div>
-                    
                 </div>
                 {% endfor %}
             </div>
         </div>
-        <div class="col-12 col-lg-4 col-md-4 text-center px-0 mx-0">
+        <div class="col-12 col-lg-4 col-md-4 text-center px-0 mx-0  pb-5">
             <img class="bikes-img image-fluid" src="{% static 'img/index/homepage_featured_box_3.jpg' %}" alt="Road Bikes">
-            <h3><a href="{% url 'road' %}">ROAD</a></h3>
+            <h2 class="pt-3"><a class="bike-sec-title" href="{% url 'road' %}">ROAD</a></h2>
             <div class="row">
-            {% for item in road %}
-                <div class="col">
+                {% for item in road %}
+                <div class="col-12 px-5">
                     <div class="card h-100 border-0"> 
-                        {{ item.name }}
-                        {{ item.title }}
-                        {{ item.fork }}
+                        <img class="product-image" src="{% static 'img/products/road/c3_force_axs_hr.jpg' %}"  alt="Bike Image">
+                        <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
                     </div>
                 </div>
                 {% endfor %}

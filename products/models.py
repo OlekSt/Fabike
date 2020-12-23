@@ -69,10 +69,10 @@ class Product(models.Model):
     price_carbon = models.DecimalField(max_digits=6, decimal_places=2,  null=True, blank=True,
                                 validators=[MinValueValidator(0.01)])
     price_comment = models.CharField(max_length=120, null=True, blank=True)
-    product_image01 = models.ImageField(null=True, blank=True)
-    image_url01 = models.URLField(max_length=1024, null=True, blank=True)
-    product_image02 = models.ImageField(null=True, blank=True)
-    image_url02 = models.URLField(max_length=1024, null=True, blank=True)
+    image01 = models.ImageField(null=True, blank=True)
+    img_url01 = models.URLField(max_length=1024, null=True, blank=True)
+    image02 = models.ImageField(null=True, blank=True)
+    img_url02 = models.URLField(max_length=1024, null=True, blank=True)
 
 
     class Meta:
