@@ -4,6 +4,19 @@
 {% block extra_title %}- Urban bikes{% endblock %}
 
 {% block content %}
-<h2 class="text-center">Urban bikes</h2>
-{{ urban }}
+<div id="urban" class="container-fluid ">
+    <div class="row">
+        <img class="image-fluid" src="{% static 'img/products/urban.jpg' %}" alt="Bikes">
+    </div>
+    <div class="row">
+        {% for item in road %}
+        <div class="col-lg-6 col-sm-12 text-center px-5 mx-0 pb-5">
+            <div class="card h-100 border-0"> 
+                <img class="product-image" src="{% static 'img/products/urban/t2x_rohloff_lr.jpg' %}"  alt="Bike Image">
+                <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
