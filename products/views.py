@@ -32,7 +32,7 @@ def all_road(request):
     """
     A view to return all road bikes 
     """
-    all_road = Product.objects.filter(product_group='ALL_ROAD')
+    all_road = Product.objects.filter(product_group='ALL ROAD')
     context = {
         'all_road': all_road,
     }    
@@ -47,7 +47,7 @@ def road(request):
     context = {
         'road': road,
     }    
-    return render(request, 'products/all_road.html', context)
+    return render(request, 'products/road.html', context)
 
 
 def frames(request):
