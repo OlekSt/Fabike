@@ -16,6 +16,18 @@ def bikes(request):
     return render(request, 'products/bikes.html', context)
 
 
+def bike(request, product_id):
+    """
+    A view to return an individual bike details
+    """
+    bikes = Product.objects.filter(product_type='BIKES')
+    bike = get_object_or_404(bikes, pk=product_id)
+    context = {
+        'bike': bike,
+    }    
+    return render(request, 'products/bike.html', context)
+
+
 def urban(request):
     """
     A view to return urban bikes 
@@ -25,6 +37,7 @@ def urban(request):
         'urban': urban,
     }    
     return render(request, 'products/urban.html', context)
+
 
 
 def all_road(request):

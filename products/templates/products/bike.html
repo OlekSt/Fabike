@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/product.css' %}" type="text/css">
+{% endblock %}
+
+{% block extra_title %}- Bike details{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <img class="image-fluid" src="{{ STATIC_URL}}img/products/all_road/{{ bike.image02 }}" alt="{{ bike.frame }} {{ bike.name }}">
+    </div>
+    <div class="row">
+        <div class="col col-lg-6 col-md-6 col-sm-12 bg-dark">
+            <h4 class="test">TEST</h4>
+            <h4 class="text-white">{{ bike.frame }}</h4>
+            <h4 class="text-white">{{ bike.name }}</h4>
+            <p class="text-white">{{ bike.title }}</p>
+        </div>
+        <div class="col col-lg-6 col-md-6 col-sm-12 bg-secondary">
+            <div class="row">
+                <div id="color-choice" class="col-4">
+                    <h7><strong>COLOR</strong></h7>
+                    <form>
+                        <div class="custom-radios">
+                            <div>
+                                <input type="radio" id="color-1" name="color" value="color-1" checked>
+                                <label for="color-1">
+                                <span>
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+                                </span>
+                                </label>
+                            </div>
+                            
+                            <div>
+                                <input type="radio" id="color-2" name="color" value="color-2">
+                                <label for="color-2">
+                                <span>
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+                                </span>
+                                </label>
+                            </div>
+                            
+                            <div>
+                                <input type="radio" id="color-3" name="color" value="color-3">
+                                <label for="color-3">
+                                <span>
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+                                </span>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="color-4" name="color" value="color-4">
+                                <label for="color-4">
+                                <span>
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+                                </span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-4">
+                    <h7><strong>SIZE</strong></h7>
+                </div>
+                <div class="col-4">
+                    <h7><strong>COMPONENTS</strong></h7>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <h7><strong>PRICE</strong></h7>
+                    <h4 class="text-white">{{ bike.price_alloy }}</h4>
+                </div>
+                
+            </div>
+            <p>{{ bike.price_comment }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
