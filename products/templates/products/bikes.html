@@ -16,7 +16,7 @@
                 {% for item in urban %}
                 <div class="col-12 px-5">
                     <div class="card h-100 border-0"> 
-                        <img class="product-image" src="{% static 'img/products/urban/c3_ss_lr.jpg' %}"  alt="Bike Image">
+                        <img class="product-image" src="{{ STATIC_URL}}img/products/urban/{{ item.image01 }}"  alt="Bike Image">
                         <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                 {% for item in all_road %}
                 <div class="col-12 px-5">
                     <div class="card h-100 border-0"> 
-                        <img class="product-image" src="{% static 'img/products/all_road/t2x_rohloff_drop_lr.jpg' %}"  alt="Bike Image">
+                        <img class="product-image" src="{% static 'img/products/all_road/{{ item.image01 }}' %}"  alt="Bike Image">
                         <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
                     </div>
                 </div>
