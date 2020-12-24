@@ -15,17 +15,9 @@
             <div class="row">
                 {% for item in urban %}
                 <div class="col-12 px-5">
-<<<<<<< HEAD
                     <div class="card h-100 border-0"> 
                         <img class="product-image" src="{{ STATIC_URL}}img/products/urban/{{ item.image01 }}"  alt="Bike Image">
                         <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
-=======
-                    <div class="card h-100 border-0">
-                         <a href="{% url 'bike' product.id %}"> 
-                            <img class="product-image" src="{% static 'img/products/urban/c3_ss_lr.jpg' %}"  alt="Bike Image">
-                            <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
-                        </a>
->>>>>>> 599d75778803312c478872ef1fe44187382dca61
                     </div>
                 </div>
                 {% endfor %}

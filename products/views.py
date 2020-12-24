@@ -26,17 +26,6 @@ def urban(request):
     }    
     return render(request, 'products/urban.html', context)
 
-def bike(request, product_id):
-    """ 
-    A view to display an individual urban bike 
-    """
-    bikes = Product.objects.filter(product_type='BIKES')
-    bike = get_object_or_404(bikes, pk=product_id)
-    context = {
-        'bike': bike,
-    }
-    return render(request, 'products/bike.html', context)
-
 
 def all_road(request):
     """
