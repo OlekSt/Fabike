@@ -23,6 +23,10 @@ body{
     width: 5em;
 }
 
+.account-dropdown-menu{
+    list-style-type: none;
+}
+
 /* Index page */
 #hero{
     position: relative;
@@ -138,7 +142,8 @@ body{
     overflow-x: hidden !important;
 }
 
-.bikes-img{
+.bikes-img,
+.frames-img{
     width: 100%;
 }
 
@@ -226,5 +231,8 @@ body{
     .brands-text {
         padding-left: 5px;
         padding-right: 5px;
+    }
+    .nav-item i{
+        font-size: 0.8em;
     }
 }
