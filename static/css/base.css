@@ -151,22 +151,15 @@ body{
     width: 100%;
 }
 
-.bike-sec-title{
-    color:#575757;
-    
-    text-decoration: none;
-}
-
-.bike-sec-title:hover{
-    color: black;
-}
-
-/* Individual product title not to look like a link */
+/* Bike section titles and individual bikes titles */
+/* so they don't look like links */
+.bike-sec-title,
 .bike-link{
     color:#575757;
     text-decoration: none;
 }
 
+.bike-sec-title:hover,
 .bike-link:hover{
     color: black;
 }

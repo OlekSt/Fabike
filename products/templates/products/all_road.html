@@ -11,10 +11,12 @@
     <div class="row">
         {% for item in all_road %}
         <div class="col-lg-6 col-sm-12 text-center px-5 mx-0 pb-5">
-            <div class="card h-100 border-0"> 
-                <img class="product-image" src="{% static 'img/products/all_road/t2x_force_axs_lr.jpg' %}"  alt="Bike Image">
-                <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
-            </div>
+            <a class="bike-link" href="{% url 'bike' item.id %}">    
+                <div class="card h-100 border-0"> 
+                    <img class="product-image" src="{{ STATIC_URL }}img/products/bikes/{{ item.image01 }}"  alt="{{ item.frame }} {{ item.name }}">
+                    <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
+                </div>
+            </a>
         </div>
         {% endfor %}
     </div>
