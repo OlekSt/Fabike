@@ -109,5 +109,48 @@
             <p class="price-comment">* {{ bike.price_comment }}</p>
         </div>
     </div>
+    <div class="row">
+        <div class="col-7">
+            <h5>SPECIFICATIONS</h5>
+            <div class="row">
+                <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <h6>FRAME</h6>
+                    <p>{{ bike.frame }}</p>
+                    <h6>FORK</h6>
+                    <p>{{ bike.fork }}</p>
+                    <h6>WHEELS</h6>
+                    <p>{{ bike.wheels }}</p>
+                    <h6>TYRES</h6>
+                    <p>{{ bike.tyres }}</p>
+                    <h6>CRANCKSET</h6>
+                    <p>{{ bike.crankset }}</p>
+                    <h6>SHIFT LEVERS</h6>
+                    <p>{{ bike.shift_levers }}</p>
+                    <h6>DERAILLEURS</h6>
+                    <p>{{ bike.derailleurs }}</p>
+                </div>
+                <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <h6>CASSETTE/SPROCKET</h6>
+                    <p>{{ bike.casette_or_sprocket }}</p>
+                    <h6>CHAIN/BELT</h6>
+                    <p>{{ bike.chain_or_belt }}</p>
+                    <h6>BRAKES</h6>
+                    <p>{{ bike.brakes }}</p>
+                    <h6>HANDLEBAR</h6>
+                    <p>{{ bike.handlebar }}</p>
+                    <h6>STEM</h6>
+                    <p>{{ bike.stem }}</p>
+                    <h6>SADDLE</h6>
+                    <p>{{ bike.saddle }}</p>
+                    <h6>SEATPOST</h6>
+                    <p>{{ bike.seatpost }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-5">
+        <h5 >GEOMETRY & SIZES</h5>
+            
+        </div>
+    </div>
 </div>
 {% endblock %}
