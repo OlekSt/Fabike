@@ -7,6 +7,11 @@
     padding: 0;
 }
 
+#color-size-price-sec{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
 .price-comment{
     font-size: 0.7em;
 }
@@ -119,6 +124,38 @@
 /* Finish - Components selector */
 
 /* For smaller screen sizes */
+@media only screen and (max-width: 1366px) {
+    #components-selector div label{
+        font-size: 1.3em;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .container-product{
+    width: 100%;
+    }
+    .bike-mini-title{
+        font-size: 0.8em;
+    }
+    .color-size-price div {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    .color-size-price div h7{
+        font-size: 1em;
+    }
+    .custom-radios div{
+        padding: 0 1px;
+    }
+    #components-div{
+        padding-top: 0;
+        padding-left: 10px;
+    }
+    #components-selector div label{
+        font-size: 0.85em;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .container-product{
     width: 100%;
@@ -126,7 +163,25 @@
     .bike-mini-title{
         font-size: 0.8em;
     }
+    .color-size-price{
+        padding-left: 10px;
+    }
+    .size-box{
+        padding-left: 20px;
+    }
+    .color-size-price div {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
     .color-size-price div h7{
         font-size: 1em;
     }
+    #components-div{
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    #color-size-price-sec{
+    padding-right: 20px;
+    padding-left: 30px;
+}
 }

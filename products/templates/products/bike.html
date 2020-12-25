@@ -18,9 +18,9 @@
             <h4 class="text-white">{{ bike.name }}</h4>
             <p class="text-white bike-mini-title mb-4">{{ bike.title }}</p>
         </div>
-        <div class="col-12 col-lg-6 col-md-6 bg-secondary px-5 pt-3">
+        <div id="color-size-price-sec" class="col-12 col-lg-6 col-md-6 bg-secondary pt-3">
             <div class="row color-size-price">
-                <div id="color-choice" class="col col-lg-4 col-sm-6">
+                <div id="color-choice" class="col-6 col-lg-4 col-md-4">
                     <h7><strong>COLOR</strong></h7>
                     <form>
                         <div class="custom-radios">
@@ -43,7 +43,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="col col-lg-4 col-sm-6">
+                <div class="size-box col-6 col-lg-4 col-md-3">
                     <h7><strong>SIZE</strong></h7>
                     <form id="size-selector">
                         <div>
@@ -68,10 +68,10 @@
                         </div>
                     </form>
                 </div>
-                <div class="col col-lg-4 col-sm-12">
+                <div id="components-div" class="col-12 col-lg-4 col-md-4">
                     <h7><strong>COMPONENTS</strong></h7>
                     <form id="components-selector">
-                        <div>
+                        <div >
                             <input type="radio" id="alloy-components" name="components" checked>
                             <label for="alloy-components">ALLOY</label>
                         </div>
@@ -83,9 +83,20 @@
                 </div>
             </div>
             <div class="row mt-2">
-                <div class="col-8">
+                <div class="col-4">
                     <h7><strong>PRICE</strong></h7>
-                    <h4 class="text-white">{{ bike.price_alloy }}</h4>
+                    <h4 class="text-white text-center">€ {{ bike.price_alloy }}</h4>
+                    <hr>
+                    <h4 class="text-white text-center">€ {{ bike.price_carbon }}</h4>
+                </div>
+                <div class="col-4">
+                    <h7><strong>WEIGHT</strong></h7>
+                    <h4 class="text-white text-center">{{ bike.weight_alloy }} Kg</h4>
+                    <hr>
+                    <h4 class="text-white text-center">{{ bike.weight_carbon }} Kg</h4>
+                </div>
+                <div class="col-4">
+                    
                 </div>
             </div>
             <p class="price-comment">* {{ bike.price_comment }}</p>

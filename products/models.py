@@ -62,12 +62,9 @@ class Product(models.Model):
                                  validators=[MinValueValidator(0.01)])
     weight_carbon = models.DecimalField(max_digits=4, decimal_places=1,  null=True, blank=True,
                                  validators=[MinValueValidator(0.01)])
-    price = models.DecimalField(max_digits=6, decimal_places=2,  null=True, blank=True,
-                                validators=[MinValueValidator(0.01)])
-    price_alloy = models.DecimalField(max_digits=6, decimal_places=2,  null=True, blank=True,
-                                validators=[MinValueValidator(0.01)])
-    price_carbon = models.DecimalField(max_digits=6, decimal_places=2,  null=True, blank=True,
-                                validators=[MinValueValidator(0.01)])
+    price = models.DecimalField(max_digits=4, decimal_places=0, null=True, blank=True, validators=[MinValueValidator(1)])
+    price_alloy = models.DecimalField(max_digits=4, decimal_places=0, null=True, blank=True, validators=[MinValueValidator(1)])
+    price_carbon = models.DecimalField(max_digits=4, decimal_places=0, null=True, blank=True, validators=[MinValueValidator(1)])
     price_comment = models.CharField(max_length=120, null=True, blank=True)
     image01 = models.ImageField(null=True, blank=True)
     img_url01 = models.URLField(max_length=1024, null=True, blank=True)
