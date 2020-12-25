@@ -12,7 +12,6 @@
 }
 
 
-
 /* Code for color radio buttons */
 .custom-radios div {
     display: inline-block;
@@ -64,6 +63,31 @@
     border-radius: 50%;
 }
 /* Finish - Code for color radio buttons */
+
+/* Size selector */
+#size-selector div{
+    display: inline-block;
+    padding: 4px 1px 0 0;
+}
+
+#size-selector input[type=radio] {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+}
+
+#size-selector label{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: white;
+}
+
+#size-selector input[type=radio]:checked + label {
+    color:  rgb(211, 211, 15);
+}
+/* Finish - Size selector */
 
 /* For smaller screen sizes */
 @media only screen and (max-width: 600px) {
