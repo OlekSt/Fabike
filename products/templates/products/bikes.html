@@ -15,10 +15,12 @@
             <div class="row">
                 {% for item in urban %}
                 <div class="col-12 px-5">
-                    <div class="card h-100 border-0"> 
-                        <img class="product-image" src="{{ STATIC_URL }}img/products/urban/{{ item.image01 }}"  alt="{{ item.frame }} {{ item.name }}">
-                        <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
-                    </div>
+                    <a class="bike-link" href="{% url 'bike' item.id %}">
+                        <div class="card h-100 border-0"> 
+                            <img class="product-image" src="{{ STATIC_URL }}img/products/bikes/{{ item.image01 }}"  alt="{{ item.frame }} {{ item.name }}">
+                            <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
+                        </div>
+                    </a>
                 </div>
                 {% endfor %}
             </div>
@@ -29,9 +31,9 @@
             <div class="row">
                 {% for item in all_road %}
                 <div class="col-12 px-5">
-                    <a href="{% url 'bike' item.id %}">
+                    <a class="bike-link" href="{% url 'bike' item.id %}">
                         <div class="card h-100 border-0"> 
-                            <img class="product-image" src="{{ STATIC_URL }}img/products/all_road/{{ item.image01 }}"  alt="{{ item.frame }} {{ item.name }}">
+                            <img class="product-image" src="{{ STATIC_URL }}img/products/bikes/{{ item.image01 }}"  alt="{{ item.frame }} {{ item.name }}">
                             <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
                         </div>
                     </a>
@@ -45,10 +47,12 @@
             <div class="row">
                 {% for item in road %}
                 <div class="col-12 px-5">
-                    <div class="card h-100 border-0"> 
-                        <img class="product-image" src="{{ STATIC_URL }}img/products/road/{{ item.image01 }}"  alt="{{ item.frame }} {{ item.name }}">
-                        <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
-                    </div>
+                    <a class="bike-link" href="{% url 'bike' item.id %}">
+                        <div class="card h-100 border-0"> 
+                            <img class="product-image" src="{{ STATIC_URL }}img/products/bikes/{{ item.image01 }}"  alt="{{ item.frame }} {{ item.name }}">
+                            <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
+                        </div>
+                    </a>
                 </div>
                 {% endfor %}
             </div>

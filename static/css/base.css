@@ -152,13 +152,23 @@ body{
 }
 
 .bike-sec-title{
-    color: black;
+    color:#575757;
+    
     text-decoration: none;
-    a:hover
 }
 
 .bike-sec-title:hover{
+    color: black;
+}
+
+/* Individual product title not to look like a link */
+.bike-link{
     color:#575757;
+    text-decoration: none;
+}
+
+.bike-link:hover{
+    color: black;
 }
 
 /* Footer */
