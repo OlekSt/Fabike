@@ -136,7 +136,8 @@ body{
 #products,
 #all-road,
 #road,
-#urban{
+#urban,
+#one-bike{
     padding: 0;
     max-width: 100% !important;
     overflow-x: hidden !important;
