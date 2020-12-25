@@ -80,14 +80,43 @@
     display: inline-block;
     cursor: pointer;
     font-size: 0.9em;
-    font-weight: bold;
+    font-weight: normal;
     color: white;
 }
 
 #size-selector input[type=radio]:checked + label {
     color:  rgb(211, 211, 15);
+    font-weight: bold;
 }
 /* Finish - Size selector */
+
+/* Components selector */
+#components-selector div{
+    display: inline-block;
+    padding: 4px 1px 0 0;
+}
+
+#components-selector input[type=radio] {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+}
+
+#components-selector label{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: normal;
+    color: white;
+    padding: 2px;
+}
+
+#components-selector input[type=radio]:checked + label {
+    border: 2px solid rgb(240, 240, 240);
+    font-weight: bold;
+    border-radius: 35%;
+}
+/* Finish - Components selector */
 
 /* For smaller screen sizes */
 @media only screen and (max-width: 600px) {
