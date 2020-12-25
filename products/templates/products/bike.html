@@ -8,20 +8,19 @@
 {% block extra_title %}- Bike details{% endblock %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid container-product">
     <div class="row">
-        <img class="image-fluid" src="{{ STATIC_URL}}img/products/bikes/{{ bike.image02 }}" alt="{{ bike.frame }} {{ bike.name }}">
+        <img class="product-image image-fluid" src="{{ STATIC_URL}}img/products/bikes/{{ bike.image02 }}" alt="{{ bike.frame }} {{ bike.name }}">
     </div>
     <div class="row">
-        <div class="col col-lg-6 col-md-6 col-sm-12 bg-dark">
-            <h4 class="test">TEST</h4>
-            <h4 class="text-white">{{ bike.frame }}</h4>
+        <div class="col-12 col-lg-6 col-md-6 bg-dark px-5">
+            <h4 class="text-muted mt-4">{{ bike.frame }}</h4>
             <h4 class="text-white">{{ bike.name }}</h4>
-            <p class="text-white">{{ bike.title }}</p>
+            <p class="text-white bike-mini-title mb-4">{{ bike.title }}</p>
         </div>
-        <div class="col col-lg-6 col-md-6 col-sm-12 bg-secondary">
-            <div class="row">
-                <div id="color-choice" class="col-4">
+        <div class="col-12 col-lg-6 col-md-6 bg-secondary px-5 pt-3">
+            <div class="row color-size-price">
+                <div id="color-choice" class="col col-lg-4 col-sm-6">
                     <h7><strong>COLOR</strong></h7>
                     <form>
                         <div class="custom-radios">
@@ -44,21 +43,20 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-4">
+                <div class="col col-lg-4 col-sm-6">
                     <h7><strong>SIZE</strong></h7>
                 </div>
-                <div class="col-4">
+                <div class="col col-lg-4 col-sm-12">
                     <h7><strong>COMPONENTS</strong></h7>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mt-2">
                 <div class="col-8">
                     <h7><strong>PRICE</strong></h7>
                     <h4 class="text-white">{{ bike.price_alloy }}</h4>
                 </div>
-                
             </div>
-            <p>{{ bike.price_comment }}</p>
+            <p class="price-comment">* {{ bike.price_comment }}</p>
         </div>
     </div>
 </div>

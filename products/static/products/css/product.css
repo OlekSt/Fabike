@@ -1,3 +1,18 @@
+.container-product{
+    width: 80%;
+    padding: 0;
+}
+
+.product-image{
+    padding: 0;
+}
+
+.price-comment{
+    font-size: 0.7em;
+}
+
+
+
 /* Code for color radio buttons */
 .custom-radios div {
     display: inline-block;
@@ -49,3 +64,16 @@
     border-radius: 50%;
 }
 /* Finish - Code for color radio buttons */
+
+/* For smaller screen sizes */
+@media only screen and (max-width: 600px) {
+    .container-product{
+    width: 100%;
+    }
+    .bike-mini-title{
+        font-size: 0.8em;
+    }
+    .color-size-price div h7{
+        font-size: 1em;
+    }
+}
