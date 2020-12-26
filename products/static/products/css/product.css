@@ -231,4 +231,11 @@
     #size-selector div{
         padding: 0 5px 0 3px;
     }
+    /* Add to cart/Wishlist buttons */
+    .buttons i {
+        font-size: 0.9em;
+    }
+    .buttons a{
+        font-size: 0.8em;
+    }
 }
