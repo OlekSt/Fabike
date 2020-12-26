@@ -122,6 +122,10 @@
 }
 /* Finish - Components selector */
 
+.price-muted{
+    color: rgb(185, 185, 185)
+}
+
 .geometry-img{
     max-width: 100%;
     height: auto;

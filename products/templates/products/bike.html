@@ -71,13 +71,13 @@
                 <div id="components-div" class="col-12 col-lg-4 col-md-4">
                     <h7><strong>COMPONENTS</strong></h7>
                     <form id="components-selector">
-                        <div >
-                            <input type="radio" id="alloy-components" name="components" checked>
+                        <div>
+                            <input class="components-choice" type="radio" id="alloy-components" name="components" value="alloy" checked>
                             <label for="alloy-components">ALLOY</label>
                         </div>
                         <div>
-                            <input type="radio" id="carbon-components" name="components">
-                            <label for="carbon-components">CARBON</label>
+                            <input  class="components-choice" type="radio" id="carbon-components" name="components" value="carbon">
+                            <label  for="carbon-components">CARBON</label>
                         </div>
                     </form>
                 </div>
@@ -87,18 +87,18 @@
                     <h7><strong>PRICE</strong></h7>
                     <h4 id="price-alloy" class="text-white text-center">€ {{ bike.price_alloy }}</h4>
                     <hr>
-                    <h4 id="price-carbon" class="text-white text-center">€ {{ bike.price_carbon }}</h4>
+                    <h4 id="price-carbon" class="price-muted text-center">€ {{ bike.price_carbon }}</h4>
                 </div>
                 <div class="col col-lg-4 col-sm-6">
                     <h7><strong>WEIGHT</strong></h7>
                     <h4 id="weight-alloy" class="text-white text-center">{{ bike.weight_alloy }} Kg</h4>
                     <hr>
-                    <h4 id="weight-carbon" class="text-white text-center">{{ bike.weight_carbon }} Kg</h4>
+                    <h4 id="weight-carbon" class="price-muted text-center">{{ bike.weight_carbon }} Kg</h4>
                 </div>
                 <div class="col col-lg-4 col-sm-12">
                     <div class="row">
                         <div class="col-12 buttons">
-                            <a href="" class="text-white btn btn-dark mt-3">&nbsp;ADD <i class="fas fa-long-arrow-alt-right"></i> <i class="fas fa-cart-plus"></i>&nbsp;</a>
+                            <a href="" class="text-white btn btn-dark mt-3">&nbsp;ADD&nbsp;  <i class="fas fa-long-arrow-alt-right"></i> <i class="fas fa-cart-plus"></i>&nbsp;</a>
                         </div>
                         <div class="col-12 buttons">
                             <a href="" class="text-white btn btn-dark mt-3"><i class="far fa-heart"></i> WISHLIST</a>
