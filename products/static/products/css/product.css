@@ -123,6 +123,34 @@
 }
 /* Finish - Components selector */
 
+/* Sizes in gray circles */
+.size-coin{
+    height: 7em;
+    width: 7em;
+    border-radius: 50%;
+}
+
+.coin-xs{
+    background-color: #ABABAB;
+}
+
+.coin-s{
+    background-color: #818181;
+}
+
+.coin-m{
+    background-color: #575757;
+}
+
+.coin-l{
+    background-color: #262626;
+}
+
+.coin-xl{
+    background-color: #000000;
+}
+/* Finish - Sizes in gray circles */
+
 /* For smaller screen sizes */
 @media only screen and (max-width: 1366px) {
     #components-selector div label{
