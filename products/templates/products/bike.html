@@ -109,8 +109,8 @@
             <p class="price-comment">* {{ bike.price_comment }}</p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-7">
+    <div class="row px-3">
+        <div class="col-12 col-lg-6">
             <h5 class="pt-3">SPECIFICATIONS</h5>
             <hr>
             <div class="row">
@@ -148,14 +148,13 @@
                 </div>
             </div>
         </div>
-        <div class="col-5 ">
+        <div class="col-12 col-lg-6">
             <h5 class="pt-3">GEOMETRY & SIZES</h5>
             <hr>
-            <img class="" src="static/img/products/frame/t2_geometry.jpg" alt="{{ bike.frame }} {{ bike.name }}">
+            <img class="geometry-img pt-4" src="/static/img/products/t2_geometry.jpg" alt="{{ bike.frame }} {{ bike.name }}">
         </div>
     </div>
     <div class="row justify-content-center my-2">
-        <div class="col-lg-1 col-md-none col-sm-none"></div>
         <div class="col-2 col-sm-6 size-coin coin-xs mx-3 mb-2">
             <h4 class="text-center text-white mb-0 mt-4">XS</h4>
             <p class="text-center text-white">165-170cm</p>
@@ -176,7 +175,54 @@
             <h4 class="text-center text-white mb-0 mt-4">XL</h4>
             <p class="text-center text-white">185-190cm</p>
         </div>
-        <div class="col-lg-1 col-md-none col-sm-none"></div>
+        <p class="text-center px-5">LET'S TAKE THESE AS GENERAL SIZING SUGGESTIONS. FOR A MORE DETAILED SIZING YOU CAN DROP US A MESSAGE.</p>
+        <div class="col-12 text-center">
+            <a href="" class="text-white btn btn-secondary my-4">CONTACT US</a>
+        </div>
+    </div>
+    <div class="row bg-dark py-4">
+        <h3 class="text-muted text-center mb-3">PICK YOUR DETAILS</h3>
+        <p class="text-white text-center my-0">You can choose among four different anodized details colors.</p>
+        <p class="text-white text-center my-0">This color will be used on the head badge, headset, seat clamp and compressor top cap.</p>
+    </div>
+    <div class="row">
+        <div class="col-3 px-0">
+            <img class="color-image" src="/static/img/products/4_colors_red.jpg" alt="Red Color details">
+        </div>
+        <div class="col-3 px-0">
+            <img class="color-image" src="/static/img/products/4_colors_blue.jpg" alt="Blue Color details">
+        </div>
+        <div class="col-3 px-0">
+            <img class="color-image" src="/static/img/products/4_colors_yellow.jpg" alt="Yellow Color details">
+        </div>
+        <div class="col-3 px-0">
+            <img class="color-image" src="/static/img/products/4_colors_black.jpg" alt="Black Color details">
+        </div>
+    </div>
+    <div class="row bg-dark py-2"></div>
+    <div class="row bg-red">
+        <div class="col col-lg-6 col-sm-12 px-5 py-4">
+            <h4 class="text-white mb-4">MAKE IT EVEN MORE SPECIAL</h4>
+            <p class="text-white mb-0">The components above are not exactly what you are looking for and you would prefer to have some different components?</p>
+            <p class="text-white mb-2">Maybe you are craving for a custom painting?</p>
+            <p class="text-white mb-4">Tell us more about your dream bike, we will do our best to make it happen.</p>
+            <div class="text-center pt-4">
+                <a href="" class="btn btn-light my-4">GET A QUOTE</a>
+            </div>
+            
+        </div>
+        <div class="col col-lg-6 col-sm-12 px-0">
+            <img class="red-bike px-0" src="/static/img/products/red_bike.png" alt="Bike parts">
+        </div>
+    </div>
+    <div class="row bg-secondary py-3">
+        <div class="col col-lg-6 col-sm-12 px-10 text-center">
+            <img src="/static/img/products/built_eu.png" alt="Built in EU">
+        </div>
+        <div class="col col-lg-6 col-sm-12 px-5">
+            <p class="text-white text-left">All our bikes are assembled in Italy at the moment of the order.</p>
+            <p class="text-white text-left">The average waiting time to get your bike ready is 4-5 weeks in case of C3 models, and 8-9 weeks in case of T2 models.</p>
+        </div>
     </div>
 </div>
 {% endblock %}
