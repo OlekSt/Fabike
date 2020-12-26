@@ -238,4 +238,10 @@
     .buttons a{
         font-size: 0.8em;
     }
+    #make-special h4{
+        font-size: 1em;
+    }
+    #make-special p{
+        font-size: 0.8em;
+    }
 }
