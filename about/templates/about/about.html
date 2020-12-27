@@ -2,5 +2,36 @@
 {% load static %}
 
 {% block content %}
-<h3>HERE ABOUT</h3>
+<div id="about" class="container-fluid">
+    <div class="row">
+        <img class="about-title-image image-fluid" src="{% static 'img/about.jpg' %}" alt="About Fabike">
+    </div>
+    <div class="row">
+        <div id="about-section" class="col">
+            <h2 class="text-center py-4">WHO WE ARE</h2>
+            <p class="text-center pb-3"> FABIKE project started in 2011. The founder of the company and driving force behind the FABIKE brand is Fabio Putzolu. He comes from a family with a long cycling tradition, and grew up around passionate cyclists. Fabio's main inspiration for the FABIKE project is his uncle Antonino, who was already spreading a strong passion for cycling in his native Sardinia - Italy, in the early 1950s.</p>
+            <p class="text-center  pb-3">For many years Fabio studied and worked in design and advertising, and is thrilled to combine so many of his passions under one roof. He founded FABIKE Design during his time spent in Prague, Czech republic, where the company is now based.</p>
+            <p class="text-center pb-3">As the project grew and developed, Jake and Alexey joined, bringing a wealth of diverse experience to the team. In August 2013, FABIKE was officially presented to the public at Eurobike, the largest cycling trade show in the world. We have worked hard to passionately improve our products day after day since then.</p>
+            <p class="text-center pb-3">Today, our bikes are riding in more than 20 countries worldwide, spreading the word, and showing people what a contemporary bicycle could be.</p>
+            <h4 class="text-center pb-3">WOULD YOU LIKE TO KNOW MORE?</h4>
+            <div class="text-center py-2">
+                <a href="" class="btn btn-secondary my-4">CONTACT US</a>
+            </div>
+        </div>
+    </div>
+    <div class="row pt-4 justify-content-center">
+        <div class="col col-lg-4 col-sm-6 about-address  bg-secondary">
+            <h5 class="pt-4 text-center">ITALY</h5>
+            <p class="text-white text-center mb-0">Via Stati Uniti, 20</p>
+            <p class="text-white text-center mb-0">09038 Serramanna (SU)</p>
+            <p class="text-white text-center">Italy</p>
+        </div>
+            <div class="col col-lg-4 col-sm-6 about-address bg-secondary">
+            <h5 class="pt-4 text-center">CZECHIA</h5>
+            <p class="text-white text-center mb-0">Plaska, 9</p>
+            <p class="text-white text-center mb-0">15000 Prague</p>
+            <p class="text-white text-center">Czech Republic</p>
+        </div>
+    </div>
+</div>
 {% endblock %}
