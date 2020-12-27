@@ -4,14 +4,14 @@
 <div id="footer" class="container-fluid">
     <div class="row footer-links">
         <div class="col col-lg-4 col-sm-6">
-            <h6 class="text-white">BIKES</h6>
-            <h6 class="text-white">FRAMES</h6>
-            <h6 class="text-white">EVENTS</h6>
+            <h6 class="text-white"><a href="{% url 'bikes' %}">BIKES</a></h6>
+            <h6 class="text-white"><a href="{% url 'frames' %}">FRAMES</a></h6>
+            <h6 class="text-white"><a href="#">EVENTS</a></h6>
         </div>
         <div class="col col-lg-4 col-sm-6">
-            <h6 class="text-white">ABOUT</h6>
-            <h6 class="text-white">WARRANTY POLICY</h6>
-            <h6 class="text-white">RETURNS & REFUNDS</h6>
+            <h6 class="text-white"><a href="{% url 'about' %}">ABOUT</a></h6>
+            <h6 class="text-white"><a href="#">WARRANTY POLICY</a></h6>
+            <h6 class="text-white"><a href="#">RETURNS & REFUNDS</a></h6>
         </div>        
         <div class="col col-lg-4 col-sm-12">
             <ul class="list-inline social">
@@ -33,8 +33,6 @@
         </div>
     </div>
     <div class="row">
-        <p class="text-white">
-            © 2020 by FABIKE Design s.r.o. All rights reserved.
-        </p>
+        <p class="copyright">© 2020 by FABIKE Design s.r.o. All rights reserved.</p>
     </div>
 </div>

@@ -186,6 +186,11 @@ body{
     padding-left: 15px;
 }
 
+.footer-links div a{
+    color: #ababab; 
+    text-decoration: none;
+}
+
 .social li a i {
     height: 30px;
     width: 30px;
@@ -194,7 +199,12 @@ body{
     padding: 13px;
     text-align: center;
     color: #201766;
-    color: white;
+    color: #ababab;
+}
+
+.copyright{
+    font-size: 0.7em;
+    color: #ababab; 
 }
 
 
