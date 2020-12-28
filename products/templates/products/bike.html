@@ -21,7 +21,7 @@
         <div class="col-12 col-lg-6 col-md-6 bg-secondary pt-3 color-size-price-sec">
             <div class="row color-size-price">
                 <div class="color-choice col-6 col-lg-4 col-md-4">
-                    <h7><strong>COLOR</strong></h7>
+                    <p class="price-size-components-title"><strong>COLOR</strong></p>
                     <form>
                         <div class="custom-radios">
                             <div>
@@ -44,7 +44,7 @@
                     </form>
                 </div>
                 <div class="size-box col-6 col-lg-3 col-md-3">
-                    <h7><strong>SIZE</strong></h7>
+                    <p class="price-size-components-title"><strong>SIZE</strong></p>
                     <form id="size-selector">
                         <div>
                             <input type="radio" id="size-xs" name="size" checked>
@@ -69,7 +69,7 @@
                     </form>
                 </div>
                 <div id="components-div" class="col-12 col-lg-4 col-md-4">
-                    <h7><strong>COMPONENTS</strong></h7>
+                    <p class="price-size-components-title"><strong>COMPONENTS</strong></p>
                     <form id="components-selector">
                         <div>
                             <input class="components-choice" type="radio" id="alloy-components" name="components" value="alloy" checked>
@@ -84,13 +84,13 @@
             </div>
             <div class="row mt-2">
                 <div class="col col-lg-4  col-sm-6">
-                    <h7><strong>PRICE</strong></h7>
+                    <p class="price-size-components-title"><strong>PRICE</strong></p>
                     <h4 id="price-alloy" class="text-white text-center">€ {{ bike.price_alloy }}</h4>
                     <hr>
                     <h4 id="price-carbon" class="price-muted text-center">€ {{ bike.price_carbon }}</h4>
                 </div>
                 <div class="col col-lg-4 col-sm-6">
-                    <h7><strong>WEIGHT</strong></h7>
+                    <p class="price-size-components-title"><strong>WEIGHT</strong></p>
                     <h4 id="weight-alloy" class="text-white text-center">{{ bike.weight_alloy }} Kg</h4>
                     <hr>
                     <h4 id="weight-carbon" class="price-muted text-center">{{ bike.weight_carbon }} Kg</h4>

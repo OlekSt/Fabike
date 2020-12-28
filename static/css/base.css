@@ -6,8 +6,7 @@ html, body{
     margin: 0;
     padding: 0;  
     max-width: 100%;
-    overflow-x: initial hidden;
-    height: 100%;
+    overflow-x: hidden;
 }
 
 body{
@@ -132,17 +131,20 @@ body{
     padding-right: 16%;
 }
 
-/* Products page */
+/* to make containers on all those pages cover all screen */
 #products,
 #all-road,
 #road,
 #urban,
-#one-bike{
+#one-bike, 
+#carbon,
+#titanium{
     padding: 0;
     max-width: 100% !important;
     overflow-x: hidden !important;
 }
 
+/* Products page */
 .bikes-img,
 .frames-img{
     width: 100%;

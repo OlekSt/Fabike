@@ -16,6 +16,10 @@
     font-size: 0.7em;
 }
 
+.price-size-components-title{
+    font-size: 1.1em;
+}
+
 /* Code for color radio buttons */
 .custom-radios div {
     display: inline-block;
