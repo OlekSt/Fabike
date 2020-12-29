@@ -177,6 +177,11 @@ body{
     padding: 0;
 }
 
+/* Contact form page */
+#contact-form{
+    max-width: 60%;
+}
+
 /* Footer */
 #footer{
     background-color: #262626;
@@ -270,5 +275,8 @@ body{
     }
     .about-address p{
         font-size: 0.8em;
+    }
+    #contact-form{
+        max-width: 95%;
     }
 }
