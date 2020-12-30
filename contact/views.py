@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.conf import settings
 from django.core.mail import send_mail, BadHeaderError
+from django.contrib import messages
 from django.http import HttpResponse
 from .forms import ContactForm
 
@@ -25,7 +26,9 @@ def contact(request):
                     [settings.DEFAULT_FROM_EMAIL],
                     fail_silently=False
                 )
-                return redirect('contact_thankyou')
+                
+                return redirect('contact')
+
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
     else:

@@ -26,6 +26,7 @@
         <span class="dot"></span> 
     </div>
 </div>
+
 <div class="container-fluid v-100">
     <div class="row intro-section">
         <div class="col">
@@ -48,7 +49,7 @@
                     <p class="text-white mx-20">
                         Truly live the city! Move through it with unique style and maximum flexibility.
                     </p>
-                    <a href="" class="text-white btn btn-warning mt-20">DISCOVER</a>
+                    <a href="{% url 'urban' %}" class="text-white btn btn-warning mt-20">DISCOVER</a>
                 </div>
             </div>
             <div class="row my-10">
@@ -60,7 +61,7 @@
                     <p class="text-white mx-20">
                         Never limit your rides. Enjoy the freedom of taking the unbeaten paths with full confidence.
                     </p>
-                    <a href="" class="text-white btn btn-danger mt-20">DISCOVER</a>
+                    <a href="{% url 'all_road' %}" class="text-white btn btn-danger mt-20">DISCOVER</a>
                 </div>
             </div>
             <div class="row my-10">
@@ -72,7 +73,7 @@
                     <p class="text-white mx-20">
                         Expect more from your rides. Reach your top level with an exclusive configuration.
                     </p>
-                    <a href="" class="btn btn-primary mt-20">DISCOVER</a>  
+                    <a href="{% url 'road' %}" class="btn btn-primary mt-20">DISCOVER</a>  
                 </div>
             </div>                
         </div>

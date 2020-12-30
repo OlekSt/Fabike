@@ -7,16 +7,17 @@
         <img class="image-fluid" src="{% static 'img/contact.jpg' %}" alt="Contact Fabike">
     </div>
     <div class="row justify-content-center">
-        <div id="contact-form" class="col">
-            <h4>GET IN TOUCH</h4>
-            <p>For any kind of question or information, either it is commercial, technical or just a "Hello!" don't hesitate to contact us, we reply really fast!</p>
+        <div id="contact-form" class="col shadow my-2">
+            <h2 class="text-center py-3 mb-4">GET IN TOUCH</h2>
+            <p id="message-sent" class="text-center mb-0 pb-0 mb-2 invisible">Thank you! Your messages has been successfully sent.</p>
+            <p id="message-hello" class="text-center mb-0 pb-0 mb-2 visible">For any kind of question or information, either it is commercial, technical or just a "Hello!", don't hesitate to contact us, we reply really fast!</p>
             <!--Contact form -->
             <form method="POST" action="{% url 'contact' %}">
                 {% csrf_token %}
                 {{ contact_form|crispy }}
-                <div class="text-center mb-2 mt-4">
-                    <button type="submit" class="btn">
-                        <i class="fas fa-bicycle uppercase"></i> SEND
+                <div id="contact-send" class="text-center my-3">
+                    <button type="submit" class="btn btn-dark">
+                        SEND  <i class="fas fa-bicycle uppercase"></i> 
                     </button>
                 </div>
             </form>
