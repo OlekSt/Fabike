@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Product
 
+
 def bikes(request):
     """
     A view to return all bikes, showing 3 groups: urban, all-road, road 
