@@ -12,10 +12,11 @@
     <div class="row">
         {% if cart_items %}
             <div class="table-responsive">
-
+                {{ cart_items }}
+                {{ context }}
             </div>
         {% else %}
-            <p>Your bag is empty.</p>
+            <p>Your shopping cart is empty.</p>
             <a href="{% url 'home' %}" class="text-center">Home page</a>
         {% endif %}
         

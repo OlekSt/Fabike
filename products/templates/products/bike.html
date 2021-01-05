@@ -19,94 +19,103 @@
             <p class="text-white bike-mini-title mb-4">{{ bike.title }}</p>
         </div>
         <div class="col-12 col-lg-6 col-md-6 bg-secondary pt-3 color-size-price-sec">
-            <div class="row color-size-price">
-                <div class="color-choice col-6 col-lg-4 col-md-4">
-                    <p class="price-size-components-title"><strong>COLOR</strong></p>
-                    <form>
-                        <div class="custom-radios">
+            <form class="form" action="{% url 'add_to_cart' bike.id %}" method="POST">
+            {% csrf_token %}
+                <div class="row color-size-price">
+                    <div class="color-choice col-6 col-lg-4 col-md-4">
+                        <p class="price-size-components-title"><strong>COLOR</strong></p>
+                        <form>
+                            <div class="custom-radios">
+                                <div>
+                                    <input type="radio" id="color-red" name="color-red" value="color-red" checked>
+                                    <label for="color-red"><span></span></label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="color-blue" name="color-blue" value="color-blue">
+                                    <label for="color-blue"><span></span></label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="color-yellow" name="color-yellow" value="color-yellow">
+                                    <label for="color-yellow"><span></span></label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="color-black" name="color-black" value="color-black">
+                                    <label for="color-black"><span></span></label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="size-box col-6 col-lg-3 col-md-3">
+                        <p class="price-size-components-title"><strong>SIZE</strong></p>
+                        <form id="size-selector">
                             <div>
-                                <input type="radio" id="color-1" name="color" value="color-1" checked>
-                                <label for="color-1"><span></span></label>
+                                <input type="radio" id="size-xs" name="size-xs" checked>
+                                <label for="size-xs">XS</label>
                             </div>
                             <div>
-                                <input type="radio" id="color-2" name="color" value="color-2">
-                                <label for="color-2"><span></span></label>
+                                <input type="radio" id="size-s" name="size-s">
+                                <label for="size-s">S</label>
                             </div>
                             <div>
-                                <input type="radio" id="color-3" name="color" value="color-3">
-                                <label for="color-3"><span></span></label>
+                                <input type="radio" id="size-m" name="size">
+                                <label for="size-m">M</label>
                             </div>
                             <div>
-                                <input type="radio" id="color-4" name="color" value="color-4">
-                                <label for="color-4"><span></span></label>
+                                <input type="radio" id="size-l" name="size">
+                                <label for="size-l">L</label>
                             </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="size-box col-6 col-lg-3 col-md-3">
-                    <p class="price-size-components-title"><strong>SIZE</strong></p>
-                    <form id="size-selector">
-                        <div>
-                            <input type="radio" id="size-xs" name="size" checked>
-                            <label for="size-xs">XS</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="size-s" name="size">
-                            <label for="size-s">S</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="size-m" name="size">
-                            <label for="size-m">M</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="size-l" name="size">
-                            <label for="size-l">L</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="size-xl" name="size">
-                            <label for="size-xl">XL</label>
-                        </div>
-                    </form>
-                </div>
-                <div id="components-div" class="col-12 col-lg-4 col-md-4">
-                    <p class="price-size-components-title"><strong>COMPONENTS</strong></p>
-                    <form id="components-selector">
-                        <div>
-                            <input class="components-choice" type="radio" id="alloy-components" name="components" value="alloy" checked>
-                            <label for="alloy-components">ALLOY</label>
-                        </div>
-                        <div>
-                            <input  class="components-choice" type="radio" id="carbon-components" name="components" value="carbon">
-                            <label  for="carbon-components">CARBON</label>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col col-lg-4  col-sm-6">
-                    <p class="price-size-components-title"><strong>PRICE</strong></p>
-                    <h4 id="price-alloy" class="text-white text-center">€ {{ bike.price_alloy }}</h4>
-                    <hr>
-                    <h4 id="price-carbon" class="price-muted text-center">€ {{ bike.price_carbon }}</h4>
-                </div>
-                <div class="col col-lg-4 col-sm-6">
-                    <p class="price-size-components-title"><strong>WEIGHT</strong></p>
-                    <h4 id="weight-alloy" class="text-white text-center">{{ bike.weight_alloy }} Kg</h4>
-                    <hr>
-                    <h4 id="weight-carbon" class="price-muted text-center">{{ bike.weight_carbon }} Kg</h4>
-                </div>
-                <div class="col col-lg-4 col-sm-12">
-                    <div class="row">
-                        <div class="col-12 buttons">
-                            <a href="" class="text-white btn btn-dark mt-3">&nbsp;ADD&nbsp;  <i class="fas fa-long-arrow-alt-right"></i> <i class="fas fa-cart-plus"></i>&nbsp;</a>
-                        </div>
-                        <div class="col-12 buttons">
-                            <a href="" class="text-white btn btn-dark mt-3"><i class="far fa-heart"></i> WISHLIST</a>
-                        </div>                    
+                            <div>
+                                <input type="radio" id="size-xl" name="size">
+                                <label for="size-xl">XL</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="components-div" class="col-12 col-lg-4 col-md-4">
+                        <p class="price-size-components-title"><strong>COMPONENTS</strong></p>
+                        <form id="components-selector">
+                            <div>
+                                <input class="components-choice" type="radio" id="alloy-components" name="components" value="alloy" checked>
+                                <label for="alloy-components">ALLOY</label>
+                            </div>
+                            <div>
+                                <input  class="components-choice" type="radio" id="carbon-components" name="components" value="carbon">
+                                <label  for="carbon-components">CARBON</label>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </div>
-            <p class="price-comment">* {{ bike.price_comment }}</p>
+                <div class="row mt-2">
+                    <div class="col col-lg-4  col-sm-6">
+                        <p class="price-size-components-title"><strong>PRICE</strong></p>
+                        <h4 id="price-alloy" class="text-white text-center">€ {{ bike.price_alloy }}</h4>
+                        <hr>
+                        <h4 id="price-carbon" class="price-muted text-center">€ {{ bike.price_carbon }}</h4>
+                    </div>
+                    <div class="col col-lg-4 col-sm-6">
+                        <p class="price-size-components-title"><strong>WEIGHT</strong></p>
+                        <h4 id="weight-alloy" class="text-white text-center">{{ bike.weight_alloy }} Kg</h4>
+                        <hr>
+                        <h4 id="weight-carbon" class="price-muted text-center">{{ bike.weight_carbon }} Kg</h4>
+                    </div>
+                    <div class="col col-lg-4 col-sm-12">
+                        <div class="row">
+                            <div class="col-12 buttons justify-content-center">
+                                <div class="text-center w-50">
+                                    <div class="input-group">
+                                        <input class="form-control" type="number" name="quantity" value="1" min="1" max="15" data-item_id="{{ bike.id }}" id="id_qty_{{ bike.id }}">
+                                    </div>
+                                </div>
+                                <button type="submit" class="text-white btn btn-dark mt-3" >&nbsp;ADD&nbsp;  <i class="fas fa-long-arrow-alt-right"></i> <i class="fas fa-cart-plus"></i>&nbsp;</button>
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">             
+                            </div>
+                            <div class="col-12 buttons">
+                                <a href="" class="text-white btn btn-dark mt-3"><i class="far fa-heart"></i> WISHLIST</a>
+                            </div>                    
+                        </div>
+                    </div>
+                </div>
+                <p class="price-comment">* {{ bike.price_comment }}</p>
+            </form>
         </div>
     </div>
     <div class="row px-3">
