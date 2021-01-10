@@ -14,7 +14,6 @@ def add_to_cart(request, item_id):
     color = request.POST.get('color')
     components = request.POST.get('components')
     cart = request.session.get('cart', {})
-
    
     cart[item_id] = quantity
         

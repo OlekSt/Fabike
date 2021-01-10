@@ -19,121 +19,121 @@
             <p class="text-white bike-mini-title mb-4">{{ product.title }}</p>
         </div>
         <div class="col-12 col-lg-6 col-md-6 bg-secondary pt-3 color-size-price-sec">
-            <div class="row color-size-price">
-                <div class="color-choice col-6 col-lg-4 col-md-4">
-                    <p class="price-size-components-title"><strong>COLOR</strong></p>
-                    <form>
-                        <div class="custom-radios">
+            <form action="" method="POST">   
+                {% csrf_token %}
+                <div class="row color-size-price">
+                    <div class="color-choice col-6 col-lg-4 col-md-4">
+                        <p class="price-size-components-title"><strong>COLOR</strong></p>
+                            <div class="custom-radios">
+                                <div>
+                                    <input type="radio" id="color-red" name="color" value="color-red" checked>
+                                    <label for="color-red"><span></span></label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="color-blue" name="color" value="color-blue">
+                                    <label for="color-blue"><span></span></label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="color-yellow" name="color" value="color-yellow">
+                                    <label for="color-yellow"><span></span></label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="color-black" name="color" value="color-black">
+                                    <label for="color-black"><span></span></label>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="size-box col-6 col-lg-3 col-md-3">
+                        <p class="price-size-components-title"><strong>SIZE</strong></p>
+                        <div id="size-selector">
                             <div>
-                                <input type="radio" id="color-red" name="color" value="color-red" checked>
-                                <label for="color-red"><span></span></label>
+                                <input type="radio" id="size-xs" name="size" checked>
+                                <label for="size-xs">XS</label>
                             </div>
                             <div>
-                                <input type="radio" id="color-blue" name="color" value="color-blue">
-                                <label for="color-blue"><span></span></label>
+                                <input type="radio" id="size-s" name="size">
+                                <label for="size-s">S</label>
                             </div>
                             <div>
-                                <input type="radio" id="color-yellow" name="color" value="color-yellow">
-                                <label for="color-yellow"><span></span></label>
+                                <input type="radio" id="size-m" name="size">
+                                <label for="size-m">M</label>
                             </div>
                             <div>
-                                <input type="radio" id="color-black" name="color" value="color-black">
-                                <label for="color-black"><span></span></label>
+                                <input type="radio" id="size-l" name="size">
+                                <label for="size-l">L</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="size-xl" name="size">
+                                <label for="size-xl">XL</label>
                             </div>
                         </div>
-                    </form>
-                </div>
-                <div class="size-box col-6 col-lg-3 col-md-3">
-                    <p class="price-size-components-title"><strong>SIZE</strong></p>
-                    <form id="size-selector">
-                        <div>
-                            <input type="radio" id="size-xs" name="size" checked>
-                            <label for="size-xs">XS</label>
+                    </div>
+                    {% if product.is_bike %}
+                    <div id="components-div" class="col-12 col-lg-4 col-md-4">
+                        <p class="price-size-components-title"><strong>COMPONENTS</strong></p>
+                        <div id="components-selector">
+                            <div>
+                                <input class="components-choice" type="radio" id="alloy-components" name="components" value="alloy" checked>
+                                <label for="alloy-components">ALLOY</label>
+                            </div>
+                            <div>
+                                <input  class="components-choice" type="radio" id="carbon-components" name="components" value="carbon">
+                                <label  for="carbon-components">CARBON</label>
+                            </div>
                         </div>
-                        <div>
-                            <input type="radio" id="size-s" name="size">
-                            <label for="size-s">S</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="size-m" name="size">
-                            <label for="size-m">M</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="size-l" name="size">
-                            <label for="size-l">L</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="size-xl" name="size">
-                            <label for="size-xl">XL</label>
-                        </div>
-                    </form>
-                </div>
-                {% if product.is_bike %}
-                <div id="components-div" class="col-12 col-lg-4 col-md-4">
-                    <p class="price-size-components-title"><strong>COMPONENTS</strong></p>
-                    <form id="components-selector">
-                        <div>
-                            <input class="components-choice" type="radio" id="alloy-components" name="components" value="alloy" checked>
-                            <label for="alloy-components">ALLOY</label>
-                        </div>
-                        <div>
-                            <input  class="components-choice" type="radio" id="carbon-components" name="components" value="carbon">
-                            <label  for="carbon-components">CARBON</label>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!-- Two blocks for prices: one to be displayed for bikes, one for frames -->
-            <!-- Bikes prices section -->
-            
-            <div class="row mt-2">
-                <div class="col col-lg-4  col-sm-6">
-                    <p class="price-size-components-title"><strong>PRICE</strong></p>
-                    <h4 id="price-alloy" class="text-white text-center">€ {{ product.price_alloy }}</h4>
-                    <hr>
-                    <h4 id="price-carbon" class="price-muted text-center">€ {{ product.price_carbon }}</h4>
-                </div>
-                <div class="col col-lg-4 col-sm-6">
-                    <p class="price-size-components-title"><strong>WEIGHT</strong></p>
-                    <h4 id="weight-alloy" class="text-white text-center">{{ product.weight_alloy }} Kg</h4>
-                    <hr>
-                    <h4 id="weight-carbon" class="price-muted text-center">{{ product.weight_carbon }} Kg</h4>
-                </div>
-                <div class="col col-lg-4 col-sm-12">
-                    <div class="row">
-                        <div class="col-12 buttons">
-                            <a href="" class="text-white btn btn-dark mt-3">&nbsp;ADD&nbsp;  <i class="fas fa-long-arrow-alt-right"></i> <i class="fas fa-cart-plus"></i>&nbsp;</a>
-                        </div>
-                        <div class="col-12 buttons">
-                            <a href="" class="text-white btn btn-dark mt-3"><i class="far fa-heart"></i>WISHLIST</a>
-                        </div>                    
                     </div>
                 </div>
-            </div>
-            {% else %}
-            <!-- Frames price section -->
-            <div class="row mt-2">
-                <div class="col col-lg-4  col-sm-4">
-                    <p class="price-size-components-title"><strong>PRICE</strong></p>
-                    <h4 id="price-titanium" class="text-white text-center">€ {{ product.price }}</h4>
-                </div>
-                <div class="col col-lg-4 col-sm-4">
-                    <p class="price-size-components-title"><strong>WEIGHT</strong></p>
-                    <h4 id="weight-titanium" class="text-white text-center">{{ product.weight }} Kg</h4>
-                </div>
-                <div class="col-4">
-                    <div class="row">
-                        <div class="col-12 buttons">
-                            <a href="" class="text-white btn btn-dark mt-3">&nbsp;ADD&nbsp;  <i class="fas fa-long-arrow-alt-right"></i> &nbsp;<i class="fas fa-cart-plus"></i>&nbsp;</a>
+                <!-- Two blocks for prices: one to be displayed for bikes, one for frames -->
+                <!-- Bikes prices section -->
+                <div class="row mt-2 pt-2">
+                    <div class="col col-lg-3  col-sm-6">
+                        <p class="price-size-components-title"><strong>PRICE</strong></p>
+                        <h4 id="price-alloy" class="text-white text-center">€ {{ product.price_alloy }}</h4>
+                        <hr>
+                        <h4 id="price-carbon" class="price-muted text-center">€ {{ product.price_carbon }}</h4>
+                    </div>
+                    <div class="col col-lg-3 col-sm-6">
+                        <p class="price-size-components-title"><strong>WEIGHT</strong></p>
+                        <h4 id="weight-alloy" class="text-white text-center">{{ product.weight_alloy }} Kg</h4>
+                        <hr>
+                        <h4 id="weight-carbon" class="price-muted text-center">{{ product.weight_carbon }} Kg</h4>
+                    </div>
+                    <div class="col col-lg-6 col-sm-12">
+                        <div class="row text-center">
+                            <div class="col-lg-12 col-sm-6 buttons">
+                                <a href="" class="text-white btn btn-dark mt-3">&nbsp;ADD&nbsp;  <i class="fas fa-long-arrow-alt-right"></i> <i class="fas fa-cart-plus"></i>&nbsp;</a>
+                            </div>
+                            <div class="col-12 buttons">
+                                <a href="" class="text-white btn btn-dark mt-3"><i class="far fa-heart"></i> WISHLIST</a>
+                            </div>                 
                         </div>
-                        <div class="col-12 buttons">
-                            <a href="" class="text-white btn btn-dark mt-3"><i class="far fa-heart"></i> WISHLIST</a>
-                        </div>                    
                     </div>
                 </div>
-            </div>    
-            {% endif %}
-            <p class="price-comment">* {{ product.price_comment }}</p>
+                {% else %}
+                <!-- Frames price section -->
+                <div class="row mt-2">
+                    <div class="col col-lg-4  col-sm-4">
+                        <p class="price-size-components-title"><strong>PRICE</strong></p>
+                        <h4 id="price-titanium" class="text-white text-center">€ {{ product.price }}</h4>
+                    </div>
+                    <div class="col col-lg-4 col-sm-4">
+                        <p class="price-size-components-title"><strong>WEIGHT</strong></p>
+                        <h4 id="weight-titanium" class="text-white text-center">{{ product.weight }} Kg</h4>
+                    </div>
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col-12 buttons">
+                                <a href="" class="text-white btn btn-dark mt-3">&nbsp;ADD&nbsp;  <i class="fas fa-long-arrow-alt-right"></i> &nbsp;<i class="fas fa-cart-plus"></i>&nbsp;</a>
+                            </div>
+                            <div class="col-12 buttons">
+                                <a href="" class="text-white btn btn-dark mt-3"><i class="far fa-heart"></i> WISHLIST</a>
+                            </div>                    
+                        </div>
+                    </div>
+                </div>    
+                {% endif %}
+                <p class="price-comment mt-2">* {{ product.price_comment }}</p>
+            </form>
         </div>
     </div>
     <!-- Specification section: One to be displayed for bikes, one for frames -->
@@ -281,4 +281,9 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+    {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
