@@ -8,7 +8,7 @@
 {% block extra_title %}- Product details{% endblock %}
 
 {% block content %}
-<div id="one-bike" class="container-fluid container-product">
+<div id="product" class="container-fluid container-product">
     <div class="row">
         <img class="product-image image-fluid" src="{{ STATIC_URL}}img/products/{{ product.image02 }}" alt="{{ product.frame }} {{ product.name }}">
     </div>
@@ -68,6 +68,7 @@
                         </div>
                     </form>
                 </div>
+                {% if product.is_bike %}
                 <div id="components-div" class="col-12 col-lg-4 col-md-4">
                     <p class="price-size-components-title"><strong>COMPONENTS</strong></p>
                     <form id="components-selector">
@@ -84,6 +85,7 @@
             </div>
             <!-- Two blocks for prices: one to be displayed for bikes, one for frames -->
             <!-- Bikes prices section -->
+            
             <div class="row mt-2">
                 <div class="col col-lg-4  col-sm-6">
                     <p class="price-size-components-title"><strong>PRICE</strong></p>
@@ -97,34 +99,44 @@
                     <hr>
                     <h4 id="weight-carbon" class="price-muted text-center">{{ product.weight_carbon }} Kg</h4>
                 </div>
-
-                <!-- Frames price section -->
-                <div class="row mt-2">
-                        <div class="col col-lg-6  col-sm-6">
-                            <p class="price-size-components-title"><strong>PRICE</strong></p>
-                            <h4 id="price-titanium" class="text-white text-center">€ {{ carbon.price }}</h4>
-                        </div>
-                        <div class="col col-lg-6 col-sm-6">
-                            <p class="price-size-components-title"><strong>WEIGHT</strong></p>
-                            <h4 id="weight-titanium" class="text-white text-center">{{ carbon.weight }} Kg</h4>
-                        </div>
-                    </div>
                 <div class="col col-lg-4 col-sm-12">
                     <div class="row">
                         <div class="col-12 buttons">
                             <a href="" class="text-white btn btn-dark mt-3">&nbsp;ADD&nbsp;  <i class="fas fa-long-arrow-alt-right"></i> <i class="fas fa-cart-plus"></i>&nbsp;</a>
                         </div>
                         <div class="col-12 buttons">
-                            <a href="" class="text-white btn btn-dark mt-3"><i class="far fa-heart"></i> WISHLIST</a>
+                            <a href="" class="text-white btn btn-dark mt-3"><i class="far fa-heart"></i>WISHLIST</a>
                         </div>                    
                     </div>
                 </div>
             </div>
+            {% else %}
+            <!-- Frames price section -->
+            <div class="row mt-2">
+                <div class="col col-lg-4  col-sm-4">
+                    <p class="price-size-components-title"><strong>PRICE</strong></p>
+                    <h4 id="price-titanium" class="text-white text-center">€ {{ product.price }}</h4>
+                </div>
+                <div class="col col-lg-4 col-sm-4">
+                    <p class="price-size-components-title"><strong>WEIGHT</strong></p>
+                    <h4 id="weight-titanium" class="text-white text-center">{{ product.weight }} Kg</h4>
+                </div>
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-12 buttons">
+                            <a href="" class="text-white btn btn-dark mt-3">&nbsp;ADD&nbsp;  <i class="fas fa-long-arrow-alt-right"></i> &nbsp;<i class="fas fa-cart-plus"></i>&nbsp;</a>
+                        </div>
+                        <div class="col-12 buttons">
+                            <a href="" class="text-white btn btn-dark mt-3"><i class="far fa-heart"></i> WISHLIST</a>
+                        </div>                    
+                    </div>
+                </div>
+            </div>    
+            {% endif %}
             <p class="price-comment">* {{ product.price_comment }}</p>
         </div>
     </div>
     <!-- Specification section: One to be displayed for bikes, one for frames -->
-    
     <div class="row px-3">
         <div class="col-12 col-lg-6">
             <h5 class="pt-3">SPECIFICATIONS</h5>
@@ -232,16 +244,16 @@
     </div>
     <div class="row">
         <div class="col-3 px-0">
-            <img class="color-image" src="/static/img/products/4_colors_red.jpg" alt="Red Color details">
+            <img class="color-image" src="/static/img/products/{% if product.frame == 'FABIKE C3'%}4_colors_red{% else %}t2colors_red{% endif %}.jpg" alt="Red Color details">
         </div>
         <div class="col-3 px-0">
-            <img class="color-image" src="/static/img/products/4_colors_blue.jpg" alt="Blue Color details">
+            <img class="color-image" src="/static/img/products/{% if product.frame == 'FABIKE C3'%}4_colors_blue{% else %}t2colors_blue{% endif %}.jpg" alt="Blue Color details">
         </div>
         <div class="col-3 px-0">
-            <img class="color-image" src="/static/img/products/4_colors_yellow.jpg" alt="Yellow Color details">
+            <img class="color-image" src="/static/img/products/{% if product.frame == 'FABIKE C3'%}4_colors_yellow{% else %}t2colors_yellow{% endif %}.jpg" alt="Yellow Color details">
         </div>
         <div class="col-3 px-0">
-            <img class="color-image" src="/static/img/products/4_colors_black.jpg" alt="Black Color details">
+            <img class="color-image" src="/static/img/products/{% if product.frame == 'FABIKE C3'%}4_colors_black{% else %}t2colors_black{% endif %}.jpg" alt="Black Color details">
         </div>
     </div>
     <div class="row bg-dark py-2"></div>
