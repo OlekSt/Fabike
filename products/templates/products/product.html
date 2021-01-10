@@ -123,10 +123,14 @@
             <p class="price-comment">* {{ product.price_comment }}</p>
         </div>
     </div>
+    <!-- Specification section: One to be displayed for bikes, one for frames -->
+    
     <div class="row px-3">
         <div class="col-12 col-lg-6">
             <h5 class="pt-3">SPECIFICATIONS</h5>
             <hr>
+            <!-- Bikes specification seection -->
+            {% if product.is_bike %}
             <div class="row">
                 <div class="col col-lg-6 col-md-6 col-sm-12">
                     <h6 class="mb-0">FRAME</h6>
@@ -161,11 +165,38 @@
                     <p>{{ product.seatpost }}</p>
                 </div>
             </div>
+            <!-- Frames specification seection -->
+            {% else %}
+            <div class="row">
+                <div class="col-12 col-lg-6 col-md-6">
+                    <h6 class="mb-0">FRAME</h6>
+                    <p>{{ product.frame }}</p>
+                    <h6 class="mb-0">FORK</h6>
+                    <p>{{ product.fork }}</p>
+                    <h6 class="mb-0">HEADSET</h6>
+                    <p>{{ product.headset }}</p>
+                    <h6 class="mb-0">SEAT CLAMP</h6>
+                    <p>{{ product.seat_clamp }}</p>
+                    <h6 class="mb-0">BOTTOM BRACKET TYPE</h6>
+                    <p>{{ product.bottom_bracket }}</p>
+                </div>
+                <div class="col-12 col-lg-6 col-md-6">
+                    <h6 class="mb-0">SEATPOST DIAMETER</h6>
+                    <p>{{ product.seatpost }}</p>
+                    <h6 class="mb-0">BRAKES</h6>
+                    <p>{{ product.brakes }}</p>
+                    <h6 class="mb-0">DROPOUTS</h6>
+                    <p>{{ product.dropouts }}</p>
+                    <h6 class="mb-0">MAX TYRE SIZE</h6>
+                    <p>{{ product.max_tyre_size }}</p>
+                </div>
+            </div>
+            {% endif %}
         </div>
         <div class="col-12 col-lg-6">
             <h5 class="pt-3">GEOMETRY & SIZES</h5>
             <hr>
-            <img class="geometry-img pt-2" src="/static/img/products/t2_geometry.jpg" alt="{{ bike.frame }} Frame geometry">
+            <img class="geometry-img pt-2" src="/static/img/products/t2_geometry.jpg" alt="{{ product.frame }} Frame geometry">
         </div>
     </div>
     <div class="row justify-content-center my-2">
