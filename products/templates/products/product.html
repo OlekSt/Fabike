@@ -82,6 +82,8 @@
                     </form>
                 </div>
             </div>
+            <!-- Two blocks for prices: one to be displayed for bikes, one for frames -->
+            <!-- Bikes prices section -->
             <div class="row mt-2">
                 <div class="col col-lg-4  col-sm-6">
                     <p class="price-size-components-title"><strong>PRICE</strong></p>
@@ -95,6 +97,18 @@
                     <hr>
                     <h4 id="weight-carbon" class="price-muted text-center">{{ product.weight_carbon }} Kg</h4>
                 </div>
+
+                <!-- Frames price section -->
+                <div class="row mt-2">
+                        <div class="col col-lg-6  col-sm-6">
+                            <p class="price-size-components-title"><strong>PRICE</strong></p>
+                            <h4 id="price-titanium" class="text-white text-center">€ {{ carbon.price }}</h4>
+                        </div>
+                        <div class="col col-lg-6 col-sm-6">
+                            <p class="price-size-components-title"><strong>WEIGHT</strong></p>
+                            <h4 id="weight-titanium" class="text-white text-center">{{ carbon.weight }} Kg</h4>
+                        </div>
+                    </div>
                 <div class="col col-lg-4 col-sm-12">
                     <div class="row">
                         <div class="col-12 buttons">
@@ -116,35 +130,35 @@
             <div class="row">
                 <div class="col col-lg-6 col-md-6 col-sm-12">
                     <h6 class="mb-0">FRAME</h6>
-                    <p>{{ bike.frame }}</p>
+                    <p>{{ product.frame }}</p>
                     <h6 class="mb-0">FORK</h6>
-                    <p>{{ bike.fork }}</p>
+                    <p>{{ product.fork }}</p>
                     <h6 class="mb-0">WHEELS</h6>
-                    <p>{{ bike.wheels }}</p>
+                    <p>{{ product.wheels }}</p>
                     <h6 class="mb-0">TYRES</h6>
-                    <p>{{ bike.tyres }}</p>
+                    <p>{{ product.tyres }}</p>
                     <h6 class="mb-0">CRANKSET</h6>
-                    <p>{{ bike.crankset }}</p>
+                    <p>{{ product.crankset }}</p>
                     <h6 class="mb-0">SHIFT LEVERS</h6>
-                    <p>{{ bike.shift_levers }}</p>
+                    <p>{{ product.shift_levers }}</p>
                     <h6 class="mb-0">DERAILLEURS</h6>
-                    <p>{{ bike.derailleurs }}</p>
+                    <p>{{ product.derailleurs }}</p>
                 </div>
                 <div class="col col-lg-6 col-md-6 col-sm-12">
                     <h6 class="mb-0">CASSETTE/SPROCKET</h6>
-                    <p>{{ bike.casette_or_sprocket }}</p>
+                    <p>{{ product.casette_or_sprocket }}</p>
                     <h6 class="mb-0">CHAIN/BELT</h6>
-                    <p>{{ bike.chain_or_belt }}</p>
+                    <p>{{ product.chain_or_belt }}</p>
                     <h6 class="mb-0">BRAKES</h6>
-                    <p>{{ bike.brakes }}</p>
+                    <p>{{ product.brakes }}</p>
                     <h6 class="mb-0">HANDLEBAR</h6>
-                    <p>{{ bike.handlebar }}</p>
+                    <p>{{ product.handlebar }}</p>
                     <h6 class="mb-0">STEM</h6>
-                    <p>{{ bike.stem }}</p>
+                    <p>{{ product.stem }}</p>
                     <h6 class="mb-0">SADDLE</h6>
-                    <p>{{ bike.saddle }}</p>
+                    <p>{{ product.saddle }}</p>
                     <h6 class="mb-0">SEATPOST</h6>
-                    <p>{{ bike.seatpost }}</p>
+                    <p>{{ product.seatpost }}</p>
                 </div>
             </div>
         </div>

@@ -17,17 +17,6 @@ def bikes(request):
     return render(request, 'products/bikes.html', context)
 
 
-def bike(request, product_id):
-    """
-    A view to return an individual bike details
-    """
-    bikes = Product.objects.filter(product_type='BIKES')
-    bike = get_object_or_404(bikes, pk=product_id)
-    context = {
-        'bike': bike,
-    }    
-    return render(request, 'products/bike.html', context)
-
 def product(request, product_id):
     """
     A view to return an individual bike details
@@ -49,7 +38,6 @@ def urban(request):
         'urban': urban,
     }    
     return render(request, 'products/urban.html', context)
-
 
 
 def all_road(request):
@@ -83,30 +71,3 @@ def frames(request):
         'frames': frames,
     }    
     return render(request, 'products/frames.html', context)
-
-
-
-def carbon(request):
-    """
-    A view to return carbon fibre page
-    """
-    carbon = Product.objects.filter(product_group='CARBON')
-    carbon = get_object_or_404(carbon)
-    context = {
-        'carbon': carbon,
-    }    
-    return render(request, 'products/carbon.html', context)
-
-
-def titanium(request):
-    """
-    A view to return titanium frame page
-    """
-    titanium = Product.objects.filter(product_group='TITANIUM')
-    titanium = get_object_or_404(titanium)
-    context = {
-        'titanium': titanium,
-    }    
-    
-    return render(request, 'products/titanium.html', context)
-

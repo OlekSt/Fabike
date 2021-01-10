@@ -12,7 +12,7 @@
         {% for frame in frames %}
             <div class="col-lg-4 col-sm-10 text-center pt-3">
                 <a href="{% url 'product' frame.id %}"><img class="frames-img image-fluid" src="{{ STATIC_URL}}img/products/{{ frame.image01 }}" alt="{{ frame.frame }} Frame"></a>
-                <h5>{{ frame.frame }} &nbsp<strong>FRAME SET</strong></h5>
+                <h5><strong>{{ frame.frame }}</strong> &nbspFRAME SET</h5>
             </div> 
         {% endfor %}   
     </div>
