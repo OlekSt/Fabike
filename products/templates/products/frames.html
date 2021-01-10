@@ -6,17 +6,15 @@
 {% block content %}
 <div id="frames" class="container-fluid">
     <div class="row">
-        <img class="image-fluid px-0" src="{% static 'img/products/frame/frames.jpg' %}" alt="Frames">
+        <img class="image-fluid px-0" src="{% static 'img/products/frames.jpg' %}" alt="Frames">
     </div>
     <div class="row justify-content-center py-5">
-        <div class="col-lg-4 col-sm-10 text-center pt-3">
-            <a href="{% url 'carbon' %}"><img class="frames-img image-fluid" src="{% static 'img/products/frame/c3frame_white.jpg' %}" alt="Carbon Fiber frame"></a>
-            <h5>FABIKE C3 &nbsp<strong>FRAME SET</strong></h5>
-        </div>
-        <div class="col-lg-4 col-sm-10  text-center pt-3">
-            <a href="{% url 'titanium' %}"><img class="frames-img image-fluid" src="{% static 'img/products/frame/t1frame_white.jpg' %}" alt="Titanium frame"></a>
-            <h5>FABIKE T2 &nbsp<strong>FRAME SET</strong></h5>
-        </div>    
+        {% for frame in frames %}
+            <div class="col-lg-4 col-sm-10 text-center pt-3">
+                <a href="{% url 'product' frame.id %}"><img class="frames-img image-fluid" src="{{ STATIC_URL}}img/products/{{ frame.image01 }}" alt="{{ frame.frame }} Frame"></a>
+                <h5>{{ frame.frame }} &nbsp<strong>FRAME SET</strong></h5>
+            </div> 
+        {% endfor %}   
     </div>
 </div>
 {% endblock %}

@@ -28,6 +28,17 @@ def bike(request, product_id):
     }    
     return render(request, 'products/bike.html', context)
 
+def product(request, product_id):
+    """
+    A view to return an individual bike details
+    """
+    products = Product.objects.all()
+    product = get_object_or_404(products, pk=product_id)
+    context = {
+        'product': product,
+    }    
+    return render(request, 'products/product.html', context)
+
 
 def urban(request):
     """
@@ -73,16 +84,6 @@ def frames(request):
     }    
     return render(request, 'products/frames.html', context)
 
-def frame(request, product_id):
-    """
-    A view to return an individual bike details
-    """
-    frames = Product.objects.filter(product_type='FRAMES')
-    frame = get_object_or_404(frames, pk=product_id)
-    context = {
-        'frame': frame,
-    }    
-    return render(request, 'products/frame.html', context)
 
 
 def carbon(request):
