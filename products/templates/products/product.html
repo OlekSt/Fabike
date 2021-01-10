@@ -208,7 +208,7 @@
         <div class="col-12 col-lg-6">
             <h5 class="pt-3">GEOMETRY & SIZES</h5>
             <hr>
-            <img class="geometry-img pt-2" src="/static/img/products/t2_geometry.jpg" alt="{{ product.frame }} Frame geometry">
+            <img class="geometry-img pt-2" src="/static/img/products/{% if product.frame == 'FABIKE C3'%}c3_geometry.png{% else %}t2_geometry.jpg{% endif %}" alt="{{ product.frame }} Frame geometry">
         </div>
     </div>
     <div class="row justify-content-center my-2">
