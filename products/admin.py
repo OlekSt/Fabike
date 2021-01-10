@@ -8,6 +8,7 @@ class ProductAdmin(admin.ModelAdmin):
         'product_group',
         'name',
         'fork',
+        'is_bike',
         'weight',
         'weight_alloy',
         'weight_carbon',
