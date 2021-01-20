@@ -21,33 +21,10 @@ def add_to_cart(request, item_id):
         components = request.POST['components']
     cart = request.session.get('cart', {})
 
-    if components:
-        if item_id in list(cart.keys()):
-            if components in cart[item_id]['components_type'].keys():
-                cart[item_id]['components_type'][components] += quantity
-            else:
-                cart[item_id]['components_type'][components] = quantity
-        else:
-            cart[item_id] = {'components_type': {components: quantity}}
-    else:
-        if item_id in list(cart.keys()):
-            cart[item_id] += quantity
-        else:
-            cart[item_id] = quantity
     
-   # product = get_object_or_404(Product, pk=item_id)
-    #if components:
-    #    if components == 'carbon':
-    #        price = product.price_carbon
-    #    else: 
-    #        price = product.price_alloy
-    #else:
-    #    price = product.price
-        
     request.session['cart'] = cart
     print(cart)
     print(request.session['cart'])
-    print(components)
     print(size)
     print(color)
     
