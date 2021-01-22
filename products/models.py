@@ -35,7 +35,6 @@ class Product(models.Model):
         default=CARBON,
     )
     frame =	models.CharField(max_length=80)
-    frame_img = models.ImageField(null=True, blank=True)
     name = models.CharField(max_length=80)
     title =	models.CharField(max_length=120)
     fork =	models.CharField(max_length=80)

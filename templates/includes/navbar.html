@@ -17,8 +17,21 @@
             </div>
             <div id="navbarContent" class="collapse navbar-collapse" role="navigation">
                 <ul class="navbar-nav mr-auto pr-0" >
-                    <li>
-                        <a class="text-white py-0 nav-item nav-link" href="{% url 'bikes' %}">BIKES</a>
+                    <li class="dropdown">
+                        <a id="bikes-btn" class="text-white py-0 nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="{% url 'bikes' %}">BIKES</a>
+                        <div class="dropdown-menu bg-dark" aria-labelledby="bikes-btn">
+                            <ul class="bikes-dropdown-menu ">
+                                <li class="nav-item text-white">
+                                    <a class="text-white py-0 nav-item nav-link" href="{% url 'urban' %}">URBAN</a>
+                                </li>
+                                <li class="nav-item text-white">
+                                    <a class="text-white py-0 nav-item nav-link" href="{% url 'all_road' %}">ALL-ROAD</a>
+                                </li>
+                                <li class="nav-item text-white">
+                                    <a class="text-white py-0 nav-item nav-link" href="{% url 'road' %}">ROAD</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
                         <a class="text-white py-0 nav-item nav-link" href="{% url 'frames' %}">FRAMES</a>
@@ -61,10 +74,10 @@
                 <a class="nav-link text-white px-3" href="#" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="far fa-user"></i>
                 </a>
-                <div class="dropdown-menu border-0 w-8 p-0 rounded-3 my-0" aria-labelledby="dropdown-account">
+                <div id="account-drop-menu" class="dropdown-menu border-0 px-0 rounded-3 my-0 bg-dark text-center" aria-labelledby="dropdown-account">
                     <ul class="account-dropdown-menu">
-                        <li class="nav-item">SIGN IN</li>
-                        <li class="nav-item">SIGN UP</li>
+                        <li class="nav-item text-white">SIGN IN</li>
+                        <li class="nav-item text-white">SIGN UP</li>
                     </ul>
                 </div>
             </li>

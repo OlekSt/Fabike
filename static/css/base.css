@@ -22,9 +22,14 @@ body{
     width: 5em;
 }
 
+.bikes-dropdown-menu,
 .account-dropdown-menu{
     list-style-type: none;
 }
+
+.dropdown-menu { 
+    width: max-content; 
+ }
 
 .invisible{
     display: none;
