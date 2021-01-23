@@ -39,6 +39,10 @@ body{
     display: block;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: blue;
+}
+
 /* Index page */
 #hero{
     position: relative;
