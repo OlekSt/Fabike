@@ -11,12 +11,11 @@ def products(request):
     if request.GET:
         if 'q' in request.GET:
             query = request.GET['q']
-            #if not query:
-                #messages.error(request, "You didn't enter any search criteria!")
-                # return redirect(reverse('products'))
+            if not query:
+                messages.error(request, "You didn't enter any search criteria!")
+                return redirect(reverse('products'))
             
             query = Q(name__icontains=query)  | Q(title__icontains=query) | Q(frame__icontains=query) | Q(fork__icontains=query)  | Q(wheels__icontains=query) | Q(tyres__icontains=query) | Q(crankset__icontains=query)  | Q(shift_levers__icontains=query) | Q(casette_or_sprocket__icontains=query) | Q(chain_or_belt__icontains=query)  | Q(brakes__icontains=query) | Q(bottom_bracket__icontains=query) | Q(dropouts__icontains=query)
-
 
             products = products.filter(query)
 
