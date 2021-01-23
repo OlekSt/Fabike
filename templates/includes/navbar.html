@@ -18,9 +18,12 @@
             <div id="navbarContent" class="collapse navbar-collapse" role="navigation">
                 <ul class="navbar-nav mr-auto pr-0" >
                     <li class="dropdown">
-                        <a id="bikes-btn" class="text-white py-0 nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="{% url 'bikes' %}">BIKES</a>
+                        <a id="bikes-btn" class="text-white py-0 nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">BIKES</a>
                         <div class="dropdown-menu bg-dark" aria-labelledby="bikes-btn">
                             <ul class="bikes-dropdown-menu ">
+                                <li class="nav-item text-white">
+                                    <a class="text-white py-0 nav-item nav-link" href="{% url 'bikes' %}">ALL BIKES</a>
+                                </li>
                                 <li class="nav-item text-white">
                                     <a class="text-white py-0 nav-item nav-link" href="{% url 'urban' %}">URBAN</a>
                                 </li>
