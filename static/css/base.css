@@ -27,9 +27,9 @@ body{
     list-style-type: none;
 }
 
-.dropdown-menu { 
-    width: max-content; 
- }
+#account-drop-menu{ 
+    width: 100px; 
+}
 
 .invisible{
     display: none;
