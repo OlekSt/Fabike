@@ -17,10 +17,7 @@ def products(request):
             
             queries = Q(name__icontains=query)  | Q(title__icontains=query) | Q(frame__icontains=query) | Q(fork__icontains=query)  | Q(wheels__icontains=query) | Q(tyres__icontains=query) | Q(crankset__icontains=query)  | Q(shift_levers__icontains=query) | Q(casette_or_sprocket__icontains=query) | Q(chain_or_belt__icontains=query)  | Q(brakes__icontains=query) | Q(bottom_bracket__icontains=query) | Q(dropouts__icontains=query)
 
-            products = products.filter(queries)
-            print(products)
-            
-                
+            products = products.filter(queries)                
 
     context = {
         'products': products,
