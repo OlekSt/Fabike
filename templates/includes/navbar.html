@@ -90,8 +90,12 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white px-3" href="{% url 'view_cart' %}">
-                    <i class="fas fa-cart-arrow-down"></i>
+                    <span id="cart-span">
+                        <i class="fas fa-cart-arrow-down text-white"></i>
+                        <p id="cart-qty" class="font-weight-bold text-white">2</p>
+                    </span>
                 </a>
+                
             </li>
         </ul>
     </div>

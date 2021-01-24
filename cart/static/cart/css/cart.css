@@ -1,0 +1,10 @@
+/* to position number of products relative to the shopping cart icon */
+#cart-span{
+    position: relative;
+}
+
+#cart-qty{
+    position: absolute;
+    top: -15px;
+    right: 3px;
+}
