@@ -15,17 +15,22 @@ def products(request):
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
             
-            query = Q(name__icontains=query)  | Q(title__icontains=query) | Q(frame__icontains=query) | Q(fork__icontains=query)  | Q(wheels__icontains=query) | Q(tyres__icontains=query) | Q(crankset__icontains=query)  | Q(shift_levers__icontains=query) | Q(casette_or_sprocket__icontains=query) | Q(chain_or_belt__icontains=query)  | Q(brakes__icontains=query) | Q(bottom_bracket__icontains=query) | Q(dropouts__icontains=query)
+            queries = Q(name__icontains=query)  | Q(title__icontains=query) | Q(frame__icontains=query) | Q(fork__icontains=query)  | Q(wheels__icontains=query) | Q(tyres__icontains=query) | Q(crankset__icontains=query)  | Q(shift_levers__icontains=query) | Q(casette_or_sprocket__icontains=query) | Q(chain_or_belt__icontains=query)  | Q(brakes__icontains=query) | Q(bottom_bracket__icontains=query) | Q(dropouts__icontains=query)
 
-            products = products.filter(query)
+            products = products.filter(queries)
+            print(products)
+            
+                
 
     context = {
         'products': products,
         'search_term': query,
     }
-
-    return render(request, 'products/products.html', context)
-
+    if products:          
+        return render(request, 'products/products.html', context)
+    else: 
+        messages.error(request, "No products found for your search criteria!")
+        return render(request, 'products/products.html', context)
 
 def bikes(request):
     """

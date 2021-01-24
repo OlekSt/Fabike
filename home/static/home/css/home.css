@@ -4,7 +4,7 @@
 }
 
 /* Fading animation */
-.fade {
+.dissolve {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 4s;
     animation-name: fade;
