@@ -381,6 +381,7 @@ The website is created by Alexey Statsenko, using the media described below.
 - Code for search dropdown menu and search algorithm was copied from CI's Boutique Ado project, and modified according to the current project's needs. Thanks, Chris! ;-)
 - HTML/CSS code for color radio buttons on bike.html was taken from https://uicookies.com/bootstrap-radio-button-styles/ and modified according to the needs of the project. 
 - HTML/CSS code for size and components selector was taken from https://freefrontend.com/css-radio-buttons/ and modified according to the needs of the project. 
+- Code for toasts was copied from CI's Boutique Ado project, and modified according to the current project's needs.
 
 
 
