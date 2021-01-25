@@ -26,7 +26,7 @@ def cart_contents(request):
                     price = product.price_carbon
                 else:
                     price = product.price
-                total += quantity * product.price
+                total += quantity * price
                 product_count += quantity
                 cart_items.append({
                     'item_id': item_id,
