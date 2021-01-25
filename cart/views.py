@@ -41,19 +41,19 @@ def add_to_cart(request, item_id):
             if components == 'none':
                 messages.success(request, f'Updated quantity of {product.frame} {product.name} in {color} color &  size {size} in your cart')
             else:
-                messages.success(request, f'Updated quantity of {product.name} with {product.frame} frame & {components} components in {color} color, size {size} in your cart')
+                messages.success(request, f'Updated quantity of {product.name} with {product.frame} frame   in {color} color, size {size} with {components} components in your cart')
         else:
             cart[item_id]['items_by_options'][options_in_cart] = quantity
             if components == 'none':
-                messages.success(request, f'Added {product.frame} {product.name} in {color} color & {size} size in your cart')
+                messages.success(request, f'Added {product.frame} {product.name} in {color} color, size {size} to your cart')
             else:
-                messages.success(request, f'Added {product.name} with {product.frame} frame & {components} components in {color} color, size {size} to your cart')
+                messages.success(request, f'Added {product.name} with {product.frame} frame   in {color} color, size {size} with {components} components to your cart')
     else:
         cart[item_id] = {'items_by_options': {options_in_cart: quantity}}
         if components == 'none':
-            messages.success(request, f'Added {product.frame} {product.name} in {color} color & size {size} to your cart')
+            messages.success(request, f'Added {product.frame} {product.name} in {color} color, size {size} to your cart')
         else:
-            messages.success(request, f'Added {product.name} with {product.frame} frame & {components} components in {color} color, size {size} to your cart')
+            messages.success(request, f'Added {product.name} with {product.frame} frame in {color} color, size {size} with {components} components to your cart')
 
     request.session['cart'] = cart
     print(cart)
