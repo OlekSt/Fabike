@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load humanize %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'products/css/product.css' %}" type="text/css">
@@ -10,7 +11,7 @@
 {% block content %}
 <div id="product" class="container-fluid container-product">
     <div class="row">
-        <img class="product-image image-fluid" src="{{ STATIC_URL}}img/products/{{ product.image02 }}" alt="{{ product.frame }} {{ product.name }}">
+        <img class="product-image image-fluid" src="{{ STATIC_URL }}img/products/{{ product.image02 }}" alt="{{ product.frame }} {{ product.name }}">
     </div>
     <div class="row">
         <div class="col-12 col-lg-6 col-md-6 bg-dark px-5">
@@ -88,9 +89,9 @@
                 <div class="row mt-2 pt-2">
                     <div class="col col-lg-3  col-sm-6">
                         <p class="price-size-components-title"><strong>PRICE</strong></p>
-                        <h4 id="price_alloy" class="text-white text-center">€ {{ product.price_alloy }}</h4>
+                        <h4 id="price_alloy" class="text-white text-center">€ {{ product.price_alloy | intcomma }}</h4>
                         <hr>
-                        <h4 id="price_carbon" class="price-muted text-center">€ {{ product.price_carbon }}</h4>
+                        <h4 id="price_carbon" class="price-muted text-center">€ {{ product.price_carbon | intcomma }}</h4>
                     </div>
                     <div class="col col-lg-3 col-sm-6">
                         <p class="price-size-components-title"><strong>WEIGHT</strong></p>
@@ -114,7 +115,7 @@
                 <div class="row mt-2">
                     <div class="col col-lg-4  col-sm-4">
                         <p class="price-size-components-title"><strong>PRICE</strong></p>
-                        <h4 id="price" class="text-white text-center">€ {{ product.price }}</h4>
+                        <h4 id="price" class="text-white text-center">€ {{ product.price | intcomma }}</h4>
                     </div>
                     <div class="col col-lg-4 col-sm-4">
                         <p class="price-size-components-title"><strong>WEIGHT</strong></p>

@@ -35,6 +35,7 @@ def cart_contents(request):
                     'color': color,
                     'size': size,
                     'components': components,
+                    'price': price,
                 })
 
     context = {
