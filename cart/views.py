@@ -47,5 +47,5 @@ def add_to_cart(request, item_id):
             messages.success(request, f'Added {product.name} with {product.frame} frame & {components} components in {color} color, size {size} to your bag')
 
     request.session['cart'] = cart
-
+    print(cart)
     return redirect(redirect_url)

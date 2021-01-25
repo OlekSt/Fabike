@@ -3,7 +3,6 @@ $(document).ready(function() {
     let colorChoice = $("input[type=radio][name=color]:checked").val();
     let sizeChoice = $("input[type=radio][name=size]:checked").val();
     componentsChoice = $("input[type=radio][name=components]:checked").val();
-    console.log(colorChoice, sizeChoice, componentsChoice);
     
     $("input[type=radio][name=color]").on('change', function() {
         colorChoice = $("input[type=radio][name=color]:checked").val();
