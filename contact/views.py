@@ -26,7 +26,8 @@ def contact(request):
                     [settings.DEFAULT_FROM_EMAIL],
                     fail_silently=False
                 )
-                
+
+                messages.success(request, f'Your message has been successfully sent. Thank you! We will answer within 3 days!')
                 return redirect('contact')
 
             except BadHeaderError:
