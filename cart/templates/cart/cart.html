@@ -48,7 +48,7 @@
                                 <div class="form-group">
                                     <div class="input-group w-50">
                                         <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-sm btn-black rounded-0" 
+                                            <button class="decrement-qty btn btn-sm btn-outline-dark" 
                                                 data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-minus fa-sm"></i>
@@ -60,7 +60,7 @@
                                             data-item_id="{{ item.item_id }}"
                                             id="id_qty_{{ item.item_id }}">
                                         <div class="input-group-append">
-                                            <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                            <button class="increment-qty btn btn-sm btn-outline-dark"
                                                 data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-plus fa-sm"></i>
@@ -101,3 +101,7 @@
 </div>
 {% endblock %}
 
+{% block postloadjs %}
+{{ block.super }}
+{% include 'cart/includes/quantity_input_script.html' %}
+{% endblock %}
