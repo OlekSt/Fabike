@@ -27,10 +27,14 @@
                     {% for item in cart_items %}
                     <tr>
                         <td class="p-3 w-25 col">
-                            <img class="img-fluid rounded" src="{{ STATIC_URL }}img/products/{{ item.product.image02 }}">
+                            <a class="bike-link" href="{% url 'product' item.product.id %}">
+                                <img class="img-fluid rounded" src="{{ STATIC_URL }}img/products/{{ item.product.image02 }}">
+                            </a>
                         </td>
                         <td class="py-3 w-25">
-                            <p class="my-0"><strong>{{ item.product.frame }} {{ item.product.name }}</strong></p>
+                            <a class="bike-link" href="{% url 'product' item.product.id %}">
+                                <p class="my-0"><strong>{{ item.product.frame }} {{ item.product.name }}</strong></p>
+                            </a>
                             <p class="my-0"><strong>Color: </strong>{{ item.size|upper }}</p>
                             <p class="my-0"><strong>Size: </strong>{{ item.color|upper }}</p>
                             <p class="my-0"><strong>Components: </strong>{{ item.components|upper }}</p>
