@@ -13,7 +13,6 @@ def cart_contents(request):
     cart = request.session.get('cart', {})
 
     for item_id, options_in_cart in cart.items():
-            
             product = get_object_or_404(Product, pk=item_id)
             for options, quantity in options_in_cart['items_by_options'].items():
                 options = options.split('-')
@@ -26,6 +25,7 @@ def cart_contents(request):
                     price = product.price_carbon
                 else:
                     price = product.price
+                subtotal = quantity * price
                 total += quantity * price
                 product_count += quantity
                 cart_items.append({
@@ -36,11 +36,13 @@ def cart_contents(request):
                     'size': size,
                     'components': components,
                     'price': price,
+                    'subtotal': subtotal,
                 })
 
     context = {
-        'cart_items': cart_items, 
+        'cart_items': cart_items,
         'total': total,
+        'subtotal': subtotal,
         'product_count': product_count,
     }
 
