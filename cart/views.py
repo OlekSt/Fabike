@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect,\
+                                get_object_or_404, HttpResponse
 from django.contrib import messages
 from products.models import Product
 from django import template
@@ -11,10 +12,6 @@ def view_cart(request):
     """ A view to return shopping card page """
 
     return render(request, 'cart/cart.html')
-
-
-def calc_subtotal(price, quantity):
-    return price * quantity
 
 
 def add_to_cart(request, item_id):
@@ -69,3 +66,21 @@ def add_to_cart(request, item_id):
     request.session['cart'] = cart
 
     return redirect(redirect_url)
+
+
+def remove_from_cart(request, item_id):
+    """Remove a specific product from the shopping cart"""
+    product = Product.objects.get(pk=item_id)
+
+    try:
+        cart = request.session.get('cart', {})
+        cart.pop(item_id)
+        messages.info(request, (f'Removed {product.frame} {product.name}\
+                                from your cart'))
+
+        request.session['cart'] = cart
+        return render(request, 'cart/cart.html')
+
+    except Exception as e:
+        messages.error(request, f'Error removing item from the cart: {e}')
+        return HttpResponse(status=500)

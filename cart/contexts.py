@@ -25,7 +25,6 @@ def cart_contents(request):
                     price = product.price_carbon
                 else:
                     price = product.price
-                subtotal = quantity * price
                 total += quantity * price
                 product_count += quantity
                 cart_items.append({
@@ -36,13 +35,11 @@ def cart_contents(request):
                     'size': size,
                     'components': components,
                     'price': price,
-                    'subtotal': subtotal,
                 })
 
     context = {
         'cart_items': cart_items,
         'total': total,
-        'subtotal': subtotal,
         'product_count': product_count,
     }
 
