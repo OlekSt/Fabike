@@ -13,29 +13,31 @@ def cart_contents(request):
     cart = request.session.get('cart', {})
 
     for item_id, options_in_cart in cart.items():
-            product = get_object_or_404(Product, pk=item_id)
-            for options, quantity in options_in_cart['items_by_options'].items():
-                options = options.split('-')
-                color = options[0]
-                size = options[1]
-                components = options[2]
-                if components == 'alloy':
-                    price = product.price_alloy
-                elif components == 'carbon':
-                    price = product.price_carbon
-                else:
-                    price = product.price
-                total += quantity * price
-                product_count += quantity
-                cart_items.append({
-                    'item_id': item_id,
-                    'quantity': quantity,
-                    'product': product,
-                    'color': color,
-                    'size': size,
-                    'components': components,
-                    'price': price,
-                })
+        product = get_object_or_404(Product, pk=item_id)
+        for options, quantity in options_in_cart['items_by_options'].items():
+            options = options.split('-')
+            color = options[0]
+            size = options[1]
+            components = options[2]
+            if components == 'alloy':
+                price = product.price_alloy
+            elif components == 'carbon':
+                price = product.price_carbon
+            else:
+                price = product.price
+            price = int(price)
+            quantity = int(quantity)
+            total += quantity * price
+            product_count += quantity
+            cart_items.append({
+                'item_id': item_id,
+                'quantity': quantity,
+                'product': product,
+                'color': color,
+                'size': size,
+                'components': components,
+                'price': price,
+            })
 
     context = {
         'cart_items': cart_items,

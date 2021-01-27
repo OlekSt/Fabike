@@ -1,11 +1,9 @@
-from django.shortcuts import render, redirect,\
+from django.shortcuts import render, redirect, reverse,\
                                 get_object_or_404, HttpResponse
 from django.contrib import messages
 from products.models import Product
 from django import template
-
-
-register = template.Library()
+from decimal import Decimal
 
 
 def view_cart(request):
@@ -30,7 +28,7 @@ def add_to_cart(request, item_id):
         components = 'none'
 
     # options_in_cart to check if such a combination has been added to the cart
-    options_to_add = (size, color, components)
+    options_to_add = (color, size, components)
     options_in_cart = "-".join(options_to_add)
 
     cart = request.session.get('cart', {})
@@ -64,9 +62,25 @@ def add_to_cart(request, item_id):
             with {components} components to your cart')
 
     request.session['cart'] = cart
-
     return redirect(redirect_url)
 
+
+def update_cart(request, item_id):
+    """Update quantity of a specific product in the shopping cart"""
+    
+    quantity = request.POST.get('quantity')
+    product = get_object_or_404(Product, pk=item_id)
+    cart = request.session.get('cart', {})
+        
+    for item_id, options_in_cart in cart.items():
+        for options_in_cart in cart[item_id]['items_by_options'].keys():
+            cart[item_id]['items_by_options'][options_in_cart] = quantity
+            messages.success(request, f'Updated quanitity of {product.frame}\
+                            {product.name} to { quantity } in your cart')
+
+    request.session['cart'] = cart
+    return redirect(reverse('view_cart'))
+    
 
 def remove_from_cart(request, item_id):
     """Remove a specific product from the shopping cart"""
