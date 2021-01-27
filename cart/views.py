@@ -30,6 +30,7 @@ def add_to_cart(request, item_id):
     # options_in_cart to check if such a combination has been added to the cart
     options_to_add = (color, size, components)
     options_in_cart = "-".join(options_to_add)
+    
 
     cart = request.session.get('cart', {})
     if item_id in list(cart.keys()):
@@ -60,7 +61,7 @@ def add_to_cart(request, item_id):
             messages.success(request, f'Added {product.name} with\
             {product.frame} frame in {color} color, size {size}\
             with {components} components to your cart')
-
+    print(cart)
     request.session['cart'] = cart
     return redirect(redirect_url)
 
@@ -71,14 +72,16 @@ def update_cart(request, item_id):
     quantity = request.POST.get('quantity')
     product = get_object_or_404(Product, pk=item_id)
     cart = request.session.get('cart', {})
-
-    for item_id, options_in_cart in cart.items():
-        for options_in_cart in cart[item_id]['items_by_options'].keys():
+    
+    for options_in_cart in cart[item_id]['items_by_options'].keys():
+        print(options_in_cart)
+        if options_in_cart in cart[item_id]['items_by_options'].keys():
             cart[item_id]['items_by_options'][options_in_cart] = quantity
             
     messages.success(request, f'Updated quanitity of {product.frame}\
                             {product.name} to { quantity } in your cart')
-                            
+    print(cart)
+    print(options_in_cart)
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
 
@@ -90,6 +93,7 @@ def remove_from_cart(request, item_id):
     try:
         cart = request.session.get('cart', {})
         cart.pop(item_id)
+        
         messages.info(request, (f'Removed {product.frame} {product.name}\
                                 from your cart'))
 
