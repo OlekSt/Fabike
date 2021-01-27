@@ -229,6 +229,11 @@ body{
     height: 2px;
 }
 
+.toast-icon{
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {

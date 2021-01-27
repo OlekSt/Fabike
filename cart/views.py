@@ -67,20 +67,21 @@ def add_to_cart(request, item_id):
 
 def update_cart(request, item_id):
     """Update quantity of a specific product in the shopping cart"""
-    
+
     quantity = request.POST.get('quantity')
     product = get_object_or_404(Product, pk=item_id)
     cart = request.session.get('cart', {})
-        
+
     for item_id, options_in_cart in cart.items():
         for options_in_cart in cart[item_id]['items_by_options'].keys():
             cart[item_id]['items_by_options'][options_in_cart] = quantity
-            messages.success(request, f'Updated quanitity of {product.frame}\
+            
+    messages.success(request, f'Updated quanitity of {product.frame}\
                             {product.name} to { quantity } in your cart')
-
+                            
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
-    
+
 
 def remove_from_cart(request, item_id):
     """Remove a specific product from the shopping cart"""

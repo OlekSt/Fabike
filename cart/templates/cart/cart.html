@@ -85,21 +85,29 @@
                 </table>
             </div>
             <hr>
-            <div>
-                <table>
-                    <tr class="w-100 pb-5">
-                        <td class="col-8"></td>
-                        <td class="col-4 right-0 text-right">                       
-                            <h5><strong>Cart Total: € {{ total| intcomma }}</strong></h5>
-                            <h6 class="mb-4">Delivery is included.</h6>
-                            <hr>
-                        </td>
-                    </tr>
-                </table>
-            </div>        
+            <div class="row text-center py-2">
+                <div class="col-6"></div>
+                <div class="col-6 text-right">
+                    <div class="col-12 right-0 ">                       
+                        <h5><strong>Cart Total: € {{ total| intcomma }}</strong></h5>
+                        <h6 class="mb-4">Delivery is included.</h6>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center py-2">
+                <div class="col-6">
+                    <a href="{% url 'home' %}" class="py-2 btn btn-light text-center border-primary">Back to <i class="fas fa-biking"></i></a>
+                </div>
+                <div class="col-6">
+                    <button href="" class="py-2 text-center btn btn-light border-warning">CHECKOUT</button>
+                </div>
+            </div>
         {% else %}
-            <p>Your cart is empty.</p>
-            <a href="{% url 'home' %}" class="py-2 text-center">Back to <i class="fas fa-biking"></i></a>
+            <div class="text-center py-2">
+                <h4 class="py-4">Your cart is empty.</h4>
+                <a href="{% url 'home' %}" class="py-2 btn btn-light text-center border-primary">Back to <i class="fas fa-biking"></i></a>
+            </div>
         {% endif %}
     </div>
 </div>

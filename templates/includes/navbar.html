@@ -91,8 +91,8 @@
             <li class="nav-item">
                 <a class="nav-link text-white px-3" href="{% url 'view_cart' %}">
                     <span id="cart-span">
-                        <i class="fas fa-cart-arrow-down {% if product_count == 0 %}text-white{% else %}text-info{% endif %}"></i>
-                        <span id="cart-qty" class="{% if product_count == 0 %}text-white{% else %}text-info{% endif %}">{{ product_count }}</span>
+                        <i class="fas fa-cart-arrow-down {% if product_count == 0 %}text-white{% else %}text-primary{% endif %}"></i>
+                        <span id="cart-qty" class="{% if product_count == 0 %}text-white{% else %}text-primary{% endif %}">{{ product_count }}</span>
                     </span>
                 </a>
                 
