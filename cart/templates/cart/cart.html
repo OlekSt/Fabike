@@ -77,7 +77,8 @@
                             <p class="my-0"><strong>€ {{ item.price | calc_subtotal:item.quantity | intcomma }}</strong></p></div>
                             <div class="h-25"></div>
                             <div>
-                            <a href="{% url 'remove_from_cart' item.product.id %}" type="submit" class="bottom-0 text-danger float-right"><small>Remove item</small></a></div>
+                                <a href="{% url 'remove_from_cart' item.product.id %}" type="submit" class="bottom-0 text-danger btn btn-light"><small>Remove item</small></a>
+                            </div>
                         </td>
                     </tr>
                     {% endfor %}    
@@ -96,11 +97,9 @@
                     </tr>
                 </table>
             </div>        
-            {{ cart_items }}
-            {{ cart }}
         {% else %}
             <p>Your cart is empty.</p>
-            <a href="{% url 'home' %}" class="text-center">Back to Home page</a>
+            <a href="{% url 'home' %}" class="py-2 text-center">Back to <i class="fas fa-biking"></i></a>
         {% endif %}
     </div>
 </div>
