@@ -68,20 +68,22 @@ def add_to_cart(request, item_id):
 
 def update_cart(request, item_id):
     """Update quantity of a specific product in the shopping cart"""
-
+    
+        
     quantity = request.POST.get('quantity')
     product = get_object_or_404(Product, pk=item_id)
     cart = request.session.get('cart', {})
     
-    for options_in_cart in cart[item_id]['items_by_options'].keys():
-        print(options_in_cart)
-        if options_in_cart in cart[item_id]['items_by_options'].keys():
-            cart[item_id]['items_by_options'][options_in_cart] = quantity
-            
+    for item_id, item_by_options in cart.items():
+        for options_in_cart in cart[item_id]['items_by_options'].keys():
+            if request.method == 'POST':
+                #form = update_cart(request.POST())
+                btn_id = f'update_{options_in_cart}'
+                if btn_id in request.POST:
+                    cart[item_id]['items_by_options'][options_in_cart ] = quantity
     messages.success(request, f'Updated quanitity of {product.frame}\
-                            {product.name} to { quantity } in your cart')
-    print(cart)
-    print(options_in_cart)
+        {product.name} to { quantity } in your cart')
+
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
 
@@ -89,7 +91,7 @@ def update_cart(request, item_id):
 def remove_from_cart(request, item_id):
     """Remove a specific product from the shopping cart"""
     product = Product.objects.get(pk=item_id)
-
+    
     try:
         cart = request.session.get('cart', {})
         cart.pop(item_id)

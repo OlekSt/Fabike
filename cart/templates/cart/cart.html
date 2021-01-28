@@ -26,29 +26,29 @@
                     </thead>
                     {% for item in cart_items %}
                     <tr>
-                        <td class="p-3 w-25 col">
-                            <a class="bike-link" href="{% url 'product' item.item_id %}">
-                                <img class="img-fluid rounded" src="{{ STATIC_URL }}img/products/{{ item.product.image02 }}">
-                            </a>
-                        </td>
-                        <td class="py-3 w-25">
-                            <a class="bike-link" href="{% url 'product' item.product.id %}">
-                                <h5 class="my-1"><strong>{{ item.product.frame }} {{ item.product.name }}</strong></h5>
-                            </a>
-                            <p class="my-0"><strong>Color: </strong>{{ item.color|upper }}</p>
-                            <p class="my-0"><strong>Size: </strong>{{ item.size|upper }}</p>
-                            <p class="my-0"><strong>Components: </strong>{{ item.components|upper }}</p>
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0">€ {{ item.price | intcomma }}</p>
-                        </td>                            
-                        <td class="py-3 text-center">
-                            <div class="w-50">
-                                <p class="my-0 text-center"><strong>{{ item.quantity }}</strong></p>
-                                <hr>
-                            </div>
-                            <form class="form" method="POST" action="{% url 'update_cart' item.item_id %}">
-                                {% csrf_token %}
+                        <form class="form" method="POST" action="{% url 'update_cart' item.item_id %}">
+                            {% csrf_token %}
+                            <td class="p-3 w-25 col">
+                                <a class="bike-link" href="{% url 'product' item.item_id %}">
+                                    <img class="img-fluid rounded" src="{{ STATIC_URL }}img/products/{{ item.product.image02 }}">
+                                </a>
+                            </td>
+                            <td class="py-3 w-25">
+                                <a class="bike-link" href="{% url 'product' item.product.id %}">
+                                    <h5 class="my-1"><strong>{{ item.product.frame }} {{ item.product.name }}</strong></h5>
+                                </a>
+                                <p class="my-0"><strong>Color: </strong>{{ item.color|upper }}</p>
+                                <p class="my-0"><strong>Size: </strong>{{ item.size|upper }}</p>
+                                <p class="my-0"><strong>Components: </strong>{{ item.components|upper }}</p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">€ {{ item.price | intcomma }}</p>
+                            </td>                            
+                            <td class="py-3 text-center">
+                                <div class="w-50">
+                                    <p class="my-0 text-center"><strong>{{ item.quantity }}</strong></p>
+                                    <hr>
+                                </div>
                                 <div class="form-group">
                                     <div class="input-group w-50">
                                         <div class="input-group-prepend">
@@ -69,17 +69,18 @@
                                         </div>
                                     </div>
                                 </div>
-                            <button href="{% url 'update_cart' item.item_id %}" type="submit" class="btn btn-light text-info"><small>Update</small></button>
-                        </form> 
-                        </td>
-                        <td class="py-3 text-center">
-                            <div class="h-50">
-                            <p class="my-0"><strong>€ {{ item.price | calc_subtotal:item.quantity | intcomma }}</strong></p></div>
-                            <div class="h-25"></div>
-                            <div>
-                                <a href="{% url 'remove_from_cart' item.product.id %}" type="submit" class="bottom-0 text-danger btn btn-light"><small>Remove item</small></a>
-                            </div>
-                        </td>
+                                <button id="update_{{ item.options }}" name="update_{{ item.options_in_cart }}" value="{{ item.options_in_cart  }}" href="{% url 'update_cart' item.item_id %}" type="submit" class="btn btn-light text-info">
+                                <small>Update</small></button>
+                            </td>
+                            <td class="py-3 text-center">
+                                <div class="h-50">
+                                <p class="my-0"><strong>€ {{ item.price | calc_subtotal:item.quantity | intcomma }}</strong></p></div>
+                                <div class="h-25"></div>
+                                <div>
+                                    <button id="remove_{{ item.options_in_cart }}" name="remove_{{ item.options_in_cart  }}" value="{{ item.options }}" href="{% url 'remove_from_cart' item.product.id %}" type="submit" class="bottom-0 text-danger btn btn-light"><small>Remove item</small></button>
+                                </div>
+                            </td>
+                        </form>
                     </tr>
                     {% endfor %}    
                 </table>

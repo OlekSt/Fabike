@@ -29,13 +29,13 @@ def cart_contents(request):
             quantity = int(quantity)
             total += quantity * price
             product_count += quantity
-            options = "-".join(options)
+            options_in_cart = "-".join(options)
             cart_items.append({
                 'item_id': item_id,
                 'quantity': quantity,
                 'product': product,
                 'color': color,
-                'options': options,
+                'options_in_cart': options_in_cart,
                 'size': size,
                 'components': components,
                 'price': price,
