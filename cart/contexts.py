@@ -16,9 +16,9 @@ def cart_contents(request):
         product = get_object_or_404(Product, pk=item_id)
         for options, quantity in options_in_cart['items_by_options'].items():
             options = options.split('-')
-            color = options[0]
-            size = options[1]
-            components = options[2]
+            color = options[1]
+            size = options[2]
+            components = options[3]
             if components == 'alloy':
                 price = product.price_alloy
             elif components == 'carbon':
@@ -29,13 +29,13 @@ def cart_contents(request):
             quantity = int(quantity)
             total += quantity * price
             product_count += quantity
-            options_in_cart = "-".join(options)
+            item_in_cart = "-".join(options)
             cart_items.append({
                 'item_id': item_id,
                 'quantity': quantity,
                 'product': product,
                 'color': color,
-                'options_in_cart': options_in_cart,
+                'item_in_cart': item_in_cart,
                 'size': size,
                 'components': components,
                 'price': price,
@@ -46,5 +46,5 @@ def cart_contents(request):
         'total': total,
         'product_count': product_count,
     }
-
+    print(product_count)
     return context

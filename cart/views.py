@@ -28,14 +28,14 @@ def add_to_cart(request, item_id):
         components = 'none'
 
     # options_in_cart to check if such a combination has been added to the cart
-    options_to_add = (color, size, components)
-    options_in_cart = "-".join(options_to_add)
+    item_to_add = (item_id, color, size, components)
+    item_in_cart = "-".join(item_to_add)
     
 
     cart = request.session.get('cart', {})
     if item_id in list(cart.keys()):
-        if options_in_cart in cart[item_id]['items_by_options'].keys():
-            cart[item_id]['items_by_options'][options_in_cart] += quantity
+        if item_in_cart in cart[item_id]['items_by_options'].keys():
+            cart[item_id]['items_by_options'][item_in_cart] += quantity
             if components == 'none':
                 messages.success(request, f'Updated quantity of {product.frame} \
                 {product.name} in {color} color &  size {size} in your cart')
@@ -44,7 +44,7 @@ def add_to_cart(request, item_id):
                 {product.frame} frame   in {color} color, size {size} with \
                 {components} components in your cart')
         else:
-            cart[item_id]['items_by_options'][options_in_cart] = quantity
+            cart[item_id]['items_by_options'][item_in_cart] = quantity
             if components == 'none':
                 messages.success(request, f'Added {product.frame} {product.name} in\
                 {color} color, size {size} to your cart')
@@ -53,7 +53,7 @@ def add_to_cart(request, item_id):
                 {product.frame} frame in {color} color, size {size}\
                 with {components} components to your cart')
     else:
-        cart[item_id] = {'items_by_options': {options_in_cart: quantity}}
+        cart[item_id] = {'items_by_options': {item_in_cart: quantity}}
         if components == 'none':
             messages.success(request, f'Added {product.frame} {product.name}\
             in {color} color, size {size} to your cart')
@@ -68,40 +68,54 @@ def add_to_cart(request, item_id):
 
 def update_cart(request, item_id):
     """Update quantity of a specific product in the shopping cart"""
-    
         
     quantity = request.POST.get('quantity')
     product = get_object_or_404(Product, pk=item_id)
     cart = request.session.get('cart', {})
     
-    for item_id, item_by_options in cart.items():
-        for options_in_cart in cart[item_id]['items_by_options'].keys():
-            if request.method == 'POST':
-                #form = update_cart(request.POST())
-                btn_id = f'update_{options_in_cart}'
-                if btn_id in request.POST:
-                    cart[item_id]['items_by_options'][options_in_cart ] = quantity
+    
+    
+    for item_in_cart in cart[item_id]['items_by_options'].keys():
+        if request.method == 'POST':
+            btn_update = f'update_{item_in_cart}'
+            if btn_update in request.POST:
+                cart[item_id]['items_by_options'][item_in_cart] = quantity
+                
+
     messages.success(request, f'Updated quanitity of {product.frame}\
         {product.name} to { quantity } in your cart')
-
     request.session['cart'] = cart
+    print(cart)
     return redirect(reverse('view_cart'))
 
 
 def remove_from_cart(request, item_id):
     """Remove a specific product from the shopping cart"""
-    product = Product.objects.get(pk=item_id)
-    
-    try:
-        cart = request.session.get('cart', {})
-        cart.pop(item_id)
         
-        messages.info(request, (f'Removed {product.frame} {product.name}\
-                                from your cart'))
+    product = Product.objects.get(pk=item_id)
+    cart = request.session.get('cart', {})
+    
+    for cart_items, items_by_options in cart.items():
+        for value in items_by_options.values():
+            print("value: ", value)
+            print("value len: ", len(value))
+            for item_in_cart, key in cart[item_id]['items_by_options'].items():
+                print("item_in_cart: ", item_in_cart, len(item_in_cart))
+                btn_remove = f'remove_{item_in_cart}'
+                if btn_remove in request.POST:
+                    btn_item = btn_remove.split('_')
+                    item_to_remove = btn_item[1]
+                    print("btn_removee", btn_remove)
+                    print("remove: ", item_to_remove)
+            
+    if len(value) == 1 and btn_remove in request.POST:
+        print("pop", print(len(items_by_options)))
+        cart.pop(item_id)
+    else: 
+        print("del", print(len(items_by_options)))
+        del cart[item_id]['items_by_options'][item_to_remove]
 
-        request.session['cart'] = cart
-        return render(request, 'cart/cart.html')
-
-    except Exception as e:
-        messages.error(request, f'Error removing item from the cart: {e}')
-        return HttpResponse(status=500)
+    request.session['cart'] = cart
+    
+    print("cart final", cart)
+    return render(request, 'cart/cart.html')

@@ -69,18 +69,22 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button id="update_{{ item.options }}" name="update_{{ item.options_in_cart }}" value="{{ item.options_in_cart  }}" href="{% url 'update_cart' item.item_id %}" type="submit" class="btn btn-light text-info">
+                                <button id="update_{{ item.options_in_cart }}" name="update_{{ item.item_in_cart }}" value="{{ item.item_in_cart  }}" href="{% url 'update_cart' item.item_id %}" type="submit" class="btn btn-light text-info">
                                 <small>Update</small></button>
                             </td>
+                        </form>
                             <td class="py-3 text-center">
                                 <div class="h-50">
                                 <p class="my-0"><strong>€ {{ item.price | calc_subtotal:item.quantity | intcomma }}</strong></p></div>
                                 <div class="h-25"></div>
                                 <div>
-                                    <button id="remove_{{ item.options_in_cart }}" name="remove_{{ item.options_in_cart  }}" value="{{ item.options }}" href="{% url 'remove_from_cart' item.product.id %}" type="submit" class="bottom-0 text-danger btn btn-light"><small>Remove item</small></button>
+                                    <form class="form" method="POST" action="{% url 'remove_from_cart' item.item_id %}">
+                                    {% csrf_token %}
+                                        <button id="remove_{{ item.item_in_cart }}" name="remove_{{ item.item_in_cart  }}" value="{{ item.item_in_cart  }}" href="{% url 'remove_from_cart' item.item_id %}" type="submit" class="bottom-0 text-danger btn btn-light"><small>Remove item</small></button>
+                                    </form>
                                 </div>
                             </td>
-                        </form>
+                        
                     </tr>
                     {% endfor %}    
                 </table>
@@ -92,6 +96,8 @@
                     <div class="col-12 right-0 ">                       
                         <h5><strong>Cart Total: € {{ total| intcomma }}</strong></h5>
                         <h6 class="mb-4">Delivery is included.</h6>
+                        {{ cart_items }}
+                        {{ product_count }}
                         <hr>
                     </div>
                 </div>
@@ -101,7 +107,7 @@
                     <a href="{% url 'home' %}" class="py-2 btn btn-light text-center border-primary">Back to <i class="fas fa-biking"></i></a>
                 </div>
                 <div class="col-6">
-                    <button href="" class="py-2 text-center btn btn-light border-warning">CHECKOUT</button>
+                    <a href="" class="py-2 text-center btn btn-light border-warning">CHECKOUT</a>
                 </div>
             </div>
         {% else %}
