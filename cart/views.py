@@ -26,11 +26,9 @@ def add_to_cart(request, item_id):
         components = request.POST['components']
     else:
         components = 'none'
-
     # options_in_cart to check if such a combination has been added to the cart
     item_to_add = (item_id, color, size, components)
     item_in_cart = "-".join(item_to_add)
-    
 
     cart = request.session.get('cart', {})
     if item_id in list(cart.keys()):
@@ -68,19 +66,16 @@ def add_to_cart(request, item_id):
 
 def update_cart(request, item_id):
     """Update quantity of a specific product in the shopping cart"""
-        
+
     quantity = request.POST.get('quantity')
     product = get_object_or_404(Product, pk=item_id)
     cart = request.session.get('cart', {})
-    
-    
-    
+
     for item_in_cart in cart[item_id]['items_by_options'].keys():
         if request.method == 'POST':
             btn_update = f'update_{item_in_cart}'
             if btn_update in request.POST:
                 cart[item_id]['items_by_options'][item_in_cart] = quantity
-                
 
     messages.success(request, f'Updated quanitity of {product.frame}\
         {product.name} to { quantity } in your cart')
@@ -91,28 +86,28 @@ def update_cart(request, item_id):
 
 def remove_from_cart(request, item_id):
     """Remove a specific product from the shopping cart"""
-        
+
     product = Product.objects.get(pk=item_id)
     cart = request.session.get('cart', {})
-    
+
     for cart_items, items_by_options in cart.items():
         for value in items_by_options.values():
             for item_in_cart, key in cart[item_id]['items_by_options'].items():
-                # to prevent the same button remove several options related to 1 product_id 
+                # to prevent the same button remove
+                # several options related to 1 product_id
                 btn_remove = f'remove_{item_in_cart}'
                 if btn_remove in request.POST:
                     btn_item = btn_remove.split('_')
                     item_to_remove = btn_item[1]
     """
-    To remove (pop) a product if there is only 1 product_id + 1 options variation
-    or to remove only 1 variation from several if 1 product_id + several sets of options
+    To remove (pop) a product if there is only 1 product_id +
+    1 options variation or to remove only 1 variation
+    from several if 1 product_id + several sets of options
     """
     if len(value) == 1 and btn_remove in request.POST:
         cart.pop(item_id)
-    else: 
+    else:
         del cart[item_id]['items_by_options'][item_to_remove]
 
     request.session['cart'] = cart
-    
-    print("cart final", cart)
     return render(request, 'cart/cart.html')

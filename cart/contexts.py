@@ -46,5 +46,5 @@ def cart_contents(request):
         'total': total,
         'product_count': product_count,
     }
-    print(product_count)
+
     return context
