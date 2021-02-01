@@ -110,4 +110,4 @@ def remove_from_cart(request, item_id):
         del cart[item_id]['items_by_options'][item_to_remove]
 
     request.session['cart'] = cart
-    return render(request, 'cart/cart.html')
+    return redirect(reverse('view_cart'))
