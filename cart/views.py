@@ -97,22 +97,19 @@ def remove_from_cart(request, item_id):
     
     for cart_items, items_by_options in cart.items():
         for value in items_by_options.values():
-            print("value: ", value)
-            print("value len: ", len(value))
             for item_in_cart, key in cart[item_id]['items_by_options'].items():
-                print("item_in_cart: ", item_in_cart, len(item_in_cart))
+                # to prevent the same button remove several options related to 1 product_id 
                 btn_remove = f'remove_{item_in_cart}'
                 if btn_remove in request.POST:
                     btn_item = btn_remove.split('_')
                     item_to_remove = btn_item[1]
-                    print("btn_removee", btn_remove)
-                    print("remove: ", item_to_remove)
-            
+    """
+    To remove (pop) a product if there is only 1 product_id + 1 options variation
+    or to remove only 1 variation from several if 1 product_id + several sets of options
+    """
     if len(value) == 1 and btn_remove in request.POST:
-        print("pop", print(len(items_by_options)))
         cart.pop(item_id)
     else: 
-        print("del", print(len(items_by_options)))
         del cart[item_id]['items_by_options'][item_to_remove]
 
     request.session['cart'] = cart
