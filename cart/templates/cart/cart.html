@@ -3,6 +3,7 @@
 {% load humanize %}
 {% load cart_tools %}
 
+{% block extra_title %}- Shopping Cart{% endblock %}
 
 {% block content %}
 <div class="container">
@@ -73,18 +74,17 @@
                                 <small>Update</small></button>
                             </td>
                         </form>
-                            <td class="py-3 text-center">
-                                <div class="h-50">
-                                <p class="my-0"><strong>€ {{ item.price | calc_subtotal:item.quantity | intcomma }}</strong></p></div>
-                                <div class="h-25"></div>
-                                <div>
-                                    <form class="form" method="POST" action="{% url 'remove_from_cart' item.item_id %}">
-                                    {% csrf_token %}
-                                        <button id="remove_{{ item.item_in_cart }}" name="remove_{{ item.item_in_cart  }}" value="{{ item.item_in_cart  }}" href="{% url 'remove_from_cart' item.item_id %}" type="submit" class="bottom-0 text-danger btn btn-light"><small>Remove item</small></button>
-                                    </form>
-                                </div>
-                            </td>
-                        
+                        <td class="py-3 text-center">
+                            <div class="h-50">
+                            <p class="my-0"><strong>€ {{ item.price | calc_subtotal:item.quantity | intcomma }}</strong></p></div>
+                            <div class="h-25"></div>
+                            <div>
+                                <form class="form" method="POST" action="{% url 'remove_from_cart' item.item_id %}">
+                                {% csrf_token %}
+                                    <button id="remove_{{ item.item_in_cart }}" name="remove_{{ item.item_in_cart  }}" value="{{ item.item_in_cart  }}" href="{% url 'remove_from_cart' item.item_id %}" type="submit" class="bottom-0 text-danger btn btn-light"><small>Remove item</small></button>
+                                </form>
+                            </div>
+                        </td>
                     </tr>
                     {% endfor %}    
                 </table>
@@ -105,7 +105,7 @@
                     <a href="{% url 'home' %}" class="py-2 btn btn-light text-center border-primary">Back to <i class="fas fa-biking"></i></a>
                 </div>
                 <div class="col-6">
-                    <a href="" class="py-2 text-center btn btn-light border-warning">CHECKOUT</a>
+                    <a href="{% url 'checkout' %}" class="py-2 text-center btn btn-light border-warning">CHECKOUT</a>
                 </div>
             </div>
         {% else %}
@@ -115,7 +115,6 @@
             </div>
         {% endif %}
     </div>
-    {{ cart }}
 </div>
 {% endblock %}
 
