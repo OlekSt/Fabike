@@ -80,7 +80,7 @@ def update_cart(request, item_id):
     messages.success(request, f'Updated quanitity of {product.frame}\
         {product.name} to { quantity } in your cart')
     request.session['cart'] = cart
-    print(cart)
+
     return redirect(reverse('view_cart'))
 
 

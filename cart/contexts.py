@@ -40,10 +40,15 @@ def cart_contents(request):
                 'components': components,
                 'price': price,
             })
+        
+    delivery = 0
+    final_total = delivery + total
 
     context = {
         'cart_items': cart_items,
         'total': total,
+        'delivery': delivery,
+        'final_total': final_total,
         'product_count': product_count,
     }
 

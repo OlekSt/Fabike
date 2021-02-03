@@ -12,56 +12,55 @@
 <div class="container">
     <div class="row">
         <hr>
-        <h2 class="uppercase">Checkout</h2>
-        <hr>
+        <h2 class="uppercase">CHECKOUT</h2>
+        <hr class="my-1">
     </div>
-    <div class="col-sm-12 col-lg-5 order-lg-last mb-5">
-        <p>Order Summary ({{ product_count }})</p>
-        <div class="row">
-            <div class="col-7 offset-2">
-                <p class="mb-1 mt-0 small text-muted text-center">Item</p>
-            </div>
-            <div class="col-3 text-right">
-                <p class="mb-1 mt-0 small text-muted">Subtotal</p>
-            </div>
-        </div>
-        {% for item in cart_items %}
+    <div class="row pt-2">
+        <div class="col-sm-12 col-lg-6 order-lg-last mb-5">
+            <p>Order Summary ({{ product_count }})</p>
             <div class="row">
-                <p class="my-0"><strong>{{ item.product.name|upper }}</strong></p>
-                <div class="col-3 mb-1">
-                    <a href="{% url 'product' item.product.id %}">
-                        <img class="w-100" src="{{ STATIC_URL }}img/products/{{ item.product.image01 }}" alt="{{ product.name }}">
-                    </a>
-                </div>
-                <div class="col-6">
-                    <p class="my-0">Color: <strong>{{ item.color|upper }}</strong></p>
-                    <p class="my-0">Size: <strong>{{ item.size|upper }}</strong></p>
-                    <p class="my-0">Components: <strong>{{ item.components|upper }}</strong></p>
-                    <p class="my-0">Quantity: <strong>{{ item.quantity }}</strong></p>
+                <div class="col-7 offset-2">
+                    <p class="mb-1 mt-0 small text-muted text-center">Item</p>
                 </div>
                 <div class="col-3 text-right">
-                    <p class="my-0"><strong>€ {{ item.price | calc_subtotal:item.quantity | intcomma }}</strong></p>
+                    <p class="mb-1 mt-0 small text-muted">Subtotal</p>
                 </div>
-                <hr class="muted">
             </div>
-        {% endfor %}
-        <hr class="my-0">
-        <div class="row text-black text-right">
-            <div class="col-7 offset-2">
-                <p class="my-0">Order Total:</p>
-                <p class="my-0">Delivery:</p>
-                <p class="my-0">Grand Total:</p>
-            </div>
-            <div class="col-3">
-                <p class="my-0">${{ total | intcomma }}</p>
-                <p class="my-0">${{ delivery | intcomma }}</p>
-                <p class="my-0"><strong>${{ grand_total | intcomma }}</strong></p>
+            {% for item in cart_items %}
+                <div class="row">
+                    <p class="my-1"><strong>{{ item.product.frame|upper }} {{ item.product.name|upper }}</strong></p>
+                    <div class="col-3 mb-1">
+                        <a href="{% url 'product' item.product.id %}">
+                            <img class="w-100" src="{{ STATIC_URL }}img/products/{{ item.product.image01 }}" alt="{{ product.name }}">
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <p class="my-0">Color: <strong>{{ item.color|upper }}</strong></p>
+                        <p class="my-0">Size: <strong>{{ item.size|upper }}</strong></p>
+                        <p class="my-0">Components: <strong>{{ item.components|upper }}</strong></p>
+                        <p class="my-0">Quantity: <strong>{{ item.quantity }}</strong></p>
+                    </div>
+                    <div class="col-3 text-right">
+                        <p class="my-0"><strong>€ {{ item.price | calc_subtotal:item.quantity | intcomma }}</strong></p>
+                    </div>
+                    <hr class="muted">
+                </div>
+            {% endfor %}
+            <div class="row text-black text-right">
+                <div class="col-7 offset-2">
+                    <p class="my-0">Order Total:</p>
+                    <p class="my-0">Delivery:</p>
+                    <p class="my-0"><strong>Total to Pay:</strong></p>
+                </div>
+                <div class="col-3">
+                    <p class="my-0">€ {{ total | intcomma }}</p>
+                    <p class="my-0 small">€ {{ delivery | intcomma }}</p>
+                    <p class="my-0"><strong>€ {{ final_total | intcomma }}</strong></p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-lg-6">
-            <p>Fill in the form below to complete the order</p>
+        <div class="col-sm-12 col-lg-6 px-4">
+            <p class="text-muted">Fill in the form below to complete the order</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
@@ -104,10 +103,10 @@
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="font-weight-bold">Adjust Cart</span>
+                        <span class="font-weight-bold">BACK TO CART</span>
                     </a>
                     <button id="submit-button" class="btn btn-black rounded-0">
-                        <span class="font-weight-bold">Complete Order</span>
+                        <span class="font-weight-bold">COMPLETE ORDER</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
                         </span>
@@ -116,7 +115,7 @@
                         <span class="icon">
                             <i class="fas fa-exclamation-circle"></i>
                         </span>
-                        <span>Your card will be charged <strong>${{ grand_total | intcomma }}</strong></span>
+                        <span>Your card will be charged <strong>€ {{ final_total | intcomma }}</strong></span>
                     </p>
                 </div>
             </form>
