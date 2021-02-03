@@ -47,15 +47,15 @@
                 </div>
             {% endfor %}
             <div class="row text-black text-right">
-                <div class="col-7 offset-2">
+                <div class="col-7 offset-2 text-right">
                     <p class="my-0">Order Total:</p>
                     <p class="my-0">Delivery:</p>
                     <p class="my-0"><strong>Total to Pay:</strong></p>
                 </div>
                 <div class="col-3">
-                    <p class="my-0">€ {{ total | intcomma }}</p>
-                    <p class="my-0 small">€ {{ delivery | intcomma }}</p>
-                    <p class="my-0"><strong>€ {{ final_total | intcomma }}</strong></p>
+                    <p class="my-0 text-right">€ {{ total | intcomma }}</p>
+                    <p class="my-0 small text-right">€ {{ delivery | intcomma }}</p>
+                    <p class="my-0 text-right"><strong>€ {{ final_total | intcomma }}</strong></p>
                 </div>
             </div>
         </div>
@@ -111,7 +111,7 @@
                             <i class="fas fa-lock"></i>
                         </span>
                     </button>
-                    <p class="small text-danger my-0">
+                    <p class="small text-danger my-0 text-center>
                         <span class="icon">
                             <i class="fas fa-exclamation-circle"></i>
                         </span>
@@ -122,4 +122,11 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key | json_script:"id_stripe_public_key" }}
+    {{ client_secret | json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
