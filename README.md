@@ -383,6 +383,7 @@ The website is created by Alexey Statsenko, using the media described below.
 - HTML/CSS code for size and components selector was taken from https://freefrontend.com/css-radio-buttons/ and modified according to the needs of the project. 
 - Code for toasts was copied from CI's Boutique Ado project, and modified according to the current project's needs.
 - Code for cart including calc_subtotal templatetags was copied from CI's Boutique Ado project, and modified according to the current project's needs.
+- Code for checkout app was partly copied from CI's Boutique Ado project, and modified according to the current project's needs.
 
 
 
