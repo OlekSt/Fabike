@@ -22,5 +22,4 @@ def update_on_delete(sender, instance, **kwargs):
     """
     Update order total on OrderItem delete
     """
-    print('singal delete works')
     instance.order.update_total()
