@@ -15,7 +15,7 @@ def view_cart(request):
 def add_to_cart(request, item_id):
     """ Add a quantity of the specified product to the shopping cart """
 
-    quantity = '1'
+    quantity = 1
     redirect_url = request.POST.get('redirect_url')
     product = get_object_or_404(Product, pk=item_id)
     # to get a chosen combination of a product + color + size +
