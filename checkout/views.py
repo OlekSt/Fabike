@@ -74,7 +74,6 @@ def checkout(request):
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
-
     else:
         cart = request.session.get('cart', {})
         if not cart:
@@ -104,7 +103,7 @@ def checkout(request):
         'stripe_public_key': stripe_public_key, 
         'client_secret': intent.client_secret,
     }
-    
+
     return render(request, template, context)
 
 
