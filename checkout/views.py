@@ -37,31 +37,38 @@ def checkout(request):
         if order_form.is_valid:
             order = order_form.save()
             for item_id, options_in_cart in cart.items():
-                for options, quantity in options_in_cart['items_by_options'].items():
-                    options = options.split('-')
-                    color = options[1]
-                    size = options[2]
-                    components = options[3]     
-                    product = Product.objects.get(id=item_id)
-                    quantity = int(quantity)
-                    if components == 'alloy':
-                        price = int(product.price_alloy)
-                    elif components == 'carbon':
-                        price = int(product.price_carbon)
-                    else:
-                        price = int(product.price)
-                    order_line_item = OrderLineItem(
-                        order=order,
-                        product=product,
-                        quantity=quantity,
-                        product_color=color,
-                        product_size=size,
-                        product_components=components,
-                        price=price,
+                try:
+                    for options, quantity in options_in_cart['items_by_options'].items():
+                        options = options.split('-')
+                        color = options[1]
+                        size = options[2]
+                        components = options[3]     
+                        product = Product.objects.get(id=item_id)
+                        quantity = int(quantity)
+                        if components == 'alloy':
+                            price = int(product.price_alloy)
+                        elif components == 'carbon':
+                            price = int(product.price_carbon)
+                        else:
+                            price = int(product.price)
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            product=product,
+                            quantity=quantity,
+                            product_color=color,
+                            product_size=size,
+                            product_components=components,
+                            price=price,
+                        )
+                        order_line_item.save()
+                except Product.DoesNotExist:
+                    messages.error(request, (
+                        "One of the products in your bag wasn't "
+                        "found in our database. "
+                        "Please call us for assistance!")
                     )
-                    order_line_item.save()
+                    order.delete()
                     return redirect(reverse('view_cart'))
-
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
