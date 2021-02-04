@@ -26,7 +26,6 @@ class OrderForm(forms.ModelForm):
             'address_line2': 'Address Line 2',
             'county': 'County, State or Locality',
             'country': 'Country',
-            'comment': 'Additional comment/query',
         }
 
         self.fields['full_name'].widget.attrs['autofocus'] = True

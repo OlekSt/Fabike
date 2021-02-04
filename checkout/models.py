@@ -28,24 +28,23 @@ class Order(models.Model):
                                         null=False, default=0)
     order_total = models.DecimalField(max_digits=10, decimal_places=0,
                                         null=False, default=0)
-    grand_total = models.DecimalField(max_digits=10, decimal_places=0,
+    final_total = models.DecimalField(max_digits=10, decimal_places=0,
                                         null=False, default=0)
     original_cart = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False,
                                     blank=False, default='')
-    comment = models.TextField(max_length=254, null=True, blank=True)
 
     def _generate_order_number(self):
         """
         Generate a unique order number using UUID
         """
-        uuid.uuid4().hex.upper()
+        return uuid.uuid4().hex.upper()
 
     def update_total(self):
         """
         Updates final total for an order.
         """
-        #self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total_sum']
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         self.delivery_cost = 0
         self.final_total = self.order_total + self.delivery_cost
         self.save()
@@ -55,12 +54,13 @@ class Order(models.Model):
         Override the original save method to set the order number
         if it hasn't been set already.
         """
-        if not self.order_number():
-            self.order_number = _generate_order_number(self)
+        if not self.order_number:
+            self.order_number = self._generate_order_number()
         super().save(*args, **kwargs)
-        
+
     def __str__(self):
         return self.order_number
+
 
 
 class OrderLineItem(models.Model):
@@ -76,6 +76,7 @@ class OrderLineItem(models.Model):
     product_components = models.CharField(max_length=15, null=True,
                                             blank=True)  # alloy, carbon
     quantity = models.IntegerField(null=False, blank=False, default=0)
+    price = models.DecimalField(max_digits=4, decimal_places=0, null=True, blank=False)
     lineitem_total = models.DecimalField(max_digits=8, decimal_places=0,
                                             null=False, blank=False,
                                             editable=False)
@@ -85,5 +86,5 @@ class OrderLineItem(models.Model):
         Override the original save method to set the lineitem total
         and update the order total.
         """
-        self.lineitem_total = self.product.price * self.quantity
+        self.lineitem_total = self.price * self.quantity
         super().save(*args, **kwargs)    

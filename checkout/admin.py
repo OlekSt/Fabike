@@ -12,19 +12,19 @@ class OrderAdmin(admin.ModelAdmin):
 
     readonly_fields = ('order_number', 'purchase_date',
                         'delivery_cost', 'order_total',
-                        'grand_total', 'original_cart',
+                        'final_total', 'original_cart',
                         'stripe_pid',)
     # fields allows to specify the order of the fields in the admin interface
     fields = ('order_number', 'profile', 'full_name',
                 'email', 'phone_number', 'address_line1', 'address_line2',
-                'town_or_city', 'county', 'country', 'comment',
+                'town_or_city', 'county', 'country',
                 'postcode', 'purchase_date', 'delivery_cost',
-                'order_total', 'grand_total', 'original_cart',
+                'order_total', 'final_total', 'original_cart',
                 'stripe_pid')
     # restrict the columns that show up in the order list to only few key items
     list_display = ('order_number', 'purchase_date', 'full_name', 'profile',
                     'order_total', 'delivery_cost',
-                    'grand_total',)
+                    'final_total',)
     # displays most recent orders from the top
     ordering = ('-purchase_date',)
 
