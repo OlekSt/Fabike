@@ -29,7 +29,7 @@ class StripeWH_Handler:
         pid = intent.id
         cart = intent.metadata.cart
         save_info = intent.metadata.save_info
-
+        
         billing_details = intent.charges.data[0].billing_details
         shipping_details = intent.shipping
         final_total = round(intent.charges.data[0].amount / 100, 2)
@@ -112,6 +112,9 @@ class StripeWH_Handler:
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
+
+        print(pid)
+        print(cart)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)
