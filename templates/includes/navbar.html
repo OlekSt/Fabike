@@ -79,12 +79,21 @@
                 </a>
                 <div id="account-drop-menu" class="dropdown-menu border-0 px-0 rounded-3 my-0 bg-dark text-center" aria-labelledby="dropdown-account">
                     <ul class="account-dropdown-menu">
+                        {% if user.is_authenticated %}
                         <li class="nav-item px-0">
-                            <a class="nav-link py-0 text-white" href="#">SIGN IN</a>
+                            <a class="nav-link py-0 text-white" href="{% url 'profiles' %}">PROFILE</a>
                         </li>
                         <li class="nav-item px-0">
-                            <a class="nav-link py-0 text-white" href="#">SIGN UP</a>
+                            <a class="nav-link py-0 text-white" href="{% url 'account_logout' %}">SIGN OUT</a>
                         </li>
+                        {% else %}
+                        <li class="nav-item px-0">
+                            <a class="nav-link py-0 text-white" href="{% url 'account_login' %}">SIGN IN</a>
+                        </li>
+                        <li class="nav-item px-0">
+                            <a class="nav-link py-0 text-white" href="{% url 'account_signup' %}">SIGN UP</a>
+                        </li>
+                        {% endif %}
                     </ul>
                 </div>
             </li>
