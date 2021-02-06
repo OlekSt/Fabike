@@ -297,6 +297,20 @@ body{
     border-bottom-color: #343a40 !important;
 }
 
+/* Allauth content formatting */
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #ABABAB;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type=submit]:hover {
+    background-color: #575757;
+}
+  
 
 /* For various screen sizes */
 /* Bigger screens */
