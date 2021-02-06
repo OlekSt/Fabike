@@ -3,6 +3,11 @@
 {% load humanize %}
 {% load cart_tools %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">
+{% endblock %}
+
+
 {% block extra_title %}- Shopping Cart{% endblock %}
 
 {% block content %}

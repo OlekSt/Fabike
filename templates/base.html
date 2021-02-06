@@ -2,14 +2,18 @@
 <html lang="en">
 <head>
     {% include 'includes/head.html' %} 
+
+    {% block extra_css %}
+    {% endblock %}
+
     <title>FABIKE {% block extra_title %}{% endblock %}</title>
 </head>
 
 <body>
 <header>
-{% block header %}
-    {% include 'includes/navbar.html' %}
-{% endblock %}
+    {% block header %}
+        {% include 'includes/navbar.html' %}
+    {% endblock %}
 </header>
 
 {% if messages %}
