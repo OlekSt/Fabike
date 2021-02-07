@@ -1,0 +1,20 @@
+Dear {{ order.full_name }}!
+
+This is a confirmation of your order at FABIKE.
+
+Order #: {{ order.order_number }}
+Date: {{ order.purchase_date }}
+
+Order Total: € {{ order.order_total }}
+Delivery: € {{ order.delivery_cost }}
+Total: € {{ order.final_total }}
+
+Your order will be shipped to {{ order.address_line1 }} in {{ order.town_or_city }}, {{ order.country }}.
+
+If you have any questions, feel free to contact us at {{ contact_email }}.
+
+Thank you for your order!
+
+Sincerely,
+
+FABIKE Design
