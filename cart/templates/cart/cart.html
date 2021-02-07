@@ -13,9 +13,11 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <hr>
-        <h2 class="uppercase">Shopping cart</h2>
-        <hr>
+        <div class="col">
+            <hr>
+            <h2 class="text-center uppercase">Shopping cart</h2>
+            <hr>
+        </div>    
     </div>
     <div class="row">
         {% if cart_items %}
@@ -117,8 +119,9 @@
             </div>
         {% else %}
             <div class="text-center py-2">
-                <h4 class="py-4">Your cart is empty.</h4>
-                <a href="{% url 'home' %}" class="py-2 btn btn-light text-center border-primary">Back to <i class="fas fa-biking"></i></a>
+                <h3 class="py-5"><i class="fa fa-cog fa-spin"></i> Your cart is empty.</h3>
+                
+                <a href="{% url 'home' %}" class="my-3 py-2 btn btn-light text-center border-primary">Back to <i class="fas fa-biking"></i></a>
             </div>
         {% endif %}
     </div>
