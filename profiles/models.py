@@ -11,7 +11,6 @@ class Profile(models.Model):
     delivery information and storing order history
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    user_full_name = models.CharField(max_length=70, null=True, blank=True)
     user_phone_number = models.CharField(max_length=20,
                                             null=True, blank=True)
     user_address_line1 = models.CharField(max_length=60,

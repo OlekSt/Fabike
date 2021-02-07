@@ -75,13 +75,17 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white px-3" href="#" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="far fa-user"></i>
+                    {% if user.is_authenticated %}
+                        <i class="fa fa-user text-primary"></i>
+                    {% else %}
+                        <i class="fa fa-user"></i>
+                    {% endif %}
                 </a>
                 <div id="account-drop-menu" class="dropdown-menu border-0 px-0 rounded-3 my-0 bg-dark text-center" aria-labelledby="dropdown-account">
                     <ul class="account-dropdown-menu">
                         {% if user.is_authenticated %}
                         <li class="nav-item px-0">
-                            <a class="nav-link py-0 text-white" href="{% url 'profiles' %}">PROFILE</a>
+                            <a class="nav-link py-0 text-white" href="{% url 'profile' %}">PROFILE</a>
                         </li>
                         <li class="nav-item px-0">
                             <a class="nav-link py-0 text-white" href="{% url 'account_logout' %}">SIGN OUT</a>
