@@ -8,6 +8,8 @@ from django.contrib import messages
 from products.models import Product
 from .forms import OrderForm
 from .models import Order, OrderLineItem
+from profiles.models import Profile
+from profiles.forms import ProfileForm
 
 from cart.contexts import cart_contents
 
@@ -26,12 +28,11 @@ def checkout(request):
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
             'phone_number': request.POST['phone_number'],
-            'country': request.POST['country'],
-            'postcode': request.POST['postcode'],
             'town_or_city': request.POST['town_or_city'],
             'address_line1': request.POST['address_line1'],
             'address_line2': request.POST['address_line2'],
             'county': request.POST['county'],
+            'postcode': request.POST['postcode'],
             'country': request.POST['country'],
         }
 
@@ -115,9 +116,28 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
+
+    profile = Profile.objects.get(user=request.user)
+    order.profile = profile
+    order.save()
+
+    if save_info:
+        profile_data = {
+            'user_phone_number': order.phone_number,
+            'user_address_line1': order.address_line1,
+            'user_address_line2': order.address_line2,
+            'user_town_or_city': order.town_or_city,
+            'user_county': order.county,
+            'user_postcode': order.postcode,
+            'user_country': order.country,
+        }
+        profile_form = ProfileForm(profile_data, instance=profile)
+        if profile_form.is_valid():
+            profile_form.save()
+
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
+        email will be sent to {order.email}.') 
 
     if 'cart' in request.session:
         del request.session['cart']

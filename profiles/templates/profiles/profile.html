@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load humanize %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
@@ -17,9 +18,9 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="m-2 px-0 col-12 col-lg-5 card shadow bg-white rounded">
+            <div class="m-2 px-0 col-12 col-lg-4 card shadow bg-white rounded">
                 <div class="card-header ">
-                    <h5 class="uppercase text-left">Delivery Information</h5>
+                    <h5 class="uppercase text-left"><i class="fa fa-cog fa-spin"></i> Delivery Information</h5>
                 </div>
                 <div class="card-body px-3">
                     <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
@@ -30,15 +31,59 @@
                 </div>
                 <div class="card-footer text-muted text-center"></div>
             </div>
-            <div class="m-2 px-0 col-12 col-lg-5 card shadow bg-white rounded">
+            <div class="m-2 px-0 col-12 col-lg-6 card shadow bg-white rounded">
                 <div class="card-header">
-                    <h5 class="uppercase text-left">Order History</h5>
+                    <h5 class="uppercase text-left"><i class="fa fa-cog fa-spin"></i> Order History</h5>
                 </div>
                 <div class="card-body">
-                    {{ orders }}
+                    <div class="order-history table-responsive">
+                        <table class="table table-sm table-borderless">
+                            <thead>
+                                <tr class="text-muted">
+                                    <th>Order #</th>
+                                    <th>Date</th>
+                                    <th>Items</th>
+                                    <th>Order Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for order in orders %}
+                                    <tr>
+                                        <td>
+                                            <a href="{% url 'order_history' order.order_number %}"
+                                            title="{{ order.order_number }}">
+                                                {{ order.order_number|truncatechars:6 }}
+                                            </a>
+                                        </td>
+                                        <td class="small">{{ order.purchase_date|date:"d M Y" }}</td>
+                                        <td>
+                                            <ul class="list-unstyled">
+                                                {% for item in order.lineitems.all %}
+                                                    <li class="small">
+                                                        {{ item.product.frame }}-{{ item.product.name }}, 
+                                                        {{ item.product_color }}, {{ item.product_size }} 
+                                                        {% if item.product_components != 'none' %}
+                                                           , {{ item.product_components|upper }}
+                                                        {% endif %}
+                                                        x {{ item.quantity }}pcs
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </td>
+                                        <td class="text-right">€ {{ order.final_total|intcomma }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div class="card-footer text-muted text-center"></div>
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'profiles/js/country_field.js' %}"></script>
 {% endblock %}

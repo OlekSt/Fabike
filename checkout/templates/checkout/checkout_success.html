@@ -179,7 +179,14 @@
                     </div>
                 </div>
             </div>
+        </div> 
+        <div class="col-12 col-lg-7 text-right">
+            {% if from_profile %}
+                <a href="{% url 'profile' %}" class="m-1 pull-right btn btn-dark btn-sm uppercase">Back to Profile</a>
+            {% else %}
+            {% endif %}
         </div>
     </div>
+       
 </div>
 {% endblock %}
