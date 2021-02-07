@@ -38,7 +38,9 @@
                     <div class="col-6">
                         <p class="my-0">Color: <strong>{{ item.color|upper }}</strong></p>
                         <p class="my-0">Size: <strong>{{ item.size|upper }}</strong></p>
+                        {% if item.components != 'none' %}
                         <p class="my-0">Components: <strong>{{ item.components|upper }}</strong></p>
+                        {% endif %}
                         <p class="my-0">Quantity: <strong>{{ item.quantity }}</strong></p>
                     </div>
                     <div class="col-3 text-right">

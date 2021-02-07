@@ -45,7 +45,9 @@
                                 </a>
                                 <p class="my-0"><strong>Color: </strong>{{ item.color|upper }}</p>
                                 <p class="my-0"><strong>Size: </strong>{{ item.size|upper }}</p>
+                                {% if item.components != 'none' %}
                                 <p class="my-0"><strong>Components: </strong>{{ item.components|upper }}</p>
+                                {% endif %}
                             </td>
                             <td class="py-3">
                                 <p class="my-0">€ {{ item.price | intcomma }}</p>
