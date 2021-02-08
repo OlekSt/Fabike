@@ -18,6 +18,12 @@
             <h4 class="text-muted mt-4">{{ product.frame }}</h4>
             <h4 class="text-white">{{ product.name }}</h4>
             <p class="text-white bike-mini-title mb-4">{{ product.title }}</p>
+            {% if request.user.is_superuser %}
+                <small class="edit-delete-btn ml-3 mt-5 pull-bottom">
+                    <a href="{% url 'edit_product' product.id %}">EDIT</a> | 
+                    <a class="text-danger" href="{% url 'delete_product' product.id %}">DELETE</a>
+                </small>
+            {% endif %}
         </div>
         <div class="col-12 col-lg-6 col-md-6 bg-secondary pt-3 color-size-price-sec">
             <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">   
