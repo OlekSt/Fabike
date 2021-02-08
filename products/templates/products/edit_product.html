@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}- Product Management{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="text-center uppercase logo-font mb-4">Product management</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="m-2 px-0 col-12 col-lg-5 card shadow bg-white rounded">
+            <div class="card-header ">
+                <h5 class="mt-2 uppercase text-center"><i class="fa fa-cog fa-spin"></i> Edit a Product</h5>
+            </div>
+            <div class="card-body px-3">
+                <form method="POST" action="{% url 'edit_product' product.id %}" class="form" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="my-2">
+                        <a href="{% url 'bikes' %}" class="btn btn-outline-secondary mx-lg-3">
+                            <span class="font-weight-bold">CANCEL</span>
+                        </a>
+                        <button type="submit" class="pull-right button btn btn-dark mx-lg-3">
+                            <span class="font-weight-bold">UPDATE PRODUCT</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer text-muted text-center"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
