@@ -7,20 +7,25 @@
         <img class="image-fluid" src="{% static 'img/contact.jpg' %}" alt="Contact Fabike">
     </div>
     <div class="row justify-content-center">
-        <div id="contact-form" class="col shadow my-2">
-            <h2 class="text-center py-3 mb-4">GET IN TOUCH</h2>
-            <p id="message-sent" class="text-center mb-0 pb-0 mb-2 invisible">Thank you! Your messages has been successfully sent.</p>
-            <p id="message-hello" class="text-center mb-0 pb-0 mb-2 visible">For any kind of question or information, either it is commercial, technical or just a "Hello!", don't hesitate to contact us, we reply really fast!</p>
-            <!--Contact form -->
-            <form method="POST" action="{% url 'contact' %}">
-                {% csrf_token %}
-                {{ contact_form|crispy }}
-                <div id="contact-send" class="text-center my-3">
-                    <button type="submit" class="btn btn-dark">
-                        SEND  <i class="fas fa-bicycle uppercase"></i> 
-                    </button>
-                </div>
-            </form>
+        <div id="contact-form" class="col px-0 col-lg-6 col-md-6 col-sm-12 card my-4 align-self-center shadow bg-white rounded">
+            <div class=" card-header">
+                <h2 class="uppercase text-center"><i class="fa fa-cog fa-spin"></i> GET IN TOUCH</h2>
+            </div>
+            <div class="card-body">
+                <p id="message-sent" class="text-center mb-0 pb-0 mb-2 invisible">Thank you! Your messages has been successfully sent.</p>
+                <p id="message-hello" class="text-center mb-0 pb-0 mb-2 visible">For any kind of question or information, either it is commercial, technical or just a "Hello!", don't hesitate to contact us, we reply really fast!</p>
+                <!--Contact form -->
+                <form method="POST" action="{% url 'contact' %}">
+                    {% csrf_token %}
+                    {{ contact_form|crispy }}
+                    <div id="contact-send" class="text-center my-2">
+                        <button type="submit" class="btn btn-dark">
+                            SEND <i class="fas fa-bicycle uppercase"></i> 
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer text-muted text-right"></div>
         </div>
     </div>
 </div>
