@@ -216,7 +216,7 @@
         <div class="col-12 col-lg-6">
             <h5 class="pt-3">GEOMETRY & SIZES</h5>
             <hr>
-            <img class="geometry-img pt-2" src="/static/img/products/{% if product.frame == 'FABIKE C3'%}c3_geometry.png{% else %}t2_geometry.jpg{% endif %}" alt="{{ product.frame }} Frame geometry">
+            <img class="geometry-img pt-2" src="{{ STATIC_URL }}img/products/img/products/{% if product.frame == 'FABIKE C3'%}c3_geometry.png{% else %}t2_geometry.jpg{% endif %}" alt="{{ product.frame }} Frame geometry">
         </div>
     </div>
     <div class="row justify-content-center my-2">
@@ -252,16 +252,16 @@
     </div>
     <div class="row p-0">
         <div class="col-3 px-0">
-            <img class="color-image" src="/static/img/products/{% if product.frame == 'FABIKE C3'%}4_colors_red{% else %}t2colors_red{% endif %}.jpg" alt="Red Color details">
+            <img class="color-image" src="{{ STATIC_URL }}img/products/{% if product.frame == 'FABIKE C3'%}4_colors_red{% else %}t2colors_red{% endif %}.jpg" alt="Red Color details">
         </div>
         <div class="col-3 px-0">
-            <img class="color-image" src="/static/img/products/{% if product.frame == 'FABIKE C3'%}4_colors_blue{% else %}t2colors_blue{% endif %}.jpg" alt="Blue Color details">
+            <img class="color-image" src="{{ STATIC_URL }}img/products/{% if product.frame == 'FABIKE C3'%}4_colors_blue{% else %}t2colors_blue{% endif %}.jpg" alt="Blue Color details">
         </div>
         <div class="col-3 px-0">
-            <img class="color-image" src="/static/img/products/{% if product.frame == 'FABIKE C3'%}4_colors_yellow{% else %}t2colors_yellow{% endif %}.jpg" alt="Yellow Color details">
+            <img class="color-image" src="{{ STATIC_URL }}img/products/{% if product.frame == 'FABIKE C3'%}4_colors_yellow{% else %}t2colors_yellow{% endif %}.jpg" alt="Yellow Color details">
         </div>
         <div class="col-3 px-0">
-            <img class="color-image" src="/static/img/products/{% if product.frame == 'FABIKE C3'%}4_colors_black{% else %}t2colors_black{% endif %}.jpg" alt="Black Color details">
+            <img class="color-image" src="{{ STATIC_URL }}img/products/{% if product.frame == 'FABIKE C3'%}4_colors_black{% else %}t2colors_black{% endif %}.jpg" alt="Black Color details">
         </div>
     </div>
     <div class="row bg-dark py-2"></div>
@@ -276,7 +276,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-6 col-md-6 px-0">
-            <img class="red-bike px-0" src="/static/img/products/red_bike.png" alt="Bike parts">
+            <img class="red-bike px-0" src="{{ STATIC_URL }}img/products/red_bike.png" alt="Bike parts">
         </div>
     </div>
     <div class="row bg-secondary py-3">
