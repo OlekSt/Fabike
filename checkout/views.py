@@ -138,23 +138,24 @@ def checkout_success(request, order_number):
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
-    profile = Profile.objects.get(user=request.user)
-    order.profile = profile
-    order.save()
+    if request.user.is_authenticated:
+        profile = Profile.objects.get(user=request.user)
+        order.profile = profile
+        order.save()
 
-    if save_info:
-        profile_data = {
-            'user_phone_number': order.phone_number,
-            'user_address_line1': order.address_line1,
-            'user_address_line2': order.address_line2,
-            'user_town_or_city': order.town_or_city,
-            'user_county': order.county,
-            'user_postcode': order.postcode,
-            'user_country': order.country,
-        }
-        profile_form = ProfileForm(profile_data, instance=profile)
-        if profile_form.is_valid():
-            profile_form.save()
+        if save_info:
+            profile_data = {
+                'user_phone_number': order.phone_number,
+                'user_address_line1': order.address_line1,
+                'user_address_line2': order.address_line2,
+                'user_town_or_city': order.town_or_city,
+                'user_county': order.county,
+                'user_postcode': order.postcode,
+                'user_country': order.country,
+            }
+            profile_form = ProfileForm(profile_data, instance=profile)
+            if profile_form.is_valid():
+                profile_form.save()
 
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
