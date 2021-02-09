@@ -27,7 +27,7 @@ SECRET_KEY = 'exmc++7b_35-xudnmbce-+w=r7t@yq^nnc0bjr2i6g1_c6o0te'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['fabike.herokuapp.com/', 'localhost']
+ALLOWED_HOSTS = ['fabike.herokuapp.com', 'localhost']
 
 
 # Application definition
