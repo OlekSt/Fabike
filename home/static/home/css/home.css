@@ -1,3 +1,15 @@
+
+/* Index page */
+#hero{
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin: auto;
+    max-height: 800px;
+    overflow: hidden;
+}
+
 /* Hero image slideshow container */
 .hero-image{
     width: 100%;
@@ -19,4 +31,119 @@
 @keyframes fade {
     from {opacity: 0.4} 
     to {opacity: 1}
+}
+
+#slogan{
+    font-weight: 500;
+}
+
+.centered {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Intro section under hero slideshow */
+.intro-text{
+    padding: 15px 20px;
+    font-size: 1.2em;
+    margin-bottom: 0;
+}
+
+.intro-section{
+    background-color: #262626;
+    padding: 20px 0;
+}
+
+/* to scale width vs height of the image within div */
+.box-image{
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Urban, all-road, road section on home page */
+.feat-image{
+    width: 100%;
+}
+
+.box-urban{
+    background-color: rgba(83, 55, 15, 0.858);
+}
+
+.box-all-road{
+    background-color: #751d1a;
+}
+
+.box-road{
+    background-color: #0b173d;
+}
+
+.box-urban, 
+.box-all-road,
+.box-road{
+    padding: 50px 50px;
+}
+
+/* Brands section */
+.brands-section{
+    background: #575757;
+    padding-top: 15px;
+}
+
+.brand-img{
+    max-width: 130px;
+    height: auto;
+    padding: 8px 5px;
+}
+
+.brands-text {
+    padding-left: 16%;
+    padding-right: 16%;
+}
+
+/* Smaller screens */
+@media only screen and (max-width: 600px) {
+    #slogan {
+        font-size: 1.2em;
+        font-weight: 400;
+    }
+    .centered {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .intro-text{
+        padding: 15px 20px;
+        font-size: 1.1em;
+        margin-bottom: 0;
+    }
+    .intro-section{
+        background-color: #262626;
+        padding: 15px 0;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    #slogan{
+        font-size: 0.9em;
+    }
+    .centered {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .intro-section{
+        background-color: #262626;
+        padding: 5px 0;
+    }
+    .intro-text{
+        padding: 15px 20px;
+        font-size: 0.9em;
+        margin-bottom: 0;
+    }
 }
