@@ -22,3 +22,11 @@ This document is intended to record testing at various stages of development of 
     - [**Solved bugs**](#solved-bugs)
     - [**Unsolved bugs**](#unsolved-bugs)
 5. [**Further Testing**](#further-testing)
+
+
+
+4. Bugs discovered
+
+Bug: On Heroku getting 500 error upon pressing Checkout button, while it works from Gitpod.
+Solution: 
+Solved / Not solved? 
