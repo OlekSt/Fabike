@@ -28,5 +28,13 @@ This document is intended to record testing at various stages of development of 
 4. Bugs discovered
 
 Bug: On Heroku getting 500 error upon pressing Checkout button, while it works from Gitpod.
+Solution: Added Stripe public, secret, & wh keys to heroku.
+Solved.
+
+Bug: Stripe webhooks don't work.
+Solution: Added Stripe public, secret, & wh keys to heroku.
+Solved.
+
+Bug: Checkout works well, an order is created, but a confirmation email is not sent. Tried both signed-in purchase, and non signed-in purchase. 
 Solution: 
-Solved / Not solved? 
+Solved / Not solved?
