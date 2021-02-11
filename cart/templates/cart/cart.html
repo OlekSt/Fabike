@@ -20,7 +20,7 @@
         </div>
     </div>
     <div class="row px-2 d-flex justify-content-center">
-        <div class="col-10 mx-2 px-0 card my-1 shadow rounded">
+        <div class="col-12 col-lg-10 col-md-10 mx-2 px-0 card my-1 shadow rounded">
             <div class="card-header">
                 <div class="row">                    
                     <div class="col px-2 pt-2">
@@ -33,16 +33,16 @@
                 
                 {% for item in cart_items %}
                 <div class="row">
-                    <div class="col p-2">
-                        <form class="form" method="POST" action="{% url 'update_cart' item.item_id %}">
-                            {% csrf_token %}
+                    <form class="form" method="POST" action="{% url 'update_cart' item.item_id %}">
+                    {% csrf_token %}
+                        <div class="col-12 p-2 container">
                             <div class="row my-2">
-                                <div class="col col-lg-3 col-md-3 col-sm-12 px-1 mx-1">
+                                <div class="col-12 col-md-3 col-lg-3 px-1 mx-1">
                                     <a class="bike-link" href="{% url 'product' item.item_id %}">
                                         <img class="img-fluid rounded" src="{{ STATIC_URL }}img/products/{{ item.product.image02 }}">
                                     </a>
                                 </div>
-                                <div class="col col-lg-3 col-md-3 col-sm-12 px-1">
+                                <div class="col-12 col-md-3 col-lg-3 px-2 mb-3">
                                     <a class="bike-link" href="{% url 'product' item.product.id %}">
                                         <h6 class="my-1"><strong>{{ item.product.frame }} {{ item.product.name }}</strong></h6>
                                     </a>
@@ -52,7 +52,7 @@
                                     <p class="my-0"><strong>Components: </strong>{{ item.components|upper }}</p>
                                     {% endif %}
                                 </div>
-                                <div class="col col-lg-3 col-md-3 col-sm-6 text-center">
+                                <div class="col-7 col-md-3 col-lg-3 text-center">
                                     <h6 class="font-weight-bold mb-2">Price: <strong>€ {{ item.price | intcomma }}</strong></h6>                                
                                     <div class="col mt-2 text-center">
                                         <h6 class="font-weight-bold text-right">Qty: <strong>{{ item.quantity }}</strong></h6>
@@ -80,13 +80,13 @@
                                     <button id="update_{{ item.options_in_cart }}" name="update_{{ item.item_in_cart }}" value="{{ item.item_in_cart  }}" href="{% url 'update_cart' item.item_id %}" type="submit" class="btn btn-light text-primary">
                                     <i class="fas fa-redo-alt"></i></button>
                                 </div>
-                                <div class="col col-lg-2 col-md-2 col-sm-6 text-center">
+                                <div class="col-5 col-md-2 col-lg-2 text-center">
                                     <p class="my-0">Subtotal:</p>
                                     <p class="my-0"><strong>€ {{ item.price | calc_subtotal:item.quantity | intcomma }}</strong></p>
                                 </div>
                             </div>                            
-                        </form>
-                    </div>
+                        </div> 
+                    </form>
                 </div>
                 <div id="delete-btn-div" class="row text-right d-flex justify-content-end">
                     <div id="delete-btn" class="col-2">
@@ -99,8 +99,8 @@
                 {% endfor %} 
                 
                 <div class="row">
-                    <div class="col col-lg-6 col-md-6 col-sm-0"></div>
-                    <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <div class="col-sm-none col-lg-6 col-md-4"></div>
+                    <div class="col-12 col-lg-6 col-md-8">
                         <hr>
                         <h5 class="pl-3"><strong>Cart Total: € {{ total| intcomma }}</strong></h5>
                         <h6 class="mb-3 pl-3">Delivery is included. Inclusive of all taxes.</h6>

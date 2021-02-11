@@ -11,3 +11,13 @@ img-fluid {
     top: -60px;
     right: -20px;
 }
+
+/* Smaller screens */
+@media only screen and (max-width: 600px) {
+    #delete-btn{
+        position: absolute;
+        top: -60px;
+        right: 20px;
+    }
+
+}
