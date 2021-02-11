@@ -14,7 +14,7 @@
         <img class="product-image image-fluid" src="{{ STATIC_URL }}img/products/{{ product.image02 }}" alt="{{ product.frame }} {{ product.name }}">
     </div>
     <div class="row">
-        <div class="col-12 col-lg-6 col-md-6 bg-dark px-5">
+        <div class="col-12 col-lg-6 col-md-6 bg-dark px-5 py-2">
             <h4 class="text-muted mt-4">{{ product.frame }}</h4>
             <h4 class="text-white">{{ product.name }}</h4>
             <p class="text-white bike-mini-title mb-4">{{ product.title }}</p>
@@ -108,7 +108,7 @@
                     <div class="col col-lg-6 col-sm-12">
                         <div class="row text-center">
                             <div class="col-lg-12 col-sm-6 buttons">
-                                <button href="{% url 'add_to_cart' product.id %}" type="submit" class="text-white btn btn-dark mt-3">&nbsp;ADD&nbsp;  <i class="fas fa-long-arrow-alt-right"></i> <i class="fas fa-cart-plus"></i>&nbsp;</button>
+                                <button href="{% url 'add_to_cart' product.id %}" type="submit" class="text-white btn btn-dark mt-3">ADD<i class="fas fa-long-arrow-alt-right"></i><i class="fas fa-cart-plus"></i></button>
                             </div>
                             <div class="col-12 buttons">
                                 <a href="" class="text-white btn btn-dark mt-3"><i class="far fa-heart"></i> WISHLIST</a>
@@ -145,8 +145,8 @@
         </div>
     </div>
     <!-- Specification section: One to be displayed for bikes, one for frames -->
-    <div class="row px-3">
-        <div class="col-12 col-lg-6">
+    <div class="row mx-2">
+        <div class="col-12 col-lg-6 ">
             <h5 class="pt-3">SPECIFICATIONS</h5>
             <hr>
             <!-- Bikes specification seection -->
@@ -219,7 +219,7 @@
             <img class="geometry-img pt-2" src="{{ STATIC_URL }}img/products/{% if product.frame == 'FABIKE C3'%}c3_geometry.png{% else %}t2_geometry.jpg{% endif %}" alt="{{ product.frame }} Frame geometry">
         </div>
     </div>
-    <div class="row justify-content-center my-2">
+    <div class="row justify-content-center mx-0 px-0 my-2">
         <div class="col-2 col-sm-6 size-coin coin-xs mx-3 mb-2">
             <h4 class="text-center text-white mb-0 mt-4">XS</h4>
             <p class="text-center text-white">165-170cm</p>
