@@ -76,6 +76,7 @@ class StripeWH_Handler:
                 profile.save()
 
         order_exists = False
+        print('Order False')
         attempt = 1
         while attempt <= 5:
             try:
@@ -94,17 +95,20 @@ class StripeWH_Handler:
                     stripe_pid=pid,
                 )
                 order_exists = True
+                print('Order True')
                 break
             except Order.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
         if order_exists:
             self._send_confirmation_email(order)
+            print('order exists')
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
                 status=200)
         else:
             order = None
+            print('order None')
             try:
                 order = Order.objects.create(
                     full_name=shipping_details.name,
@@ -143,6 +147,7 @@ class StripeWH_Handler:
                             product_components=components,
                             price=price,
                         )
+                        print('order line save')
                         order_line_item.save()
             except Exception as e:
                 if order:
@@ -150,6 +155,7 @@ class StripeWH_Handler:
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
+        print('order email')
         self._send_confirmation_email(order)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',

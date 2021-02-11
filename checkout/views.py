@@ -73,6 +73,7 @@ def checkout(request):
                     order.delete()
                     return redirect(reverse('view_cart'))
             request.session['save_info'] = 'save-info' in request.POST
+            print('1: ', request.session['save_info'])
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
@@ -85,6 +86,7 @@ def checkout(request):
             return redirect(reverse('bikes'))
         
         current_cart = cart_contents(request)
+        print('2')
         total = current_cart['final_total']
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
@@ -120,6 +122,7 @@ def checkout(request):
                 Did you forget to set it in your environment?')
 
         order_form = OrderForm()
+        print('3')
 
     template = 'checkout/checkout.html'
     context = {
