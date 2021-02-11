@@ -36,5 +36,15 @@ Solution: Added Stripe public, secret, & wh keys to heroku.
 Solved.
 
 Bug: Checkout works well, an order is created, but a confirmation email is not sent. Tried both signed-in purchase, and non signed-in purchase. 
-Solution: 
+Solution: Updated secret keys on heroku.
+Solved.
+
+Bug: Checkout works, and gives a toast message, an email is sent. But two orders are created with two different numbers. First order number is shown in a toast message, and this order is created without current cart data & stripe pid.
+Second order number is indicated in a confirmation email, and this 2nd order has both current cart data & stripe pid.
+Webhooks events are registered correctly on stripe. But I get a 500 error, if I send a webhook test for payment_intent.succeded.
+Solution: Added a couple of missing lines of code in webhooks_handler.py (lines 41-45). 
+Solved: Now one order is created, it has cart data + stripe pid in DB, a confirmation email is sent with a correct order number, strip registers all three events as succeded: payment_intent.created, payment_intent.succeded, charge.succeeded.
+
+Bug: Connected to the one above. When testing webhook 'payment_intent.succeded' get 'POST /checkout/wh/ HTTP/1.1" 500 135356' & 'AttributeError: cart'
+Solution:
 Solved / Not solved?
