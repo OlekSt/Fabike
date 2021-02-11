@@ -61,6 +61,7 @@ def add_to_cart(request, item_id):
             with {components} components to your cart')
     
     request.session['cart'] = cart
+    print('cart from cart: ', cart)
     return redirect(redirect_url)
 
 

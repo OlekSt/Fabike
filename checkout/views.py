@@ -23,7 +23,7 @@ def checkout(request):
 
     if request.method == 'POST':
         cart = request.session.get('cart', {})
-
+        print('cart from checkout 1: ', cart)
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -42,6 +42,7 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
+            print('original cart: ', order.original_cart)
             order.save()
             for item_id, options_in_cart in cart.items():
                 try:
@@ -89,6 +90,7 @@ def checkout(request):
             return redirect(reverse('bikes'))
         
         current_cart = cart_contents(request)
+        print('current cart: ', current_cart)
         total = current_cart['final_total']
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key

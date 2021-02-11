@@ -48,3 +48,7 @@ Solved: Now one order is created, it has cart data + stripe pid in DB, a confirm
 Bug: Connected to the one above. When testing webhook 'payment_intent.succeded' get 'POST /checkout/wh/ HTTP/1.1" 500 135356' & 'AttributeError: cart'
 Solution:
 Solved / Not solved?
+
+Bug: Current images are not displayed correctly in Product management edit a product form.
+Solution:
+Solved / Not solved?
