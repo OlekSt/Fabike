@@ -9,8 +9,8 @@ class ContactForm(forms.Form):
     email = forms.EmailField(label='Email')
     subject = forms.CharField(label='Subject')
     message = forms.CharField(label='Message',
-                                widget=forms.Textarea(attrs={
-                                "rows": 6,}))
+                              widget=forms.Textarea(attrs={
+                                                    "rows": 6, }))
 
     class Meta:
         fields = ['name', 'email', 'subject', 'message']
