@@ -37,7 +37,7 @@
                         <p class="my-1"><strong>{{ item.product.frame|upper }} {{ item.product.name|upper }}</strong></p>
                         <div class="col-3 mb-1">
                             <a href="{% url 'product' item.product.id %}">
-                                <img class="w-100" src="{{ STATIC_URL }}img/products/{{ item.product.image01 }}" alt="{{ product.name }}">
+                                <img class="w-100" src="{{ MEDIA_URL }}{{ item.product.image01 }}" alt="{{ product.name }}">
                             </a>
                         </div>
                         <div class="col-6">

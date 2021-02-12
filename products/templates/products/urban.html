@@ -10,14 +10,14 @@
 {% block content %}
 <div id="urban" class="container-fluid ">
     <div class="row">
-        <img class="image-fluid" src="{% static 'img/products/urban.jpg' %}" alt="Bikes">
+        <img class="image-fluid" src="{{ MEDIA_URL }}urban.jpg" alt="Bikes">
     </div>
     <div class="row">
         {% for item in urban %}
         <div class="col-lg-6 col-sm-12 text-center px-5 mx-0 pb-5">
             <a class="bike-link" href="{% url 'product' item.id %}">
                 <div class="card h-100 border-0"> 
-                    <img class="product-image" src="{{ STATIC_URL }}img/products/{{ item.image01 }}"  alt="{{ item.frame }} {{ item.name }}">
+                    <img class="product-image" src="{{ MEDIA_URL }}{{ item.image01 }}"  alt="{{ item.frame }} {{ item.name }}">
                     <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
                 </div>
             </a>

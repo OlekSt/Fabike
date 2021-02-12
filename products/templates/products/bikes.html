@@ -10,18 +10,18 @@
 {% block content %}
 <div id="products" class="container-fluid ">
     <div class="row">
-        <img class="title-image image-fluid" src="{% static 'img/products/bikes.jpg' %}" alt="Bikes">
+        <img class="title-image image-fluid" src="{{ MEDIA_URL }}bikes.jpg" alt="Bikes">
     </div>
     <div id="bikes-section" class="row">
         <div class="col-12 col-lg-4 col-md-4 text-center px-0 mx-0 pb-5">
-            <a href="{% url 'urban' %}"><img class="bikes-img image-fluid" src="{% static 'img/index/homepage_featured_box_1.jpg' %}" alt="Urban Bikes"></a>
+            <a href="{% url 'urban' %}"><img class="bikes-img image-fluid" src="{{ MEDIA_URL }}homepage_featured_box_1.jpg" alt="Urban Bikes"></a>
             <h2 class="pt-3"><a class="bike-sec-title" href="{% url 'urban' %}">URBAN</a></h2>
             <div class="row">
                 {% for item in urban %}
                 <div class="col-12 px-5">
                     <a class="bike-link" href="{% url 'product' item.id %}">
                         <div class="card h-100 border-0"> 
-                            <img class="product-image" src="{{ STATIC_URL }}img/products/{{ item.image01 }}"  alt="{{ item.frame }} {{ item.name }}">
+                            <img class="product-image" src="{{ MEDIA_URL }}{{ item.image01 }}"  alt="{{ item.frame }} {{ item.name }}">
                             <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
                         </div>
                     </a>
@@ -30,14 +30,14 @@
             </div>
         </div>
         <div class="col-12 col-lg-4 col-md-4 text-center px-0 mx-0 pb-5">
-            <a href="{% url 'all_road' %}"><img class="bikes-img image-fluid" src="{% static 'img/index/homepage_featured_box_2.jpg' %}" alt="All Road Bikes"></a>
+            <a href="{% url 'all_road' %}"><img class="bikes-img image-fluid" src="{{ MEDIA_URL }}homepage_featured_box_2.jpg" alt="All Road Bikes"></a>
             <h2 class="pt-3"><a class="bike-sec-title" href="{% url 'all_road' %}">ALL ROAD</a></h2>
             <div class="row">
                 {% for item in all_road %}
                 <div class="col-12 px-5">
                     <a class="bike-link" href="{% url 'product' item.id %}">
                         <div class="card h-100 border-0"> 
-                            <img class="product-image" src="{{ STATIC_URL }}img/products/{{ item.image01 }}"  alt="{{ item.frame }} {{ item.name }}">
+                            <img class="product-image" src="{{ MEDIA_URL }}{{ item.image01 }}"  alt="{{ item.frame }} {{ item.name }}">
                             <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
                         </div>
                     </a>
@@ -46,14 +46,14 @@
             </div>
         </div>
         <div class="col-12 col-lg-4 col-md-4 text-center px-0 mx-0  pb-5">
-            <a href="{% url 'road' %}"><img class="bikes-img image-fluid" src="{% static 'img/index/homepage_featured_box_3.jpg' %}" alt="Road Bikes"></a>
+            <a href="{% url 'road' %}"><img class="bikes-img image-fluid" src="{{ MEDIA_URL }}homepage_featured_box_3.jpg" alt="Road Bikes"></a>
             <h2 class="pt-3"><a class="bike-sec-title" href="{% url 'road' %}">ROAD</a></h2>
             <div class="row">
                 {% for item in road %}
                 <div class="col-12 px-5">
                     <a class="bike-link" href="{% url 'product' item.id %}">
                         <div class="card h-100 border-0"> 
-                            <img class="product-image" src="{{ STATIC_URL }}img/products/{{ item.image01 }}"  alt="{{ item.frame }} {{ item.name }}">
+                            <img class="product-image" src="{{ MEDIA_URL }}{{ item.image01 }}"  alt="{{ item.frame }} {{ item.name }}">
                             <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
                         </div>
                     </a>

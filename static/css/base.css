@@ -325,3 +325,10 @@ body{
         padding: 0 8%;
     }
 }
+
+@media only screen and (max-width: 320px) {
+    /* to make toast message to fit the smallest screen */
+    .toast{
+        width: 100%;
+    }
+}
