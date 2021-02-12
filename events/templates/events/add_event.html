@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <img class="about-title-image image-fluid" src="{{ MEDIA_URL }}about.jpg" alt="About Fabike">
+    </div>
+    <div class="row justify-content-center">
+        <div id="add-event" class="col mx-1 px-0 col-lg-6 col-md-6 col-sm-12 card my-4 align-self-center shadow bg-white rounded">
+            <div class=" card-header">
+                <h2 class="uppercase text-center"><i class="fa fa-cog fa-spin"></i> Add event</h2>
+            </div>
+
+            <div class="card-body">
+
+                <form method="POST" action="{% url 'add_event' %}" class="form" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form | crispy }}
+                        <div class="my-2">
+                            <a href="{% url 'events' %}" class="btn btn-outline-secondary mx-lg-3">
+                                <span class="font-weight-bold">CANCEL</span>
+                            </a>
+                            <button type="submit" class="pull-right button btn btn-dark mx-lg-3">
+                                <span class="font-weight-bold">ADD PRODUCT</span>
+                            </button>
+                        </div>
+                    </form>
+            </div>
+            <div class="card-footer text-muted text-right"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<script>
+    $(function () {
+        $("#datetimepicker1").datetimepicker({
+        format: 'DD/MM/YYYY HH:mm',
+        });
+    });
+</script>

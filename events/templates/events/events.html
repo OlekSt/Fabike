@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div id="about" class="container-fluid">
+    <div class="row">
+        <img class="about-title-image image-fluid" src="{{ MEDIA_URL }}about.jpg" alt="About Fabike">
+    </div>
+    <div class="row justify-content-center">
+        <div id="events" class="col mx-1 px-0 col-lg-6 col-md-6 col-sm-12 card my-4 align-self-center shadow bg-white rounded">
+            <div class=" card-header">
+                <h2 class="uppercase text-center">{% if events %}<i class="fa fa-cog fa-spin"></i>{% else %}<i class="fas fa-tools"></i>{% endif %} Workshops</h2>
+            </div>
+            <div class="card-body">
+            {% if events %}
+
+            {% for event in events %}
+                <div class="card my-2 border-secondary">
+                    <div class="card-header bg-secondary">
+                        <h6 class="uppercase py-2 text-left text-white"><i class="fas fa-tools"></i> {{ event.title }}</h6>
+                    </div>
+                    <div class="card-body row">
+                        <div class="col-12 col-lg-4 col-md-4">
+                            Topic: {{ event.topics }}
+                        </div>
+                        <div class="col-6 col-lg-4 col-md-4">
+                            When: 
+                        <p>{{ event.date }}</p>
+                        <p>{{ event.time }}</p>
+                            Where:
+                            <p>{{ event.address }}{{ event.town_or_city }}</p>
+                            <p>{{ event.map_link }}</p>
+                        </div>
+                        <div class="col-6 col-lg-4 col-md-4">
+                            ADFadsADSa
+
+                            book
+                        </div>
+
+                        
+                        <p>{{ event.price }}</p>
+                    </div>
+                    <div class="row">
+                        <div class="submit-button text-right mt-2 mb-2">                    
+                            <a href="{% url 'bikes' %}" class="btn btn-outline-secondary mx-lg-3">
+                                <span class="font-weight-bold">BACK TO BIKES</span>
+                            </a>
+                            <a href="{% url 'event' event.id %}" class="pull-right button btn btn-dark mx-lg-3">
+                                <span class="font-weight-bold">MORE INFO</span>
+                                
+                            </a>
+                        </div>
+                    </div>               
+                </div>
+            {% endfor %}
+
+            {% else %}
+                <div class="row">
+                    <div class="text-center py-2">
+                        <h3 class="py-5"><i class="fa fa-cog fa-spin"></i> There are no planned events.</h3>
+                        <a href="{% url 'home' %}" class="my-3 py-2 btn btn-dark text-center uppercase">Back to &nbsp; <i class="fas fa-biking"></i></a>
+                    </div>
+                </div>        
+            {% endif %}
+            </div>
+            <div class="card-footer text-muted text-right"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

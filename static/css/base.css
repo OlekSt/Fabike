@@ -91,7 +91,7 @@ body{
 .bike-link:hover{
     color: black;
 }
-/* Edit & Delete buttons on product page for admin access */
+/* Edit & Delete buttons on product and event for admin access */
 .edit-delete-btn a{
     text-decoration: none;
 }

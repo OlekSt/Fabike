@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'cart',
     'profiles',
     'checkout',
+    'events',
     
     'crispy_forms',
     'storages',
@@ -118,6 +119,10 @@ LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'fabike.wsgi.application'
+
+DATETIME_INPUT_FORMATS = [
+    '%m/%d/%Y %H:%M',
+]
 
 
 # Database
