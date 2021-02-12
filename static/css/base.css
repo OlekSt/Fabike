@@ -32,8 +32,9 @@ body{
     list-style-type: none;
 }
 
-#account-drop-menu{ 
-    width: 100px; 
+.account-drop-menu{ 
+    width: max-content;
+    padding-left: 0;
 }
 
 .invisible{
