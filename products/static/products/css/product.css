@@ -126,6 +126,10 @@
 }
 /* Finish - Components selector */
 
+.btn-link{
+    text-decoration: none;
+}
+
 .price-muted{
     color: rgb(185, 185, 185)
 }

@@ -5,13 +5,17 @@ import datetime
 class EventForm(forms.ModelForm):
 
     class Meta:
-        model = Event
-        fields = '__all__'
+            model = Event
+            fields = '__all__'
+
+
+    class DateInput(forms.DateInput):
+        input_type = 'date'
 
     date = forms.DateField(
         widget=forms.DateInput(format='%d/%m/%Y',
         attrs={'placeholder':'e.g. 12/10/2021'}),
-        input_formats=('%d/%m/%Y', ),
+        
         )
 
     time = forms.TimeField(
@@ -19,6 +23,7 @@ class EventForm(forms.ModelForm):
         attrs={'placeholder':'e.g. 14:00'}),
         input_formats=('%H:%M', )
         )
+
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

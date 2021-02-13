@@ -10,13 +10,13 @@
 {% block content %}
 <div id="frames" class="container-fluid">
     <div class="row">
-        <img class="image-fluid px-0" src="{% static 'img/products/frames.jpg' %}" alt="Frames">
+        <img class="image-fluid px-0" src="{{ MEDIA_URL }}frames.jpg" alt="Frames">
     </div>
     <div class="row justify-content-center py-5">
         {% for frame in frames %}
             <div class="col-lg-4 col-sm-10 text-center pt-3">
                 <a href="{% url 'product' frame.id %}"><img class="frames-img image-fluid" src="{{ MEDIA_URL }}{{ frame.image01 }}" alt="{{ frame.frame }} Frame"></a>
-                <h5><strong>{{ frame.frame }}</strong> &nbspFRAME SET</h5>
+                <h5><strong>{{ frame.frame }}</strong> &nbsp;FRAME SET</h5>
             </div> 
         {% endfor %}   
     </div>
