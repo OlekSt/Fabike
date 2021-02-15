@@ -11,7 +11,7 @@ class EventForm(forms.ModelForm):
     
     date = forms.DateField(
         widget=forms.DateInput(format='%d.%m.%Y',
-        attrs={'placeholder': '__/__/____'}),
+        attrs={'placeholder': 'as 25.10.2021'}),
         input_formats=('%d.%m.%Y', )
     )
 
