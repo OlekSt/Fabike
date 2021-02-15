@@ -120,10 +120,6 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'fabike.wsgi.application'
 
-DATETIME_INPUT_FORMATS = [
-    '%m/%d/%Y %H:%M',
-]
-
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases

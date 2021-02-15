@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect,\
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from datetime import datetime
 
 from .models import Event
 from .forms import EventForm
@@ -15,7 +16,7 @@ def events(request):
     events = Event.objects.all()
 
     context = {
-        'events': events,   
+        'events': events,  
     }    
     return render(request, 'events/events.html', context)
 
@@ -59,6 +60,7 @@ def add_event(request):
 
     return render(request, template, context)
 
+
 @login_required
 def edit_event(request, event_id):
     """ Edit an event  """
@@ -98,4 +100,5 @@ def delete_event(request, event_id):
     event = get_object_or_404(Event, pk=event_id)
     event.delete()
     messages.info(request, 'Event deleted!')
+    
     return redirect(reverse('events'))
