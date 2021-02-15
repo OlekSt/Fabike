@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div id="about" class="container-fluid">
+<div id="contact" class="container-fluid">
     <div class="row">
         <img class="image-fluid" src="{{ MEDIA_URL }}contact.jpg" alt="Contact Fabike">
     </div>
@@ -17,7 +17,11 @@
                 <!--Contact form -->
                 <form method="POST" action="{% url 'contact' %}">
                     {% csrf_token %}
-                    {{ contact_form|crispy }}
+                    {{ contact_form.name| as_crispy_field }}
+                    {{ contact_form.email| as_crispy_field }}
+                    {{ contact_form.subject| as_crispy_field }}
+                    {{ contact_form.message| as_crispy_field }}
+                    
                     <div id="contact-send" class="text-center my-2">
                         <button type="submit" class="btn btn-dark">
                             SEND <i class="fas fa-bicycle uppercase"></i> 
@@ -26,6 +30,7 @@
                 </form>
             </div>
             <div class="card-footer text-muted text-right"></div>
+            
         </div>
     </div>
 </div>

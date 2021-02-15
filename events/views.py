@@ -71,14 +71,13 @@ def edit_event(request, event_id):
         form = EventForm(request.POST, request.FILES, instance=event)
         if form.is_valid():
             form.save()
-            print('updated')
             messages.success(request, 'Successfully updated event!')
             return redirect(reverse('event', args=[event.id]))
         else:
             messages.error(request, 'Failed to update event. Please ensure the form is valid.')
     else:
         form = EventForm(instance=event)
-        messages.info(request, f'You are editing {event.title} on {event.date}')
+        messages.info(request, f'You are editing {event.title} event')
 
     template = 'events/edit_event.html'
     context = {
