@@ -27,7 +27,6 @@ def cart_contents(request):
                 price = product.price
             price = int(price)
             quantity = int(quantity)
-            print('quantity: ', quantity)
             total += quantity * price
             product_count += quantity
             item_in_cart = "-".join(options)

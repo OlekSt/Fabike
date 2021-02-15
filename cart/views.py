@@ -61,7 +61,6 @@ def add_to_cart(request, item_id):
             with {components} components to your cart')
     
     request.session['cart'] = cart
-    print('cart from cart: ', cart)
     return redirect(redirect_url)
 
 
@@ -105,12 +104,11 @@ def remove_from_cart(request, item_id):
     1 options variation or to remove only 1 variation
     from several if 1 product_id + several sets of options
     """
-    print('value: ', value)
     if len(value) == 1 and btn_remove in request.POST:
         cart.pop(item_id)
     else:
         del cart[item_id]['items_by_options'][item_to_remove]
 
     request.session['cart'] = cart
-    print('on delete: ', cart)
+    
     return redirect(reverse('view_cart'))

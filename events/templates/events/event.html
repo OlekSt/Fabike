@@ -4,7 +4,7 @@
 {% block content %}
 <div id="about" class="container-fluid">
     <div class="row">
-        <img class="about-title-image image-fluid" src="{{ MEDIA_URL }}about.jpg" alt="About Fabike">
+        <img class="about-title-image image-fluid" src="{{ MEDIA_URL }}workshops_01.jpg" alt="Workshop Fabike">
     </div>
     <div class="row justify-content-center">
         <div id="events" class="col mx-1 px-0 col-lg-6 col-md-6 col-sm-12 card my-4 align-self-center shadow bg-white rounded">
@@ -39,22 +39,22 @@
                         
                         <p>{{ event.price }}</p>
                     </div>
-                    <div class="row">
-                        <div class="col-6 text-right mt-2 mb-2">                    
-                            <a href="{% url 'events' %}" class="btn btn-outline-secondary mx-lg-3">
-                                <span class="font-weight-bold">BACK TO EVENTS</span>
+                    <div class="row d-flex justify-content-center px-1">
+                        <div class="col-6 text-center">                    
+                            <a href="{% url 'events' %}" class="btn btn-outline-secondary mx-lg-3 pull-left">
+                                <span class="text-center">BACK TO EVENTS</span>
                             </a>
                         </div>
-                        <div class="col-6 text-right mt-2 mb-2">                    
-                            <a href="{% url 'events' %}" class="btn btn-outline-secondary mx-lg-3">
+                        <div class="col-6 text-right">                    
+                            <a href="{% url 'events' %}" class="btn btn-dark mx-lg-3 pull-right">
                                 <span class="font-weight-bold">BOOK A PLACE</span>
                             </a>
                         </div>
                     </div>          
                     <div class="row">
-                        <div class="col-10 text-right ">                    
+                        <div class="col col-10 col-sm-6 text-right">                    
                         </div>
-                        <div class="col-2 text-right mx-1 my-2">
+                        <div class="col col-2 col-sm-6 text-right mx-1 my-2">
                             {% if request.user.is_superuser %}
                                 <small class="edit-delete-btn pull-bottom">
                                     <a href="{% url 'edit_event' event.id %}">EDIT</a> | 

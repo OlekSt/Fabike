@@ -3,9 +3,6 @@
 
 {% block content %}
 <div class="container-fluid">
-    <div class="row">
-        <img class="about-title-image image-fluid" src="{{ MEDIA_URL }}about.jpg" alt="About Fabike">
-    </div>
     <div class="row justify-content-center">
         <div id="add-event" class="col mx-1 px-0 col-lg-6 col-md-6 col-sm-12 card my-4 align-self-center shadow bg-white rounded">
             <div class=" card-header">
@@ -30,11 +27,3 @@
     </div>
 </div>
 {% endblock %}
-
-<script>
-    $(function () {
-        $("#datetimepicker1").datetimepicker({
-        format: 'DD/MM/YYYY HH:mm',
-        });
-    });
-</script>
