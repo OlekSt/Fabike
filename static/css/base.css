@@ -325,6 +325,9 @@ body{
     .centered h1{
         font-size: 1.8em;
     }
+    #cart-qty{
+        right: 1px;
+    }
 }
 
 @media only screen and (max-width: 360px) {
