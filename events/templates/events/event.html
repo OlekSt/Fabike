@@ -14,32 +14,30 @@
             <div class="card-body">
                 <div class="card my-2 border-secondary">
                     <div class="card-header bg-secondary">
-                        <h6 class="uppercase py-2 text-left text-white"><i class="fas fa-tools"></i> {{ event.topics }}</h6>
+                        <h4 class="uppercase py-2 text-left text-white"><i class="fas fa-tools"></i> {{ event.topics }}</h4>
                     </div>
                     <div class="card-body row">
-                        <div class="col-12 col-lg-4 col-md-4">
-
-                            What you will learn:
-                            {{ event.topics }}
+                        <div class="col-12 col-lg-5 col-md-5">
+                            <p>What you will learn:</p>
+                            <p class="px-1">{{ event.learning }}</p>
                         </div>
-                        <div class="col-6 col-lg-4 col-md-4">
-                            When: 
-                        <p>{{ event.date|date:"d.m.Y" }}</p>
-                        <p>{{ event.time|time:"H:i" }}</p>
-                            Where:
-                            <p>{{ event.address }}{{ event.town_or_city }}</p>
-                            <p>{{ event.map_link }}</p>
+                        <div class="col-6 col-lg-3 col-md-3">
+                            <h2 class="mx-3"><i class="far fa-calendar-alt text-primary"></i></h2>
+                            <p><strong>{{ event.date|date:"d.m.Y" }}</strong></p>
+                            <p class="mb-1"><strong>{{ event.time|time:"H:i" }}</strong></p>
+                            <h2 class="mx-3 mt-3"><i class="fas fa-map-pin text-primary"></i></h2>
+                            <p class="my-0">{{ event.address }}</p>
+                            <p class="my-0">{{ event.town_or_city }}</p>
+                            <p class="my-0">{% if event.map_link %}<a href="{{ event.map_link }}" target="_blank">Open map</a>{% endif %}</p>
                         </div>
-                        <div class="col-6 col-lg-4 col-md-4">
-                            ADFadsADSa
-
-                            book
+                        <div class="col-6 col-lg-3 col-md-3">
+                            <h2 class="mx-3"><i class="fas fa-barcode text-primary"></i></h2>
+                            <p class="my-1">€ {{ event.price }}/person</p>
+                            <p class="my-1">{{ event.comment }}</p>
+                            <p class="text-primary mt-2"><small><i class="fa fa-cog fa-spin"></i> Bicycle Club members for free</small></p>
                         </div>
-
-                        
-                        <p>{{ event.price }}</p>
                     </div>
-                    <div class="row d-flex justify-content-center px-1">
+                    <div class="row px-1">
                         <div class="col-6 text-center">                    
                             <a href="{% url 'events' %}" class="btn btn-outline-secondary mx-lg-3 pull-left">
                                 <span class="text-center">BACK TO EVENTS</span>

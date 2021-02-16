@@ -15,7 +15,7 @@
             {% if events %}
 
             {% for event in events %}
-                <div class="card my-2 border-secondary">
+                <div class="card my-5 border-secondary">
                     <div class="card-header bg-secondary">
                         <h5 class="uppercase py-2 text-left text-white"><i class="fa fa-cog fa-spin"></i> {{ event.title }}</h5>
                     </div>
@@ -27,7 +27,7 @@
                         </div>
                         <div class="col-6 col-lg-4 col-md-4">
                             <h2 class="mx-3"><i class="far fa-calendar-alt text-primary"></i></h2>
-                            <p>{{ event.date|date:"d.m.Y" }}</p>
+                            <h5><strong>{{ event.date|date:"d.m.Y" }}</strong></h5>
                             <p class="my-0">{{ event.time|time:"H:i" }}</p>
                         </div>
                         <div class="col-6 col-lg-4 col-md-4">
@@ -39,16 +39,15 @@
                         <div class="col-6 col-lg-4 col-md-4">
                             <h2 class="mx-3"><i class="fas fa-barcode text-primary"></i></h2>
                             <p class="my-0">€ {{ event.price }}/person</p>
-                            <p class="my-0">{{ event.comment }}</p>
-                            <p class="text-primary mt-2"><small><i class="fa fa-cog fa-spin"></i> Bicycle members for free</small></p>
+                            <p class="text-primary mt-2"><small><i class="fa fa-cog fa-spin"></i> Bicycle Club members for free</small></p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="submit-button text-right mb-2">                    
-                            <a href="{% url 'bikes' %}" class="btn btn-outline-secondary mx-lg-3">
+                        <div class="submit-button text-right mb-2 px-3">                    
+                            <a href="{% url 'bikes' %}" class="btn btn-outline-secondary mx-lg-3 pull-left">
                                 <span class="font-weight-bold">BACK TO BIKES</span>
                             </a>
-                            <a href="{% url 'event' event.id %}" class="pull-right button btn btn-dark mx-lg-3">
+                            <a href="{% url 'event' event.id %}" class="pull-right button btn btn-dark mx-lg-3 pull-right">
                                 <span class="font-weight-bold">MORE INFO</span>
                             </a>
                         </div>
