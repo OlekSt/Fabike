@@ -8,10 +8,13 @@
 {% block extra_title %}- Frames{% endblock %}
 
 {% block content %}
-<div id="frames" class="container-fluid">
-    <div class="row">
-        <img class="image-fluid px-0" src="{{ MEDIA_URL }}frames.jpg" alt="Frames">
+<div class="container-fluid mx-0 px-0 secondary-hero-image">
+    <img class="title-image image-fluid mx-0 px-0 align-self-center" src="{{ MEDIA_URL }}frames.jpg" alt="Bikes">
+    <div class="centered">
+        <h1 class="display-2 text-white uppercase">frames</h1>   
     </div>
+</div>
+<div id="frames" class="container-fluid">
     <div class="row justify-content-center py-5">
         {% for frame in frames %}
             <div class="col-lg-4 col-sm-10 text-center pt-3">

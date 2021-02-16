@@ -22,6 +22,24 @@ body{
     padding-top: 80px;
 }
 
+/* Title images and titles on other pages besides home */
+.title-image{
+    width: 100%;
+}
+
+.secondary-hero-image{
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* Navbar */
 #logo{
     width: 5em;
@@ -302,6 +320,10 @@ body{
     #about-section{
         width: 90%;
         padding: 0 8%;
+    }
+    /* title over title images */
+    .centered h1{
+        font-size: 1.8em;
     }
 }
 

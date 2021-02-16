@@ -8,10 +8,13 @@
 {% block extra_title %}- All Products{% endblock %}
 
 {% block content %}
-<div id="products" class="container-fluid ">
-    <div class="row">
-        <img class="image-fluid" src="{{ MEDIA_URL }}search_results.jpg" alt="Bikes">
+<div class="container-fluid mx-0 px-0 secondary-hero-image">
+    <img class="title-image image-fluid mx-0 px-0 align-self-center" src="{{ MEDIA_URL }}search_results.jpg" alt="Bikes">
+    <div class="centered">
+        <h1 class="display-2 text-white uppercase">SEARCH rESULTS</h1>   
     </div>
+</div>
+<div id="products" class="container-fluid">
     <div class="row">
         {% for item in products %}
         <div class="col-lg-6 col-sm-12 text-center px-5 mx-0 pb-5">
