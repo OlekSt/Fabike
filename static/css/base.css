@@ -63,6 +63,11 @@ body{
     display: block;
 }
 
+.nav-item{
+    font-size: 1.2em;
+    list-style-type: none;
+}
+
 /* to position number of products relative to the shopping cart icon */
 #cart-span{
     position: relative;
@@ -70,7 +75,7 @@ body{
 
 #cart-qty{
     position: absolute;
-    top: -15px;
+    top: -17px;
     right: 3px;
     font-size: 1em;
     font-weight: 600;

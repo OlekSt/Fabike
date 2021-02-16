@@ -24,7 +24,7 @@
                             <p>What you will learn:</p>
                             <p class="px-1">{{ event.learning }}</p>
                         </div>
-                        <div class="col-6 col-lg-3 col-md-3">
+                        <div class="col-6 col-lg-3 col-md-3 mx-2">
                             <h2 class="mx-3"><i class="far fa-calendar-alt text-primary"></i></h2>
                             <p><strong>{{ event.date|date:"d.m.Y" }}</strong></p>
                             <p class="mb-1"><strong>{{ event.time|time:"H:i" }}</strong></p>
@@ -37,7 +37,7 @@
                             <h2 class="mx-3"><i class="fas fa-barcode text-primary"></i></h2>
                             <p class="my-1">€ {{ event.price }}/person</p>
                             <p class="my-1">{{ event.comment }}</p>
-                            <p class="text-primary mt-2"><small><i class="fa fa-cog fa-spin"></i> Bicycle Club members for free</small></p>
+                            <p class="text-primary mt-2"><i class="fas fa-award"></i> <small>Bicycle Club members for free</small></p>
                         </div>
                     </div>
                     <div class="row px-1">

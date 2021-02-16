@@ -64,6 +64,11 @@
     height: auto;
 }
 
+.box-text{
+    vertical-align: middle;
+    display: inline-block;
+}
+
 /* Urban, all-road, road section on home page */
 .feat-image{
     width: 100%;
@@ -86,6 +91,7 @@
 .box-road{
     padding: 50px 50px;
 }
+
 
 /* Brands section */
 .brands-section{

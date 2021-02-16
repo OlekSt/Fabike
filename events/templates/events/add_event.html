@@ -3,10 +3,17 @@
 
 {% block content %}
 <div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="text-center uppercase logo-font mb-4">Product management</h2>
+            <hr>
+        </div>
+    </div>
     <div class="row justify-content-center">
         <div id="add-event" class="col mx-1 px-0 col-lg-6 col-md-6 col-sm-12 card my-4 align-self-center shadow bg-white rounded">
             <div class=" card-header">
-                <h2 class="uppercase text-center"><i class="fa fa-cog fa-spin"></i> Add event</h2>
+                <h5 class="uppercase text-center"><i class="fa fa-cog fa-spin"></i> Add event</h5>
             </div>
             <div class="card-body">
                 <form method="POST" action="{% url 'add_event' %}" class="form" enctype="multipart/form-data">
