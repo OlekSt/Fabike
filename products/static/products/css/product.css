@@ -211,6 +211,22 @@
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .components-choice{
+        font-size: 0.3em;
+    }
+    #components-div{
+        padding-top: 0;
+        padding-left: 0;
+        margin-left: 10px;
+        
+    }
+    .size-box{
+        padding-left: 0;
+    }
+    
+}
+
 @media only screen and (max-width: 600px) {
     .container-product{
     width: 100%;
@@ -258,6 +274,17 @@
     /* Make text at the bottom of search results page smaller */
     .dream-configuration-text{
         font-size: 1em;
+    }
+    #components-div{
+        padding-top: 25px;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    #components-selector{
+        font-size: 1.3em;
+    }
+    #size-selector{
+        font-size: 1.1em;
     }
 }
 

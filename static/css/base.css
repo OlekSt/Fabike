@@ -286,6 +286,10 @@ body{
     font-size: 1.5em;
 }
 
+.btn:hover{
+    box-shadow: 3px 3px #575757;
+}
+
 /* For various screen sizes */
 /* Bigger screens */
 @media only screen and (min-width: 1200px) {

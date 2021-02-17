@@ -76,7 +76,7 @@
                         </div>
                     </div>
                     {% if product.is_bike %}
-                    <div id="components-div" class="col-12 col-lg-4 col-md-4">
+                    <div id="components-div" class="col-12 col-lg-4 col-md-4 text-right">
                         <p class="price-size-components-title"><strong>COMPONENTS</strong></p>
                         <div id="components-selector">
                             <div>
@@ -95,27 +95,20 @@
                 <!-- Two blocks for prices: one to be displayed for bikes, one for frames -->
                 <!-- Bikes prices section -->
                 <div class="row mt-2 pt-2">
-                    <div class="col col-lg-3  col-sm-6">
+                    <div class="col col-lg-3 col-md-6 col-sm-6">
                         <p class="price-size-components-title"><strong>PRICE</strong></p>
                         <h4 id="price_alloy" class="text-white text-center">€ {{ product.price_alloy | intcomma }}</h4>
                         <hr>
                         <h4 id="price_carbon" class="price-muted text-center">€ {{ product.price_carbon | intcomma }}</h4>
                     </div>
-                    <div class="col col-lg-3 col-sm-6">
+                    <div class="col col-lg-3 col-md-6 col-sm-6">
                         <p class="price-size-components-title"><strong>WEIGHT</strong></p>
                         <h4 id="weight_alloy" class="text-white text-center">{{ product.weight_alloy }} Kg</h4>
                         <hr>
                         <h4 id="weight_carbon" class="price-muted text-center">{{ product.weight_carbon }} Kg</h4>
                     </div>
-                    <div class="col col-lg-6 col-sm-12">
-                        <div class="row text-center">
-                            <div class="col-lg-12 col-sm-6 buttons">
-                                <button formaction="{% url 'add_to_cart' product.id %}" type="submit" class="text-white btn btn-dark mt-3">ADD <i class="fas fa-long-arrow-alt-right"></i> <i class="fas fa-cart-plus"></i></button>
-                            </div>
-                            <div class="col-12 buttons">
-                                <a href="" class="text-white btn btn-dark mt-3"><i class="far fa-heart"></i> WISHLIST</a>
-                            </div>                 
-                        </div>
+                    <div class="col col-lg-6 col-md-12 col-sm-12 d-flex align-items-center justify-content-center">
+                        <button formaction="{% url 'add_to_cart' product.id %}" type="submit" class="text-white btn btn-dark mt-3">ADD <i class="fas fa-long-arrow-alt-right"></i> <i class="fas fa-cart-plus"></i></button>
                     </div>
                 </div>
                 {% else %}
@@ -129,17 +122,10 @@
                         <p class="price-size-components-title"><strong>WEIGHT</strong></p>
                         <h4 id="weight" class="text-white text-center">{{ product.weight }} Kg</h4>
                     </div>
-                    <div class="col-4">
-                        <div class="row">
-                            <div class="col-12 buttons">
-                                <button class="text-white btn btn-dark mt-3" formaction="{% url 'add_to_cart' product.id %}">&nbsp;ADD&nbsp;  
-                                    <i class="fas fa-long-arrow-alt-right"></i> &nbsp;<i class="fas fa-cart-plus"></i>&nbsp;
-                                </button>
-                            </div>
-                            <div class="col-12 buttons">
-                                <a href="" class="text-white btn btn-dark mt-3"><i class="far fa-heart"></i> WISHLIST</a>
-                            </div>                    
-                        </div>
+                    <div class="col-4  d-flex align-items-center justify-content-center">
+                        <button class="text-white btn btn-dark" formaction="{% url 'add_to_cart' product.id %}">&nbsp;ADD&nbsp;  
+                                <i class="fas fa-long-arrow-alt-right"></i> &nbsp;<i class="fas fa-cart-plus"></i>&nbsp;
+                        </button>          
                     </div>
                 </div>    
                 {% endif %}
