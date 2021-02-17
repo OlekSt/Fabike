@@ -2,14 +2,17 @@ from django import forms
 from .widgets import CustomClearableFileInput
 from .models import Product
 
+
 class ProductForm(forms.ModelForm):
 
     class Meta:
         model = Product
         fields = '__all__'
 
-    image01 = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
-    image02 = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    image01 = forms.ImageField(label='Image', required=False,
+                               widget=CustomClearableFileInput)
+    image02 = forms.ImageField(label='Image', required=False,
+                               widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

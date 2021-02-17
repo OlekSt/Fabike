@@ -1,5 +1,6 @@
 from django.test import TestCase
 
+
 class TestEventsViews(TestCase):
 
     def test_get_events_page(self):

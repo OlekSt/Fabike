@@ -40,7 +40,7 @@ def cart_contents(request):
                 'components': components,
                 'price': price,
             })
-        
+
     delivery = 0
     final_total = delivery + total
 

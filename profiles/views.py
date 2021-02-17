@@ -19,8 +19,9 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
-    else: 
+            messages.error(request, 'Update failed. Please\
+                                    ensure the form is valid.')
+    else:
         form = ProfileForm(instance=profile)
 
     orders = profile.orders.all()
@@ -46,5 +47,5 @@ def order_history(request, order_number):
         'order': order,
         'from_profile': True,
     }
-    
+
     return render(request, template, context)

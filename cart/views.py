@@ -59,7 +59,7 @@ def add_to_cart(request, item_id):
             messages.success(request, f'Added {product.name} with\
             {product.frame} frame in {color} color, size {size}\
             with {components} components to your cart')
-    
+
     request.session['cart'] = cart
     return redirect(redirect_url)
 
@@ -110,5 +110,5 @@ def remove_from_cart(request, item_id):
         del cart[item_id]['items_by_options'][item_to_remove]
 
     request.session['cart'] = cart
-    
+
     return redirect(reverse('view_cart'))

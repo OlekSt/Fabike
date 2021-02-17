@@ -6,7 +6,6 @@ from django.http import HttpResponse
 from .forms import ContactForm
 
 
-
 def contact(request):
     """
     A view to return contact page and render the form
@@ -20,15 +19,19 @@ def contact(request):
             message = contact_form.cleaned_data['message']
             try:
                 send_mail(
-                    # to capture the user email it's displayd in subject field and can be responded to
-                    f"Message from {name}, <{email}>", 
+                    # to capture the user email it's displayd
+                    # in subject field and can be responded to
+                    f"Message from {name}, <{email}>",
                     message,
                     email,
                     [settings.DEFAULT_FROM_EMAIL],
                     fail_silently=False
                 )
 
-                messages.success(request, f'Your message has been successfully sent. Thank you! We will answer within 3 days!')
+                messages.success(request, f'Your message has been\
+                                           successfully sent. Thank\
+                                           you! We will answer\
+                                           within 3 days!')
                 return redirect('contact')
 
             except BadHeaderError:

@@ -6,7 +6,7 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         exclude = ('user',)
-    
+
     def __init__(self, *args, **kwargs):
         """
         Add placeholders and classes, remove auto-generated
@@ -30,5 +30,6 @@ class ProfileForm(forms.ModelForm):
                 else:
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'border-secondary profile-form-input'
+            self.fields[field].widget.attrs['class'] =\
+                'border-secondary profile-form-input'
             self.fields[field].label = False
