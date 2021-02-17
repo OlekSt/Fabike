@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %}- Your Event{% endblock %}
+
 {% block content %}
 <div class="container-fluid mx-0 px-0 secondary-hero-image">
     <img class="title-image image-fluid mx-0 px-0 align-self-center" src="{{ MEDIA_URL }}workshops_01.jpg" alt="Bikes">
@@ -25,16 +27,16 @@
                             <p class="px-1">{{ event.learning }}</p>
                         </div>
                         <div class="col col-lg-3 col-md-3 mx-2">
-                            <h2 class="mx-3"><i class="far fa-calendar-alt text-primary"></i></h2>
+                            <p class="mx-3 events-icon"><i class="far fa-calendar-alt text-primary"></i></p>
                             <p><strong>{{ event.date|date:"d.m.Y" }}</strong></p>
                             <p class="mb-1"><strong>{{ event.time|time:"H:i" }}</strong></p>
-                            <h2 class="mx-3 mt-3"><i class="fas fa-map-pin text-primary"></i></h2>
+                            <p class="mx-3 mt-3 events-icon"><i class="fas fa-map-pin text-primary"></i></p>
                             <p class="my-0">{{ event.address }}</p>
                             <p class="my-0">{{ event.town_or_city }}</p>
                             <p class="my-0">{% if event.map_link %}<a href="{{ event.map_link }}" target="_blank">Open map</a>{% endif %}</p>
                         </div>
                         <div class="col col-lg-3 col-md-3">
-                            <h2 class="mx-3"><i class="fas fa-barcode text-primary"></i></h2>
+                            <p class="mx-3 events-icon"><i class="fas fa-barcode text-primary"></i></p>
                             <p class="my-1">€ {{ event.price }}/person</p>
                             <p class="my-1">{{ event.comment }}</p>
                             <p class="text-primary mt-2"><i class="fas fa-award"></i> <small>Bicycle Club members for free</small></p>

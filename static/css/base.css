@@ -281,6 +281,11 @@ body{
     background-color: #575757;
 }
 
+/* For events pages */
+.events-icon{
+    font-size: 1.5em;
+}
+
 /* For various screen sizes */
 /* Bigger screens */
 @media only screen and (min-width: 1200px) {

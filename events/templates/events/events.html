@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %}- Events{% endblock %}
+
 {% block content %}
 <div class="container-fluid mx-0 px-0 secondary-hero-image">
     <img class="title-image image-fluid mx-0 px-0 align-self-center" src="{{ MEDIA_URL }}workshops.jpg" alt="Bikes">
@@ -19,7 +21,7 @@
 
             {% for event in events %}
                 <div class="card my-5 border-secondary mx-0 px-0">
-                    <div class="card-header bg-secondary">
+                    <div class="card-header bg-secondary m-0">
                         <h5 class="uppercase py-2 text-left text-white"><i class="fa fa-cog fa-spin"></i> {{ event.title }}</h5>
                     </div>
                     <div class="card-body row mb-3">
@@ -29,18 +31,18 @@
                             </div>
                         </div>
                         <div class="col-6 col-lg-4 col-md-4 mt-3">
-                            <h2 class="mx-3"><i class="far fa-calendar-alt text-primary"></i></h2>
+                            <p class="mx-3 events-icon"><i class="far fa-calendar-alt text-primary"></i></p>
                             <h5><strong>{{ event.date|date:"d.m.Y" }}</strong></h5>
                             <p class="my-0">{{ event.time|time:"H:i" }}</p>
                         </div>
                         <div class="col-6 col-lg-4 col-md-4 mt-3">
-                            <h2 class="mx-3"><i class="fas fa-map-pin text-primary"></i></h2>
+                            <p class="mx-3 events-icon"><i class="fas fa-map-pin text-primary"></i></p>
                             <p class="my-0">{{ event.address }}</p>
                             <p class="my-0">{{ event.town_or_city }}</p>
                             <p class="my-0">{% if event.map_link %}<a href="{{ event.map_link }}" target="_blank">Open map</a>{% endif %}</p>
                         </div>
                         <div class="col-12 col-lg-4 col-md-4 mt-3">
-                            <h2 class="mx-3"><i class="fas fa-barcode text-primary"></i></h2>
+                            <p class="mx-3 events-icon"><i class="fas fa-barcode text-primary"></i></p>
                             <p class="my-0">€ {{ event.price }}/person</p>
                             <p class="text-primary mt-2"><i class="fas fa-award"></i> <small>Bicycle Club members for free</small></p>
                         </div>
