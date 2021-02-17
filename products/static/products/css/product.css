@@ -260,3 +260,9 @@
         font-size: 1em;
     }
 }
+
+@media only screen and (max-width: 279px) {
+    .title{
+        font-size: 0.1em;
+    }
+}

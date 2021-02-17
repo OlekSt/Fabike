@@ -37,7 +37,12 @@ The following validation services were used to check the validity of the website
 
 - Console errors:
 
-## Client stories testing
+## Manual Testing
+
+### Responsiveness
+
+
+### Client Stories Testing
 The user stories are described in the UX section of [README.md](README.md) 
 
 

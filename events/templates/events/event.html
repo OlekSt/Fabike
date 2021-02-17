@@ -10,7 +10,7 @@
 </div>
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div id="events" class="col mx-1 px-0 col-lg-6 col-md-6 col-sm-12 card my-4 align-self-center shadow bg-white rounded">
+        <div id="events" class="col-12 mx-1 px-0 col-xl-6 col-lg-8 col-md-10 card my-4 align-self-center shadow bg-white rounded">
             <div class=" card-header">
                 <h2 class="uppercase text-center"><i class="fa fa-cog fa-spin"></i> {{ event.title }}</h2>
             </div>
@@ -24,7 +24,7 @@
                             <p>What you will learn:</p>
                             <p class="px-1">{{ event.learning }}</p>
                         </div>
-                        <div class="col-6 col-lg-3 col-md-3 mx-2">
+                        <div class="col col-lg-3 col-md-3 mx-2">
                             <h2 class="mx-3"><i class="far fa-calendar-alt text-primary"></i></h2>
                             <p><strong>{{ event.date|date:"d.m.Y" }}</strong></p>
                             <p class="mb-1"><strong>{{ event.time|time:"H:i" }}</strong></p>
@@ -33,7 +33,7 @@
                             <p class="my-0">{{ event.town_or_city }}</p>
                             <p class="my-0">{% if event.map_link %}<a href="{{ event.map_link }}" target="_blank">Open map</a>{% endif %}</p>
                         </div>
-                        <div class="col-6 col-lg-3 col-md-3">
+                        <div class="col col-lg-3 col-md-3">
                             <h2 class="mx-3"><i class="fas fa-barcode text-primary"></i></h2>
                             <p class="my-1">€ {{ event.price }}/person</p>
                             <p class="my-1">{{ event.comment }}</p>
@@ -42,13 +42,13 @@
                     </div>
                     <div class="row px-1">
                         <div class="col-6 text-center">                    
-                            <a href="{% url 'events' %}" class="btn btn-outline-secondary mx-lg-3 pull-left">
-                                <span class="text-center">BACK TO EVENTS</span>
+                            <a href="{% url 'events' %}" class="btn btn-outline-secondary mx-lg-3 px-2 pull-left">
+                                <span class="text-center px-0">BACK TO EVENTS</span>
                             </a>
                         </div>
                         <div class="col-6 text-right">                    
-                            <a href="{% url 'contact' %}" class="btn btn-dark mx-lg-3 pull-right">
-                                <span class="font-weight-bold">BOOK A PLACE</span>
+                            <a href="{% url 'contact' %}" class="btn btn-dark mx-lg-3 px-3 pull-right">
+                                <span class="text-center">BOOK A PLACE</span>
                             </a>
                         </div>
                     </div>          
