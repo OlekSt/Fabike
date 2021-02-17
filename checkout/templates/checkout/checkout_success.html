@@ -8,7 +8,7 @@
 {% block extra_title %}- Checkout Success{% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container pb-3">
     <div class="row">
         <div class="col">
             <hr>
@@ -22,7 +22,7 @@
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="m-2 px-0 col-12 col-lg-6 card shadow bg-white rounded">
+        <div class="m-2 px-0 col-12 col-lg-8 card shadow bg-white rounded">
             <div class="card-header ">
                 <h5 class="uppercase text-left pt-2"><i class="fa fa-cog fa-spin"></i> Order info</h5>
             </div>
@@ -100,13 +100,13 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <p class="mb-0 text-black font-weight-bold">Order Total: € {{ order.order_total | intcomma }}</p>
+                                <p class="mb-0 text-black font-weight-bold">Total: € {{ order.order_total | intcomma }}</p>
                                 <p class="mb-0 text-black font-weight-bold">Delivery: € {{ order.delivery_cost | intcomma }}</p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <p class="mb-0 text-black font-weight-bold">Final Total: € {{ order.final_total | intcomma }}</p>
+                                <p class="mb-0 text-black font-weight-bold">Final Total: <strong>€ {{ order.final_total | intcomma }}</strong></p>
                             </div>
                         </div> 
                     </div> 

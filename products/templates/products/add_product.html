@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_title %}- Product Management{% endblock %}
+{% block extra_title %}- Add Product{% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container pb-3">
     <div class="row">
         <div class="col">
             <hr>
@@ -22,10 +22,10 @@
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="my-2">
-                        <a href="{% url 'bikes' %}" class="btn btn-outline-secondary mx-lg-3">
+                        <a href="{% url 'bikes' %}" class="btn btn-outline-secondary mx-lg-3 mt-3">
                             <span class="font-weight-bold">CANCEL</span>
                         </a>
-                        <button type="submit" class="pull-right button btn btn-dark mx-lg-3">
+                        <button type="submit" class="pull-right button btn btn-dark mx-lg-3 mt-3">
                             <span class="font-weight-bold">ADD PRODUCT</span>
                         </button>
                     </div>
