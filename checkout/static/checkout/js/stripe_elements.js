@@ -3,6 +3,7 @@
     https://stripe.com/docs/payments/accept-a-payment
     CSS from here: 
     https://stripe.com/docs/stripe-js
+    The code has been copied from Boutique Ado repository
 */
 
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
@@ -28,7 +29,6 @@ var card = elements.create('card', {style: style});
 card.mount('#card-element');
 
 // Handle realtime error validation
-
 card.addEventListener('change', function(event) {
     var errorDiv = document.getElementById('card-errors');
     if (event.error) {
