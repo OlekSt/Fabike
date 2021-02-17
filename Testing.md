@@ -13,15 +13,32 @@ This document is intended to record testing at various stages of development of 
 ## Table of Contents
 1. [**Automated Testing**](#automated-testing)
     - [**Validation services**](#validation-services)
-2. [**Client Stories Testing**](#client-stories-testing)
-3. [**Manual Testing**](#manual-testing)
-    - [**Testing undertaken on laptop**](#testing-undertaken-on-laptop) 
-    - [**Testing undertaken on mobile and pad devices**](#testing-undertaken-on-mobile-and-pad-devices)
+2. [**Manual Testing**](#manual-testing)
+    - [**Responsiveness **](#responsiveness)
+    - [**Client Stories Testing**](#client-stories-testing)
+    
     - [**Testing undertaken in DevTools**](#testing-undertaken-in-DevTools)
-4. [**Bugs discovered**](#bugs-discovered)
+3. [**Bugs discovered**](#bugs-discovered)
     - [**Solved bugs**](#solved-bugs)
     - [**Unsolved bugs**](#unsolved-bugs)
-5. [**Further Testing**](#further-testing)
+4. [**Further Testing**](#further-testing)
+
+## Automated Testing
+
+### Validation services
+The following validation services were used to check the validity of the website code.
+- [W3C Markup Validation]( https://validator.w3.org/): 
+
+- [W3C CSS validation](https://jigsaw.w3.org/css-validator/):
+
+- [JSHint](https://jshint.com/) & [Esprima](https://esprima.org/demo/validate.html):
+
+- [PEP8 Python Validator](http://pep8online.com):
+
+- Console errors:
+
+## Client stories testing
+The user stories are described in the UX section of [README.md](README.md) 
 
 
 
