@@ -69,6 +69,10 @@
     display: inline-block;
 }
 
+.brands-section{
+    padding-bottom: 15px;
+}
+
 .brands-section p{
     font-size: 1.3em;
 }

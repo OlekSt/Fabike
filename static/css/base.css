@@ -6,11 +6,17 @@ html, body{
     margin: 0;
     padding: 0;  
     max-width: 100%;
-    overflow-x: hidden;    
+    overflow-x: hidden;
+    height: 100%;
 }
 
 body{
     font-family: 'Noto Sans KR', sans-serif;
+}
+
+#main{
+    position: relative;
+    min-height:100%;
 }
 
 .uppercase{
@@ -154,6 +160,12 @@ body{
     background-color: #262626;
     padding-top: 15px;
     flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-pillow{
+    height: 130px;
 }
 
 .footer-links{
@@ -279,8 +291,10 @@ body{
     
 }
 
-@media only screen and (min-width: 750px) {
-    
+@media only screen and (max-width: 768px) {
+    .footer-pillow{
+        height: 200px;
+    }
 }
 
 /* Smaller screens */
@@ -332,6 +346,15 @@ body{
     }
     #cart-qty{
         right: 1px;
+    }
+    .footer-pillow{
+        height: 160px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+.footer-pillow{
+        height: 175px;
     }
 }
 
