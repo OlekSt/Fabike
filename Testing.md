@@ -49,7 +49,9 @@ The user stories are described in the UX section of [README.md](README.md)
 
 Wesbite visitors:
 - First time website visitor:
-    * I want to get a clear idea what the website is about
+
+User story: I want to get a clear idea what the website is about
+
     Testing: 
     - Open the home page, scroll it down 
     
@@ -63,7 +65,8 @@ Wesbite visitors:
     Conclusion:
     - Passed. A visitor can easily understand what the website is about, as well as see the main navigation units allowing to continue exploring the website.
     
-    * I want to be able to easily see where I can find various info (menu, sections, links, individual pages/windows) and easily navigate there
+User story: I want to be able to easily see where I can find various info (menu, sections, links, individual pages/windows) and easily navigate there
+
     Testing: 
     - Located the Navbar, and clicked all of the links there: 
             1. Bikes>All Bikes/Urban/All Road/Road
@@ -89,7 +92,8 @@ Wesbite visitors:
     Conclusion: 
     - Passed. All links work as exppected. There no wrong or broken links. 
 
-    * Find appropriate section - bikes or frames, urban bikes or all road bikes, etc, and be able to see all the products in the section
+User story: Find appropriate section - bikes or frames, urban bikes or all road bikes, etc, and be able to see all the products in the section
+
     Testing:
     - Click links Bikes>All Bikes/Urban/All Road/Road, Frames or Events
     - Scroll down and click Discover buttons for Urban, All Road or Road section
@@ -118,16 +122,47 @@ Wesbite visitors:
     - An event page has info about the topic, what attendees will learn during a workshop, price, time and date, location, and a button to contact the company to book a spot for an attendee.
     
     Conclusion:
-    - Passed. 
+    - Passed. All individual pages work as expected, and display necessary info for a visitor of the website to make a decsion of next steps from such a page, and provides necessary tools to continue. 
 
     * I want to be able to choose appropriate size, color and add the product to shopping cart
+    Testing: 
+    Results: 
+    Conclusion:
+
     * I want to be able to easily navigate from the shopping cart back to products
+    Testing: 
+    Results: 
+    Conclusion:
+
     * Then once I am done with products, I want to be able to easily find the shopping cart, and navigate there.
+    Testing: 
+    Results: 
+    Conclusion:
+
     * I want to be able to go to checkout, see all the info about my purchase, be able to add billing/shipping details, add my card details, and pay with one-click.
+    Testing: 
+    Results: 
+    Conclusion:
+
     * Also I want to be able to automatically (during checkout-payment process) add my details and automatically create an account (adding all my data, incl. shipping address).
+    Testing: 
+    Results: 
+    Conclusion:
+
     * Once the payment is processed, I want to get a confirmation email about the payment, and the order, with all the order details. And be able to login into my account and see the order there.
+    Testing: 
+    Results: 
+    Conclusion:
+
     * If I don’t purchase anything, I want to be able to create an account, add my details, and add products to my wish list. 
+    Testing: 
+    Results: 
+    Conclusion:
+
     * If I decide not to create an account, I want to have an option to send a message or ask questions about the products
+    Testing: 
+    Results: 
+    Conclusion:
 
 - Returning visitor (in addition to possibilities described above, except those specific to first time visitors):
     * If I haven’t created a profile yet, to find easily where I can do that, and create one.

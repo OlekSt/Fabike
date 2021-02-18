@@ -8,7 +8,7 @@
 
 <img src="" alt="Title image" style="margin: 0 10px;" width="100%"/>
 
-[FABIKE - Heroku link](website will be here)
+[FABIKE - Heroku link](https://fabike.herokuapp.com/)
 
 ************************************************************
 
@@ -374,6 +374,9 @@ The User model used is provided by Django as a part of defaults `django.contrib.
  Comment | Comment | max_length=120 | CharField
 ---
 
+## TESTING 
+
+You will find all the info related to testing in [Testing.md file](Testing.md)
 
 
 ## CREDITS
