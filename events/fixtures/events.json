@@ -1,0 +1,50 @@
+[
+  {
+    "model": "events.event",
+    "pk": 36,
+    "fields": {
+      "title": "How to replace a bicycle chain",
+      "topics": "Replacing a chain + maintenance tips",
+      "learning": "1. Removing an old chain\r\n2. Fitting a new chain\r\n3. Sizing a chain\r\n4.Joining a chain\r\n5. How to care for your chain\r\n6. How to measure a chain for wear\r\n7. Chain tools and wear checkers",
+      "date": "2021-03-15",
+      "time": "18:00:00",
+      "address": "Plaska 9",
+      "town_or_city": "Prague",
+      "map_link": "https://goo.gl/maps/Hyb8QCxpa9e7Aiz2A",
+      "price": "25",
+      "comment": "Paid on arrival"
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 37,
+    "fields": {
+      "title": "Brake pads change",
+      "topics": "How to change the disc brake pads + tools you need",
+      "learning": "1. Inspect for wear; \r\n2. Remove and clean;\r\n3. Replace and adjust;\r\n4. Tools you need;\r\n5. Maintenance tips",
+      "date": "2021-04-02",
+      "time": "17:00:00",
+      "address": "Plaska 9",
+      "town_or_city": "Prague",
+      "map_link": "https://goo.gl/maps/Hyb8QCxpa9e7Aiz2A",
+      "price": "20",
+      "comment": "Paid on arrival"
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 38,
+    "fields": {
+      "title": "How to service bike hubs",
+      "topics": "Service your wheel bearings for a smoother ride",
+      "learning": "1. Remove and clean the bearings;\r\n2. Re-grease the hub;\r\n3. Refit the axle;\r\n4. Refit the cassette;\r\n5. Tips on regular maintenace",
+      "date": "2021-05-14",
+      "time": "17:00:00",
+      "address": "Plaska 9",
+      "town_or_city": "Prague",
+      "map_link": "https://goo.gl/maps/Hyb8QCxpa9e7Aiz2A",
+      "price": "30",
+      "comment": "Paid on arrival"
+    }
+  }
+]
