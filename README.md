@@ -374,6 +374,44 @@ The User model used is provided by Django as a part of defaults `django.contrib.
  Comment | Comment | max_length=120 | CharField
 ---
 
+
+## TECHNOLOGIES USED
+
+### LANGUAGES 
+- HTML
+- CSS
+- Python
+- Javascript
+- Jinja
+
+### LIBRARIES & FRAMEWORKS 
+- [Django](https://www.djangoproject.com/)
+- [Bootstrap](https://www.bootstrapcdn.com/)
+- [Google Fonts](https://fonts.google.com/)
+- [FontAwesome](https://fontawesome.com/)  
+- [JQuery](https://jquery.com/)
+- [Gunicorn](https://pypi.org/project/gunicorn/) - a Python WSGI HTTP Server to enable deployment to Heroku
+- [Psycopg2](https://pypi.org/project/psycopg2/) - to enable the PostgreSQL database to function with Django
+- [Stripe](https://stripe.com/ie) - for card payment process
+- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+
+### TOOLS
+- [GitPod](https://www.gitpod.io/) - IDE for developing this project
+- [Git](https://git-scm.com/) - version control
+- [GitHub](https://git-scm.com/) - storage of the project's repository
+- [PIP](https://pip.pypa.io/en/stable/installing/) - for installation of necessary tools
+- [Heroku](https://heroku.com/) - to host the project
+- [AWS S3 Bucket](https://aws.amazon.com/) -  to store static and media files in prodcution
+- [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) for compatibility with AWS
+- [Travis](https://travis-ci.org/) - for integration testing
+- [Balsamiq](https://balsamiq.com/) - for wireframes
+- [ColosSpace](https://mycolor.space/) - to create colour palette
+- [Autoprefixer](https://autoprefixer.github.io/) - for adapting css to various browsers
+
+### DATABASES
+- [SQlite3](https://www.sqlite.org/index.html) - for development
+- [PostgreSQL](https://www.postgresql.org/) - for production
+
 ## TESTING 
 
 You will find all the info related to testing in [Testing.md file](Testing.md)

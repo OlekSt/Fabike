@@ -48,8 +48,8 @@ I have tested responsiveness of the website for various mobile, pad, laptop & de
 ### Client Stories Testing
 The user stories are described in the UX section of [README.md](README.md) 
 
-Wesbite visitors:
-- First time website visitor:
+
+- **First time website visitor**:
 
 User story: I want to get a clear idea what the website is about
 
@@ -253,9 +253,10 @@ User story: If I decide not to create an account, I want to have an option to se
     Fixed: 
     - Updated code in views.py of the contact app
 
+##### back to [top](#table-of-contents)
 
 
-- Returning visitor (in addition to possibilities described above, except those specific to first time visitors):
+- **Returning visitor** (in addition to possibilities described above, except those specific to first time visitors):
 
 
 User story: If I haven’t created a profile yet, to find easily where I can do that, and create one
@@ -300,8 +301,10 @@ User story: I want to be able to navigate across the website and get info necess
     Conclusion:
     - Passed. 
 
+##### back to [top](#table-of-contents)
 
-- Website administrator:
+
+- **Website administrator**:
 
 User story: To have access to all the necessary data to manage products’ display on the web-site, customers’ accounts, and purchase histories, etc. 
 
@@ -317,7 +320,7 @@ User story: To have access to all the necessary data to manage products’ displ
     Conclusion:
     - Passed. Works as expected.
 
-User story: To be able to easily login and navigate within the admin area of the website
+User story: Admin CRUD - be able to easily login and navigate within the admin area of the website
     
     Testing: 
     - Logged in into admin
@@ -332,7 +335,7 @@ User story: To be able to easily login and navigate within the admin area of the
     Conclusion:
     - Passed. Works as expected.
 
-User story: To be able to easily add, modify or delete products listings, with all the necessary info – images, descriptions, technical parameters, etc.
+User story: Admin CRUD - be able to easily add, modify or delete products listings, with all the necessary info – images, descriptions, technical parameters, etc.
 
     Testing: 
     - Sing In as a super user or staff user
