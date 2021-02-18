@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     $("input[type=radio][name=components]").on('change', function() {
-        var componentChoice = $("input[type=radio][name=components]:checked").val();
+        var componentChoice = $("[name=components]:checked").val();
         if (componentChoice == "alloy") {
             $("#price_alloy, #weight_alloy").removeClass("price-muted").addClass("text-white").change(); 
             $("#price_carbon, #weight_carbon").removeClass("text-white").addClass("price-muted").change();
