@@ -333,12 +333,15 @@ The User model used is provided by Django as a part of defaults `django.contrib.
  User | account | ForeignKey 'Account' | on_delete=models.SET_NULL, null=True, blank=True, related_name='orders'
  Full Name | account_full_name | max_length=70 | CharField
  Phone number | account_phone_number | max_length=25 | CharField
- Address | delivery_address | max_length=254 | TextField, ForeignKey 'Address'
+ Address | address | max_length=254 | TextField, ForeignKey 'Address'
+ Town or City | town_or_city | max_length=80 | CharField
+ Postcode | postcode | max_length=20 | CharField
+ Country | country | blank_label='Country*' | CharField
  Purchase Date | purchase_date | auto_now_add=True | DateTimeField
  Order Total | order_total | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
+ Delivery Cost | delivery_cost | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
+ Final Total Total | final_total | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
  Stripe Pid | stripe_pid | max_length=254, null=False, blank=False, default='' | CharField
- Comment | comment | TextField | max_length=254, null=True, blank=True
- Shipped | shipped | default=False | BooleanField
 
 
  ##### Order Item Details 
@@ -352,19 +355,23 @@ The User model used is provided by Django as a part of defaults `django.contrib.
  Components | alloy_or_carbon | choices=COMPONENTS | CharField
  Item Total | item_total | max_digits=6, decimal_places=2, null=False, blank=False, editable=False | DecimalField
 
-* Colors, Components & Sizes choices are defined within the Product model.
+* Colors, Components & Sizes choices will be added via other means, product views, Javascript.
+
+    **Learning point: Data model for Products done at the beginning of the project didn't take into account some aspects of data manipulation, specifically creating a unique product record with a combination of model, color, size, components, etc. Based on the knowledge & experience I have obtained during the project's implementation, I'd plan a Product data model differently, i.e. each individual combination of a model, color, size, components would be given an individual sku code. This would simplify quite a number of processes within the following apps: cart, checkout.
 
 
 #### Events app
 ##### Event
 | **Name** | **Database Key** | **Validation** | **Field Type** | 
 --- | --- | --- | --- 
- Name | name | max_length=80 | CharField
- Description | description | max_length=254 | TextFeild
+ Title | title | max_length=80 | CharField
+ Learning | Learning | max_length=254 | TextFeild
  Date | date | max_length=20 | DateTimeField
  Time | time | max_length=20 | DateTimeField 
+ Address | address | max_length=80 | CharField
+ Town or City | town_or_city | max_length=80 | CharField
  Price | price | max_digits=3, decimal_places=2  | DecimalField
- Price Comment | price_comment | max_length=120 | CharField
+ Comment | Comment | max_length=120 | CharField
 ---
 
 
