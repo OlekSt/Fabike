@@ -109,7 +109,8 @@ User story: Find appropriate section - bikes or frames, urban bikes or all road 
     Conclusion: 
     - Passed. The website offers several options from where a uers can reach respective sections of interest, bikes, frames or events.
 
-    * Choose an individual product, and get all necessary info: images, descriptions, technical parameters, price, delivery terms, etc. 
+User story: Choose an individual product, and get all necessary info: images, descriptions, technical parameters, price, delivery terms, etc. 
+
     Testing:
     - Open any bike section(all bikes, urban, all road or road bikes) and click an individual product
     - Open frames and click one of the frames
@@ -117,87 +118,226 @@ User story: Find appropriate section - bikes or frames, urban bikes or all road 
     - Typed some search words into the search field
 
     Results:
-    - An individual bicycle page contains all the necesessary info about the product: image, name, frame name, clickable color/size/components options, price and weight, list of components, info about geometry of the frames and sizes relative to a person's height. It includes production and delivery info. 
+    - An individual bicycle page contains all the necesessary info about the product.
+    - Image, name, frame name, clickable color/size/components options, price and weight, list of components, info about geometry of the frames and sizes relative to a person's height. 
+    - It includes production and delivery info. 
     - An individual frame page contains the same info as a bicycle page, except of the components. 
     - An event page has info about the topic, what attendees will learn during a workshop, price, time and date, location, and a button to contact the company to book a spot for an attendee.
     
     Conclusion:
     - Passed. All individual pages work as expected, and display necessary info for a visitor of the website to make a decsion of next steps from such a page, and provides necessary tools to continue. 
 
-    * I want to be able to choose appropriate size, color and add the product to shopping cart
-    Testing: 
-    Results: 
-    Conclusion:
+User story: I want to be able to choose appropriate size, color and add the product to shopping cart
 
-    * I want to be able to easily navigate from the shopping cart back to products
     Testing: 
-    Results: 
-    Conclusion:
+    - Click & choose individual parameters of a product - color, size, components
+    - Click Add to Cart button
+    - Click Shopping Cart 
 
-    * Then once I am done with products, I want to be able to easily find the shopping cart, and navigate there.
-    Testing: 
     Results: 
+    - All of the selectors work correctly responding to click, change of components also highlights respective price and weight of a products, depending where carbon fibre or alloy components are chosen. 
+    - Clicking Add to Cart add a products to the cart. I get a confirmation message. Also can see the change of the color of the cart icon and number of products added.  
+    - Shopping Cart icon takes me to the shopping cart page, where I can see info about products added. 
     Conclusion:
+    - Passed. All the functionality works as planned and provides necessary feedback to a user. 
 
-    * I want to be able to go to checkout, see all the info about my purchase, be able to add billing/shipping details, add my card details, and pay with one-click.
-    Testing: 
-    Results: 
-    Conclusion:
+User story: I want to be able to easily navigate from the shopping cart back to products
 
-    * Also I want to be able to automatically (during checkout-payment process) add my details and automatically create an account (adding all my data, incl. shipping address).
     Testing: 
+    - Click Back to Bikes button
+    - Click links in the navbar
     Results: 
+    - Back to Bikes takes me back to all the bicycles displayed together, and I can see more options
+    - Using navbar menu takes me to Bikes, Frames or Events pages
     Conclusion:
+    - Passed. Works as planned, a user can easily navigate back to explore more products, using several options.  
 
-    * Once the payment is processed, I want to get a confirmation email about the payment, and the order, with all the order details. And be able to login into my account and see the order there.
-    Testing: 
-    Results: 
-    Conclusion:
+User story: Then once I am done with products, I want to be able to easily find the shopping cart, and navigate there
 
-    * If I don’t purchase anything, I want to be able to create an account, add my details, and add products to my wish list. 
     Testing: 
+    - Location Shopping cart icon and click it
     Results: 
+    - The icon is easily and always visible in the upper right corner
+    - It has blue color and displays a number of products added
+    - Clicking it opens the shopping cart page, displaying all the necessary info about product
+    - A user can update quantity of a product or delete a product from a shopping cart, a message is provided to a user upon each action
+    - If the cart is empty it displays a message that it is empty and has a button Back to Bikes
+    - If all products deleted, the icon becomes white and displays zero
     Conclusion:
+    - Passed. Works as expected. 
 
-    * If I decide not to create an account, I want to have an option to send a message or ask questions about the products
+User story: I want to be able to go to checkout, see all the info about my purchase, be able to add billing/shipping details, add my card details, and pay with one-click
+
     Testing: 
+    - Click Checkout button from the cart
+    - Check Checkout Summary
+    - Add my billing/shipping details
+    - Enter card info and press Complete Order
+
     Results: 
+    - It takes me to checkout page as expected
+    - The summary shows the product details: model, color, size, components, quantity, price, delivery cost, final sum to pay
+    - It displays a form for billing and shipping details, which a user can fill in
+    - Beneath the form there is an option to Sign Up or Sign In
+    - Payment info field for card info
+    - a user can choose buttons Back to Cart & Complete order
+    - A user can see a message, informing how much an entered card will be charged
+
     Conclusion:
+    - Passed.
+    - I can see all the necessary info about my order
+    - The form does not let to proceed unless all the necessary fields are filled in
+    - Pressing Sign Up takes me to create an account
+    - If card details are incomplete or missing, a relevant message is displayed, and an order cannot be paid
+
+User story: Also I want to be able to automatically (during checkout-payment process) add my details and automatically create an account (adding all my data, incl. shipping address)
+
+    Testing: 
+    - Clicking Sign Up under the form to create an account
+
+    Results: 
+    - It takes me to create an account. 
+    - Once an account is created and I navigate back to checkout I can save billing and shipping info into my account automatically
+    - I get a confirmation message that I signed in as "user name"
+
+    Conclusion:
+    - Passed. All works as expected
+
+User story: Once the payment is processed, I want to get a confirmation email about the payment, and the order, with all the order details. And be able to login into my account and see the order there.
+
+    Testing: 
+    - I get to order susccess summary page
+    - i check my email    
+    - I click Profile Icon and choose Profile
+    - I update my info
+    - i check purchase histroy and open a past order
+
+    Results: 
+    - Once checkout process is successful I get a message about an order
+    - Then I am taken to a summary page with all the info of an order, saying that all the info will be sent to my email
+    - I get an email with confirmation of my order
+    - I can open my profile, where I can see my shipping details
+    - I update them and get a success message
+    - I can see my purchse history, and can open last orders details
+    - I open a past order, which takes me to a page with the order summary: oder number/date, product details, shipping address, payment info. 
+    Conclusion:
+    - Passed.
+    - All works as expected.
+
+User story: If I don’t purchase anything, I want to be able to create an account, add my details, and add products to my wish list
+
+    Note: Feature was removed from the current implementation due to time constriants, and postponed for further stages of the project development. 
+    
+
+User story: If I decide not to create an account, I want to have an option to send a message or ask questions about the products
+
+    Testing: 
+    - Navigate to contact page
+    - Send a message
+
+    Results: 
+    - I am taken to a contact us form
+    - I fill it in, and send
+    - I get a confirmation that my message was sent succesfully
+
+    Conclusion:
+    - Passed. 
+    - The contact form works as expected, does not allow a message with any field empty
+    - I checked my email, a message was received
+
+    Bug: 
+    - Subject is missing in the message. 
+    Fixed: 
+    - Updated code in views.py of the contact app
+
+    
 
 - Returning visitor (in addition to possibilities described above, except those specific to first time visitors):
-    * If I haven’t created a profile yet, to find easily where I can do that, and create one.
-    * I want to be able to login into my account, update my data if needed, and see my wish list if I created it.
-    * I want to be able to navigate across the website and get info necessary for me to decide about a purchase and purchase a product taking steps described above.
+
+
+User story: If I haven’t created a profile yet, to find easily where I can do that, and create one
+    
+    Testing: 
+    Results: 
+    Conclusion:
+
+User story: I want to be able to login into my account, update my data if needed, and see my wish list if I created it
+    
+    Testing: 
+    Results: 
+    Conclusion:
+
+User story: I want to be able to navigate across the website and get info necessary for me to decide about a purchase and purchase a product taking steps described above
+    
+    Testing: 
+    Results: 
+    Conclusion:
 
 - Website administrator:
-    * To have access to all the necessary data to manage products’ display on the web-site, customers’ accounts, and purchase histories, etc. 
-    * To be able to easily login and navigate within the admin area of the website.
-    * To be able to easily add, modify or delete products listings, with all the necessary info – images, descriptions, technical parameters, etc. 
 
-4. Bugs discovered
+User story: To have access to all the necessary data to manage products’ display on the web-site, customers’ accounts, and purchase histories, etc. 
 
-Bug: On Heroku getting 500 error upon pressing Checkout button, while it works from Gitpod.
-Solution: Added Stripe public, secret, & wh keys to heroku.
+    Testing: 
+    Results: 
+    Conclusion:
+
+User story: To be able to easily login and navigate within the admin area of the website
+    
+    Testing: 
+    Results: 
+    Conclusion:
+
+User story: To be able to easily add, modify or delete products listings, with all the necessary info – images, descriptions, technical parameters, etc.
+
+    Testing: 
+    Results: 
+    Conclusion: 
+
+
+
+
+## BUGS DISCOVERED
+### SOLVED BUGS
+
+Bug: 
+- On Heroku getting 500 error upon pressing Checkout button, while it works from Gitpod.
+Solution: 
+- Added Stripe public, secret, & wh keys to heroku.
+Solved
+
+Bug: 
+- Stripe webhooks don't work.
+Solution: 
+- Added Stripe public, secret, & wh keys to heroku.
 Solved.
 
-Bug: Stripe webhooks don't work.
-Solution: Added Stripe public, secret, & wh keys to heroku.
+Bug: 
+- Checkout works well, an order is created, but a confirmation email is not sent. Tried both signed-in purchase, and non signed-in purchase. 
+Solution: 
+- Updated secret keys on heroku.
 Solved.
 
-Bug: Checkout works well, an order is created, but a confirmation email is not sent. Tried both signed-in purchase, and non signed-in purchase. 
-Solution: Updated secret keys on heroku.
-Solved.
+Bug: 
+- Checkout works, and gives a toast message, an email is sent. But two orders are created with two different numbers. First order number is shown in a toast message, and this order is created without current cart data & stripe pid.
+- Second order number is indicated in a confirmation email, and this 2nd order has both current cart data & stripe pid.
+- Webhooks events are registered correctly on stripe. But I get a 500 error, if I send a webhook test for payment_intent.succeded.
+Solution: 
+- Added a couple of missing lines of code in webhooks_handler.py (lines 41-45). 
+Solved: 
+- Now one order is created, it has cart data + stripe pid in DB, a confirmation email is sent with a correct order number, strip registers all three events as succeded: payment_intent.created, payment_intent.succeded, charge.succeeded.
 
-Bug: Checkout works, and gives a toast message, an email is sent. But two orders are created with two different numbers. First order number is shown in a toast message, and this order is created without current cart data & stripe pid.
-Second order number is indicated in a confirmation email, and this 2nd order has both current cart data & stripe pid.
-Webhooks events are registered correctly on stripe. But I get a 500 error, if I send a webhook test for payment_intent.succeded.
-Solution: Added a couple of missing lines of code in webhooks_handler.py (lines 41-45). 
-Solved: Now one order is created, it has cart data + stripe pid in DB, a confirmation email is sent with a correct order number, strip registers all three events as succeded: payment_intent.created, payment_intent.succeded, charge.succeeded.
+Bug: 
+- Current images are not displayed correctly in Product management edit a product form.
+Solution: 
+- Moved all the product images from static/img to media, updated all the image links.
+Solved: 
+- Works as it should
 
-Bug: Connected to the one above. When testing webhook 'payment_intent.succeded' get 'POST /checkout/wh/ HTTP/1.1" 500 135356' & 'AttributeError: cart'
-Solution:
-Solved / Not solved?
+### UNSOLVED BUGS
 
-Bug: Current images are not displayed correctly in Product management edit a product form.
-Solution:
-Solved / Not solved?
+Bug: 
+- Connected to the one above. When testing webhook 'payment_intent.succeded' get 'POST /checkout/wh/ HTTP/1.1" 500 135356' & 'AttributeError: cart'
+Solution: 
+- ...
+Not solved?
+
