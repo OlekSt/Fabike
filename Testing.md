@@ -40,12 +40,104 @@ The following validation services were used to check the validity of the website
 ## Manual Testing
 
 ### Responsiveness
-
+I have tested responsiveness of the website for various mobile, pad, laptop & desktop sized screens on:
+- Google Chrome Devtools 
+- [Responsive Checker](https://www.websiteplanet.com/webtools/responsive-checker/). 
 
 ### Client Stories Testing
 The user stories are described in the UX section of [README.md](README.md) 
 
+Wesbite visitors:
+- First time website visitor:
+    * I want to get a clear idea what the website is about
+    Testing: 
+    - Open the home page, scroll it down 
+    
+    Results: 
+    - Hero image slide shows featureing bicycles. 
+    - Navbar menu contains "Bikes" & "Frames", as well as  "About" links. 
+    - Scrolling down revels images with info and additional access buttons to urban, all-road, road bikes scetions.
+    - Additionally you can info about brands the company works with. 
+    - The footer contains additional links to Bikes, Frames, About, etc.
 
+    Conclusion:
+    - Passed. A visitor can easily understand what the website is about, as well as see the main navigation units allowing to continue exploring the website.
+    
+    * I want to be able to easily see where I can find various info (menu, sections, links, individual pages/windows) and easily navigate there
+    Testing: 
+    - Located the Navbar, and clicked all of the links there: 
+            1. Bikes>All Bikes/Urban/All Road/Road
+            2. Frames
+            3. Events
+            4. About
+            5. Contact
+    - Clicked Search icon
+    - Clicked Profile icon
+    - Clicked Cart icon
+    - Scrolled down and clicked Discover buttons for each of the sections Urban, All Road, Road
+    - Located the footer and clicked Bikes, Frames, Events, About, Warranty Policy, Returns & Refunds, as well as social media icons - Facebook & Instagram, and finally emal icon. 
+
+    Results: 
+    - The navbar has all the necessay links for a visitor to explore the website. Clicking each individual link leads a user to a respective part of the website, eg. clicking Bikes>Urban will open a page with all the bikes categorized as urban; or clicking Frames takes user to a page with frames listed, and so on. 
+    - Search icon opens a search window, where a user can type search parameters. 
+    - Profile icon opens menu with two options: SIGN UP & SIGN IN (not-logged in view)
+    - Cart icon leads to an empty cart page. 
+    - All the links in the footer lead to respective pages, except Warranty Policy, Returns & Refunds, which both lead to Under Construction page. 
+    - Facebook and Instagram open social media accounts. 
+    - Email icon leads to Contact Us page. 
+
+    Conclusion: 
+    - Passed. All links work as exppected. There no wrong or broken links. 
+
+    * Find appropriate section - bikes or frames, urban bikes or all road bikes, etc, and be able to see all the products in the section
+    Testing:
+    - Click links Bikes>All Bikes/Urban/All Road/Road, Frames or Events
+    - Scroll down and click Discover buttons for Urban, All Road or Road section
+    - Click links in the footer for Bikes, Frames, Events
+
+    Results:
+    - All links open respecive pages - Bikes, Frames or Events from either navbar, or Discover buttons in the body of the home page, or the footer.
+    - Bikes shows all three groupd of bikes in one page: Urban, All Road, Road, and allows a visitor to easily navigate either to a specific section, eg Urban or to an individual bike.
+    - Frames shows both frames currently on offer, carbon fibre and titanium, and allows to navigate to either of them.
+    - Events lists all upcoming events, indicating info about topic and date/time. A user can easily navigate to an individual event page to get more info or book a spot.
+    - A user can always see the navbar menu, no matter where on the website one currently is, and can navigate back to any of the pages of interest. 
+
+    Conclusion: 
+    - Passed. The website offers several options from where a uers can reach respective sections of interest, bikes, frames or events.
+
+    * Choose an individual product, and get all necessary info: images, descriptions, technical parameters, price, delivery terms, etc. 
+    Testing:
+    - Open any bike section(all bikes, urban, all road or road bikes) and click an individual product
+    - Open frames and click one of the frames
+    - Open events page and click More info on one of the events
+    - Typed some search words into the search field
+
+    Results:
+    - An individual bicycle page contains all the necesessary info about the product: image, name, frame name, clickable color/size/components options, price and weight, list of components, info about geometry of the frames and sizes relative to a person's height. It includes production and delivery info. 
+    - An individual frame page contains the same info as a bicycle page, except of the components. 
+    - An event page has info about the topic, what attendees will learn during a workshop, price, time and date, location, and a button to contact the company to book a spot for an attendee.
+    
+    Conclusion:
+    - Passed. 
+
+    * I want to be able to choose appropriate size, color and add the product to shopping cart
+    * I want to be able to easily navigate from the shopping cart back to products
+    * Then once I am done with products, I want to be able to easily find the shopping cart, and navigate there.
+    * I want to be able to go to checkout, see all the info about my purchase, be able to add billing/shipping details, add my card details, and pay with one-click.
+    * Also I want to be able to automatically (during checkout-payment process) add my details and automatically create an account (adding all my data, incl. shipping address).
+    * Once the payment is processed, I want to get a confirmation email about the payment, and the order, with all the order details. And be able to login into my account and see the order there.
+    * If I don’t purchase anything, I want to be able to create an account, add my details, and add products to my wish list. 
+    * If I decide not to create an account, I want to have an option to send a message or ask questions about the products
+
+- Returning visitor (in addition to possibilities described above, except those specific to first time visitors):
+    * If I haven’t created a profile yet, to find easily where I can do that, and create one.
+    * I want to be able to login into my account, update my data if needed, and see my wish list if I created it.
+    * I want to be able to navigate across the website and get info necessary for me to decide about a purchase and purchase a product taking steps described above.
+
+- Website administrator:
+    * To have access to all the necessary data to manage products’ display on the web-site, customers’ accounts, and purchase histories, etc. 
+    * To be able to easily login and navigate within the admin area of the website.
+    * To be able to easily add, modify or delete products listings, with all the necessary info – images, descriptions, technical parameters, etc. 
 
 4. Bugs discovered
 
