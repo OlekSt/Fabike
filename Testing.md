@@ -14,14 +14,13 @@ This document is intended to record testing at various stages of development of 
 1. [**Automated Testing**](#automated-testing)
     - [**Validation services**](#validation-services)
 2. [**Manual Testing**](#manual-testing)
-    - [**Responsiveness **](#responsiveness)
+    - [**Responsiveness**](#responsiveness)
     - [**Client Stories Testing**](#client-stories-testing)
-    
-    - [**Testing undertaken in DevTools**](#testing-undertaken-in-DevTools)
 3. [**Bugs discovered**](#bugs-discovered)
     - [**Solved bugs**](#solved-bugs)
     - [**Unsolved bugs**](#unsolved-bugs)
 4. [**Further Testing**](#further-testing)
+
 
 ## Automated Testing
 
@@ -37,12 +36,14 @@ The following validation services were used to check the validity of the website
 
 - Console errors:
 
+
 ## Manual Testing
 
 ### Responsiveness
 I have tested responsiveness of the website for various mobile, pad, laptop & desktop sized screens on:
 - Google Chrome Devtools 
 - [Responsive Checker](https://www.websiteplanet.com/webtools/responsive-checker/). 
+
 
 ### Client Stories Testing
 The user stories are described in the UX section of [README.md](README.md) 
@@ -220,9 +221,11 @@ User story: Once the payment is processed, I want to get a confirmation email ab
     - I update them and get a success message
     - I can see my purchse history, and can open last orders details
     - I open a past order, which takes me to a page with the order summary: oder number/date, product details, shipping address, payment info. 
+
     Conclusion:
     - Passed.
     - All works as expected.
+    - Admin has a corect odrder created.
 
 User story: If I don’t purchase anything, I want to be able to create an account, add my details, and add products to my wish list
 
@@ -250,7 +253,7 @@ User story: If I decide not to create an account, I want to have an option to se
     Fixed: 
     - Updated code in views.py of the contact app
 
-    
+
 
 - Returning visitor (in addition to possibilities described above, except those specific to first time visitors):
 
@@ -258,40 +261,104 @@ User story: If I decide not to create an account, I want to have an option to se
 User story: If I haven’t created a profile yet, to find easily where I can do that, and create one
     
     Testing: 
+    - Re-open the website and locate the profile icon
+    - Click the profil icon
+    - Choose Sign Up from the menu
+    - Create an account
+
     Results: 
+    - Proifl icon is easily visible
+    - Clicking it opens a menu where I choose Sign Up
+    - On Sing Up page I will in a form 
+    - I am taken to Sign In page
+
     Conclusion:
+    - Passed. Easy to find where and how to create an account, and sign in
 
 User story: I want to be able to login into my account, update my data if needed, and see my wish list if I created it
     
     Testing: 
+    - Sign In and navigate to Profile
+    - Update my info
     Results: 
+    - I sign in, and choose Profile in the menu
+    - My profile is opened
+    - I update my info and get a confirmation message
+    Note: Whishlist functionality was removed from this stage of implementation. 
+
     Conclusion:
+    - Passed. Works as expected.
 
 User story: I want to be able to navigate across the website and get info necessary for me to decide about a purchase and purchase a product taking steps described above
     
     Testing: 
+    - I navigate to different parts of the website
+
     Results: 
+    - Works as described in tested user stories above
+
     Conclusion:
+    - Passed. 
+
 
 - Website administrator:
 
 User story: To have access to all the necessary data to manage products’ display on the web-site, customers’ accounts, and purchase histories, etc. 
 
     Testing: 
+    - Login into admin using superuser credentials
+
     Results: 
+    - I have full access to all the info stored in DB
+    - I can manage groups and users of the website, and their access rights
+    - I can add, update, delete products & events
+    - I can check orders, update or delete them
+
     Conclusion:
+    - Passed. Works as expected.
 
 User story: To be able to easily login and navigate within the admin area of the website
     
     Testing: 
+    - Logged in into admin
+    
     Results: 
+    - Checked accounts, where I can update or verify emails
+    - Checked users, where I can add, delete a user, or update their access rights
+    - Checked orders, updated an order, changed quantity
+    - Checked events, updated an event
+    - Checked products, updated a product
+
     Conclusion:
+    - Passed. Works as expected.
 
 User story: To be able to easily add, modify or delete products listings, with all the necessary info – images, descriptions, technical parameters, etc.
 
     Testing: 
+    - Sing In as a super user or staff user
+    - Add a new product
+    - Update a product
+    - Delete a product
+    - Add a new event
+    - Update an event
+    - Delete an event
+
     Results: 
+    - I click on Profile icon in the navbar and choose either New Product or New Event
+    - I added a new product, including pictures
+    - I opened a page of a newly added product, pressed edit
+    - I edited a product and saved info, including pictures
+    - I deleted this newly created product 
+    - I get notification at each step
+    - I added a new event
+    - I opened a page of a newly added event, pressed edit
+    - I edited a product and saved info
+    - I deleted this newly created event 
+    - I get notification at each step
+
     Conclusion: 
+    - Passed.
+    - Works as expected. Provides all the necessary tools for an admin to manage products, events, etc. 
 
 
 
