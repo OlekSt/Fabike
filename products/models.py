@@ -47,7 +47,7 @@ class Product(models.Model):
     casette_or_sprocket = models.CharField(max_length=80,
                                            null=True, blank=True)
     chain_or_belt = models.CharField(max_length=80, null=True, blank=True)
-    brakes = models.CharField(max_length=80, null=True, blank=True)
+    brakes = models.CharField(max_length=80, null=True, blank=False)
     handlebar = models.CharField(max_length=80, null=True, blank=True)
     stem = models.CharField(max_length=80, null=True, blank=True)
     saddle = models.CharField(max_length=80, null=True, blank=True)
@@ -77,9 +77,9 @@ class Product(models.Model):
                                        null=True, blank=True,
                                        validators=[MinValueValidator(1)])
     price_comment = models.CharField(max_length=120, null=True, blank=True)
-    image01 = models.ImageField(null=True, blank=True)
+    image01 = models.ImageField(null=True, blank=False)
     img_url01 = models.URLField(max_length=1024, null=True, blank=True)
-    image02 = models.ImageField(null=True, blank=True)
+    image02 = models.ImageField(null=True, blank=False)
     img_url02 = models.URLField(max_length=1024, null=True, blank=True)
 
     class Meta:

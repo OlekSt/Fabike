@@ -9,9 +9,9 @@ class ProductForm(forms.ModelForm):
         model = Product
         fields = '__all__'
 
-    image01 = forms.ImageField(label='Image01', required=False,
+    image01 = forms.ImageField(label='Image01', required=True,
                                widget=CustomClearableFileInput)
-    image02 = forms.ImageField(label='Image02', required=False,
+    image02 = forms.ImageField(label='Image02', required=True,
                                widget=CustomClearableFileInput)
     
 
