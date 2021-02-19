@@ -1,15 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 
-
-{% block extra_title %}- Under Construction{% endblock %}
+{% block extra_title %}- Error 404{% endblock %}
 
 {% block content %}
 <div class="container">
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="uppercase text-center logo-font mb-4">Under construction</h2>
+            <h2 class="uppercase text-center logo-font mb-4">Error 404</h2>
             <hr>
         </div>
     </div>
@@ -19,7 +18,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="text-center py-2">
-                        <h3 class="py-5 text-primary"><i class="fa fa-cog fa-spin"></i> Content will be added to this page soon</h3>
+                        <h3 class="py-5 text-primary"><i class="fa fa-cog fa-spin"></i> Sorry! Looks like this page cannot be found...</h3>
                         <a href="{% url 'home' %}" class="my-3 py-2 btn btn-dark text-center uppercase">Back to &nbsp; <i class="fas fa-biking"></i></a>
                     </div>
                 </div>        

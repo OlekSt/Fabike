@@ -295,7 +295,9 @@ body{
     .nav-link{
         font-size: 1.3em;
     }
-    
+    #cart-qty{
+        top: -19px;
+    }       
 }
 
 @media only screen and (min-width: 995px) {
@@ -304,7 +306,7 @@ body{
 
 @media only screen and (max-width: 768px) {
     .footer-pillow{
-        height: 125px;
+        height: 195px;
     }
 }
 

@@ -116,7 +116,7 @@
 }
 
 .brand-img{
-    max-width: 130px;
+    width: 170px;
     height: auto;
     padding: 8px 5px;
 }
@@ -145,6 +145,11 @@
         font-size: 2em;
         margin-top: 50px;
     }
+    .brand-img{
+        max-width: 150px;
+        height: auto;
+        padding: 8px 5px;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -171,6 +176,11 @@
         padding-left: 30%;
         padding-right: 30%;
         font-size: 3em;
+    }
+    .brand-img{
+        max-width: 130px;
+        height: auto;
+        padding: 8px 5px;
     }
 }
 

@@ -31,7 +31,6 @@ ALLOWED_HOSTS = ['fabike.herokuapp.com', 'localhost']
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
