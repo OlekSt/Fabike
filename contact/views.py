@@ -21,12 +21,11 @@ def contact(request):
                 send_mail(
                     # to capture the user email it's displayd
                     # in subject field and can be responded to
-                    f"Message from {name}, <{email}>",
-                    subject,
+                    f"Message from {name}, subject: '{subject}'",
                     message,
                     email,
                     [settings.DEFAULT_FROM_EMAIL],
-                    fail_silently=False
+                    
                 )
 
                 messages.success(request, f'Your message has been\

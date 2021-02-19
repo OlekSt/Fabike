@@ -416,6 +416,23 @@ The User model used is provided by Django as a part of defaults `django.contrib.
 
 You will find all the info related to testing in [Testing.md file](Testing.md)
 
+## DEPLOYMENT 
+
+Gitpod was used AS ide to code this project. It was then committed and pushed to Github using the command line and deployed on Heroku PaaS platform, static and media files were uploaded to AWS S3. 
+All versions and branches of the code are stored on [Github repository](https://github.com/OlekSt/Fabike).
+
+### Local Deployment
+To be able to run this project, the following tools have to be installed:
+- An IDE, e.g., [GitPod](https://www.gitpod.io/), or any other 
+- [Git](https://git-scm.com/)
+- [PIP](https://pip.pypa.io/en/stable/installing/) 
+- [Python3](https://www.python.org/download/releases/3.0/)    
+
+Besides you need to have/create accounts at:
+- [Stripe](https://stripe.com/en-ie)
+- [AWS](https://aws.amazon.com/) to setup the [S3 basket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
+- [Gmail](https://mail.google.com/)
+
 
 ## CREDITS
 #### CONTENT
