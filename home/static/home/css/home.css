@@ -56,7 +56,6 @@
 /* Intro section under hero slideshow */
 .intro-text{
     padding: 15px 20px;
-    font-size: 1.2em;
     margin-bottom: 0;
 }
 
@@ -129,11 +128,41 @@
 
 /* For various screen sizes */
 /* Bigger screens */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1600px) {
     .intro-text{
         padding-left: 30%;
         padding-right: 30%;
         font-size: 6em;
+    }
+    .box-title{
+        font-size: 9em;
+    }
+    .box-text{
+        font-size: 1.7em;
+        margin-top: 50px;
+    }
+    .discover-btn{
+        font-size: 2em;
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .intro-text{
+        padding-left: 30%;
+        padding-right: 30%;
+        font-size: 0;
+    }
+    .box-title{
+        font-size: 8em;
+    }
+    .box-text{
+        font-size: 1.5em;
+        margin-top: 50px;
+    }
+    .discover-btn{
+        font-size: 1.7em;
+        margin-top: 50px;
     }
 }
 
@@ -141,7 +170,7 @@
     .intro-text{
         padding-left: 30%;
         padding-right: 30%;
-        font-size: 3.5em;
+        font-size: 3em;
     }
 }
 
@@ -195,7 +224,7 @@
         padding-right: 5px;
     }
     .brands-section p{
-        font-size: 1.1em;
+        font-size: 1em;
     }
 }
 

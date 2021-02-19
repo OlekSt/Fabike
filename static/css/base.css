@@ -292,7 +292,10 @@ body{
 /* For various screen sizes */
 /* Bigger screens */
 @media only screen and (min-width: 1200px) {
-  
+    .nav-link{
+        font-size: 1.3em;
+    }
+    
 }
 
 @media only screen and (min-width: 995px) {
@@ -301,14 +304,14 @@ body{
 
 @media only screen and (max-width: 768px) {
     .footer-pillow{
-        height: 200px;
+        height: 125px;
     }
 }
 
 /* Smaller screens */
 @media only screen and (max-width: 600px) {
     .nav-item i{
-        font-size: 0.8em;
+        font-size: 1em;
     }
     #about-section{
         width: 100%;
@@ -325,10 +328,10 @@ body{
     }
     /* Footer */
     .footer-links h6{
-        font-size: 0.7em;
+        font-size: 1em;
     }
     .social li a i{
-        font-size: 1.2em;
+        font-size: 1.6em;
     }
     .social {
         width: 100%;
@@ -356,13 +359,13 @@ body{
         right: 1px;
     }
     .footer-pillow{
-        height: 160px;
+        height: 175px;
     }
 }
 
 @media only screen and (max-width: 460px) {
-.footer-pillow{
-        height: 175px;
+    .footer-pillow{
+        height: 195px;
     }
 }
 
@@ -377,5 +380,18 @@ body{
     /* to make toast message to fit the smallest screen */
     .toast{
         width: 100%;
+    }
+    .footer-pillow{
+        height: 210px;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    /* to make toast message to fit the smallest screen */
+    .toast{
+        width: 100%;
+    }
+    .footer-pillow{
+        height: 230px;
     }
 }
