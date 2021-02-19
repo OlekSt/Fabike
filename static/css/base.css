@@ -291,12 +291,18 @@ body{
 
 /* For various screen sizes */
 /* Bigger screens */
+@media only screen and (min-width: 1500px) {
+    .nav-link{
+        font-size: 1.4m;
+    }    
+}
+
 @media only screen and (min-width: 1200px) {
     .nav-link{
-        font-size: 1.3em;
+        font-size: 1.2m;
     }
     #cart-qty{
-        top: -19px;
+        top: -17px;
     }       
 }
 

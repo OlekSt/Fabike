@@ -21,7 +21,7 @@
             <a class="bike-link" href="{% url 'product' item.id %}">
                 <div class="card h-100 border-0"> 
                     <img class="product-image" src="{{ MEDIA_URL }}{{ item.image01 }}"  alt="{{ item.frame }} {{ item.name }}">
-                    <p class="text-center">{{ item.frame }} <strong>{{ item.name }}</strong></p>
+                    <p class="text-center bike-name">{{ item.frame }} <strong>{{ item.name }}</strong></p>
                 </div>
             </a>
         </div>

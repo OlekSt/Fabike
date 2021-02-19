@@ -49,7 +49,6 @@ class StripeWH_Handler:
         intent = event.data.object
         pid = intent.id
         cart = intent.metadata.cart
-        print(intent.metadata.cart)
         save_info = intent.metadata.save_info
 
         billing_details = intent.charges.data[0].billing_details
@@ -80,7 +79,6 @@ class StripeWH_Handler:
         attempt = 1
         while attempt <= 5:
             try:
-                print('cart from attempts 1: ', cart)
                 order = Order.objects.get(
                     full_name__iexact=shipping_details.name,
                     email__iexact=billing_details.email,
@@ -108,7 +106,9 @@ class StripeWH_Handler:
                 status=200)
         else:
             order = None
+            
             try:
+                print(cart)
                 order = Order.objects.create(
                     full_name=shipping_details.name,
                     profile=profile,
@@ -148,9 +148,11 @@ class StripeWH_Handler:
                             price=price,
                         )
                         order_line_item.save()
+            
             except Exception as e:
                 if order:
                     order.delete()
+                    
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
