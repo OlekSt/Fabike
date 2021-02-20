@@ -106,9 +106,7 @@ class StripeWH_Handler:
                 status=200)
         else:
             order = None
-            
             try:
-                print(cart)
                 order = Order.objects.create(
                     full_name=shipping_details.name,
                     profile=profile,
@@ -152,7 +150,6 @@ class StripeWH_Handler:
             except Exception as e:
                 if order:
                     order.delete()
-                    
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
