@@ -45,7 +45,7 @@ def add_event(request):
             events = form.save()
             messages.success(request, 'Successfully added event.')
             return redirect('events')
-            #return redirect(reverse('event', args=[event.id]))
+            
         else:
             messages.error(request, 'Failed to add event. Please check if the form is valid.')
     else:
