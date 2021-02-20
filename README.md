@@ -117,6 +117,9 @@ Wesbite visitors:
     * To be able to easily add, modify or delete products listings, with all the necessary info – images, descriptions, technical parameters, etc. 
 
 
+##### back to [top](#table-of-contents)
+
+
 Visitor vs Administrator:
 - Website's visitor can:
     * Look through products (bikes, frames, repair workshops)
@@ -154,7 +157,9 @@ Logged-in vs unlogged:
     * Everything as above
     * Personal account (user’s details, order history, wish list)
     * Administtrator can access product management area (inaccessible to other logged in users)
-    
+
+
+##### back to [top](#table-of-contents)
 
 
 ### STRUCTURE 
@@ -183,6 +188,7 @@ The website will consist of the following pages/sections:
 
 *For more details on what pages will contain check out the wireframes below.*
 
+##### back to [top](#table-of-contents)
 
 
 ### SKELETON
@@ -205,7 +211,7 @@ Each wireframe below contains mobile, pad & laptop/desktop view:
 * [EVENTS](static/wireframes/events.png)
 * [EVENT page](static/wireframes/event_details.png)
 
-
+##### back to [top](#table-of-contents)
 
 ### SURFACE 
 
@@ -238,7 +244,6 @@ For the purpose of the project the following colors (matching or related) will b
 <img src="static/readme/palette/pallete_red.jpg" alt="Color Picking" style="margin: 0 10px; align-self: left;"/>
 
 
-
 Fonts: 
 * The original web-site is using DINPro font, Bold and Light. For the purpose of the project, i will use a very similar Google font - **Noto Sans KR**. 
 
@@ -247,6 +252,7 @@ Images:
 * All product(bikes, frames) & lifestyle photos were taken by the designer of the frames, Fabio Putzolu.
 ---
 
+##### back to [top](#table-of-contents)
 
 
 ## INFORMATION ARCHITECTURE
@@ -283,6 +289,8 @@ The User model used is provided by Django as a part of defaults `django.contrib.
  County | account_county | max_length=50, null=True, blank=True | CharField
  Postcode | accountaccount_postcode | max_length=20 | CharField
  Country | account_country | blank_label='Country' | CountryField
+
+##### back to [top](#table-of-contents)
 
 #### Products app
 ##### Product
@@ -324,6 +332,7 @@ The User model used is provided by Django as a part of defaults `django.contrib.
 
 * Product Types/choices are defined within the Product model.
 
+##### back to [top](#table-of-contents)
 
 #### Checkout App
 ##### Order
@@ -354,8 +363,10 @@ The User model used is provided by Django as a part of defaults `django.contrib.
  Size | size | choices=SIZES | CharField
  Components | alloy_or_carbon | choices=COMPONENTS | CharField
  Item Total | item_total | max_digits=6, decimal_places=2, null=False, blank=False, editable=False | DecimalField
-
 * Colors, Components & Sizes choices will be added via other means, product views, Javascript.
+
+##### back to [top](#table-of-contents)
+
 
     **Learning point: Data model for Products done at the beginning of the project didn't take into account some aspects of data manipulation, specifically creating a unique product record with a combination of model, color, size, components, etc. Based on the knowledge & experience I have obtained during the project's implementation, I'd plan a Product data model differently, i.e. each individual combination of a model, color, size, components would be given an individual sku code. This would simplify quite a number of processes within the following apps: cart, checkout.
 
@@ -375,6 +386,8 @@ The User model used is provided by Django as a part of defaults `django.contrib.
 ---
 
 
+##### back to [top](#table-of-contents)
+
 ## FEATURES 
 
 ### EXISTING FEATURES 
@@ -382,7 +395,7 @@ The User model used is provided by Django as a part of defaults `django.contrib.
 ### FEATURES TO BE IMPLEMENTED
 
 
-
+##### back to [top](#table-of-contents)
 
 ## TECHNOLOGIES USED
 
@@ -421,6 +434,9 @@ The User model used is provided by Django as a part of defaults `django.contrib.
 - [SQlite3](https://www.sqlite.org/index.html) - for development
 - [PostgreSQL](https://www.postgresql.org/) - for production
 
+##### back to [top](#table-of-contents)
+
+
 ## TESTING 
 
 You will find all the info related to testing in [Testing.md file](Testing.md)
@@ -435,12 +451,14 @@ All versions and branches of the code are stored on [Github repository](https://
 Follow these steps to deploy the project to Heroku:
 
 **In HEROKU:**
+
 1. Create an new app in Heroku dashboard, choose closest region to you
 2. Go to `Resources` & provision a new instance of PostgreSQL DB
     - Search for `Heroku Postgres` in ADDONS 
     - Choose Development plan
 
 **In IDE**:
+
 3. Run the following commands to install `dj_database_url` & `psycopg2-binary`:
 - pip3 install dj_database_url
 - pip3 install psycopg2-binary
@@ -448,6 +466,7 @@ Follow these steps to deploy the project to Heroku:
 - pip3 freeze > requirements.txt
 
 **In settings.py**:
+
 5. add `import dj_database_url` right after `import os`
 6. Change Database:
 ```
@@ -456,6 +475,7 @@ DATABASES = {
 }
 ```
 **In IDE**:
+
 7. Run migrations:
 - python3 manage.py showmigrations
 - python3 manage.py migrate
@@ -468,6 +488,7 @@ DATABASES = {
 - python3 manage.py createsuperuser
 
 **In settings.py**:
+
 10. Change the Database settings as follows:
 ```
 if 'DATABASE_URL' in os.environ:
@@ -484,16 +505,21 @@ else:
 
 ```
 
+##### back to [top](#table-of-contents)
+
 **In IDE**:
+
 11. Install gunicorn:
 - pip3 install gunicorn”
 12. Update requirements.txt:
 - pip3 freeze > requirements.txt
 
 **In general project's directory**:
+
 13. Create a Procfile
 
 **In IDE**:
+
 14. Run the following command:
 - web gunicorn django_name.wsgi:application
 15. To login into heroku run:
@@ -503,12 +529,14 @@ else:
 - heroku config:set DISABLE_COLLECTSTATIC=1 --app fabike
 
 **In settings.py**:
+
 18. To ALLOWED_HOSTS add ['https://fabike.herokuapp.com', 'localhost']
 
 
 19.	Generate a new SCRET_KEY on Django Secret Key generator (find online)
 
 **In Heroku**:
+
 19. Add it to `Settings > Config Vars`,
 20. Make sure you have other necessesary keys are setup there:
 * AWS_ACCESS_KEY_ID	
@@ -523,18 +551,20 @@ else:
 * USE_AWS set to `True`
 
 **In settings.py**:
+
 21. Change SECRET_KEY to:
 - SECRET_KEY = os.environ.get('SECRET_KEY', ' ')
 
 **In IDE**:
+
 22. Commit changes to Github:
 - git push origin master
 23. Push to Heroku:
 - git push -u heroku master
 
-
 Additionally 
 **In Heroku**:
+
 24. You can setup automatic deployment to Heroku when you commit changes to Githu:
 - Go to Deploy
 - Set deployment method to GitHub
@@ -542,6 +572,8 @@ Additionally
 - Enable Automatic Deploys
 
 The deployment has been completed.
+
+##### back to [top](#table-of-contents)
 
 ##### Hosting media files with AWS
 The static files and media files (product images) are hosted in the AWS S3 Bucket. To host them, you need to create an account in AWS and create your S3 basket with public access. 
@@ -578,6 +610,7 @@ os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH_Secret key>"
 ```
 
 **In IDE**:
+
 3. Install all the requirements: 
 - pip3 install -r requirements.txt
 4. Start the server:
@@ -596,6 +629,7 @@ os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH_Secret key>"
 Now the project should be active on localhost port 8000. 
 To access admin you need to add `/admin` at the end of the url.
 
+##### back to [top](#table-of-contents)
 
 
 ## CREDITS
@@ -613,7 +647,7 @@ The website is created by Alexey Statsenko, using the media described below.
 - Code for toasts was copied from CI's Boutique Ado project, and modified according to the current project's needs.
 - Code for cart including calc_subtotal templatetags was copied from CI's Boutique Ado project, and modified according to the current project's needs.
 - Code for checkout app was partly copied from CI's Boutique Ado project, and modified according to the current project's needs.
-
+- Code for profile was partly copied from I's Boutique Ado project, and modified according to the current project's needs.
 
 
 #### ACKNOWLEDGMENTS 
