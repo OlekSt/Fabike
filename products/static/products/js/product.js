@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     $("input[type=radio][name=components]").on('change', function() {
         var componentChoice = $("[name=components]:checked").val();
         if (componentChoice == "alloy") {
@@ -11,5 +10,4 @@ $(document).ready(function() {
             $("#price_alloy, #weight_alloy").removeClass("text-white").addClass("price-muted").change();
         }
     });
-
 });

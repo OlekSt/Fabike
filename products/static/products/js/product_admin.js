@@ -43,7 +43,7 @@ $(document).ready(function () {
             
             // to show NO for frames
             $("#id_is_bike").val("false").change();
-           
+
             // On user's choice to show fields for frames
             $("#div_id_headset, #div_id_seat_clamp, #div_id_bottom_bracket, #div_id_seatpost_diameter, #div_id_dropouts, #div_id_max_tyre_size, #div_id_price, #div_id_weight").show(); 
             
