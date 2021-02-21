@@ -121,6 +121,7 @@ body{
 .bike-link:hover{
     color: black;
 }
+
 /* Edit & Delete buttons on product and event for admin access */
 .edit-delete-btn a{
     text-decoration: none;
@@ -129,7 +130,6 @@ body{
 .edit-delete-btn a:hover{
     opacity: 0.9;
 }
-
 
 /* ABout page */
 #about-section{
@@ -198,7 +198,6 @@ body{
     font-size: 0.7em;
     color: #ababab; 
 }
-
 
 /* ------------------------------- bootstrap toasts */
 .message-container {
@@ -293,13 +292,13 @@ body{
 /* Bigger screens */
 @media only screen and (min-width: 1500px) {
     .nav-link{
-        font-size: 1.4m;
+        font-size: 1.2em;
     }    
 }
 
 @media only screen and (min-width: 1200px) {
     .nav-link{
-        font-size: 1.2m;
+        font-size: 1em;
     }
     #cart-qty{
         top: -17px;

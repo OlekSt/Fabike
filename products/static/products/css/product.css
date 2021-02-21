@@ -48,7 +48,7 @@
     height: 18px;
     vertical-align: middle;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 50% 50%;
     text-align: center;
 }
 
@@ -249,7 +249,7 @@
     
 }
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
     .container-product{
     width: 100%;
     }
@@ -310,7 +310,7 @@
     }
 }
 
-@media only screen and (max-width: 279px) {
+@media (max-width: 279px) {
     .title{
         font-size: 0.1em;
     }

@@ -6,13 +6,13 @@
 [![Build Status](https://travis-ci.org/OlekSt/Fabike.svg?branch=master)](https://travis-ci.org/github/OlekSt/Fabike)
 
 
-<img src="" alt="Title image" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/title_image.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
 
 [FABIKE - Heroku link](https://fabike.herokuapp.com/)
 
 ************************************************************
 
-<img src="static/readme/t2x_rohloff_drop_lr.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/t2x_rohloff_drop_lr.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
 
 ************************************************************
 
@@ -196,20 +196,20 @@ The website will consist of the following pages/sections:
 [Balsamiq](https://balsamiq.com/) wireframes software was used to create wireframes for this project.
 
 Each wireframe below contains mobile, pad & laptop/desktop view:
-* [HOME](static/wireframes/home.png)
-* [SIGN UP/IN](static/wireframes/sign_up_in.png)
-* [ABOUT](static/wireframes/about.png)
-* [BIKES](static/wireframes/bikes.png)
-* [Section URBAN BIKES](static/wireframes/urban_bikes.png)
-* [FRAMES](static/wireframes/frames.png)
-* [PRODUCT page](static/wireframes/product_details.png)
-* [SHOPPING CART](static/wireframes/shopping_cart.png)
-* [CHECKOUT](static/wireframes/checkout.png)
-* [ACCOUNT](static/wireframes/account.png)
-* [ORDER HISTORY](static/wireframes/order_history.png)
-* [PRODUCT MANAGEMENT](static/wireframes/product_management.png)
-* [EVENTS](static/wireframes/events.png)
-* [EVENT page](static/wireframes/event_details.png)
+* [HOME](media/wireframes/home.png)
+* [SIGN UP/IN](media/wireframes/sign_up_in.png)
+* [ABOUT](media/wireframes/about.png)
+* [BIKES](media/wireframes/bikes.png)
+* [Section URBAN BIKES](media/wireframes/urban_bikes.png)
+* [FRAMES](media/wireframes/frames.png)
+* [PRODUCT page](media/wireframes/product_details.png)
+* [SHOPPING CART](media/wireframes/shopping_cart.png)
+* [CHECKOUT](media/wireframes/checkout.png)
+* [ACCOUNT](media/wireframes/account.png)
+* [ORDER HISTORY](media/wireframes/order_history.png)
+* [PRODUCT MANAGEMENT](media/wireframes/product_management.png)
+* [EVENTS](media/wireframes/events.png)
+* [EVENT page](media/wireframes/event_details.png)
 
 ##### back to [top](#table-of-contents)
 
@@ -226,22 +226,22 @@ For the purpose of the project the following colors (matching or related) will b
 
 **Greys-Blacks**
 
-<img src="static/readme/palette/pallete_black_grey.jpg" alt="Color Picking" style="margin: 0 10px; align-self: left;"/>
+<img src="media/readme/palette/pallete_black_grey.jpg" alt="Color Picking" style="margin: 0 10px; align-self: left;"/>
 
 
 **Blues**
 
-<img src="static/readme/palette/pallete_blue.jpg" alt="Color Picking" style="margin: 0 10px; align-self: left;"/>
+<img src="media/readme/palette/pallete_blue.jpg" alt="Color Picking" style="margin: 0 10px; align-self: left;"/>
 
 
 **Yellows**
 
-<img src="static/readme/palette/pallete_yellow.jpg" alt="Color Picking" style="margin: 0 10px; align-self: left;"/>
+<img src="media/readme/palette/pallete_yellow.jpg" alt="Color Picking" style="margin: 0 10px; align-self: left;"/>
 
 
 **Reds**
 
-<img src="static/readme/palette/pallete_red.jpg" alt="Color Picking" style="margin: 0 10px; align-self: left;"/>
+<img src="media/readme/palette/pallete_red.jpg" alt="Color Picking" style="margin: 0 10px; align-self: left;"/>
 
 
 Fonts: 
@@ -265,7 +265,7 @@ Images:
 
 ### DATA MODELLING
 
-<img src="static/readme/db_schema_diagram.png" alt="DB Schema Diagram" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/db_schema_diagram.png" alt="DB Schema Diagram" style="margin: 0 10px;" width="100%"/>
 
 
 #### User
