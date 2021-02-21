@@ -821,6 +821,7 @@ The website is created by Alexey Statsenko, using the media described below.
 - Code for cart including calc_subtotal templatetags was copied from CI's Boutique Ado project, and modified according to the current project's needs.
 - Code for checkout app was partly copied from CI's Boutique Ado project, and modified according to the current project's needs.
 - Code for profile was partly copied from I's Boutique Ado project, and modified according to the current project's needs.
+- Code for clear input widget was taken from Boutique Ado.
 
 
 #### ACKNOWLEDGMENTS 

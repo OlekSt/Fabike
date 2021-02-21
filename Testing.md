@@ -27,6 +27,31 @@ This document is intended to record testing at various stages of development of 
 ### Validation services
 The following validation services were used to check the validity of the website code.
 - [W3C Markup Validation]( https://validator.w3.org/): 
+    - All pages except `Add Product` & `Edit Product` have no errors or warning:
+    * [HOME](media/readme/validation/home_html.jpg)
+    * [BIKES](media/readme/validation/bikes_html.jpg)
+    * [URBAN](media/readme/validation/urban_html.jpg)
+    * [ALL ROAD](media/readme/validation/all_road_html.jpg)
+    * [ROAD](media/readme/validation/road_html.jpg)
+    * [FRAMES](media/readme/validation/frames_html.jpg)
+    * [PRODUCT BIKE](media/readme/validation/product_bike_html.jpg)
+    * [PRODUCT FRAME](media/readme/validation/product_frame_html.jpg)
+    * [PRODUCT SEARCH](media/readme/validation/product_search_html.jpg)
+    * [EVENTS](media/readme/validation/events_html.jpg)
+    * [EVENT](media/readme/validation/event_html.jpg)
+    * [ADD EVENT](media/readme/validation/add_event_html.jpg)
+    * [EDIT EVENT](media/readme/validation/edit_event_html.jpg)
+    * [ABOUT](media/readme/validation/about_html.jpg)
+    * [CONTACT](media/readme/validation/contact_html.jpg)
+    * [CART](media/readme/validation/cart_html.jpg)
+    * [CHECKOUT](media/readme/validation/checkout_html.jpg)
+    * [CHECKOUT Success](media/readme/validation/checkout__success_html.jpg)
+    * [PROFILE](media/readme/validation/profile_html.jpg)
+    * [UNDER CONSTRUCTION](media/readme/validation/under_construction_html.jpg)
+
+    - `Add Product` & `Edit Product` produce 6 errors each due to repeated IDs. This is caused by code from widgets of Uploading images for products in product management. I copied the code of the widget from Boutique Ado repository. Considering these errors are not critical, and due to lack of time, I leave the code as it is.
+    * [ADD PRODUCT](media/readme/validation/add_product_html.jpg)
+
 
 - [W3C CSS validation](https://jigsaw.w3.org/css-validator/):
 
