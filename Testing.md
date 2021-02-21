@@ -78,6 +78,7 @@ User story: I want to get a clear idea what the website is about
     - Passed. A visitor can easily understand what the website is about, as well as see the main navigation units allowing to continue exploring the website.
     
 <img src="media/readme/title_image.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+**** 
 
 User story: I want to be able to easily see where I can find various info (menu, sections, links, individual pages/windows) and easily navigate there
 
@@ -107,6 +108,7 @@ User story: I want to be able to easily see where I can find various info (menu,
     - Passed. All links work as exppected. There no wrong or broken links. 
 
 <img src="media/readme/01_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+**** 
 
 User story: Find appropriate section - bikes or frames, urban bikes or all road bikes, etc, and be able to see all the products in the section
 
@@ -123,7 +125,12 @@ User story: Find appropriate section - bikes or frames, urban bikes or all road 
     - A user can always see the navbar menu, no matter where on the website one currently is, and can navigate back to any of the pages of interest. 
 
     Conclusion: 
-    - Passed. The website offers several options from where a uers can reach respective sections of interest, bikes, frames or events.
+    - Passed. The website offers several options from where a users can reach respective sections of interest, bikes, frames or events.
+
+<img src="media/readme/02_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+**** 
+<img src="media/readme/03_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+**** 
 
 User story: Choose an individual product, and get all necessary info: images, descriptions, technical parameters, price, delivery terms, etc. 
 
@@ -143,6 +150,15 @@ User story: Choose an individual product, and get all necessary info: images, de
     Conclusion:
     - Passed. All individual pages work as expected, and display necessary info for a visitor of the website to make a decsion of next steps from such a page, and provides necessary tools to continue. 
 
+<img src="media/readme/04_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+**** 
+<img src="media/readme/05_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/06_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/07_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+
 User story: I want to be able to choose appropriate size, color and add the product to shopping cart
 
     Testing: 
@@ -156,6 +172,11 @@ User story: I want to be able to choose appropriate size, color and add the prod
     - Shopping Cart icon takes me to the shopping cart page, where I can see info about products added. 
     Conclusion:
     - Passed. All the functionality works as planned and provides necessary feedback to a user. 
+
+<img src="media/readme/08_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/09_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
 
 User story: I want to be able to easily navigate from the shopping cart back to products
 
