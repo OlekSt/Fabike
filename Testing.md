@@ -302,7 +302,7 @@ User story: Once the payment is processed, I want to get a confirmation email ab
 Confirmation email:
 <img src="media/readme/18_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
 ****
-<img src="media/readme/24_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/23_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
 ****
 <img src="media/readme/24_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
 ******************
@@ -410,6 +410,9 @@ User story: To have access to all the necessary data to manage products’ displ
     Conclusion:
     - Passed. Works as expected.
 
+<img src="media/readme/27_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+******************
+
 User story: Admin CRUD - be able to easily login and navigate within the admin area of the website
     
     Testing: 
@@ -453,7 +456,28 @@ User story: Admin CRUD - be able to easily add, modify or delete products listin
     - Passed.
     - Works as expected. Provides all the necessary tools for an admin to manage products, events, etc. 
 
-
+<img src="media/readme/28_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/29_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/30_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/31_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/32_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/33_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/34_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/35_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/36_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/37_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/38_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+******************
 
 
 ## BUGS DISCOVERED
@@ -496,7 +520,7 @@ Solved:
 ### UNSOLVED BUGS
 
 Bug: 
-- Connected to the one above. When testing webhook 'payment_intent.succeded' get 'POST /checkout/wh/ HTTP/1.1" 500 135356' & 'AttributeError: cart'
+- When testing webhook 'payment_intent.succeded' get 'POST /checkout/wh/ HTTP/1.1" 500 135356' & 'AttributeError: cart'
 Solution: 
 - ...
 Not solved?
