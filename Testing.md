@@ -28,9 +28,7 @@ This document is intended to record testing at various stages of development of 
 The following validation services were used to check the validity of the website code.
 - [W3C Markup Validation]( https://validator.w3.org/): 
     - All pages except `Add Product` & `Edit Product` have no errors or warning:
-    * [HOME](media/readme/validation/home_html.jpg)
-    * [BIKES](media/readme/validation/bikes_html.jpg)
-    * [URBAN](media/readme/validation/urban_html.jpg)
+    [HOME](media/readme/validation/home_html.jpg) | [BIKES](media/readme/validation/bikes_html.jpg) [URBAN](media/readme/validation/urban_html.jpg)
     * [ALL ROAD](media/readme/validation/all_road_html.jpg)
     * [ROAD](media/readme/validation/road_html.jpg)
     * [FRAMES](media/readme/validation/frames_html.jpg)
