@@ -80,7 +80,7 @@ User story: I want to get a clear idea what the website is about
     - Open the home page, scroll it down 
     
     Results: 
-    - Hero image slide shows featureing bicycles. 
+    - Hero image slide shows featuring bicycles. 
     - Navbar menu contains "Bikes" & "Frames", as well as  "About" links. 
     - Scrolling down revels images with info and additional access buttons to urban, all-road, road bikes scetions.
     - Additionally you can info about brands the company works with. 
@@ -105,10 +105,10 @@ User story: I want to be able to easily see where I can find various info (menu,
     - Clicked Profile icon
     - Clicked Cart icon
     - Scrolled down and clicked Discover buttons for each of the sections Urban, All Road, Road
-    - Located the footer and clicked Bikes, Frames, Events, About, Warranty Policy, Returns & Refunds, as well as social media icons - Facebook & Instagram, and finally emal icon. 
+    - Located the footer and clicked Bikes, Frames, Events, About, Warranty Policy, Returns & Refunds, as well as social media icons - Facebook & Instagram, and finally email icon. 
 
     Results: 
-    - The navbar has all the necessay links for a visitor to explore the website. Clicking each individual link leads a user to a respective part of the website, eg. clicking Bikes>Urban will open a page with all the bikes categorized as urban; or clicking Frames takes user to a page with frames listed, and so on. 
+    - The navbar has all the necessary links for a visitor to explore the website. Clicking each individual link leads a user to a respective part of the website, eg. clicking Bikes>Urban will open a page with all the bikes categorized as urban; or clicking Frames takes user to a page with frames listed, and so on. 
     - Search icon opens a search window, where a user can type search parameters. 
     - Profile icon opens menu with two options: SIGN UP & SIGN IN (not-logged in view)
     - Cart icon leads to an empty cart page. 
@@ -117,7 +117,7 @@ User story: I want to be able to easily see where I can find various info (menu,
     - Email icon leads to Contact Us page. 
 
     Conclusion: 
-    - Passed. All links work as exppected. There no wrong or broken links. 
+    - Passed. All links work as expected. There no wrong or broken links. 
 
 <img src="media/readme/01_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
 ******************
@@ -130,14 +130,14 @@ User story: Find appropriate section - bikes or frames, urban bikes or all road 
     - Click links in the footer for Bikes, Frames, Events
 
     Results:
-    - All links open respecive pages - Bikes, Frames or Events from either navbar, or Discover buttons in the body of the home page, or the footer.
+    - All links open respective pages - Bikes, Frames or Events from either navbar, or Discover buttons in the body of the home page, or the footer.
     - Bikes shows all three groupd of bikes in one page: Urban, All Road, Road, and allows a visitor to easily navigate either to a specific section, eg Urban or to an individual bike.
-    - Frames shows both frames currently on offer, carbon fibre and titanium, and allows to navigate to either of them.
+    - Frames shows both frames currently on offer, carbon fiber and titanium, and allows navigating to either of them.
     - Events lists all upcoming events, indicating info about topic and date/time. A user can easily navigate to an individual event page to get more info or book a spot.
     - A user can always see the navbar menu, no matter where on the website one currently is, and can navigate back to any of the pages of interest. 
 
     Conclusion: 
-    - Passed. The website offers several options from where a users can reach respective sections of interest, bikes, frames or events.
+    - Passed. The website offers several options from where users can reach respective sections of interest, bikes, frames or events.
 
 <img src="media/readme/02_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
 **** 
@@ -153,7 +153,7 @@ User story: Choose an individual product, and get all necessary info: images, de
     - Typed some search words into the search field
 
     Results:
-    - An individual bicycle page contains all the necesessary info about the product.
+    - An individual bicycle page contains all the necessary info about the product.
     - Image, name, frame name, clickable color/size/components options, price and weight, list of components, info about geometry of the frames and sizes relative to a person's height. 
     - It includes production and delivery info. 
     - An individual frame page contains the same info as a bicycle page, except of the components. 
@@ -179,8 +179,8 @@ User story: I want to be able to choose appropriate size, color and add the prod
     - Click Shopping Cart 
 
     Results: 
-    - All of the selectors work correctly responding to click, change of components also highlights respective price and weight of a products, depending where carbon fibre or alloy components are chosen. 
-    - Clicking Add to Cart add a products to the cart. I get a confirmation message. Also can see the change of the color of the cart icon and number of products added.  
+    - All of the selectors work correctly responding to click, change of components also highlights respective price and weight of a product, depending where carbon fiber or alloy components are chosen. 
+    - Clicking Add to Cart add a product to the cart. I get a confirmation message. Also can see the change of the color of the cart icon and number of products added.  
     - Shopping Cart icon takes me to the shopping cart page, where I can see info about products added. 
     Conclusion:
     - Passed. All the functionality works as planned and provides necessary feedback to a user. 
@@ -291,11 +291,11 @@ User story: Also I want to be able to automatically (during checkout-payment pro
 User story: Once the payment is processed, I want to get a confirmation email about the payment, and the order, with all the order details. And be able to login into my account and see the order there.
 
     Testing: 
-    - I get to order susccess summary page
+    - I get to order success summary page
     - i check my email    
     - I click Profile Icon and choose Profile
     - I update my info
-    - i check purchase histroy and open a past order
+    - i check purchase history and open a past order
 
     Results: 
     - Once checkout process is successful I get a message about an order
@@ -304,12 +304,12 @@ User story: Once the payment is processed, I want to get a confirmation email ab
     - I can open my profile, where I can see my shipping details
     - I update them and get a success message
     - I can see my purchse history, and can open last orders details
-    - I open a past order, which takes me to a page with the order summary: oder number/date, product details, shipping address, payment info. 
+    - I open a past order, which takes me to a page with the order summary: order number/date, product details, shipping address, payment info. 
 
     Conclusion:
     - Passed.
     - All works as expected.
-    - Admin has a corect odrder created.
+    - Admin has a corect order created.
 
 Confirmation email:
 <img src="media/readme/18_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
@@ -322,7 +322,7 @@ Confirmation email:
 
 User story: If I don’t purchase anything, I want to be able to create an account, add my details, and add products to my wish list
 
-    Note: Feature was removed from the current implementation due to time constriants, and postponed for further stages of the project development. 
+    Note: Feature was removed from the current implementation due to time constraints, and postponed for further stages of the project development. 
     
 
 User story: If I decide not to create an account, I want to have an option to send a message or ask questions about the products
@@ -334,7 +334,7 @@ User story: If I decide not to create an account, I want to have an option to se
     Results: 
     - I am taken to a contact us form
     - I fill it in, and send
-    - I get a confirmation that my message was sent succesfully
+    - I get a confirmation that my message was sent successfully
 
     Conclusion:
     - Passed. 
@@ -359,12 +359,12 @@ User story: If I haven’t created a profile yet, to find easily where I can do 
     
     Testing: 
     - Re-open the website and locate the profile icon
-    - Click the profil icon
+    - Click the profile icon
     - Choose Sign Up from the menu
     - Create an account
 
     Results: 
-    - Proifl icon is easily visible
+    - Profile icon is easily visible
     - Clicking it opens a menu where I choose Sign Up
     - On Sing Up page I will in a form 
     - I am taken to Sign In page
