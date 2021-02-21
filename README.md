@@ -51,8 +51,6 @@
     - [**Images**](#images)
     - [**Code**](#code)
     - [**Acknowledgments**](#acknowledgments)
-
-8. [**Disclaimer**](#disclaimer)  
 ---
 
 ## UX
@@ -392,8 +390,170 @@ The User model used is provided by Django as a part of defaults `django.contrib.
 
 ### EXISTING FEATURES 
 
-### FEATURES TO BE IMPLEMENTED
+**Unlogged users' view**:
+- HOME 
+    - Navbar with logo and nav links to:
+        - Products
+        - Events
+        - About 
+        - Contact
+        - Search icon
+        - Account icon
+            - Sign Up link
+            - Sign In link
+        - Cart Icon
+    - Hero image slideshow
+    - Three secion of product with CTA button
+    - Components brands info section
+    - Footer with links/icons to:
+        - Bikes 
+        - Frames 
+        - Events
+        - About 
+        - Warranty info
+        - Refunds and returns info
+        - Facebook
+        - Instagram
+        - Contact
 
+<img src="media/readme/title_image.jpg" alt="Home page" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/01_user_stories.jpg" alt="Home page" style="margin: 0 10px;" width="100%"/>
+----
+
+- ABOUT 
+    - Info about the company
+    - Addresses
+    - CTS button to contact us
+- BIKES
+    - Lists all three groups of products - Urban, All Road, Road
+    - Each group section has a clickable image/title
+    - Each product has a clickable image/title
+
+<img src="media/readme/02_user_stories.jpg" alt="Bikes" style="margin: 0 10px;" width="100%"/>
+----
+
+- URBAN BIKES
+    - All the bikes from this product group
+    - Each product has a clickable image/title
+
+<img src="media/readme/11_user_stories.jpg" alt="Urban bikes" style="margin: 0 10px;" width="100%"/>
+----
+
+- ALL-ROAD BIKES
+    - As above
+- ROAD BIKES
+    - As above
+- FRAMES
+    - Frames with clickable images/titles
+
+<img src="media/readme/03_user_stories.jpg" alt="Frames" style="margin: 0 10px;" width="100%"/>
+----
+
+- Individual PRODUCT pages
+    - Product image
+    - Name, frame, title
+    - Edit, Delete Buttons (superuser view)
+    - Color, size, components(only for bikes), price, Add-to-cart section
+    - Specifications section
+    - Geometry and sizes section
+    - Contact Us CTA button
+    - Section about customizable color parts
+    - Info about producation location & delivery times
+
+<img src="media/readme/04_user_stories.jpg" alt="Product page" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/05_user_stories.jpg" alt="Product page" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/06_user_stories.jpg" alt="Product page" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/07_user_stories.jpg" alt="Product page" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/08_user_stories.jpg" alt="Product page" style="margin: 0 10px;" width="100%"/>
+----
+
+
+- EVENTS
+    - Lists all the events
+    - Each event has More Info button
+- Individual EVENT pages
+    - Title
+    - Learning topics
+    - Date & time
+    - Location address / map link (if provided)
+    - Price
+    - Book CTA button
+    - Edit, Delete Buttons (superuser view)
+
+<img src="media/readme/36_user_stories.jpg" alt="Event page" style="margin: 0 10px;" width="100%"/>
+----
+
+- SHOPPING CART
+    - Info about added products
+    - Image, colors, size, components, quantity
+    - Update field to increase/decrease quantity
+    - Delete button
+    - Checkout button
+    - Back to Bikes Button
+
+<img src="media/readme/12_user_stories.jpg" alt="Shopping Cart" style="margin: 0 10px;" width="100%"/>
+----
+
+- CHECKOUT
+    - Summary of the order
+    - Image, colors, size, components, quantity
+    - Final total to pay
+    - Billing/Shipping info form
+    - Sign Up/Sign In link (if not logged)
+    - Save info to profiile (if logged in)
+    - Card info field
+    - Complete Order Button
+    - Info about amount to be charged
+    - Back to Bikes Button
+
+<img src="media/readme/13_user_stories.jpg" alt="CHECKOUT" style="margin: 0 10px;" width="100%"/>
+----
+
+- CHECKOUT Success
+    - Summary of an order
+        - Order date and number
+        - Product descriptions
+        - Address to where it is sent
+        - Payment info
+    - Info about email to which a confirmation was sent
+    - Button Back to Bikes
+
+<img src="media/readme/36_user_stories.jpg" alt="CHECKOUT Success" style="margin: 0 10px;" width="100%"/>
+----
+
+**Logged users' view**:
+*In addition to the pages mentioned above*
+- ACCOUNT
+    - Shipping info which can be updated
+- ORDER HISTORY
+    - List of past order, ech of them can be open separately
+<img src="media/readme/36_user_stories.jpg" alt="Account" style="margin: 0 10px;" width="100%"/>
+----
+
+- PRODUCT MANAGEMENT (for super-user)
+    - New Product & New Event in the Account menu
+    - Add Product/Add Event pages
+    - Each Product or Even has Edit/Delete buttons
+    - Edit Product/Event Pages
+
+<img src="media/readme/28_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/29_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/30_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/31_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/32_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/33_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/34_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/35_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/36_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/37_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/38_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
+-----
+
+
+### FEATURES TO BE IMPLEMENTED
+1. Datetime picker for dates and time in adding/editing events
+2. Wishlist application 
+3. More product pictures, macthing colors on color choice selected by a user
 
 ##### back to [top](#table-of-contents)
 
@@ -406,7 +566,7 @@ The User model used is provided by Django as a part of defaults `django.contrib.
 - Javascript
 - Jinja
 
-### LIBRARIES & FRAMEWORKS 
+### LIBRARIES AND FRAMEWORKS 
 - [Django](https://www.djangoproject.com/)
 - [Bootstrap](https://www.bootstrapcdn.com/)
 - [Google Fonts](https://fonts.google.com/)

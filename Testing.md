@@ -456,27 +456,27 @@ User story: Admin CRUD - be able to easily add, modify or delete products listin
     - Passed.
     - Works as expected. Provides all the necessary tools for an admin to manage products, events, etc. 
 
-<img src="media/readme/28_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/28_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
 ****
-<img src="media/readme/29_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/29_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
 ****
-<img src="media/readme/30_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/30_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
 ****
-<img src="media/readme/31_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/31_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
 ****
-<img src="media/readme/32_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/32_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
 ****
-<img src="media/readme/33_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/33_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
 ****
-<img src="media/readme/34_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/34_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
 ****
-<img src="media/readme/35_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/35_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
 ****
-<img src="media/readme/36_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/36_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
 ****
-<img src="media/readme/37_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/37_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
 ****
-<img src="media/readme/38_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/38_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
 ******************
 
 
@@ -532,6 +532,10 @@ Solution:
     - Order checked via /admin access has striped pid and correct cart
     - Stripe report give me three succeded reports
 <img src="media/readme/17_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
-****
+
 Not solved. Cannot find the reason why the testing does not work.
+
+
+## FURTHER Testing
+Asked friends and family to look at the site on their devices & report any issues they found.
 
