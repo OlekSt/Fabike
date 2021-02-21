@@ -2,7 +2,7 @@
 ## High-end bicycle & frames e-shop - Testing
 #### Full Stack Project - Testing write-up
 
-<img src="media/readme/title.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/title_image.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
 
 This document is intended to record testing at various stages of development of the project, as well as different functions, functionalities, correct display of the project's page, etc. 
 

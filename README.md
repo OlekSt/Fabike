@@ -420,6 +420,8 @@ The User model used is provided by Django as a part of defaults `django.contrib.
 <img src="media/readme/01_user_stories.jpg" alt="Home page" style="margin: 0 10px;" width="100%"/>
 ----
 
+##### back to [top](#table-of-contents)
+
 - ABOUT 
     - Info about the company
     - Addresses
@@ -439,6 +441,8 @@ The User model used is provided by Django as a part of defaults `django.contrib.
 <img src="media/readme/11_user_stories.jpg" alt="Urban bikes" style="margin: 0 10px;" width="100%"/>
 ----
 
+##### back to [top](#table-of-contents)
+
 - ALL-ROAD BIKES
     - As above
 - ROAD BIKES
@@ -448,6 +452,8 @@ The User model used is provided by Django as a part of defaults `django.contrib.
 
 <img src="media/readme/03_user_stories.jpg" alt="Frames" style="margin: 0 10px;" width="100%"/>
 ----
+
+##### back to [top](#table-of-contents)
 
 - Individual PRODUCT pages
     - Product image
@@ -467,6 +473,7 @@ The User model used is provided by Django as a part of defaults `django.contrib.
 <img src="media/readme/08_user_stories.jpg" alt="Product page" style="margin: 0 10px;" width="100%"/>
 ----
 
+##### back to [top](#table-of-contents)
 
 - EVENTS
     - Lists all the events
@@ -480,7 +487,7 @@ The User model used is provided by Django as a part of defaults `django.contrib.
     - Book CTA button
     - Edit, Delete Buttons (superuser view)
 
-<img src="media/readme/36_user_stories.jpg" alt="Event page" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/34_user_stories.jpg" alt="Event page" style="margin: 0 10px;" width="100%"/>
 ----
 
 - SHOPPING CART
@@ -493,6 +500,8 @@ The User model used is provided by Django as a part of defaults `django.contrib.
 
 <img src="media/readme/12_user_stories.jpg" alt="Shopping Cart" style="margin: 0 10px;" width="100%"/>
 ----
+
+##### back to [top](#table-of-contents)
 
 - CHECKOUT
     - Summary of the order
@@ -518,8 +527,10 @@ The User model used is provided by Django as a part of defaults `django.contrib.
     - Info about email to which a confirmation was sent
     - Button Back to Bikes
 
-<img src="media/readme/36_user_stories.jpg" alt="CHECKOUT Success" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/16_user_stories.jpg" alt="CHECKOUT Success" style="margin: 0 10px;" width="100%"/>
 ----
+
+##### back to [top](#table-of-contents)
 
 **Logged users' view**:
 *In addition to the pages mentioned above*
@@ -527,7 +538,7 @@ The User model used is provided by Django as a part of defaults `django.contrib.
     - Shipping info which can be updated
 - ORDER HISTORY
     - List of past order, ech of them can be open separately
-<img src="media/readme/36_user_stories.jpg" alt="Account" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/23_user_stories.jpg" alt="Account" style="margin: 0 10px;" width="100%"/>
 ----
 
 - PRODUCT MANAGEMENT (for super-user)
@@ -535,6 +546,8 @@ The User model used is provided by Django as a part of defaults `django.contrib.
     - Add Product/Add Event pages
     - Each Product or Even has Edit/Delete buttons
     - Edit Product/Event Pages
+
+##### back to [top](#table-of-contents)
 
 <img src="media/readme/28_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
 <img src="media/readme/29_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
@@ -549,13 +562,13 @@ The User model used is provided by Django as a part of defaults `django.contrib.
 <img src="media/readme/38_user_stories.jpg" alt="Product management" style="margin: 0 10px;" width="100%"/>
 -----
 
+##### back to [top](#table-of-contents)
 
 ### FEATURES TO BE IMPLEMENTED
 1. Datetime picker for dates and time in adding/editing events
 2. Wishlist application 
 3. More product pictures, macthing colors on color choice selected by a user
 
-##### back to [top](#table-of-contents)
 
 ## TECHNOLOGIES USED
 
