@@ -2,7 +2,7 @@
 ## High-end bicycle & frames e-shop - Testing
 #### Full Stack Project - Testing write-up
 
-<img src="static/readme/t2x_rohloff_drop_lr.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+<img src="media/readme/title.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
 
 This document is intended to record testing at various stages of development of the project, as well as different functions, functionalities, correct display of the project's page, etc. 
 
@@ -522,6 +522,16 @@ Solved:
 Bug: 
 - When testing webhook 'payment_intent.succeded' get 'POST /checkout/wh/ HTTP/1.1" 500 135356' & 'AttributeError: cart'
 Solution: 
-- ...
-Not solved?
+
+- Compared the code to the original source in Boutique Ado project.
+- Printed cart from different places througout views.py, context.py, webhooks_handler.py in cart and checkout apps. Everytime printed a correct cart
+- Went through checkout process many times.
+- Checked correctness of the process - everything matches:
+    - Checkout success page with order info
+    - Confirmation email
+    - Order checked via /admin access has striped pid and correct cart
+    - Stripe report give me three succeded reports
+<img src="media/readme/17_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+Not solved. Cannot find the reason why the testing does not work.
 
