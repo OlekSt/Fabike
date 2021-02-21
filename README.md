@@ -1,7 +1,7 @@
 # FABIKE
 ## DESIGNED FOR EXPERIENCE
 
-#### E-commerce website for a bicycle brand producing carbon fibre and titanium frames, selling them as well as fully assembled bicycles with high end components. (Full Stack project)
+#### E-commerce website for a bicycle brand producing carbon fiber and titanium frames, selling them as well as fully assembled bicycles with high end components. (Full Stack project)
 
 [![Build Status](https://travis-ci.org/OlekSt/Fabike.svg?branch=master)](https://travis-ci.org/github/OlekSt/Fabike)
 
@@ -61,12 +61,12 @@ Target audience:
 - Cycling enthusiast, semi- & professionals, who value high quality products for sports, who are very knowledgeable about the industry, and want to purchase a high end customizable frame or fully assembled bicycle for their sports or recreational cycling.
 
 Main goal of this site: 
-- Build a full cycle e-shop to present the brand's products to potential buyers, and enable the latter with an easy way to choose a product, get all necessary info about the products on the web or additional info by contacting the website's onwer, quickly and easily purchase one, or save it for buying later.
+- Build a full cycle e-shop to present the brand's products to potential buyers, and enable the latter with an easy way to choose a product, get all necessary info about the products on the web or additional info by contacting the website's owner, quickly and easily purchase one, or save it for buying later.
 
 Organizational Goals:
 - Present products in way to make a purchase easy
 - Enable convenient & quick way of buying products via its e-shop
-- Sell frames & bicyckles
+- Sell frames & bicycles
 - Promote & provide educational support on how to service and take care of bicycles
 - Strengthen the brand's image
 
@@ -89,7 +89,7 @@ Create an e-shop which is easy to navigate, with a simple & convenient order-pay
 
 ##### User Stories
 
-Wesbite visitors:
+Website visitors:
 - First time website visitor:
     * I want to get a clear idea what the website is about
     * I want to be able to easily see where I can find various info (menu, sections, links, individual pages/windows) and easily navigate there
@@ -154,7 +154,7 @@ Logged-in vs unlogged:
 - Logged user can see/access:
     * Everything as above
     * Personal account (user’s details, order history, wish list)
-    * Administtrator can access product management area (inaccessible to other logged in users)
+    * Administrator can access product management area (inaccessible to other logged in users)
 
 
 ##### back to [top](#table-of-contents)
@@ -215,7 +215,7 @@ Each wireframe below contains mobile, pad & laptop/desktop view:
 
 Design choices:
 * General guidelines are taken from the existing website www.fabike.it, and approved by the main designed of the company, Fabio Putzolu. 
-* The overall strucutre of existing pages(www.fabik.it) will be re-created in this project, but will be coded from scratch, and all the non-existing pages/features will be added during the development of the project.
+* The overall structure of existing pages(www.fabik.it) will be re-created in this project, but will be coded from scratch, and all the non-existing pages/features will be added during the development of the project.
 
 Colors:
 * All the colors & color combination will be derived from the 4 main colors used for the frames/bikes: black, blue, yellow, & red.
@@ -257,7 +257,7 @@ Images:
 
 ### DATABASE CHOICE
 
-* During development on a local machine standard sqlite3 databasewill be used, as it is installed with Django.
+* During development on a local machine standard sqlite3 database will be used, as it is installed with Django.
 
 * After deployment, PostgreSQL database will be used as, it is provided by Heroku where the website will be deployed.  
 
@@ -464,7 +464,7 @@ The User model used is provided by Django as a part of defaults `django.contrib.
     - Geometry and sizes section
     - Contact Us CTA button
     - Section about customizable color parts
-    - Info about producation location & delivery times
+    - Info about production location & delivery times
 
 <img src="media/readme/04_user_stories.jpg" alt="Product page" style="margin: 0 10px;" width="100%"/>
 <img src="media/readme/05_user_stories.jpg" alt="Product page" style="margin: 0 10px;" width="100%"/>
@@ -509,7 +509,7 @@ The User model used is provided by Django as a part of defaults `django.contrib.
     - Final total to pay
     - Billing/Shipping info form
     - Sign Up/Sign In link (if not logged)
-    - Save info to profiile (if logged in)
+    - Save info to profile (if logged in)
     - Card info field
     - Complete Order Button
     - Info about amount to be charged
@@ -596,7 +596,7 @@ The User model used is provided by Django as a part of defaults `django.contrib.
 - [GitHub](https://git-scm.com/) - storage of the project's repository
 - [PIP](https://pip.pypa.io/en/stable/installing/) - for installation of necessary tools
 - [Heroku](https://heroku.com/) - to host the project
-- [AWS S3 Bucket](https://aws.amazon.com/) -  to store static and media files in prodcution
+- [AWS S3 Bucket](https://aws.amazon.com/) -  to store static and media files in production
 - [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) for compatibility with AWS
 - [Travis](https://travis-ci.org/) - for integration testing
 - [Balsamiq](https://balsamiq.com/) - for wireframes
@@ -751,7 +751,7 @@ The deployment has been completed.
 ##### Hosting media files with AWS
 The static files and media files (product images) are hosted in the AWS S3 Bucket. To host them, you need to create an account in AWS and create your S3 basket with public access. 
 
-##### Senging email with Gmail
+##### Sending email with Gmail
 To be able to send emails with Gmail, you need to connect it to your Gmail account, setting up your email address in EMAIL_HOST_USER variable and your app password generated by your email provider in EMAIL_HOST_PASS variable.
 
 
@@ -763,7 +763,7 @@ To be able to run this project, the following tools have to be installed:
 - [PIP](https://pip.pypa.io/en/stable/installing/) 
 - [Python3](https://www.python.org/download/releases/3.0/)    
 
-Besides you need to have/create accounts at:
+Besides, you need to have/create accounts at:
 - [Stripe](https://stripe.com/en-ie)
 - [AWS](https://aws.amazon.com/) to setup the [S3 basket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
 - [Gmail](https://mail.google.com/)
@@ -825,6 +825,10 @@ The website is created by Alexey Statsenko, using the media described below.
 
 
 #### ACKNOWLEDGMENTS 
+
+1. My mentor, Can Sucullu, for advice and help with planning and creating the website; checking the project and giving advice during the project's calls - checking the code, giving general advice.
+2. CI's tutors for help during the project.
+3. Chris Z. (ckz8780), for answering my questions about the projects, especially the checkout/webhooks part.
 
 
 ##### back to [top](#table-of-contents)
