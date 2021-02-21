@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %}- About{% endblock %}
+
 {% block content %}
 <div class="container-fluid mx-0 px-0 secondary-hero-image">
     <img class="title-image image-fluid mx-0 px-0 align-self-center" src="{{ MEDIA_URL }}about.jpg" alt="About Us">
@@ -20,9 +22,9 @@
                 <p class="text-center pb-3">As the project grew and developed, Jake and Alexey joined, bringing a wealth of diverse experience to the team. In August 2013, FABIKE was officially presented to the public at Eurobike, the largest cycling trade show in the world. We have worked hard to passionately improve our products day after day since then.</p>
                 <p class="text-center pb-3">Today, our bikes are riding in more than 20 countries worldwide, spreading the word, and showing people what a contemporary bicycle could be.</p>
                 <h4 class="text-center pb-3">WOULD YOU LIKE TO KNOW MORE?</h4>
-            <div class="text-center py-2">
-                <a href="{% url 'contact' %}" class="btn btn-secondary my-4">CONTACT US</a>
-            </div>
+                <div class="text-center py-2">
+                    <a href="{% url 'contact' %}" class="btn btn-secondary my-4">CONTACT US</a>
+                </div>
             </div>
             <div class="card-footer text-muted text-right"></div>
         </div>
