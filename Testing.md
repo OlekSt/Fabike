@@ -77,6 +77,8 @@ User story: I want to get a clear idea what the website is about
     Conclusion:
     - Passed. A visitor can easily understand what the website is about, as well as see the main navigation units allowing to continue exploring the website.
     
+<img src="media/readme/title_image.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+
 User story: I want to be able to easily see where I can find various info (menu, sections, links, individual pages/windows) and easily navigate there
 
     Testing: 
@@ -103,6 +105,8 @@ User story: I want to be able to easily see where I can find various info (menu,
 
     Conclusion: 
     - Passed. All links work as exppected. There no wrong or broken links. 
+
+<img src="media/readme/01_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
 
 User story: Find appropriate section - bikes or frames, urban bikes or all road bikes, etc, and be able to see all the products in the section
 
