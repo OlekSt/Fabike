@@ -78,7 +78,7 @@ User story: I want to get a clear idea what the website is about
     - Passed. A visitor can easily understand what the website is about, as well as see the main navigation units allowing to continue exploring the website.
     
 <img src="media/readme/title_image.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
-**** 
+******************
 
 User story: I want to be able to easily see where I can find various info (menu, sections, links, individual pages/windows) and easily navigate there
 
@@ -108,7 +108,7 @@ User story: I want to be able to easily see where I can find various info (menu,
     - Passed. All links work as exppected. There no wrong or broken links. 
 
 <img src="media/readme/01_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
-**** 
+******************
 
 User story: Find appropriate section - bikes or frames, urban bikes or all road bikes, etc, and be able to see all the products in the section
 
@@ -130,7 +130,7 @@ User story: Find appropriate section - bikes or frames, urban bikes or all road 
 <img src="media/readme/02_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
 **** 
 <img src="media/readme/03_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
-**** 
+******************
 
 User story: Choose an individual product, and get all necessary info: images, descriptions, technical parameters, price, delivery terms, etc. 
 
@@ -157,7 +157,7 @@ User story: Choose an individual product, and get all necessary info: images, de
 <img src="media/readme/06_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
 ****
 <img src="media/readme/07_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
-****
+******************
 
 User story: I want to be able to choose appropriate size, color and add the product to shopping cart
 
@@ -176,7 +176,7 @@ User story: I want to be able to choose appropriate size, color and add the prod
 <img src="media/readme/08_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
 ****
 <img src="media/readme/09_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
-****
+******************
 
 User story: I want to be able to easily navigate from the shopping cart back to products
 
@@ -188,6 +188,9 @@ User story: I want to be able to easily navigate from the shopping cart back to 
     - Using navbar menu takes me to Bikes, Frames or Events pages
     Conclusion:
     - Passed. Works as planned, a user can easily navigate back to explore more products, using several options.  
+
+<img src="media/readme/10_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+******************
 
 User story: Then once I am done with products, I want to be able to easily find the shopping cart, and navigate there
 
@@ -202,6 +205,10 @@ User story: Then once I am done with products, I want to be able to easily find 
     - If all products deleted, the icon becomes white and displays zero
     Conclusion:
     - Passed. Works as expected. 
+
+<img src="media/readme/11_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+******************
+
 
 User story: I want to be able to go to checkout, see all the info about my purchase, be able to add billing/shipping details, add my card details, and pay with one-click
 
@@ -227,6 +234,28 @@ User story: I want to be able to go to checkout, see all the info about my purch
     - Pressing Sign Up takes me to create an account
     - If card details are incomplete or missing, a relevant message is displayed, and an order cannot be paid
 
+<img src="media/readme/12_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/13_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/14_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/15_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+
+Checkout success page:
+<img src="media/readme/16_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+
+Confirmation email:
+<img src="media/readme/18_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+
+Stripe webhooks report:
+<img src="media/readme/17_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+******************
+
+
 User story: Also I want to be able to automatically (during checkout-payment process) add my details and automatically create an account (adding all my data, incl. shipping address)
 
     Testing: 
@@ -239,6 +268,13 @@ User story: Also I want to be able to automatically (during checkout-payment pro
 
     Conclusion:
     - Passed. All works as expected
+
+<img src="media/readme/19_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/20_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/22_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+******************
 
 User story: Once the payment is processed, I want to get a confirmation email about the payment, and the order, with all the order details. And be able to login into my account and see the order there.
 
@@ -262,6 +298,15 @@ User story: Once the payment is processed, I want to get a confirmation email ab
     - Passed.
     - All works as expected.
     - Admin has a corect odrder created.
+
+Confirmation email:
+<img src="media/readme/18_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/24_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+****
+<img src="media/readme/24_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+******************
+
 
 User story: If I don’t purchase anything, I want to be able to create an account, add my details, and add products to my wish list
 
@@ -289,6 +334,9 @@ User story: If I decide not to create an account, I want to have an option to se
     Fixed: 
     - Updated code in views.py of the contact app
 
+<img src="media/readme/25_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+******************
+
 ##### back to [top](#table-of-contents)
 
 
@@ -312,7 +360,10 @@ User story: If I haven’t created a profile yet, to find easily where I can do 
     Conclusion:
     - Passed. Easy to find where and how to create an account, and sign in
 
-User story: I want to be able to login into my account, update my data if needed, and see my wish list if I created it
+<img src="media/readme/26_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+******************
+
+User story: I want to be able to login into my account, update my data if needed
     
     Testing: 
     - Sign In and navigate to Profile
@@ -325,6 +376,9 @@ User story: I want to be able to login into my account, update my data if needed
 
     Conclusion:
     - Passed. Works as expected.
+
+<img src="media/readme/23_user_stories.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
+******************
 
 User story: I want to be able to navigate across the website and get info necessary for me to decide about a purchase and purchase a product taking steps described above
     
