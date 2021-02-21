@@ -146,7 +146,7 @@ class StripeWH_Handler:
                             price=price,
                         )
                         order_line_item.save()
-            
+
             except Exception as e:
                 if order:
                     order.delete()

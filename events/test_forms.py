@@ -43,8 +43,9 @@ class TestEventForm(TestCase):
         form = EventForm({'town_or_city': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('town_or_city', form.errors.keys())
-        self.assertEqual(form.errors['town_or_city'][0], 'This field is required.')
-    
+        self.assertEqual(form.errors['town_or_city'][0],
+                         'This field is required.')
+
     def test_item_price_is_required(self):
         form = EventForm({'price': ''})
         self.assertFalse(form.is_valid())
@@ -53,4 +54,6 @@ class TestEventForm(TestCase):
 
     def fields_are_explicit_in_metaclass(self):
         form = EventForm()
-        self.assertEqual(form.Meta.fields, ['title', 'topics', 'learning', 'date', 'time', 'address', 'town_or_city', 'price'])
+        self.assertEqual(form.Meta.fields, ['title', 'topics', 'learning',
+                                            'date', 'time', 'address',
+                                            'town_or_city', 'price'])

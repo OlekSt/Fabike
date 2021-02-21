@@ -29,4 +29,5 @@ class TestContactForm(TestCase):
 
     def fields_are_explicit_in_metaclass(self):
         form = ContactForm()
-        self.assertEqual(form.Meta.fields, ['name', 'email', 'subject', 'message'])
+        self.assertEqual(form.Meta.fields, ['name', 'email',
+                                            'subject', 'message'])

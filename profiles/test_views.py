@@ -7,7 +7,9 @@ from django.test.client import Client
 class TestViews(TestCase):
     def setUp(self):
         self.client = Client()
-        self.user = User.objects.create_user('user', 'user@elves.com', 'userpass')
+        self.user = User.objects.create_user('user',
+                                             'user@elves.com',
+                                             'userpass')
 
     def test_get_profile_page(self):
         self.client.login(username='user', password='userpass')

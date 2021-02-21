@@ -14,8 +14,8 @@ def events(request):
     events = Event.objects.all()
 
     context = {
-        'events': events,  
-    }    
+        'events': events,
+    }
     return render(request, 'events/events.html', context)
 
 
@@ -27,8 +27,8 @@ def event(request, event_id):
     event = get_object_or_404(events, pk=event_id)
 
     context = {
-        'event': event,   
-    }    
+        'event': event,
+    }
     return render(request, 'events/event.html', context)
 
 
@@ -45,12 +45,13 @@ def add_event(request):
             events = form.save()
             messages.success(request, 'Successfully added event.')
             return redirect('events')
-            
+
         else:
-            messages.error(request, 'Failed to add event. Please check if the form is valid.')
+            messages.error(request, 'Failed to add event.\
+                           Please check if the form is valid.')
     else:
-        form = EventForm()    
-    
+        form = EventForm()
+
     template = 'events/add_event.html'
     context = {
         'form': form,
@@ -74,7 +75,8 @@ def edit_event(request, event_id):
             messages.success(request, 'Successfully updated event!')
             return redirect(reverse('event', args=[event.id]))
         else:
-            messages.error(request, 'Failed to update event. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update event.\
+                           Please ensure the form is valid.')
     else:
         form = EventForm(instance=event)
         messages.info(request, f'You are editing {event.title} event')
@@ -94,7 +96,7 @@ def delete_event(request, event_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-        
+
     event = get_object_or_404(Event, pk=event_id)
     event.delete()
     messages.info(request, 'Event deleted!')

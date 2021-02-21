@@ -31,18 +31,19 @@ The following validation services were used to check the validity of the website
 - [W3C CSS validation](https://jigsaw.w3.org/css-validator/):
 
 - [JSHint](https://jshint.com/) & [Esprima](https://esprima.org/demo/validate.html):
-Some warnings about 'template literal syntax' and undefined variable $. 
-One error, which I have not managed to fix:
+    - Some warnings about 'template literal syntax' and undefined variable $. 
+    - One error, which I have not managed to fix:
 ```
-File home.js triggers an error on line 15: missing semicolon. 
-If I add a semicolon, I get 2 errors: 
-15: missing semicolon.
-15: Unnecessary semicolon.
+- File home.js triggers an error on line 15: missing semicolon. 
+    If I add a semicolon, I get 2 errors: 
+    - 15: missing semicolon.
+    - 15: Unnecessary semicolon.
 
 ```
-
 
 - [PEP8 Python Validator](http://pep8online.com):
+    - No errors.
+    - Left a couple of long line where it was not logical to break it.
 
 - Console errors:
 No errors.

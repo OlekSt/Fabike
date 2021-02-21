@@ -7,7 +7,9 @@ from django.test.client import Client
 class TestViews(TestCase):
     def setUp(self):
         self.client = Client()
-        self.user = User.objects.create_superuser('admin', 'admin@wizards.com', 'adminpass')
+        self.user = User.objects.create_superuser('admin',
+                                                  'admin@wizards.com',
+                                                  'adminpass')
 
     def test_get_bikes_page(self):
         response = self.client.get("/products/bikes/")

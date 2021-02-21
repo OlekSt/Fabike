@@ -13,7 +13,6 @@ class ProductForm(forms.ModelForm):
                                widget=CustomClearableFileInput)
     image02 = forms.ImageField(label='Image02', required=True,
                                widget=CustomClearableFileInput)
-    
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

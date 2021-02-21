@@ -25,7 +25,7 @@ def contact(request):
                     message,
                     email,
                     [settings.DEFAULT_FROM_EMAIL],
-                    
+
                 )
 
                 messages.success(request, f'Your message has been\
