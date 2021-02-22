@@ -6,12 +6,15 @@ from django.contrib.auth.decorators import login_required
 from .models import Event
 from .forms import EventForm
 
+from datetime import date
+
 
 def events(request):
     """
     A view to return a page with listed events
     """
-    events = Event.objects.all()
+    today = date.today().strftime("%Y-%m-%d")
+    events = Event.objects.filter(date__gte=today)
 
     context = {
         'events': events,
