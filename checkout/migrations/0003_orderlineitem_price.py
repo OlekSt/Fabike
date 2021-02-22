@@ -13,6 +13,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='orderlineitem',
             name='price',
-            field=models.DecimalField(decimal_places=0, max_digits=4, null=True),
+            field=models.DecimalField(decimal_places=0,
+                                      max_digits=4,
+                                      null=True),
         ),
     ]

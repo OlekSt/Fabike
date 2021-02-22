@@ -20,5 +20,6 @@ class ProductAdmin(admin.ModelAdmin):
 
     ordering = ('product_group',)
 
+
 # Register your models here.
 admin.site.register(Product, ProductAdmin)

@@ -5,8 +5,8 @@ from .models import Event
 class EventForm(forms.ModelForm):
 
     class Meta:
-            model = Event
-            fields = '__all__'
+        model = Event
+        fields = '__all__'
 
     date = forms.DateField(
         widget=forms.DateInput(format='%d.%m.%Y',
@@ -24,4 +24,4 @@ class EventForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
 
         for field_name, field in self.fields.items():
-                field.widget.attrs['class'] = 'border-black rounded-2'
+            field.widget.attrs['class'] = 'border-black rounded-2'

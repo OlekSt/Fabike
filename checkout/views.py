@@ -131,7 +131,7 @@ def checkout(request):
                     'postcode': profile.user_postcode,
                     'town_or_city': profile.user_town_or_city,
                     'address_line1': profile.user_address_line1,
-                    'address_line1': profile.user_address_line2,
+                    'address_line2': profile.user_address_line2,
                     'county': profile.user_county,
                 })
             except Profile.DoesNotExist:

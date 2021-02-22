@@ -19,6 +19,10 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='event',
             name='price',
-            field=models.DecimalField(decimal_places=0, max_digits=2, null=True, validators=[django.core.validators.MinValueValidator(1)]),
+            field=models.DecimalField(decimal_places=0,
+                                      max_digits=2,
+                                      null=True,
+                                      validators=
+                                      [django.core.validators.MinValueValidator(1)]),
         ),
     ]

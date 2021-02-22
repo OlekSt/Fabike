@@ -1,11 +1,9 @@
 # some of the code was copied from Boutique Ado project's repository
 # and modified according to the project's needs
 from django.shortcuts import render, redirect, reverse,\
-                                get_object_or_404, HttpResponse
+                                get_object_or_404
 from django.contrib import messages
 from products.models import Product
-from django import template
-from decimal import Decimal
 
 
 def view_cart(request):

@@ -13,6 +13,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='event',
             name='map_link',
-            field=models.URLField(blank=True, max_length=1024, null=True),
+            field=models.URLField(blank=True,
+                                  max_length=1024,
+                                  null=True),
         ),
     ]

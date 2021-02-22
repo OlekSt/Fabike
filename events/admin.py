@@ -14,5 +14,6 @@ class EventAdmin(admin.ModelAdmin):
 
     ordering = ('date',)
 
+
 # Register your models here.
 admin.site.register(Event, EventAdmin)
