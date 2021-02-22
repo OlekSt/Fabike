@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /*----  General styles ---*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
@@ -43,6 +50,8 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -57,6 +66,8 @@ body{
 }
 
 .account-drop-menu{ 
+    width: -webkit-max-content; 
+    width: -moz-max-content; 
     width: max-content;
     padding-left: 0;
 }
@@ -159,7 +170,8 @@ body{
 #footer{
     background-color: #262626;
     padding-top: 15px;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     position: absolute;
     bottom: 0;
 }
@@ -220,54 +232,25 @@ body{
     font-weight: 800;
 }
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
-.arrow-up {
-    width: 0; 
-    height: 0; 
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 14px;
-}
-
-/* Convenience classes - colors copied from Bootstrap */
-.arrow-primary {
-    border-bottom-color: #007bff !important;
-}
-
-.arrow-secondary {
-    border-bottom-color: #6c757d !important;
-}
-
-.arrow-success {
-    border-bottom-color: #28a745 !important;
-}
-
-.arrow-danger {
-    border-bottom-color: #dc3545 !important;
-}
-
-.arrow-warning {
-    border-bottom-color: #ffc107 !important;
-}
-
-.arrow-info {
-    border-bottom-color: #17a2b8 !important;
-}
-
-.arrow-light {
-    border-bottom-color: #f8f9fa !important;
-}
-
-.arrow-dark {
-    border-bottom-color: #343a40 !important;
-}
-
-/* Allauth content formatting */
+/* Allauth content formatting, copied from Boutique Ado */
 .allauth-form-inner-content label:not([for='id_remember']) {
     display: none;
+}
+
+.allauth-form-inner-content input::-webkit-input-placeholder {
+    color: #ABABAB;
+}
+
+.allauth-form-inner-content input::-moz-placeholder {
+    color: #ABABAB;
+}
+
+.allauth-form-inner-content input:-ms-input-placeholder {
+    color: #ABABAB;
+}
+
+.allauth-form-inner-content input::-ms-input-placeholder {
+    color: #ABABAB;
 }
 
 .allauth-form-inner-content input::placeholder {
@@ -285,23 +268,24 @@ body{
 }
 
 .btn:hover{
-    box-shadow: 3px 3px #575757;
+    -webkit-box-shadow: 3px 3px #575757;
+            box-shadow: 3px 3px #575757;
 }
 
 /* For various screen sizes */
 /* Bigger screens */
-@media only screen and (min-width: 1500px) {
+@media (min-width: 1440px) {
     .nav-link{
-        font-size: 1.2em;
-    }    
+        font-size: 1.6em;
+    }  
 }
 
 @media only screen and (min-width: 1200px) {
     .nav-link{
-        font-size: 1em;
+        font-size: 1.2em;
     }
     #cart-qty{
-        top: -17px;
+        top: -19px;
     }       
 }
 

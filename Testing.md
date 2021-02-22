@@ -40,6 +40,13 @@ The following validation services were used to check the validity of the website
 
 
 - [W3C CSS validation](https://jigsaw.w3.org/css-validator/):
+    Checked all css files and no errors found.
+    * [base.css](media/readme/validation/base_css.jpg)
+    * [cart.css](media/readme/validation/cart_css.jpg)
+    * [checkout.css](media/readme/validation/checkout_css.jpg)
+    * [home.css](media/readme/validation/home_css.jpg)
+    * [profile.css](media/readme/validation/profile_css.jpg)
+    * [product.css](media/readme/validation/product_css.jpg)
 
 - [JSHint](https://jshint.com/) & [Esprima](https://esprima.org/demo/validate.html):
     - Some warnings about 'template literal syntax' and undefined variable $. 
