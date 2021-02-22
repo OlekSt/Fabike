@@ -1,6 +1,5 @@
 from django import forms
 from .models import Event
-import datetime
 
 
 class EventForm(forms.ModelForm):
