@@ -24,6 +24,18 @@ This document is intended to record testing at various stages of development of 
 
 ## Automated Testing
 
+Tests were implemented to provide addtional testing capabilities and ensure that the application works correctly. 
+Unit test can be found in respective app directories: `test_views.py`,  `test_forms.py`, `test_models.py`. 
+Note: The tests should be added in local database, as The Heroku hobby-tier does not give permissions to allow creation of databases that are required for python automated testing. To run the test and check the output, the database (Postgres) code configuration in settings.py should be temporarily removed or commented out.
+
+You can run tests in Gitpod or other IDE using this command `python3 manage.py test`
+
+### Travis
+
+Travis testing was integrated into the project to ensure integrity of the deployed site.
+You can find details in `.travis.yml`.
+
+
 ### Validation services
 The following validation services were used to check the validity of the website code.
 - [W3C Markup Validation]( https://validator.w3.org/): 
