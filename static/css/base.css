@@ -276,13 +276,13 @@ body{
 /* Bigger screens */
 @media (min-width: 1440px) {
     .nav-link{
-        font-size: 1.6em;
+        font-size: 1.4em;
     }  
 }
 
 @media only screen and (min-width: 1200px) {
     .nav-link{
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
     #cart-qty{
         top: -19px;
@@ -298,7 +298,13 @@ body{
 /* Smaller screens */
 @media only screen and (max-width: 600px) {
     .nav-item i{
-        font-size: 1em;
+        font-size: 1.2em;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #cart-qty{
+        right: 3px;
+        top: -19px;
     }
     #about-section{
         width: 100%;
@@ -341,9 +347,6 @@ body{
     /* title over title images */
     .centered h1{
         font-size: 1.8em;
-    }
-    #cart-qty{
-        right: 2px;
     }
     .footer-pillow{
         height: 175px;
