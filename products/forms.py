@@ -1,3 +1,5 @@
+# some of the code was copied from Boutique Ado project's repository
+# and modified according to the project's needs
 from django import forms
 from .widgets import CustomClearableFileInput
 from .models import Product

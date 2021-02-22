@@ -2,6 +2,8 @@ from django import forms
 from .models import Profile
 
 
+# some of the code was copied from Boutique Ado project's repository
+# and modified according to the project's needs
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile

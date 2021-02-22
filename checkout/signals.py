@@ -1,3 +1,4 @@
+# some of the code was copied from Boutique Ado project's repository
 from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
 

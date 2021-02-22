@@ -1,3 +1,5 @@
+# some of the code was copied from Boutique Ado project's repository
+# and modified according to the project's needs
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save

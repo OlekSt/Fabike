@@ -1,3 +1,5 @@
+# some of the code was copied from Boutique Ado project's repository
+# and modified according to the project's needs
 from django.contrib import admin
 from .models import Order, OrderLineItem
 

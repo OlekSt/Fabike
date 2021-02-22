@@ -1,3 +1,5 @@
+# some of the code was copied from Boutique Ado project's repository
+# and modified according to the project's needs
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404

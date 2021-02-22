@@ -1,3 +1,4 @@
+# the code was copied from Boutique Ado project's repository
 from django import template
 
 
