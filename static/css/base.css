@@ -289,9 +289,16 @@ body{
     }       
 }
 
+/* Fix view for Ipad */
 @media only screen and (max-width: 768px) {
     .footer-pillow{
-        height: 195px;
+        height: 130px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .footer-pillow{
+        height: 200px;
     }
 }
 
@@ -303,7 +310,7 @@ body{
         padding-right: 0px;
     }
     #cart-qty{
-        right: 3px;
+        right: 4px;
         top: -19px;
     }
     #about-section{
