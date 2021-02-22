@@ -529,6 +529,13 @@ Solution:
 Solved: 
 - Works as it should
 
+Bug: 
+- Getting errors and the message that "cannot concatenate str and int" after adding product to the cart, updating its quantity, and then adding the same product to the cart.
+Solution: 
+- Updated this line in def update_cart: quantity = int(request.POST.get('quantity')). The error was coming upon adding a product to a cart, where quantity was added to cart as int, then updating its quantity in the cart, after which the quantity got converted into a string, and so it was not possible to add to the cart. 
+Solved: 
+- Works as it should
+
 ### UNSOLVED BUGS
 
 Bug: 
