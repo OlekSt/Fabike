@@ -67,7 +67,7 @@ def add_to_cart(request, item_id):
 def update_cart(request, item_id):
     """Update quantity of a specific product in the shopping cart"""
 
-    quantity = request.POST.get('quantity')
+    quantity = int(request.POST.get('quantity'))
     product = get_object_or_404(Product, pk=item_id)
     cart = request.session.get('cart', {})
 
