@@ -363,12 +363,12 @@ The User model used is provided by Django as a part of defaults `django.contrib.
  Item Total | item_total | max_digits=6, decimal_places=2, null=False, blank=False, editable=False | DecimalField
 * Colors, Components & Sizes choices will be added via other means, product views, Javascript.
 
-##### back to [top](#table-of-contents)
-
 ### Learning point: 
 ```
-Data model for Products done at the beginning of the project didn't take into account some aspects of data manipulation, specifically creating a unique product record with a combination of model, color, size, components, etc. Based on the knowledge & experience I have obtained during the project's implementation, I'd plan a Product data model differently, i.e. each individual combination of a model, color, size, components would be given an individual sku code. This would simplify quite a number of processes within the following apps: cart, checkout.
+> Data model for Products done at the beginning of the project didn't take into account some aspects of data manipulation, specifically creating a unique product record with a combination of model, color, size, components, etc. Based on the knowledge & experience I have obtained during the project's implementation, I'd plan a Product data model differently, i.e. each individual combination of a model, color, size, components would be given an individual sku code. This would simplify quite a number of processes within the following apps: cart, checkout.
 ```
+
+##### back to [top](#table-of-contents)
 
 
 #### Events/Workshops app
