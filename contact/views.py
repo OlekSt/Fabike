@@ -21,7 +21,7 @@ def contact(request):
                 send_mail(
                     # to capture the user email it's displayd
                     # in subject field and can be responded to
-                    f"Message from {name}, subject: '{subject}'",
+                    f"From {name}, {email}, subject: '{subject}'",
                     message,
                     email,
                     [settings.DEFAULT_FROM_EMAIL],
