@@ -5,7 +5,6 @@
 
 [![Build Status](https://travis-ci.org/OlekSt/Fabike.svg?branch=master)](https://travis-ci.org/github/OlekSt/Fabike)
 
-
 <img src="media/readme/title_image.jpg" alt="Title image" style="margin: 0 10px;" width="100%"/>
 
 [FABIKE - Heroku link](https://fabike.herokuapp.com/)
