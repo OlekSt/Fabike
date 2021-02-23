@@ -555,6 +555,13 @@ Solution:
 Solved: 
 - Works as it should
 
+Bug: 
+- Seatpost Diameter in Frame product was displayed as None
+Solution: 
+- Changed {{ product.seatpost }} to {{ product.seatpost_diameter }} in product.html
+Solved: 
+- Works as it should
+
 ### UNSOLVED BUGS
 
 Bug: 
