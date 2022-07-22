@@ -57,6 +57,7 @@
     <script>
         $(document).ready(function() {
             $('.toast').toast('show');
+            $('#current-year').html((new Date).getFullYear())
         });
     </script>
 {% endblock %}
