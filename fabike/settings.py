@@ -29,9 +29,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
     'fabike.onrender.com/',
-    'localhost',
-    '127.0.0.1',
-    '8000-a8340d87-132c-4751-bec6-cfde2318363d.ws-eu115.gitpod.io'
+    'localhost'
 ]
 
 # Application definition
